@@ -1,0 +1,669 @@
+// *************************************
+//
+//   Input
+//   -> Form input style
+//
+// *************************************
+
+.#{$prefix}-input {
+  display: block;
+  width: 100%;
+  padding: $input-vertical-padding $input-horizontal-padding;
+  font-size: $font-size-base;
+  line-height: $input-line-height;
+  height: $input-height;
+  box-sizing: border-box;
+  color: $input-color;
+  background-color: $input-bg-color;
+  border: $input-border;
+  border-radius: $input-border-radius;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  outline: 0;
+  @include placeholder($input-placeholder-color);
+  z-index: $input-z-index;
+
+  &:focus {
+    outline: 0;
+    border: $input-focus-border;
+    box-shadow: $input-focus-box-shadow;
+    z-index: $input-focus-z-index;
+  }
+
+
+  // ----- RWD ----- //
+
+  // @include bp(pad-middle) {
+  // }
+}
+
+textarea.#{$prefix}-input {
+  height: auto;
+}
+
+
+// ----- input item & input group ----- //
+
+.#{$prefix}-input-item,
+.#{$prefix}-input-group {
+  display: block;
+  margin-bottom: $input-margin-bottom;
+  position: relative;
+}
+
+
+// ----- input item ----- //
+
+.#{$prefix}-input-item {
+
+  > i {
+    color: $input-disable-border-color;
+    z-index: $input-icon-z-index;
+  }
+
+  .#{$prefix}-btn {
+    height: $input-height;
+  }
+
+  // clear field icon button 
+  .#{$prefix}-btn-icon.#{$state}--clear {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0s linear;
+  }
+
+
+  // ----- icon position ----- //
+
+  &.#{$state}--icon-right,
+  &.#{$state}--icon-left {
+    > i {
+      position: absolute;
+      top: $input-icon-top;
+      width: $input-icon-width;
+      text-align: center;
+    }
+    .#{$prefix}-btn-icon {
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &.#{$state}--icon-right {
+    .#{$prefix}-input {
+      padding-right: $input-icon-width;
+    }
+
+    > i,
+    .#{$prefix}-btn-icon:last-child {
+      right: 0;
+    }
+
+    .#{$prefix}-btn-icon.#{$state}--clear {
+      right: $input-icon-width;
+      &:after {
+        content: '';
+        width: 1px;
+        background: $input-border-color;
+        height: 60%;
+        position: absolute;
+        top: 23%;
+        right: 0;
+      }
+    }
+  }
+
+  &.#{$state}--icon-left {
+    .#{$prefix}-input {
+      padding-left: $input-icon-width;
+    }
+
+    > i,
+    .#{$prefix}-btn-icon:first-child {
+      left: 0;
+    }
+  }
+
+  &.#{$state}--icon-clear {
+    .#{$prefix}-input {
+      padding-right: $input-icon-width;
+    }
+  }
+
+  &.#{$state}--icon-right.#{$state}--icon-clear { // 2 icons on right side
+    .#{$prefix}-input {
+      padding-right: $input-icon-width*2;
+    }
+  }
+
+
+} // END input-item
+
+
+// ----- input item & input wrapper ----- //
+
+.#{$prefix}-input-item,
+.#{$prefix}-input-group {
+
+  .#{$prefix}-input-item {
+    height: $input-height;
+  }
+
+
+  // ----- state ----- //
+
+  &.#{$state}--disable {
+    .#{$prefix}-input {
+      pointer-events: none;
+      border-color: $input-disable-border-color;
+      background-color: $input-disable-bg-color;
+      @include placeholder($input-disable-placeholder-color);
+    }
+
+    i {
+      color: $input-disable-border-color;
+    }
+  }
+
+  &.#{$state}--alarm {
+    .#{$prefix}-input {
+      border-color: $input-alarm-border-color;
+    }
+
+    i,
+    .#{$prefix}-hint.#{$prefix}-hint--highlight {
+      color: $input-alarm-border-color;
+    }
+  }
+
+  &.#{$state}--alarm-disable {
+    .#{$prefix}-input {
+      pointer-events: none;
+      background-color: $input-alarm-bg-color;
+      @include placeholder($input-alarm-placeholder-color);
+    }
+  }
+
+  &.#{$state}--warning {
+    .#{$prefix}-input {
+      border-color: $input-warning-border-color;
+    }
+
+    i,
+    .#{$prefix}-hint.#{$prefix}-hint--highlight {
+      color: $input-warning-border-color;
+    }
+  }
+
+  &.#{$state}--success {
+    i,
+    .#{$prefix}-hint.#{$prefix}-hint--highlight {
+      color: $input-success-border-color;
+    }
+  }
+
+
+  &.#{$state}--has-input {
+    .#{$prefix}-btn-icon.#{$state}--clear {
+      pointer-events: auto;
+      opacity: 1;
+      transition: opacity 0.15s ease-in;
+    }
+  }
+} // END input item & input group
+
+
+.#{$prefix}-input-item {
+
+  // 如果有多欄位 multiple cell 則回復 input 預設值, 只有在 focus 的欄位下狀態顏色
+  .#{$prefix}-input-group.#{$state}--multiple-cell {
+    // reset default color
+    i {
+      color: $input-icon-color;
+    }
+
+    .#{$prefix}-input {
+      border-color: $input-border-color;
+    }
+
+    .#{$prefix}-input {
+      pointer-events: auto;
+      background-color: $input-bg-color;
+      @include placeholder($input-placeholder-color);
+    }
+
+  }
+
+  &.#{$state}--alarm {
+    .#{$prefix}-input-group.#{$state}--multiple-cell {
+      .#{$prefix}-input-item.#{$state}--focus {
+        .#{$prefix}-input {
+          border-color: $input-alarm-border-color;
+        }
+        i {
+          color: $input-alarm-border-color;
+        }
+      }
+    }
+  }
+
+  &.#{$state}--alarm-disable {
+    .#{$prefix}-input-group.#{$state}--multiple-cell {
+      .#{$prefix}-input-item.#{$state}--focus {
+        .#{$prefix}-input {
+          pointer-events: none;
+          background-color: $input-alarm-bg-color;
+          @include placeholder($input-alarm-placeholder-color);
+        }
+      }
+    }
+  }
+
+  &.#{$state}--warning {
+    .#{$prefix}-input-group.#{$state}--multiple-cell {
+      .#{$prefix}-input-item.#{$state}--focus {
+        .#{$prefix}-input {
+          border-color: $input-warning-border-color;
+        }
+        i {
+          color: $input-warning-border-color;
+        }
+      }
+    }
+  }
+
+
+} // END input item
+
+
+// -------------------------------------
+//   Input Group
+// -------------------------------------
+
+.#{$prefix}-input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+
+  .#{$prefix}-input {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  > * {
+    display: table-cell;
+    vertical-align: top;
+  }
+
+  // ----- state ----- //
+
+  &.#{$state}--multiple-cell {
+    width: 100%;
+  }
+}
+
+
+// ----- input group children (addon, btns) ----- //
+
+.#{$prefix}-input-group__addon,
+.#{$prefix}-input-group__btns {
+  width: 1%;
+  white-space: nowrap;
+  display: table-cell;
+}
+
+
+// ----- input group btns ----- //
+
+.#{$prefix}-input-group__btns {
+  position: relative;
+  font-size: 0;
+
+  // btn
+  .#{$prefix}-btn {
+    z-index: $input-btn-z-index;
+  }
+}
+
+.#{$prefix}-input-group__btns {
+  &:first-child .#{$prefix}-btn:first-child {
+    border-left-width: 1px;
+  }
+  &:last-child .#{$prefix}-btn:last-child {
+    border-right-width: 1px;
+  }
+}
+
+
+// ----- input group addon ----- //
+
+.#{$prefix}-input-group__addon {
+  padding: $input-vertical-padding $input-horizontal-padding;
+  font-size: $font-size-base;
+  font-weight: $input-addon-weight;
+  line-height: 1;
+  height: $input-height;
+  color: $input-addon-color;
+  text-align: center;
+  background-color: $input-addon-bg-color;
+  border: $input-border;
+  border-radius: $input-border-radius;
+
+  .#{$prefix}-input { // embeded input
+    float: none;
+    display: inline-block;
+    margin: $input-addon-input-margin;
+    height: $input-addon-input-height;
+    padding: 0 !important;
+    width: $input-addon-input-width !important;
+    border-radius: $input-addon-border-radius !important;
+    padding: $input-addon-input-padding;
+  }
+}
+
+
+// -------------------------------------
+//   Border control
+// -------------------------------------
+
+// ----- input group ----- //
+
+// in the middle of input-group
+.#{$prefix}-input-group .#{$prefix}-input:not(:first-child):not(:last-child),
+.#{$prefix}-input-group__addon:not(:first-child):not(:last-child),
+.#{$prefix}-input-group__btns:not(:first-child):not(:last-child) > .#{$prefix}-btn,
+.#{$prefix}-input-group__btns:not(:first-child):not(:last-child) > .#{$prefix}-dropdown-toggle,
+.#{$prefix}-input-group__cell:not(:first-child):not(:last-child) .#{$prefix}-input,
+.#{$prefix}-input-group__cell:not(:first-child):not(:last-child) .#{$prefix}-input-group__addon,
+.#{$prefix}-input-group__cell:not(:first-child):not(:last-child) .#{$prefix}-input-group__btns > .#{$prefix}-btn,
+.#{$prefix}-input-group__cell:not(:first-child):not(:last-child) .#{$prefix}-input-group__btns > .#{$prefix}-dropdown-toggle
+{
+  border-radius: 0;
+}
+
+// at the head of input-group
+.#{$prefix}-input-group .#{$prefix}-input:first-child,
+.#{$prefix}-input-group__addon:first-child,
+.#{$prefix}-input-group__btns:last-child > .#{$prefix}-btn:not(:last-child):not(.#{$prefix}-dropdown-toggle), // for middle btn in btns
+.#{$prefix}-input-group__btns:first-child > .#{$prefix}-btn,
+.#{$prefix}-input-group__btns:first-child > .#{$prefix}-dropdown-toggle
+{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+// at the end of input-group
+.#{$prefix}-input-group .#{$prefix}-input:last-child,
+.#{$prefix}-input-group__addon:last-child,
+.#{$prefix}-input-group__btns:first-child > .#{$prefix}-btn:not(:first-child), // for middle btn in btns
+.#{$prefix}-input-group__btns:last-child > .#{$prefix}-btn,
+.#{$prefix}-input-group__btns:last-child > .#{$prefix}-dropdown-toggle
+{
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// not last child
+.#{$prefix}-input-group__btns:not(:last-child) > .#{$prefix}-btn,
+.#{$prefix}-input-group__btns:not(:last-child) > .#{$prefix}-btn-group
+{
+  margin-right: -2px; // 原本-1改成-2, 解決chrome問題 - Laura 2016/06
+}
+
+// last child
+.#{$prefix}-input-group__btns:last-child > .#{$prefix}-btn
+{
+  margin-left: -1px;
+}
+
+// addon
+.#{$prefix}-input-group .#{$prefix}-input-group__addon {
+  &:first-child {
+    border-right-width: 0;
+  }
+  &:last-child {
+    border-left-width: 0;
+  }
+}
+
+
+// ----- input group with cell ----- //
+
+// at the head of input-group
+.#{$prefix}-input-group__cell:first-child .#{$prefix}-input,
+.#{$prefix}-input-group__cell:first-child .#{$prefix}-input-group__addon,
+.#{$prefix}-input-group__cell:first-child .#{$prefix}-input-group__btns:first-child > .#{$prefix}-btn,
+.#{$prefix}-input-group__cell:first-child .#{$prefix}-input-group__btns:first-child > .#{$prefix}-dropdown-toggle
+{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: $input-border-radius; // override
+  border-bottom-left-radius: $input-border-radius; // override
+}
+
+// at the end of input-group
+.#{$prefix}-input-group__cell:last-child .#{$prefix}-input,
+.#{$prefix}-input-group__cell:last-child .#{$prefix}-input-group__addon,
+.#{$prefix}-input-group__cell:last-child .#{$prefix}-input-group__btns:last-child > .#{$prefix}-btn,
+.#{$prefix}-input-group__cell:last-child .#{$prefix}-input-group__btns:last-child > .#{$prefix}-dropdown-toggle
+{
+  border-top-right-radius: $input-border-radius; // override
+  border-bottom-right-radius: $input-border-radius; // override
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+// not last child
+.#{$prefix}-input-group__cell:not(:last-child) .#{$prefix}-btn,
+.#{$prefix}-input-group__cell:not(:last-child) .#{$prefix}-btn-group
+{
+  margin-left: 0; // override
+  margin-right: -2px; // 原本-1改成-2, 解決chrome問題 - Laura 2016/06
+}
+
+// last child or not first child
+.#{$prefix}-input-group__cell:last-child .#{$prefix}-input-group__btns:last-child > .#{$prefix}-btn,
+.#{$prefix}-input-group__cell:not(:first-child) .#{$prefix}-input-group__addon,
+.#{$prefix}-input-group__cell:not(:first-child) .#{$prefix}-input
+{
+  margin-left: -1px;
+  margin-right: 0; // override
+}
+
+.#{$prefix}-input-group__cell:not(:first-child) .#{$prefix}-input,
+{
+  width: calc(100% + 2px);
+}
+
+// addon
+.#{$prefix}-input-group__addon {
+  .#{$prefix}-input-group__cell:first-child & {
+    border-right-width: 0;
+    border-left-width: 1px; // override
+  }
+  
+  .#{$prefix}-input-group__cell:last-child & {
+    border-right-width: 1px; // override
+    border-left-width: 0;
+  }
+  .#{$prefix}-input-group__cell:not(:first-child):not(:last-child) & {
+    border-width: 1px; // override
+  }
+}
+
+
+// -------------------------------------
+//   Cell
+// -------------------------------------
+
+.#{$prefix}-input-group__cell {
+
+  // state
+  &.#{$prefix}-cell--fit {
+    width: 1%;
+  }
+
+  @for $_grid-i from 1 through  $grid-col {
+    &.#{$prefix}-cell--#{$_grid-i} {
+        width: ($_grid-i / $grid-col) * 100%;
+        word-break: break-word;
+      }
+  }
+  
+}
+
+
+// -------------------------------------
+//   Labels
+// -------------------------------------
+
+.#{$prefix}-input-label {
+  position: relative;
+  font-size: $input-label-font-size;
+  color: $input-label-color;
+  line-height: $input-label-line-height;
+  display: inline-block;
+}
+
+
+// ----- floating labels ----- //
+
+.#{$prefix}-input-floating {
+  .#{$prefix}-input {
+    display: inline-block;
+    margin-top: $input-floating-margin-top;
+  }
+
+  .#{$prefix}-input-label {
+    position: absolute;
+    opacity: 0;
+    top: $input-floating-label-top;
+    transition: opacity 0.15s ease-in, top 0.2s linear;
+  }
+
+  &.#{$state}--has-input .#{$prefix}-input-label {
+    opacity: 1;
+    top: 0;
+    transition: opacity 0.15s ease-in, top 0.2s linear;
+  }
+}
+
+
+// ----- inline labels ----- //
+
+.#{$prefix}-input-inline {
+  display: table;
+  margin-bottom: $input-inline-label-margin-bottom;
+
+  > * {
+    display: table-cell;
+  }
+
+  .#{$prefix}-input-label {
+    @include overflow-ellipsis(1%);
+    min-width: $input-inline-label-width;
+    padding-right: $input-inline-label-padding-right;
+    line-height: $input-inline-label-line-height;
+    vertical-align: top;
+    padding-top: $input-inline-label-padding-top;
+  }
+
+  .#{$prefix}-input-group {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
+.#{$prefix}-input-inline__content {
+  .#{$prefix}-input-group {
+    margin-bottom: 0;
+  }
+}
+
+
+// -------------------------------------
+//   Required
+// -------------------------------------
+
+.#{$prefix}-input-item.#{$state}--required {
+
+  // asterisk
+  &.#{$prefix}-placeholder:before,
+  &.#{$prefix}-input-floating:before,
+  .#{$prefix}-input-label:before {
+    content: "";
+    display: inline-block;
+    background-color: $input-asterisk-color;
+    margin: $input-asterisk-margin;
+    vertical-align: middle;
+    height: $input-asterisk-size;
+    width: $input-asterisk-size;
+    border-radius: 50%;
+  }
+
+  // except:
+  &.#{$prefix}-input-floating {
+    .#{$prefix}-input-label:before {
+      content: none;
+    }
+  }
+
+  // placeholder
+  &.#{$prefix}-placeholder {
+    .#{$prefix}-input {
+      display: inline-block;
+      width: $input-asterisk-placeholder-width;
+    }
+  }
+
+  // floating label
+  &.#{$prefix}-input-floating {
+    &:before { // asterisk
+      margin-top: $input-asterisk-floating-margin-top;
+    }
+
+    .#{$prefix}-input {
+      width: $input-asterisk-placeholder-width;
+    }
+  }
+
+  // inline label
+  &.#{$prefix}-input-inline {
+    &.#{$prefix}-txt--right .#{$prefix}-input-label:before {
+      position: absolute;
+      top: $input-asterisk-align-right-margin-top;
+      right: 0;
+    }
+  }
+
+}
+
+
+// -------------------------------------
+//   Hint
+// -------------------------------------
+
+.#{$prefix}-input-inline__content.#{$state}--has-hint {
+  color: $input-hint-color;
+
+  .#{$prefix}-input-item {
+    margin-bottom: 0;
+  }
+}
+
+.#{$prefix}-hint {
+  font-size: $input-hint-font-size;
+  line-height: $input-hint-line-height;
+  padding-left: $input-hint-padding-left;
+  white-space: normal;
+
+  .#{$prefix}-input-item + & { // first hint
+    padding-top: $input-hint-item-spacing;
+  }
+}
+
+

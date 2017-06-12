@@ -1,0 +1,218 @@
+// *************************************
+//
+//   Table
+//
+// *************************************
+
+.#{$prefix}-table {
+  width: 100%;
+
+  // -------------------------------------
+  //   Default caption
+  // -------------------------------------
+
+  caption {
+    padding: 1.25rem 0;
+  }
+
+
+  // -------------------------------------
+  //   Default thead
+  // -------------------------------------
+
+  thead {
+    text-align: left;
+  }
+
+
+  // -------------------------------------
+  //   Default th
+  // -------------------------------------
+
+  th {
+    color: $table-th-color;
+    padding: 0.6667rem 1.3333rem;
+  }
+
+
+  // -------------------------------------
+  //   Default td
+  // -------------------------------------
+
+  td {
+    padding: 0.6667rem 1.3333rem;
+    color: $table-td-color;
+  }
+
+  // -------------------------------------
+  //   Default tr
+  // -------------------------------------
+
+  tr {
+    &.#{$prefix}-selected {
+      background-color: $table-selected-bg-color!important;
+    }
+  }
+
+
+  // -------------------------------------
+  //   Bordered Style
+  // -------------------------------------
+
+  &.#{$prefix}-table--bordered {
+    // border: 1px solid $table-border-color;
+    thead {
+      border-bottom: 1px solid $table-border-color;
+    }
+    tr {
+      border-bottom: 1px solid $table-border-color;
+      &:last-child{
+        border: 0;
+      }
+    }
+    &.#{$prefix}-table--bordered__vertical{
+      th, td {
+        border-right: 1px solid $table-border-color;
+        &:last-child{
+          border: 0;
+        }
+      }
+    }
+    &.#{$prefix}-table--bordered__th-bordered{
+      th {
+        border-right: 1px solid $table-border-color;
+        &:last-child{
+          border: 0;
+        }
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  //   Striped Style
+  // -------------------------------------
+
+  &.#{$prefix}-table--striped {
+    tbody > tr:nth-child(odd) {
+      background-color: $table-striped-bg-color;
+    }
+  }
+
+
+  // -------------------------------------
+  //   Highlight
+  // -------------------------------------
+
+  &.#{$prefix}-table--highlight {
+    tbody > tr {
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: $table-highlight-bg-color;
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  //   Centered
+  // -------------------------------------
+
+  &.#{$prefix}-txt--center {
+    thead {
+      text-align: center;
+    }
+  }
+
+
+  // -------------------------------------
+  //   Right
+  // -------------------------------------
+
+  &.#{$prefix}-txt--right {
+    thead {
+      text-align: right;
+    }
+  }
+
+
+  // -------------------------------------
+  //   Responsive
+  // -------------------------------------
+
+  @include bp(nth($table-bp-list, 1)) {
+    &.#{$prefix}-table--responsive {
+      width: 100%;
+      border-collapse: collapse;
+      border-spacing: 0;
+      display: block;
+      position: relative;
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+      caption {
+        display: block;
+        border-bottom: 1px solid $table-border-color;
+      }
+      thead {
+        float: left;
+        border: 0;
+        border-right: 1px solid $table-border-color;
+        border-bottom: 1px solid $table-border-color;
+        th {
+          display: block;
+          text-align: right;
+        }
+        tr {
+          padding-right: 1rem;
+        }
+        td {
+          display: block;
+        }
+      }
+      tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+        @include remove-spacing(tr, 1rem);
+        tr {
+          display: inline-block;
+          vertical-align: top;
+        }
+        td {
+          display: block;
+          min-height: 1.25em;
+        }
+      }
+    }
+  }
+
+
+  // -------------------------------------
+  //   form
+  // -------------------------------------
+
+  &.#{$prefix}-table--headfixed {
+    th:first-child,
+    td:first-child {
+      width: 44px;
+      label {
+        position: relative;
+        top: -1px;
+        margin: 0;
+        padding: 0;
+        &:before,
+        &:after {
+          top: 0;
+        }
+      }
+    }
+  }
+}

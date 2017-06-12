@@ -1,0 +1,69 @@
+// *************************************
+//
+//   Shadows
+//
+// *************************************
+
+// -------------------------------------
+//   Basic Shadow(Non-blur)
+// -------------------------------------
+
+.#{$prefix}-shadow__1dp {
+	box-shadow: 0 0 0 1px rgba(0,0,0, 0.15);
+}
+.#{$prefix}-shadow__2dp {
+	box-shadow: 0 0 0 3px rgba(0,0,0, 0.15);
+}
+.#{$prefix}-shadow__3dp {
+	box-shadow: 0 0 0 5px rgba(0,0,0, 0.15);
+}
+.#{$prefix}-shadow__4dp {
+	box-shadow: 0 0 0 7px rgba(0,0,0, 0.15);
+}
+.#{$prefix}-shadow__5dp {
+	box-shadow: 0 0 0 9px rgba(0,0,0, 0.15);
+}
+
+
+// -------------------------------------
+//   Blur Shadow
+// -------------------------------------
+
+.#{$prefix}-shadow--blur__1dp{
+	box-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.15);
+}
+.#{$prefix}-shadow--blur__2dp{
+	box-shadow: 0 4px 3px 1px rgba(0,0,0,0.32), 0 3px 10px 1px rgba(0,0,0,0.14);
+}
+.#{$prefix}-shadow--blur__3dp{
+	box-shadow: 0 7px 6px 1px rgba(0,0,0,0.34), 0 6px 14px 2px rgba(0,0,0,0.18);
+}
+.#{$prefix}-shadow--blur__4dp{
+	box-shadow: 0 9px 6px 2px rgba(0,0,0,0.29), 0 8px 18px 3px rgba(0,0,0,0.18);
+}
+.#{$prefix}-shadow--blur__5dp{
+	box-shadow: 0 12px 8px 2px rgba(0,0,0,0.27), 0 10px 20px 7px rgba(0,0,0,0.12);
+}
+
+
+// -------------------------------------
+//   Material Shadow
+// -------------------------------------
+
+// .#{$prefix}-shadow--material__1dp{
+// 	box-shadow: 0 1px 1.5px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
+// }
+// .#{$prefix}-shadow--material__2dp{
+// 	box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16), 0 3px 3px 0 rgba(0,0,0,0.23);
+// }
+// .#{$prefix}-shadow--material__3dp{
+// 	box-shadow: 0 10px 10px rgba(0,0,0,0.19), 0 6px 3px rgba(0,0,0,0.23);
+// }
+// .#{$prefix}-shadow--material__4dp{
+// 	box-shadow: 0 14px 14px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
+// }
+// .#{$prefix}-shadow--material__5dp{
+// 	box-shadow: 0 19px 19px rgba(0,0,0,0.30), 0 15px 6px rgba(0,0,0,0.22);
+// }
+
+

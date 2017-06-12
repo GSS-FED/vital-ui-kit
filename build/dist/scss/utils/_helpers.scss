@@ -1,0 +1,141 @@
+// *************************************
+//
+//   Helper
+//   -> common helpers
+//
+// *************************************
+
+// clearfix
+.#{$prefix}-clearfix {
+  @include clearfix();
+}
+
+// float
+.#{$prefix}-pull--left {
+  float:left;
+}
+
+.#{$prefix}-pull--right {
+  float:right;
+}
+
+// text-align
+.#{$prefix}-txt--left {
+  text-align: left;
+}
+
+.#{$prefix}-txt--center {
+  text-align: center;
+}
+
+.#{$prefix}-txt--right {
+  text-align: right;
+}
+
+// paragraphs
+.#{$prefix}-paragraphs { line-height: 140%; padding:10px; }
+
+// ellipsis
+.#{$prefix}-ellipsis{
+  @include overflow-ellipsis();
+}
+
+// color
+.#{$prefix}-primary {
+  color: $c-primary;
+}
+
+.#{$prefix}-success {
+  color: $c-success;
+}
+
+.#{$prefix}-alarm {
+  color: $c-alarm;
+}
+
+.#{$prefix}-info {
+  color: $c-info;
+}
+
+.#{$prefix}-warning {
+  color: $c-warning;
+}
+
+.#{$prefix}-stable {
+  color: $c-stable;
+}
+
+// border
+$_direction: top bottom left right;
+@each $var in $_direction {
+  .#{$prefix}-border-#{$var} {
+    border-#{$var}: 1px solid nth($c-border-list, 3);
+  }
+  .#{$prefix}-border-#{$var}--light {
+    border-#{$var}: 1px solid nth($c-border-list, 2);
+  }
+  .#{$prefix}-border-#{$var}--lighter {
+    border-#{$var}: 1px solid nth($c-border-list, 1);
+  }
+  .#{$prefix}-border-#{$var}--dark {
+    border-#{$var}: 1px solid nth($c-border-list, 4);
+  }
+  .#{$prefix}-border-#{$var}--darker {
+    border-#{$var}: 1px solid nth($c-border-list, 5);
+  }
+}
+
+
+// -------------------------------------
+//   State
+// -------------------------------------
+
+// display
+.#{$state}--none {
+  display: none !important;
+}
+
+.#{$state}--block {
+  display: block !important;
+}
+
+
+// -------------------------------------
+//   frame
+// -------------------------------------
+
+.#{$prefix}-btn-list {
+  .#{$prefix}-btn {
+    margin: $btn-list-item-margin;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.#{$prefix}-padding {
+    padding: $u-list-padding;
+  }
+  &.#{$prefix}-padding-large {
+    padding: $u-list-padding-large;
+  }
+
+  &.#{$prefix}-btn-list--multiline { // 多行的 btn-list, 控制列的間距
+    .#{$prefix}-btn {
+      margin-bottom: $btn-list-item-line-margin;
+    }
+
+    &.#{$prefix}-padding {
+      padding-bottom: nth($u-list-padding, 1) - $btn-list-item-line-margin;
+    }
+
+    &.#{$prefix}-padding-large {
+      padding-bottom: nth($u-list-padding-large, 1) - $btn-list-item-line-margin;
+    }
+  }
+
+} // END sg-btn-list
+
+.#{$prefix}-height-100 {
+  height: 100%;
+}

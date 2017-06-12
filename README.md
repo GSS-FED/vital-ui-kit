@@ -12,32 +12,31 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 dist                          所有 ui kit resources (css, js...)
 ├── css
 │    ├── fonts
-│    └── vital-ui-kit.css
+│    ├── vital-ui-kit.css
+│    ├── vital-ui-kit.min.css
+│    └── vital-ui-kit.min.css.map
 ├── js
 │    ├── vital-ui-kit.js
 │    └── vital-ui-kit.min.js
-│
+├── scss
+│   ├── base
+│   ├── components
+│   ├── scripts
+│   ├── structures
+│   ├── utils
+│   ├── _core.scss
+│   └── vital-ui-kit.scss
 │
 styleguide                   ui kit style guide, index.html entry
 ```
 
-## Source Code 結構
-```
-src
-├── base
-├── components
-├── scripts
-├── structures
-├── utils
-├── _core.scss
-└── vital-ui-kit.scss
-```
 
 # Ui kit 使用說明
  Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選擇適合您的方式開始應用。
 
 **直接下載 Vital UI Kit**
 
+[下載](https://github.com/GSS-FED/Vital-UI-Kit/releases/download/v0.0.4/vital-ui-kit-0.0.4.zip)
 如果您不需要開發原始碼或是還不熟悉Sass，您可以使用此種方式，方便且快速就可以應用 Vital UI Kit 在您的產品或專案上。
 
 **使用 Npm & Gulp**
@@ -69,5 +68,5 @@ Step 3. 接著再執行
 
 
 # Copyright and License
-MIT License
+[MIT License](https://github.com/GSS-FED/Vital-UI-Kit/blob/master/LICENSE)
 

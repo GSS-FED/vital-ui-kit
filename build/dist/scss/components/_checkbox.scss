@@ -1,0 +1,103 @@
+// *************************************
+//
+//   Checkbox
+//   -> Form checkbox style
+//
+// *************************************
+
+.#{$prefix}-checkbox {
+  position: relative;
+  appearance: none;
+  width: $checkbox-size;
+  height: $checkbox-size;
+  border: 1px solid $checkbox-default-border-color;
+  border-radius: $checkbox-border-radius;
+  background-color: $checkbox-bg-color;
+  transition: all 120ms ease-out;
+  margin: -2px 0 0 0;
+  outline: none;
+  &:after {
+    @extend %icon;
+    content: $icon-check;
+    position: absolute;
+    width: $checkbox-checked-size;
+    height: $checkbox-checked-size;
+    top: calc((#{$checkbox-size} - #{$checkbox-checked-size})/2);
+    left: calc((#{$checkbox-size} - #{$checkbox-checked-size})/2);
+    opacity: 0;
+    pointer-events: none;
+    color: $checkbox-primary-color;
+    font-size: 0.8rem;
+    transform: scale(0);
+    transition: all 120ms ease-out;
+  }
+  &:checked {
+    border-color: $radio-primary-color;
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.#{$prefix}-checkbox-label {
+  position: relative;
+  min-width: $checkbox-min-width;
+  min-height: $checkbox-min-height;
+  margin: $checkbox-label-margin;
+  word-break: break-word;
+  color: $checkbox-label-default-color;
+  line-height: 1.3333rem;
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover {
+    .#{$prefix}-checkbox {
+      box-shadow: 0 0 0 2px $checkbox-shadow-color;
+      border-color: $checkbox-primary-color;
+    }
+  }
+  &.#{$state}--disable {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: $checkbox-label-disable-color;
+    &:hover {
+      .#{$prefix}-checkbox {
+        box-shadow: none;
+        border-color: $checkbox-disable-border-color;
+      }
+    }
+    .#{$prefix}-checkbox {
+      border-color: $checkbox-disable-border-color;
+      &:checked {
+        + span {
+          color: $checkbox-label-default-color;
+        }
+        &:after {
+          color: $checkbox-disable-color;
+        }
+      }
+    }
+  }
+  &.#{$prefix}-checkbox-label--circle {
+    .#{$prefix}-checkbox {
+      border-radius: 50%;
+      &:checked {
+        background-color: $checkbox-selected-color;
+        &:after {
+          color: $checkbox-bg-color;
+        }
+      }
+    }
+    &.#{$state}--disable {
+      .#{$prefix}-checkbox {
+        &:checked {
+          background-color: $checkbox-default-color;
+        }
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,125 @@
+// *************************************
+//
+//   Menu
+//
+// *************************************
+
+.#{$prefix}-header-menu {
+  li{
+    display:inline-block;
+    .#{$prefix}-menu--item {
+      text-decoration: none;
+      color:$menu-item-font-color;
+      transition:$menu-transition;
+      display:inline-block;
+      border-right:$menu-border;
+      padding:$menu-item-padding-middle;
+      &:hover{
+        color: $menu-item-font-color-hover;
+      }
+    }
+  }
+}
+// header-menu END
+
+.#{$prefix}-txt-menu {
+  li{
+    display:inline-block;
+  }
+  .#{$prefix}-menu--item {
+    text-decoration: none;
+    padding:$menu-item-padding-small;
+    color:$menu-item-font-color;
+    transition:$menu-transition;
+    &:hover{
+      color: $menu-item-font-color-hover;
+    }
+  }
+}
+// text-menu END
+
+.#{$prefix}-button-menu {
+  li{
+    display:inline-block;
+    position:relative;
+  }
+  .#{$prefix}-menu--item {
+    text-decoration: none;
+    padding:$menu-item-padding-middle;
+    color:$menu-item-font-color;
+    transition:$menu-transition;
+    border-radius: $menu-border-radius;
+    border:$menu-border;
+    &:hover {
+      border-color:$menu-item-font-color;
+    }
+  }
+  .#{$prefix}-menu--item.active {
+    background: $menu-item-font-color;
+    color: $c-white;
+    border-color:$menu-item-font-color;
+  }
+}
+// button-menu  END
+
+.demo-button-menu {
+  .#{$prefix}-menu--list {
+    min-width: 150px;
+    &:hover{
+      .#{$prefix}-sub-menu {
+        opacity: 0.99;
+      }
+    }
+  }
+  .#{$prefix}-menu--item {
+    padding:10px 30px;
+    min-width:150px;
+    position:relative;
+    display:inline-block;
+    &:before {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 4px 4px 0 4px;
+      border-color: $menu-bg-color-blue transparent transparent transparent;
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 15px;
+    }
+    &:hover {
+      background: $menu-bg-color-blue;
+      color: $c-white;
+    }
+  }
+}
+.#{$prefix}-sub-menu {
+  border-radius: $menu-border-radius;
+  z-index: z(nav-head);
+  position:absolute;
+  top: 35px;
+  left:0;
+  right:0;
+  opacity:0;
+  transition:$menu-transition;
+  li{
+    display: block;
+    &:last-child .#{$prefix}-sub-menu-item {
+      border-radius: 0 0 $menu-border-radius $menu-border-radius;
+    }
+  }
+  .#{$prefix}-sub-menu-item {
+    display:block;
+    min-width:150px;
+    text-decoration: none;
+    color: $menu-item-font-color;
+    background: $c-white;
+    padding: 10px 30px;
+    margin-bottom: -1px;
+    &:hover {
+      color: $menu-item-font-color-hover;
+      background: $menu-bg-color-blue-hover;
+    }
+  }
+}
+// sub-menu-item END

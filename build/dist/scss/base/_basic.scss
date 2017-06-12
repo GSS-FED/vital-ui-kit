@@ -1,0 +1,25 @@
+// *************************************
+//
+//   Basic
+//
+// *************************************
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size-body;
+}
+input, textarea, keygen, select, button {
+	font-family: $font-family;
+  font-weight: $font-weight;
+}
+textarea {
+  resize: none;
+}
