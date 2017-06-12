@@ -12,7 +12,8 @@
 }
 
 .#{$prefix}-template-wrapper {
-  height: calc(100% - #{$nav-height});
+  height: calc(100% - #{nth($nav-height-list, 1)});
+  background: $template-bg;
   background: $template-bg-gradient;
   text-align: center;
   overflow: auto;

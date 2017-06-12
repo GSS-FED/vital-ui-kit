@@ -4,7 +4,11 @@
 //
 // *************************************
 
-[class^="landing-"] {
+.langing-page {
+  body {
+    font-family:  "Heiti TC";
+  }
+
   h2 {
     font-size: 48px;
     font-weight: 600;
@@ -27,6 +31,16 @@
     line-height: 1.6;
     letter-spacing: 3px;
   }
+
+  @include bp(phone-land) {
+    h2 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
 }
 
 @import "landing-page/sec0";
@@ -44,10 +58,8 @@
 // -------------------------------------
 
 .landing-container {
+  margin: 0 auto;
   max-width: $content-max-width;
-}
-
-@include bp($content-max-width) {
 }
 
 
@@ -55,24 +67,27 @@
 //   footer
 // -------------------------------------
 
-.foot-dropdown-wrapper {
-  margin: 0 auto;
-  width: 500px;
-  background: url(../img/landing-page/ui-kit-btn-bg.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+.footer-dropdown-wrapper {
   position: relative;
-  text-align: center;
+  margin: 0 auto;
+  width: 94%;
+  max-width: 500px;
+  background: $landing-footer-dropdown-wrapper-bg;
+  background: $landing-footer-dropdown-wrapper-bg-gradient;
+  font-weight: bold;
+  cursor: pointer;
 
+  // shadow
   &:before {
     content: "";
     position: absolute;
     top: 0;
+    left: 8%;
     height: 100%;
-    width: 85%;
+    width: 84%;
     box-shadow: 0 50px 100px rgba(#008FFF, 0.35);
     transition: all 0.3s;
+    z-index: -1;
   }
 
   &:hover {
@@ -82,13 +97,42 @@
       opacity: 0;
     }
 
-    .foot-dropdown-menu {
+    .footer-dropdown-menu {
       transform: scale(1);
       opacity: 1;
     }
   }
 
-  .foot-dropdown-menu {
+  .footer-dropdown-toggle {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 34px;
+    left: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 200ms;
+    letter-spacing: 7px;
+
+    // icon
+    &:before {
+      @extend %icon;
+      content: $icon-download2;
+      font-size: 48px;
+      margin-right: 15px;
+      vertical-align: text-bottom;
+    }
+
+    @include bp(phone-middle) {
+      font-size: 28px;
+
+      &:before {
+        margin-right: 5px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .footer-dropdown-menu {
     position: absolute;
     left: 0;
     right: 0;
@@ -106,14 +150,25 @@
       color: #fff;
       text-decoration: none;
       font-size: 20px;
-      padding: 20px 30px;
+      padding: 20px 24%;
       position: relative;
       transition: all 200ms;
+      letter-spacing: 3px;
 
+      // icon
       &:before {
+        @extend %icon;
+        content: $icon-file-empty;
+        font-size: 20px;
+        margin-right: 15px;
+        vertical-align: vertical;
+      }
+
+      // line
+      &:after {
         content: "";
         position: absolute;
-        bottom: 10px;
+        bottom: 3px;
         left: 50%;
         right: 50%;
         height: 1px;
@@ -122,56 +177,23 @@
       }
 
       &:hover {
-        &:before {
-          left: 30%;
-          right: 30%;
+        &:after {
+          left: 20%;
+          right: 20%;
         }
       }
-    }
-  }
 
-  .foot-dropdown-toggle {
-    color: #fff;
-    display: inline-block;
-    padding: 30px 115px;
-    font-size: 34px;
-    position: relative;
-    left: 24px;
-    text-decoration: none;
-    transition: all 200ms;
-    letter-spacing: 5px;
-    cursor: pointer;
-
-    &:before {
-      content: "";
-      background: url(../img/landing-page/download-icon.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      width: 45px;
-      position: absolute;
-      left: 56px;
-      top: 24px;
-      height: 38px;
-      transition: all 200ms;
-    }
-  }
-}
+      @include bp(phone-middle) {
+        font-size: 15px;
+      }
+    } // END a
+  } // END menu
+} // END footer dropdown wrapper
 
 .footer {
   background: $landing-footer-bg;
   background: $landing-footer-bg-gradient;
   padding: 0 3% 30px;
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 15%;
-    right: 15%;
-    height: 50px;
-    bottom: 70px;
-    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.5);
-  }
 
   .footer-inner {
     background: #373737;
@@ -180,6 +202,7 @@
     margin: 0 auto;
     padding: 30px 0;
     vertical-align: middle;
+    box-shadow: 0 24px 21px rgba(#0B092C, 0.5);
   }
 
   .info-wrap {
@@ -211,5 +234,6 @@
       color: #fff;
     }
   }
+
 }
 

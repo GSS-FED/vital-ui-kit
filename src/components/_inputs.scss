@@ -535,13 +535,13 @@ textarea.#{$prefix}-input {
 .#{$prefix}-input-floating {
   .#{$prefix}-input {
     display: inline-block;
-    margin-top: $input-asterisk-floating-input-margin-top;
+    margin-top: $input-floating-margin-top;
   }
 
   .#{$prefix}-input-label {
     position: absolute;
     opacity: 0;
-    top: 10px;
+    top: $input-floating-label-top;
     transition: opacity 0.15s ease-in, top 0.2s linear;
   }
 
@@ -595,14 +595,16 @@ textarea.#{$prefix}-input {
   &.#{$prefix}-placeholder:before,
   &.#{$prefix}-input-floating:before,
   .#{$prefix}-input-label:before {
-    @extend %icon;
-    content: $icon-circle;
-    color: $input-asterisk-color;
-    font-size: $input-asterisk-size;
+    content: "";
+    display: inline-block;
+    background-color: $input-asterisk-color;
     margin: $input-asterisk-margin;
-    vertical-align: top;
-    padding-top: $input-asterisk-padding-top;
+    vertical-align: middle;
+    height: $input-asterisk-size;
+    width: $input-asterisk-size;
+    border-radius: 50%;
   }
+
   // except:
   &.#{$prefix}-input-floating {
     .#{$prefix}-input-label:before {
@@ -612,10 +614,6 @@ textarea.#{$prefix}-input {
 
   // placeholder
   &.#{$prefix}-placeholder {
-    &:before { // asterisk
-      padding-top: $input-asterisk-placeholder-padding-top;
-    }
-
     .#{$prefix}-input {
       display: inline-block;
       width: $input-asterisk-placeholder-width;
@@ -625,7 +623,7 @@ textarea.#{$prefix}-input {
   // floating label
   &.#{$prefix}-input-floating {
     &:before { // asterisk
-      padding-top: $input-asterisk-floating-padding-top;
+      margin-top: $input-asterisk-floating-margin-top;
     }
 
     .#{$prefix}-input {
@@ -635,13 +633,9 @@ textarea.#{$prefix}-input {
 
   // inline label
   &.#{$prefix}-input-inline {
-    .#{$prefix}-input-label:before { // asterisk
-      padding-top: $input-asterisk-inline-padding-top;
-    }
-
     &.#{$prefix}-txt--right .#{$prefix}-input-label:before {
       position: absolute;
-      top: $input-inline-label-padding-top;
+      top: $input-asterisk-align-right-margin-top;
       right: 0;
     }
   }

@@ -7,61 +7,94 @@
 .landing-sec4 {
   width: 100vw;
   height: 500px;
+  margin: 20px 0 50px;
   overflow: hidden;
   position: relative;
   perspective: 8000px;
 
-  // background blue
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
+
+  .landing-container {
+    position: relative;
     height: 100%;
+
+    // background blue
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      min-width: 1000px;
+      top: 0;
+      left: 20%;
+      background: $landing-sec4-bg;
+      background: $landing-sec4-bg-gradient;
+      transform: skew(-60deg);
+      box-shadow: 0 0 8px 16px rgba(#B7B7B7, 0.5);
+      z-index: -1;
+    }
+  }
+
+  .vital-icons {
+    position: absolute;
     top: 0;
-    left: 16%;
-    background: $landing-sec4-bg;
-    background: $landing-sec4-bg-gradient;
-    transform: skew(-66deg);
-    box-shadow: 0 0 8px 8px rgba(#B7B7B7, 0.5);
-    z-index: -1;
+    left: 7%;
+
+    i {
+      @extend %icon;
+      opacity: 0.36;
+    }
   }
 
-  // background purple
-  &:after {
+  .vital-icon-1 {
+    position: relative;
+    top: 45px;
+    color: #64DCE6;
+    font-size: 18px;
 
+    &:before {
+      content: $icon-calendar;
+    }
   }
 
-  // // triangle1
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: -84%;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: white;
-  //   z-index: 1;
-  //   box-shadow: inset -14px -8px 8px rgba(#B7B7B7, 0.5);
-  //   transform: skewX(-60deg);
-  // }
+  .vital-icon-2 {
+    position: relative;
+    left: 70px;
+    color: #64DCE6;
+    font-size: 24px;
 
-  // // triangle2 
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   right: -110%;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: white;
-  //   z-index: 1;
-  //   box-shadow: inset 14px 8px 8px rgba(#B7B7B7, 0.5);
-  //   transform: skewX(-60deg);
-  // }
+    &:before {
+      content: $icon-check-circle;
+    }
+  }
+
+  .vital-icon-3 {
+    position: relative;
+    top: 20px;
+    left: 140px;
+    color: #53A7AE;
+    font-size: 21px;
+
+    &:before {
+      content: $icon-clock-o;
+    }
+  }
+
+  .vital-icon-4 {
+    position: relative;
+    top: 10px;
+    left: 180px;
+    color: #64DCE6;
+    font-size: 15px;
+
+    &:before {
+      content: $icon-check-circle;
+    }
+  }
+
 
   .txt-wrap {
     position: absolute;
-    width: 30%;
+    width: 28%;
     top: 80px;
     right: 10%;
   }
@@ -78,11 +111,10 @@
 
   .vital-calendar-part1 {
     position: absolute;
-    top: 15px;
-    left: 50%;
-    margin-left: 80px;
-    width: 80px;
-    height: 36px;
+    top: 3%;
+    right: 1%;
+    width: 20%;
+    padding-bottom: 6%;
     background: url(../img/landing-page/sec4/vital-calendar-part1.svg);
     background-repeat: no-repeat;
     z-index: 4;
@@ -91,15 +123,15 @@
 
   .vital-calendar-part2 {
     position: absolute;
-    top: -70px;
-    left: 60%;
-    margin-left: -550px;
-    width: 355px;
-    height: 550px;
-    background: url(../img/landing-page/sec4/vital-calendar-part2.svg) $c-white;
+    bottom: 50px;
+    left: 12%;
+    width: 25%;
+    height: 0;
+    padding-bottom: 39%;
+    background: url(../img/landing-page/sec4/vital-calendar-part2.svg) 0 0/102% auto;
     background-repeat: no-repeat;
     z-index: 2;
-    transform: rotate3d(1.6, 1, -1.5, 70deg);
+    transform: rotate3d(1.0, 0.5, -0.9, 70deg);
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
@@ -109,9 +141,11 @@
     &:before {
       content: "";
       display: block;
-      top: 2px;
+      position: absolute;
+      top: 4px;
+      left: 0;
       width: 6px;
-      height: 100%;
+      height: 99%;
       background: $landing-sec4-calendar-bg;
       background: $landing-sec4-calendar-bg-gradient;
     }
@@ -120,20 +154,21 @@
     &:after {
       content: "";
       position: absolute;
-      bottom: 0;
-      left: 6px;
-      width: 100%;
+      bottom: 1px;
+      left: 4px;
+      width: 98%;
       height: 5px;
       background-color: #F8F8F8;
+      transform: skew(-40deg);
     }
   }
 
   .vital-calendar-part2-shadow {
-    width: 308px;
-    height: 365px;
+    width: 16%;
+    padding-bottom: 26%;
     position: absolute;
-    bottom: 22px;
-    left: 165px;
+    bottom: 48px;
+    left: 176px;
     transform: rotate(-35deg) skewX(31deg);
     background-color: rgba(#1E415F, 0.5);
     filter: blur(15px);
@@ -142,11 +177,10 @@
 
   .vital-calendar-part3 {
     position: absolute;
-    top: 212px;
-    left: 50%;
-    margin-left: -160px;
-    width: 323px;
-    height: 76px;
+    top: 31%;
+    left: 3%;
+    width: 98%;
+    padding-bottom: 10%;
     background: url(../img/landing-page/sec4/vital-calendar-part3.svg);
     background-repeat: no-repeat;
     z-index: 4;
@@ -155,11 +189,10 @@
 
   .vital-calendar-part4 {
     position: absolute;
-    top: 160px;
-    left: 50%;
-    margin-left: -160px;
-    width: 323px;
-    height: 76px;
+    top: 39%;
+    left: 2%;
+    width: 98%;
+    padding-bottom: 10%;
     background: url(../img/landing-page/sec4/vital-calendar-part4.svg);
     background-repeat: no-repeat;
     z-index: 4;
@@ -168,17 +201,17 @@
 
   .vital-calendar-part5 {
     position: absolute;
-    top: 440px;
-    left: 0px;
-    margin-left: 2px;
-    width: 350px;
-    height: 185px;
+    bottom: -24%;
+    left: 3px;
+    width: 100%;
+    padding-bottom: 52%;
     background: url(../img/landing-page/sec4/vital-calendar-part5.svg);
     background-repeat: no-repeat;
-    z-index: 4;
     background-size: 100% auto;
+    box-shadow: -30px 30px 53px rgba(#0D1922, 0.5);
+    z-index: 4;
   }
-  
+
   .triggerbox {
     position: absolute;
     height: 100px;
@@ -186,6 +219,90 @@
     bottom: 0px;
     left: 0;
     opacity: 0;
+  }
+}
+
+
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+.landing-sec4 {
+
+  @include bp(pad-land) {
+    .txt-wrap {
+      right: 7%;
+    }
+  }
+
+  @include bp(800px) {
+    .landing-container {
+      &:before {
+        left: 16%;
+      }
+    }
+
+    .txt-wrap {
+      width: 33%;
+      top: 142px;
+    }
+  }
+
+  @include bp(phone-middle) {
+    overflow: visible;
+    height: 70vh;
+    max-height: 495px;
+
+    .landing-container {
+      &:before {
+        box-shadow: none;
+        left: 0;
+      }
+    }
+
+    .vital-calendar-part2 {
+      width: 40%;
+      padding-bottom: 63%;
+      bottom: 56%;
+      left: 22%;
+      margin-left: 0;
+    }
+
+    .vital-calendar-part3 {
+      top: 40%;
+    }
+
+    .vital-calendar-part4 {
+      top: 30%;
+    }
+
+    .vital-calendar-part5 {
+      top: 89%;
+      width: 100%;
+      bottom: 22%;
+    }
+
+    .vital-calendar-part2-shadow {
+      width: 30%;
+      height: 40%;
+      bottom: 49%;
+      left: 26%;
+      transform: rotate(-30deg) skewX(30deg);
+    }
+
+    .vital-icons {
+      display: none;
+    }
+
+    .txt-wrap {
+      width: 100%;
+      top: auto;
+      bottom: 0;
+      left: 0;
+      padding: 7%;
+      text-align: center;
+    }
   }
 }
 

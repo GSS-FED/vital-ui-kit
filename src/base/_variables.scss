@@ -83,9 +83,7 @@ $c-youtube:                               #cd201f !default;
 //   Base
 // -------------------------------------
 
-// ----- basic ----- //
-
-$font-family:                            "Roboto", "Helvetica", "Segoe UI", sans-serif !default;
+$font-family:                            "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC", !default;
 $font-weight:                            normal !default;
 $font-weight-medium:                     500 !default;
 $font-weight-bold:                       bold !default;
@@ -974,10 +972,12 @@ $input-icon-width:                        2.2em !default;
 $input-icon-top:                          calc(50% - 0.5em) !default;
 
 // input label
-
 $input-label-font-size:                   $font-size-small !default;
 $input-label-color:                       $c-text !default;
 $input-label-line-height:                 $line-height-large !default;
+
+$input-floating-margin-top:               $input-label-font-size*$input-label-line-height !default;
+$input-floating-label-top:                0.666rem !default; // 10px
 
 // inline
 $input-inline-label-width:                8rem !default; // 120px
@@ -994,19 +994,14 @@ $input-hint-padding-left:                 1px !default; // input border width
 $input-hint-color:                        $c-text !default;
 
 // required
-$input-asterisk-size:                     4px !default;
+$input-asterisk-size:                     0.266rem !default;
 $input-asterisk-color:                    $c-alarm !default;
-$input-asterisk-margin:                   -$input-asterisk-size/2 8px 0 0 !default;
-$input-asterisk-padding-top:              $input-label-font-size*$input-label-line-height/2 !default;
+$input-asterisk-margin:                   -$input-asterisk-size/2 0.533rem 0 0 !default;
 
 $input-asterisk-placeholder-width:        calc(100% - #{$input-asterisk-size + nth($input-asterisk-margin, 2)}) !default;
-$input-asterisk-placeholder-padding-top:  $input-height/2 !default;
 
-$input-asterisk-floating-input-margin-top:$input-label-font-size*$input-label-line-height !default;
-$input-asterisk-floating-padding-top:     $input-asterisk-floating-input-margin-top + $input-asterisk-placeholder-padding-top !default;
-
-$input-asterisk-inline-margin:            -$input-asterisk-size/2 0 0 8px !default;
-$input-asterisk-inline-padding-top:       $input-label-font-size/2 !default;
+$input-asterisk-floating-margin-top:      $input-floating-margin-top !default;
+$input-asterisk-align-right-margin-top:   $input-height/2 - $input-asterisk-size/2 !default;
 
 
 // ----- list group ----- //

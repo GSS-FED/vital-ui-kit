@@ -4,24 +4,52 @@
 //
 // *************************************
 
+@mixin landing-sec5-card-shadow($shadow) {
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: $shadow;
+    z-index: -1;
+  }
+}
+
 .landing-sec5 {
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 100%;
-  height: 500px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  height: 100vh;
+  max-height: 600px;
   position: relative;
-  text-align: left;
+  overflow: hidden;
+
+  // shadow
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    box-shadow: 0 0 80px 50px white;
+    z-index: 10;
+  }
+
+  .landing-container {
+    position: relative;
+    height: 100%;
+  }
 
   .txt-wrap {
     position: relative;
     display: inline-block;
     text-align: center;
-    margin-left: 70px;
-    margin-top: 120px;
-    z-index: 4;
+    margin-left: 6%;
+    margin-top: 150px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 180px 150px rgba(255, 255, 255, 0.98);
+    transform: translateZ(300px);
+    z-index: z(module, base);
   }
 
   h2 {
@@ -29,192 +57,101 @@
     padding-bottom: 40px;
   }
 
-  p {
-    font-size: 18px;
-    line-height: 2;
-  }
-
   .demo-link {
-    color: #fff;
-    background: #373737;
+    display: inline-block;
+    position: relative;
     padding: 15px 60px;
     margin-top: 30px;
     font-size: 22px;
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
+    color: #fff;
     transition: all 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    text-decoration: none;
+    
     &:hover {
       transform: scale(1.1);
+
       &:after {
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
       }
     }
+
+    // bg
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #373737;
+      z-index: -1;
+    }
+
+    // shadow
     &:after {
       content: "";
-      left: 10%;
-      right: 10%;
-      top: 30%;
       position: absolute;
-      height: 30px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      top: 0;
+      left: 13%;
+      right: 13%;
+      height: 100%;
+      box-shadow: 0 15px 35px 8px rgba(#6F6F6F, 0.5);
       transition: all 300ms;
+      z-index: -2;
     }
   }
 
   .floating-warp {
     position: absolute;
-    left: 457px;
+    left: 40%;
     top: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
+    overflow: visible;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
     transform-style: preserve-3d;
     perspective-origin: center;
-    z-index: 2;
+    z-index: z(module, lower);
+  }
 
-    // white shadow
-    &:before {
-      content: "";
-      position: absolute;
-      width: 20px;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.98);
-      box-shadow: 0 0 180px 150px rgba(255, 255, 255, 0.98);
-      z-index: 1;
+  .floating-box {
+    position: absolute;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    z-index: 1;
+  }
+
+  @each $name, $value in $landing-sec5-floating-box {
+    $_box-shadow:            map-get($value, box-shadow);
+    $_width:                 map-get($value, width);
+    $_height:                map-get($value, height);
+    $_transform-2D:          map-get($value, transform-2D);
+    $_transform:             map-get($value, transform);
+    $_animation:             map-get($value, animation);
+    $_animation-duration:    map-get($value, animation-duration);
+    $_z-index:               map-get($value, z-index);
+
+    .floating-box#{$name} {
+      @include landing-sec5-card-shadow($_box-shadow);
+      width: $_width;
+      height: $_height;
+      background-image: url(#{$img-path}/landing-page/sec5/floating-card-#{$name}.svg);
+      transform: $_transform-2D;
+      transform: $_transform;
+      
+      @if($_z-index) {
+        z-index: $_z-index;
+      }
+
+      @if($_animation) {
+        animation-name: $_animation;
+        animation-duration: $_animation-duration;
+      }
     }
-  }
-
-  .floating-box1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-4.svg);
-    background-size: 100% auto;
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-50px);
-    animation-name: floating_box_1;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .floating-box2 {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-2.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-150px);
-    animation-name: floating_box_2;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .floating-box3 {
-    position: absolute;
-    width: 200px;
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-3.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-250px);
-    animation-name: floating_box_3;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .floating-box4 {
-    position: absolute;
-    width: 250px;
-    height: 312px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-4.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-175px) translateY(-160px) translateX(150px);
-    animation-name: floating_box_4;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .floating-box5 {
-    position: absolute;
-    width: 300px;
-    height: 330px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-5.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(75px) translateY(-220px) translateX(170px);
-    animation-name: floating_box_5;
-    animation-duration: 25s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .floating-box6 {
-    position: absolute;
-    width: 400px;
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-6.svg);
-    background-size: 100% auto;
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-100px) translateY(390px) translateX(-180px);
-  }
-  .floating-box7 {
-    position: absolute;
-    width: 400px;
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-175px) translateY(550px) translateX(250px);
-  }
-  .floating-box8 {
-    position: absolute;
-    width: 400px;
-    height: 600px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-8.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(175px) translateY(850px) translateX(50px);
-    animation-name: floating_box_8;
-    animation-duration: 17s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-  }
-  .floating-box9 {
-    position: absolute;
-    width: 400px;
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    font-size: 15px;
-    background: url(../img/landing-page/sec5/floating-card-9.svg);
-    background-size: 100% auto;
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(75px) translateY(500px) translateX(370px);
   }
 }
 
@@ -224,218 +161,230 @@
 // -------------------------------------
 
 @keyframes floating_box_1 {
+  $_landing-sec5-floating-box1-animation-base: map-get(map-get($landing-sec5-floating-box, "1"), "animation-base");
+  
   0% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-50px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-50px);
   }
   10% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-45px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-45px);
   }
   20% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-40px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-40px);
   }
   30% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-46px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-46px);
   }
   40% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-42px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-42px);
   }
   50% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-50px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-50px);
   }
   60% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-55px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-55px);
   }
   70% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-65px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-65px);
   }
   80% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-60px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-60px);
   }
   90% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-65px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-65px);
   }
   100% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-50px);
+    transform: $_landing-sec5-floating-box1-animation-base translateZ(-50px);
   }
 }
 
 @keyframes floating_box_2 {
+  $_landing-sec5-floating-box2-animation-base: map-get(map-get($landing-sec5-floating-box, "2"), "animation-base");
+  
   0% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-150px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-150px);
   }
   10% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-145px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-145px);
   }
   20% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-140px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-140px);
   }
   30% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-146px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-146px);
   }
   40% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-142px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-142px);
   }
   50% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-150px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-150px);
   }
   60% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-155px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-155px);
   }
   70% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-165px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-165px);
   }
   80% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-160px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-160px);
   }
   90% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-165px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-165px);
   }
   100% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-150px);
+    transform: $_landing-sec5-floating-box2-animation-base translateZ(-150px);
   }
 }
 
 @keyframes floating_box_3 {
+  $_landing-sec5-floating-box3-animation-base: map-get(map-get($landing-sec5-floating-box, "3"), "animation-base");
+  
   0% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-250px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-250px);
   }
   10% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-245px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-245px);
   }
   20% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-240px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-240px);
   }
   30% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-246px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-246px);
   }
   40% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-242px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-242px);
   }
   50% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-250px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-250px);
   }
   60% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-255px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-255px);
   }
   70% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-265px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-265px);
   }
   80% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-260px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-260px);
   }
   90% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-265px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-265px);
   }
   100% {
-    transform: rotate3d(1.6, 1, -1.5, 70deg) translateZ(-250px);
+    transform: $_landing-sec5-floating-box3-animation-base translateZ(-250px);
   }
 }
 
 @keyframes floating_box_4 {
+  $_landing-sec5-floating-box4-animation-base: map-get(map-get($landing-sec5-floating-box, "4"), "animation-base");
+  
   0% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-175px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(75px);
   }
   10% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-188px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(65px);
   }
   20% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-186px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(67px);
   }
   30% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-188px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(65px);
   }
   40% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-191px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(63px);
   }
   50% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-195px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(71px);
   }
   60% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-187px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(76px);
   }
   70% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-189px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(64px);
   }
   80% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-180px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(83px);
   }
   90% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-183px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(80px);
   }
   100% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(-175px) translateY(-160px) translateX(150px);
+    transform: $_landing-sec5-floating-box4-animation-base translateZ(75px);
   }
 }
 
 @keyframes floating_box_5 {
+  $_landing-sec5-floating-box5-animation-base: map-get(map-get($landing-sec5-floating-box, "5"), "animation-base");
+  
   0% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(75px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-175px);
   }
   10% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(65px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-188px);
   }
   20% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(67px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-186px);
   }
   30% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(65px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-188px);
   }
   40% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(63px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-191px);
   }
   50% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(71px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-195px);
   }
   60% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(76px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-187px);
   }
   70% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(64px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-189px);
   }
   80% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(83px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-180px);
   }
   90% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(80px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-183px);
   }
   100% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateZ(75px) translateY(-220px) translateX(170px);
+    transform: $_landing-sec5-floating-box5-animation-base translateZ(-175px);
   }
 }
 
 @keyframes floating_box_8 {
+  $_landing-sec5-floating-box8-animation-base: map-get(map-get($landing-sec5-floating-box, "8"), "animation-base");
+  
   0% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(175px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(175px);
   }
   10% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(170px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(170px);
   }
   20% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(165px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(165px);
   }
   30% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(169px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(169px);
   }
   40% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(165px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(165px);
   }
   50% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(160px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(160px);
   }
   60% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(155px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(155px);
   }
   70% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(170px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(170px);
   }
   80% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(175px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(175px);
   }
   90% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(180px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(180px);
   }
   100% {
-    transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateZ(175px) translateY(850px) translateX(50px);
+    transform: $_landing-sec5-floating-box8-animation-base translateZ(175px);
   }
 }
 

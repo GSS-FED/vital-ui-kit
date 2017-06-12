@@ -10,14 +10,15 @@
 // -------------------------------------
 
 // icomoon
-@import "../../../static/icomoon/variables";
+@import '../../../static/styleguide/variables';
+@import '../../../static/styleguide/style.scss';
 // vital
 @import '../../../src/base/variables';
-@import "../../../src/base/icon";
 
 @import 'base/base';
 @import 'base/mixin';
 @import 'base/variables';
+@import 'base/icon';
 
 @import 'components/button';
 @import 'components/nav';

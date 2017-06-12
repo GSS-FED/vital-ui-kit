@@ -13,151 +13,249 @@
   position: relative;
   overflow: hidden;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 28vw 50vw 0 50vw;
-    border-color: #ffffff transparent transparent transparent;
-    z-index: 1;
+  .landing-container {
+    position: relative;
+    height: 100%;
+
+    // dimond
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      margin-bottom: -30%;
+      left: 20%;
+      background-color: #ffffff;
+      width: 60%;
+      height: 0;
+      padding-top: 60%;
+      transform: rotate(-45deg) skew(16deg, 16deg);
+      box-shadow: inset 0 0 13px 8px rgba(#C0C0C0, 0.5);
+    }
   }
 
   .triangle2 {
     position: absolute;
-    bottom: 35vh;
-    left: 0;
-    width: 0;
+    bottom: 30%;
+    right: 50%;
+    background-color: $c-white;
+    width: 100%;
     height: 0;
-    border-style: solid;
-    border-width: 28vw 0 0 50vw;
-    border-color: transparent transparent transparent #ffffff;
+    padding-top: 50%;
+    transform-origin: 0 100%;
+    transform: skew(60deg, 0deg);
     z-index: 10;
+    box-shadow: 0 -35px 30px 20px rgba(#8A9BAD, 0.5);
   }
 
   .triangle3 {
     position: absolute;
-    bottom: 35vh;
-    right: 0;
-    width: 0;
+    bottom: 30%;
+    left: 50%;
+    background-color: $c-white;
+    width: 100%;
     height: 0;
-    border-style: solid;
-    border-width: 0 0 28vw 50vw;
-    border-color: transparent transparent #ffffff transparent;
+    padding-top: 50%;
+    transform-origin: 0 100%;
+    transform: skew(-60deg, 0deg);
     z-index: 10;
+    box-shadow: 0 -35px 30px 20px rgba(#8A9BAD, 0.5);
+  }
+
+  .rectangle {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 30%;
+    margin-bottom: -100px;
+    background: white;
+    z-index: 11;
   }
 
   .square1 {
     position: absolute;
-    bottom: -15vh;
+    bottom: -15%;
     left: 0;
     width: 100vw;
-    height: 50vh;
+    height: 50%;
     background-color: #ffffff;
     z-index: 10;
   }
-  .vital-reciced-card {
-    position: absolute;
-    top: 60vh;
-    left: 50%;
-    margin-left: -175px;
-    width: 350px;
-    height: 490px;
-    background: url(../img/landing-page/sec6/vital-reciced-card.svg);
-    background-repeat: no-repeat;
-    z-index: 2;
-    background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+
+  // box-shadow
+  .vital-reciced-card0,
+  .vital-reciced-card1,
+  .vital-reciced-card2 {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 1px;
+      box-shadow: $landing-sec6-card-left-shadow;
+      z-index: -1;
+    }
   }
+
+  // box-shadow
+  .vital-reciced-card3,
+  .vital-reciced-card4,
+  .vital-reciced-card5 {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1px;
+      bottom: 0;
+      right: 0;
+      box-shadow: $landing-sec6-card-right-shadow;
+      z-index: -1;
+    }
+  }
+
   .vital-reciced-card0 {
     position: absolute;
-    top: 60vh;
+    bottom: -240px;
     left: 50%;
-    margin-left: -375px;
-    width: 350px;
-    height: 490px;
+    margin-left: -$landing-sec6-card-left-spacing;
+    width: $landing-sec6-card-width;
+    height: $landing-sec6-card-height;
     background: url(#{$img-path}/landing-page/sec6/sec6-card-3.svg);
     background-repeat: no-repeat;
     z-index: 2;
     background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    transition: transform 0.25s ease-in-out;
   }
   .vital-reciced-card1 {
     position: absolute;
-    top: 50vh;
+    bottom: -200px;
     left: 50%;
-    margin-left: -575px;
-    width: 350px;
-    height: 490px;
+    margin-left: calc(#{-$landing-sec6-card-left-spacing} - #{$landing-sec6-card-spacing});
+    width: $landing-sec6-card-width;
+    height: $landing-sec6-card-height;
     background: url(#{$img-path}/landing-page/sec6/sec6-card-2.svg);
     background-repeat: no-repeat;
     z-index: 3;
     background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    transition: transform 0.25s ease-in-out;
   }
   .vital-reciced-card2 {
     position: absolute;
-    top: 40vh;
+    bottom: -150px;
     left: 50%;
-    margin-left: -775px;
-    width: 350px;
-    height: 490px;
+    margin-left: calc(-#{$landing-sec6-card-left-spacing} - #{$landing-sec6-card-spacing*2});
+    width: $landing-sec6-card-width;
+    height: $landing-sec6-card-height;
     background: url(#{$img-path}/landing-page/sec6/sec6-card-1.svg);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    transition: transform 0.25s ease-in-out;
   }
   .vital-reciced-card3 {
     position: absolute;
-    top: 60vh;
+    bottom: -240px;
     left: 50%;
-    margin-left: 25px;
-    width: 350px;
-    height: 490px;
+    margin-left: $landing-sec6-card-right-spacing;
+    width: $landing-sec6-card-width;
+    height: $landing-sec6-card-height;
     background: url(#{$img-path}/landing-page/sec6/sec6-card-6.svg);
     background-repeat: no-repeat;
     z-index: 2;
     background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    transition: transform 0.25s ease-in-out;
   }
   .vital-reciced-card4 {
     position: absolute;
-    top: 50vh;
+    bottom: -200px;
     left: 50%;
-    margin-left: 225px;
-    width: 350px;
-    height: 490px;
+    margin-left: calc(#{$landing-sec6-card-right-spacing} + #{$landing-sec6-card-spacing});
+    width: $landing-sec6-card-width;
+    height: $landing-sec6-card-height;
     background: url(#{$img-path}/landing-page/sec6/sec6-card-5.svg);
     background-repeat: no-repeat;
     z-index: 3;
     background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    transition: transform 0.25s ease-in-out;
   }
   .vital-reciced-card5 {
     position: absolute;
-    top: 40vh;
+    bottom: -150px;
     left: 50%;
-    margin-left: 425px;
-    width: 350px;
-    height: 490px;
+    margin-left: calc(#{$landing-sec6-card-right-spacing} + #{$landing-sec6-card-spacing*2});
+    width: $landing-sec6-card-width;
+    height: $landing-sec6-card-height;
     background: url(#{$img-path}/landing-page/sec6/sec6-card-4.svg);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    transition: transform 0.25s ease-in-out;
   }
   .scroll-trigger {
     position: absolute;
-    top: 30vw;
+    top: 30%;
     left: 0;
-    height: 1vw;
-    width: 10vw;
     opacity: 0;
     z-index: 0;
   }
 }
 
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+.landing-sec6 {
+  @include bp(phone-middle) {
+    background: $c-white;
+
+    .landing-container {
+      &:before {
+        box-shadow: none;
+      }
+
+      .vital-reciced-card0,
+      .vital-reciced-card1,
+      .vital-reciced-card2 {
+        height: 0;
+        padding-bottom: 100%;
+      }
+
+      .vital-reciced-card0 {
+        left: -6%;
+        width: 50%;
+        margin-left: 0;
+        bottom: -110px;
+        z-index: z(module, lower);
+      }
+
+      .vital-reciced-card1 {
+        left: 20%;
+        width: 60%;
+        margin-left: 0;
+        z-index: z(module, base);
+      }
+
+      .vital-reciced-card2 {
+        left: 60%;
+        width: 50%;
+        margin-left: 0;
+        bottom: -110px;
+        z-index: z(module, lower);
+      }
+
+      .vital-reciced-card3 {
+        display: none;
+      }
+
+      .vital-reciced-card4 {
+        display: none;
+      }
+
+      .vital-reciced-card5 {
+        display: none;
+      }
+    }
+  }
+
+}

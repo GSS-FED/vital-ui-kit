@@ -4,33 +4,55 @@
 //
 // *************************************
 
+@mixin landing-sec2-card($x, $y, $maxWidth, $width, $height, $marginLeft, $scale, $bg, $z-index) {
+  position: absolute;
+  top: $y;
+  left: $x;
+  width: $width;
+  height: $height;
+  max-width: $maxWidth;
+  margin-left: $marginLeft;
+  background: url(../img/landing-page/sec2/#{$bg});
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  @if($scale != 1) {
+    transform: scale($scale);
+  }
+  z-index: $z-index;
+}
+
 .landing-sec2 {
   position: relative;
   text-align: center;
   background: $landing-sec2-bg;
   background: $landing-sec2-bg-gradient;
-  box-shadow: 0 25px 23px 0 rgba(184, 184, 184, 0.50);
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   max-height: 660px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 25px 23px rgba(#B9B9B9, 0.5);
 
-  // triangle
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 18vw 50vw 0 50vw;
-    border-color: #ffffff transparent transparent transparent;
+  .landing-container {
+    position: relative;
+    height: 100%;
+
+    // dimond
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      margin-bottom: -26%;
+      left: 24%;
+      background-color: #ffffff;
+      width: 52%;
+      height: 0;
+      padding-top: 52%;
+      transform: rotate(-45deg) skew(20deg, 20deg);
+    }
   }
 
   .txt-wrap {
     position: relative;
-    top: 50%;
+    top: 48%;
   }
 
   h2 {
@@ -42,141 +64,100 @@
   p {
     color: #fff;
   }
-  
-  .circle-container {
-    top: 0;
-    left: 50%;
-    margin-left: -185px;
-    width: 370px;
-    height: 327px;
-    position: absolute;
-    //border: 1px solid #CCC;
-    -webkit-perspective: 1100px;
-    -moz-perspective: 1100px;
-    -o-perspective: 1100px;
-    perspective: 70vw;
-    z-index: 10;
 
-    .animation-box {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      -webkit-transform-style: preserve-3d;
-      -moz-transform-style: preserve-3d;
-      -o-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-      transform: translateZ(-894px);
-      transition: transform 0.5s ease-in-out;
-
-      .animation-block {
-        display: block;
-        position: absolute;
-        width: 350px;
-        height: 307px;
-        left: 10px;
-        top: 10px;
-        line-height: 116px;
-        font-size: 80px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        opacity: 1;
-        -webkit-transform-style: preserve-3d;
-        -moz-transform-style: preserve-3d;
-        -o-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-      }
-    }
+  .vital-card {
+    transition: all 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
+    border-radius: 4px;
   }
 
   .vital-orgchoose-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -175px;
-    margin-top: -153px;
-    width: 350px;
-    height: 307px;
-    background: url(../img/landing-page/sec2/vital-orgchoose-card.svg);
-    background-repeat: no-repeat;
-    z-index: 5;
-    background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+    @include landing-sec2-card(50%, 0, 350px, 45%, 307px, -175px, 1, 'vital-orgchoose-card.svg', 5);
+
+    &:hover {
+      transform: scale(1.1, 1.1);
+    }
   }
 
   .vital-malefemale-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -80px;
-    margin-top: -153px;
-    width: 200px;
-    height: 307px;
-    background: url(../img/landing-page/sec2/vital-malefemale-card.svg);
-    background-repeat: no-repeat;
-    z-index: 4;
-    background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
+    @include landing-sec2-card(50%, 0, 198px, 25%, 307px, -175px - 130px, 0.9, 'vital-malefemale-card.svg', 4);
+
     &:hover {
-      margin-left: -135px;
+      margin-left: -175px - 130px - 30px;
     }
   }
 
   .vital-fillreport-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -255px;
-    margin-top: -153px;
-    width: 350px;
-    height: 307px;
-    background: url(../img/landing-page/sec2/vital-fillreport-card.svg);
-    background-repeat: no-repeat;
-    z-index: 4;
-    background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
-    
+    @include landing-sec2-card(50%, 0, 345px, 44%, 307px, -20px, 0.9, 'vital-fillreport-card.svg', 4);
+
     &:hover {
-      margin-left: -155px;
+      margin-left: -20px + 30px;
     }
   }
 
   .vital-register-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -100px;
-    margin-top: -153px;
-    width: 200px;
-    height: 307px;
-    background: url(../img/landing-page/sec2/vital-register-card.svg);
-    background-repeat: no-repeat;
-    z-index: 3;
-    background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
-    
+    @include landing-sec2-card(50%, 0, 197px, 23%, 307px, -175px - 130px - 100px, 0.7, 'vital-register-card.svg', 3);
+
     &:hover {
-      margin-left: -5px;
+      margin-left: -175px - 130px - 100px - 30px;
     }
   }
 
   .vital-register2-card {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -100px;
-    margin-top: -153px;
-    width: 200px;
-    height: 307px;
-    background: url(../img/landing-page/sec2/vital-register-card.svg);
-    background-repeat: no-repeat;
-    z-index: 3;
-    background-size: 100% auto;
-    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
-    
+    @include landing-sec2-card(50%, 0, 197px, 23%, 307px, 210px, 0.7, 'vital-register-card.svg', 3);
+
     &:hover {
-      margin-left: -185px;
+      margin-left: 210px + 30px;
     }
   }
 }
 
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+.landing-sec2 {
+  @include bp(850px) {
+    .vital-orgchoose-card {
+      margin-left: 0;
+      left: 26%;
+    }
+
+    .vital-malefemale-card {
+      margin-left: 0;
+      left: 9%;
+
+      &:hover {
+        margin-left: -30px;
+      }
+    }
+
+    .vital-fillreport-card {
+      margin-left: 0;
+      left: 46%;
+
+      &:hover {
+        margin-left: 30px;
+      }
+    }
+
+    .vital-register-card,
+    .vital-register2-card {
+      display: none;
+    }
+  }
+
+  @include bp(phone-land) {
+    .vital-orgchoose-card {
+      left: 10%;
+      width: 80%;
+      height: 50%;
+      max-width: none;
+    }
+
+    .vital-malefemale-card,
+    .vital-fillreport-card {
+      display: none;
+    }
+  }
+}
