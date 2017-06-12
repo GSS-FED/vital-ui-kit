@@ -1,0 +1,77 @@
+// *************************************
+//
+//   Mixin
+//
+// *************************************
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+@mixin bp($_bp:null, $_bp_max:null, $_bp_min:null) {
+  @if $_bp_max {
+    @if map-has-key($bp, $_bp) && map-has-key($bp, $_bp_max) {
+      @media (min-width: #{map-get($bp, $_bp)}) and (max-width: #{map-get($bp, $_bp_max)}) {
+        @content;
+      }
+    } @else {
+      @media (max-width: $_bp) and (min-width: $_bp_max) {
+        @content;
+      }
+    }
+  }
+  @else if $_bp {
+    @if map-has-key($bp, $_bp) {
+      @media (max-width: #{map-get($bp, $_bp)}) {
+        @content;
+      }
+    } @else {
+      @media (max-width: $_bp) {
+        @content;
+      }
+    }
+  }
+  @else if $_bp_min {
+    @if map-has-key($bp, $_bp_min) {
+      @media (min-width: #{map-get($bp, $_bp_min)}) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $_bp_min) {
+        @content;
+      }
+    }
+  }
+  // @else {
+  //   @warn "Unfortunately, no value could be retrieved from `#{$bp}`. "
+  //       + "Please make sure it is defined in `$bp` map.";
+  // }
+}
+
+
+// -------------------------------------
+//   z-index
+// -------------------------------------
+
+@function map-has-nested-keys($map, $keys...) {
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+    $map: map-get($map, $key);
+  }
+  @return true;
+}
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+@function z($layers...) {
+  @if not map-has-nested-keys($z-layers, $layers...) {
+    @warn "No layer found for `#{inspect($layers...)}` in $z-layers map. Property omitted.";
+  }
+  @return map-deep-get($z-layers, $layers...);
+}
+

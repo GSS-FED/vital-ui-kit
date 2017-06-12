@@ -1,0 +1,50 @@
+// *************************************
+//
+//   Style guide css
+//   -> for ui kit guide page
+//
+// *************************************
+
+// -------------------------------------
+//   Custom styles
+// -------------------------------------
+
+// icomoon
+@import "../../../static/icomoon/variables";
+// vital
+@import '../../../src/base/variables';
+@import "../../../src/base/icon";
+
+@import 'base/base';
+@import 'base/mixin';
+@import 'base/variables';
+
+@import 'components/button';
+@import 'components/nav';
+
+@import 'page/fabricator-demo';
+@import 'page/landing-page';
+@import 'page/getting-started';
+@import 'page/template';
+
+
+// -------------------------------------
+// Fabricator styles
+// @author Luke Askew
+// Class selectors are namespaced with "f-"
+// -------------------------------------
+
+$settings: (
+	theme: dark,
+	accent: hsl(0, 0%, 46%),
+	menu-width: 14rem
+);
+
+@import 'fabricator/variables';
+@import 'fabricator/code';
+@import 'fabricator/color-chips';
+@import 'fabricator/controls';
+@import 'fabricator/item';
+@import 'fabricator/layout';
+@import 'fabricator/menu';
+

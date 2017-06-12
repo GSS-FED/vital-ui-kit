@@ -1,0 +1,135 @@
+---
+notes: |
+  Add hint or direction to input fields. 
+  If use \<div class=".sg-input-group.sg-state--multiple-cell"><\/div> structure, 
+  then it's child must be \<span class="sg-input-group__cell">...<\/span>
+---
+
+<!-- default -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">Full Name</span>
+  <div class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-item">
+      <input type="text" value="Dieter Rams" placeholder="Full Name" class="{{styleguide.prefix}}-input">
+    </div>
+    <div class="{{styleguide.prefix}}-hint">Example: James Allen</div>
+  </div>
+</div>
+
+<!-- success -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--success {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">User Name</span>
+  <div class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--icon-right">
+      <input type="text" value="dramsign" placeholder="User Name" class="{{styleguide.prefix}}-input">
+      <i class="icon-check"></i>
+    </div>
+    <div class="{{styleguide.prefix}}-hint {{styleguide.prefix}}-hint--highlight">Username is available</div>
+    <div class="{{styleguide.prefix}}-hint">This is a alternate name for your account, used by some network services. Enter 8 lowercase characters or fewer with no spaces. Example: jallen</div>
+  </div>
+</div>
+
+<!-- warning -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--warning {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">Password</span>
+  <div class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-item">
+      <input type="password" value="12345" placeholder="Password" class="{{styleguide.prefix}}-input">
+    </div>
+    <div class="{{styleguide.prefix}}-hint {{styleguide.prefix}}-hint--highlight">Password strength: weak</div>
+  </div>
+</div>
+
+<!-- alarm -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--alarm {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">Email</span>
+  <div class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-item">
+      <input type="email" value="dieterams@gmsil.com.tw" placeholder="Email" class="{{styleguide.prefix}}-input">
+    </div>
+    <div class="{{styleguide.prefix}}-hint {{styleguide.prefix}}-hint--highlight">Please enter a valid email address</div>
+  </div>
+</div>
+
+<!-- alarm (disabled) -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--alarm {{styleguide.state}}--alarm-disable {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">Password</span>
+  <div class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--icon-right">
+      <input type="password" value="12345" placeholder="Password" class="{{styleguide.prefix}}-input">
+      <i class="icon-lock"></i>
+    </div>
+    <div class="{{styleguide.prefix}}-hint {{styleguide.prefix}}-hint--highlight">Your account has been locked because you have reached the maximum number of invalid logon attempts.</div>
+  </div>
+</div>
+
+<!-- Birthday -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--alarm {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">Birthday</span>
+  <span class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-group {{styleguide.state}}--multiple-cell">
+      <span class="{{styleguide.prefix}}-input-group__cell">
+        <div class="{{styleguide.prefix}}-input-item">
+          <input type="text" value="1" placeholder="Month" class="{{styleguide.prefix}}-input">
+        </div>
+        <div class="{{styleguide.prefix}}-hint">MM</div>
+      </span>
+      <span class="{{styleguide.prefix}}-input-group__cell">
+        <div class="{{styleguide.prefix}}-input-item">
+          <input type="text" value="20" placeholder="Day" class="{{styleguide.prefix}}-input">
+        </div>
+        <div class="{{styleguide.prefix}}-hint">DD</div>
+      </span>
+      <span class="{{styleguide.prefix}}-input-group__cell">
+        <div class="{{styleguide.prefix}}-input-item {{styleguide.state}}--focus {{styleguide.state}}--icon-right">
+          <input type="text" placeholder="Year" class="{{styleguide.prefix}}-input">
+          <i class="icon-exclamation-circle"></i>
+        </div>
+        <div class="{{styleguide.prefix}}-hint {{styleguide.prefix}}-hint--highlight">Required</div>
+        <div class="{{styleguide.prefix}}-hint">YYYY</div>
+      </span>
+    </div>
+  </span>
+</div>
+
+<!-- Tel -->
+<div class="{{styleguide.prefix}}-input-item {{styleguide.prefix}}-input-inline">
+  <span class="{{styleguide.prefix}}-input-label">Tel</span>
+  <span class="{{styleguide.prefix}}-input-inline__content {{styleguide.state}}--has-hint">
+    <div class="{{styleguide.prefix}}-input-group {{styleguide.state}}--multiple-cell">
+      <span class="{{styleguide.prefix}}-input-group__cell {{styleguide.prefix}}-cell--fit">
+        <span class="{{styleguide.prefix}}-input-group__btns">
+          <button 
+            type="button" 
+            class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default {{styleguide.prefix}}-dropdown-toggle" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false"><span class="{{styleguide.prefix}}-btn-txt">Taiwan(+886)</span><span class="{{styleguide.prefix}}-caret"></span></button>
+          <ul class="{{styleguide.prefix}}-dropdown-menu">
+            <li><a href="#">Taiwan(+886)</a></li>
+            <li><a href="#">Taiwan(+886)</a></li>
+            <li><a href="#">Taiwan(+886)</a></li>
+          </ul>
+        </span>
+      </span>
+      <span class="{{styleguide.prefix}}-input-group__cell {{styleguide.prefix}}-cell--fit">
+        <span class="{{styleguide.prefix}}-input-group__addon">
+          <span class="{{styleguide.prefix}}-txt">+0</span>
+          <input type="text" class="{{styleguide.prefix}}-input">
+        </span>
+        <div class="{{styleguide.prefix}}-hint">Enter the Area code After “0”</div>
+      </span>
+      <span class="{{styleguide.prefix}}-input-group__cell">
+        <input type="text" placeholder="Phone number..." class="{{styleguide.prefix}}-input">
+      </span>
+      <span class="{{styleguide.prefix}}-input-group__cell {{styleguide.prefix}}-cell--fit">
+        <span class="{{styleguide.prefix}}-input-group__addon">Ext</span>
+      </span>
+      <span class="{{styleguide.prefix}}-input-group__cell {{styleguide.prefix}}-cell--2">
+        <input type="text" placeholder="" class="{{styleguide.prefix}}-input">
+        <div class="{{styleguide.prefix}}-hint">please omit if there is no extension number</div>
+      </span>
+    </div>
+  </span>
+</div>
+

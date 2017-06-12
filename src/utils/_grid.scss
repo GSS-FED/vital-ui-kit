@@ -1,0 +1,98 @@
+// *************************************
+//
+//   Grid System
+//
+// *************************************
+
+// -------------------------------------
+//   Cell group
+// -------------------------------------
+
+.#{$prefix}-cell-group {
+  display: table;
+  width: 100%;
+}
+
+.#{$prefix}-cell-row {
+  display: table-row;
+}
+
+.#{$prefix}-cell--fixed {
+  table-layout: fixed;
+}
+
+.#{$prefix}-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.#{$prefix}-cell--fit {
+  width: 1%;
+  white-space: nowrap;
+}
+
+@for $_grid-i from 1 through  $grid-col {
+  .#{$prefix}-cell-#{$_grid-i} {
+    width: ($_grid-i / $grid-col) * 100%;
+    word-break: break-word;
+  }
+
+  @include bp(nth($grid-bp-list, 2)) {
+    .#{$prefix}-cell-md-#{$_grid-i} {
+      width: ($_grid-i / $grid-col) * 100%;
+      
+      @if ($_grid-i == 12) {
+        display: block;
+        white-space: normal;
+      }
+    }
+  }
+  
+  @include bp(nth($grid-bp-list, 1)) {
+    .#{$prefix}-cell-xs-#{$_grid-i} {
+      width: ($_grid-i / $grid-col) * 100%;
+      
+      @if ($_grid-i == 12) {
+        display: block;
+        white-space: normal;
+      }
+    }
+  }
+}
+
+
+// -------------------------------------
+//   Col group
+// -------------------------------------
+
+.#{$prefix}-row {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.#{$prefix}-col {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+}
+
+@for $_grid-i from 1 through $grid-col {
+  .#{$prefix}-col-#{$_grid-i} {
+    width: ($_grid-i / $grid-col) * 100%;
+  }
+
+  @include bp(nth($grid-bp-list, 2)) {
+    .#{$prefix}-col-md-#{$_grid-i} {
+      width: ($_grid-i / $grid-col) * 100%;
+    }
+  }
+  
+  @include bp(nth($grid-bp-list, 1)) {
+    .#{$prefix}-col-xs-#{$_grid-i} {
+      width: ($_grid-i / $grid-col) * 100%;
+    }
+  }
+}

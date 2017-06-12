@@ -1,0 +1,43 @@
+---
+notes: |
+  Combination of different input type.
+---
+
+<!-- Multiple input column -->
+<div class="{{styleguide.prefix}}-input-group {{styleguide.state}}--multiple-cell">
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="First Name" class="{{styleguide.prefix}}-input"></span>
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="Last Name" class="{{styleguide.prefix}}-input"></span>
+</div>
+
+<!-- Multiple input column with label addons -->
+<div class="{{styleguide.prefix}}-input-group {{styleguide.state}}--multiple-cell">
+  <span class="{{styleguide.prefix}}-input-group__addon"><i class="icon-credit-card"></i></span>
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="0000" class="{{styleguide.prefix}}-input"></span>
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="0000" class="{{styleguide.prefix}}-input"></span>
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="0000" class="{{styleguide.prefix}}-input"></span>
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="0000" class="{{styleguide.prefix}}-input"></span>
+</div>
+
+<!-- Multiple input column with label addons and button dropdown -->
+<div class="{{styleguide.prefix}}-input-group {{styleguide.state}}--multiple-cell">
+  <span class="{{styleguide.prefix}}-input-group__addon">http://github.com/</span>
+  <span class="{{styleguide.prefix}}-input-group__btns">
+      <button 
+        type="button" 
+        class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default {{styleguide.prefix}}-dropdown-toggle" 
+        data-toggle="dropdown" 
+        aria-haspopup="true" 
+        aria-expanded="false"><span class="{{styleguide.prefix}}-btn-txt">GSS-FED</span><span class="{{styleguide.prefix}}-caret"></span></button>
+        <ul class="{{styleguide.prefix}}-dropdown-menu">
+          <li><a href="#">GSS-CSBU</a></li>
+          <li><a href="#">GSS-FED</a></li>
+          <li><a href="#">GSS-EBSBU</a></li>
+          <li><a href="#">GSS-CWEP</a></li>
+          <li><a href="#">GSS-KWPI</a></li>
+          <li><a href="#">GSS-KWPI</a></li>
+        </ul>
+    </span>
+  </span>
+  <span class="{{styleguide.prefix}}-input-group__addon">/</span>
+  <span class="{{styleguide.prefix}}-input-group__cell"><input type="text" placeholder="sooge-ui-kit" class="{{styleguide.prefix}}-input"></span>
+</div>

@@ -1,0 +1,1207 @@
+// *************************************
+//
+//   Common Variables
+//
+// *************************************
+
+// -------------------------------------
+//   Constant
+// -------------------------------------
+
+$prefix:                                  'sg' !default;
+$state:                                   '#{$prefix}-state' !default;
+$icomoon-font-path:                       'fonts' !default;
+
+// usage: z-index: z(module, upper), z-index: z(head)
+$z-layers: (
+  "mask":                                 10010,
+  "popup":                                9000,
+  "fix":                                  100,
+  "head":                                 99,
+  "nav-head":                             9,
+  "module": (
+    "upper":                              7,
+    "base":                               5,
+    "lower":                              3
+  ),
+  "default":                              1,
+  "below":                                -1,
+  "hidden":                               -9000) !default;
+
+
+// -------------------------------------
+//   Color (use 'c' as prefix)
+// -------------------------------------
+
+// 顏色系列 (左->右 淺->深 9種顏色)
+$c-water-list:                            #F7F9FE #EEF2FC #D8E3F6 #C4D2EB #95ACD4 #7189B6 #456297 #2A487F #1E3768 !default;
+$c-skyblue-list:                          #D9ECFF #A6D2FF #73B9FE #419FFE #0E86FE #016DD8 #0153A5 #003A73 #002040 !default;
+$c-success-list:                          #CFF5E4 #A5ECCD #7BE3B5 #51DA9E #2BCD86 #22A36A #19794F #104F33 #082518 !default;
+$c-info-list:                             #CCF3FF #99E7FF #66DBFF #33CFFF #00C3FF #009CCC #007599 #004E66 #002733 !default;
+$c-warning-list:                          #FFF0CC #FFE199 #FFD266 #FFC333 #FFB400 #CC9000 #996C00 #664800 #332400 !default;
+$c-alarm-list:                            #FFD0B8 #FFAE85 #FF8D52 #FF6B1F #EB5000 #B83F00 #852D00 #521C00 #1F0B00 !default;
+$c-black-list:                            #F8F8F8 #F0F0F0 #dddddd #cccccc #aaaaaa #888888 #555555 #333333 #0D0D0D !default;
+
+// main color
+$c-primary-list:                          $c-skyblue-list !default;
+$c-secondary-list:                        $c-water-list !default;
+$c-primary:                               nth($c-primary-list, 5) !default;
+
+// black & white
+$c-black:                                 nth($c-black-list, 9) !default;
+$c-gray-dark:                             nth($c-black-list, 7) !default;
+$c-gray:                                  nth($c-black-list, 5) !default;
+$c-gray-light:                            nth($c-black-list, 3) !default;
+$c-white:                                 #FFFFFF !default;
+
+
+// ----- state ----- //
+
+$c-success:                               nth($c-success-list, 5) !default;
+$c-alarm:                                 nth($c-alarm-list, 5) !default;
+$c-info:                                  nth($c-info-list, 5) !default;
+$c-warning:                               nth($c-warning-list, 5) !default;
+$c-stable:                                nth($c-black-list, 5) !default;
+
+
+// ----- default ----- //
+
+$c-text:                                  nth($c-secondary-list, 6) !default; // 文字主色
+$c-text-bg:                               $c-white !default; // 文字背景主色
+$c-text-hover:                            $c-text !default;
+$c-text-hover-bg:                         nth($c-secondary-list, 2) !default;
+
+$c-border-list:                           #F8F8F8 #F0F0F0 #dddddd #cccccc #aaaaaa !default;
+
+// social
+$c-facebook:                              #3b5998 !default;
+$c-twitter:                               #00b6f1 !default;
+$c-youtube:                               #cd201f !default;
+
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+// ----- basic ----- //
+
+$font-family:                            "Roboto", "Helvetica", "Segoe UI", sans-serif !default;
+$font-weight:                            normal !default;
+$font-weight-medium:                     500 !default;
+$font-weight-bold:                       bold !default;
+$font-size-body:                         15px !default;
+
+
+// ----- icon ----- //
+
+$icon-font-size:                         0.95em !default;
+
+
+// ----- typography ----- //
+
+$link-color:                             $c-primary !default;
+$link-hover-color:                       nth($c-primary-list, 4) !default;
+$link-active-color:                      nth($c-primary-list, 5) !default;
+$link-disabled-color:                    nth($c-primary-list, 2) !default;
+
+
+// ----- others ----- //
+
+$font-size-xsmall:                       0.8rem !default;   // 12 px
+$font-size-small:                        0.866rem !default; // 13 px
+$font-size-base:                         1rem !default;     // 15 px
+$font-size-large:                        1.2rem !default;   // 18 px
+$font-size-xlarge:                       1.4rem !default;   // 21 px
+
+$line-height-base:                       1.428571429 !default; // = 20/14
+$line-height-computed:                   floor($font-size-base * $line-height-base) !default; // ~21px
+$line-height-large:                      1.8 !default;
+$line-height-small:                      1 !default;
+
+$padding-base-vertical:                  0.533rem !default;  // 8px
+$padding-base-horizontal:                1.066rem !default;  // 16px
+
+$padding-xlarge-vertical:                0.8rem !default;    // 12px
+$padding-xlarge-horizontal:              1.333rem !default;  // 20px
+
+$padding-large-vertical:                 0.666rem !default;  // 10px
+$padding-large-horizontal:               1.2rem !default;    // 18px
+
+$padding-small-vertical:                 0.4rem !default;    // 6px
+$padding-small-horizontal:               0.8rem !default;    // 12px
+
+$padding-xsmall-vertical:                0.2rem !default;    // 3px
+$padding-xsmall-horizontal:              0.533rem !default;  // 8px
+
+$border-radius:                          4px !default;
+$border-radius-large:                    6px !default;
+$border-radius-small:                    3px !default;
+
+$box-shadow:                             0 1px 2px 0 rgba($c-black, 0.3), 0 2px 6px 0 rgba($c-black, 0.15) !default;
+$box-shadow-large:                       0 2px 10px 0 rgba($c-black, 0.3), 0 1px 20px 0 rgba($c-black, 0.15) !default;
+
+// transition
+$transition-duration:                     0.3s !default;
+$transition-timing:                       ease-in-out !default;
+$transition-base:                         all #{$transition-duration} #{$transition-timing} !default;
+
+// utility
+$u-content-spacing:                      0.666rem !default; // 10px
+$u-content-spacing-large:                1rem !default;
+$u-content-spacing-xlarge:               1.333rem !default; // 20px
+
+$u-content-spacing-vertical:             1.333rem 0 !default;
+
+$u-content-margin:                       0.666rem !default; // 10px
+$u-content-margin-large:                 1rem !default;
+
+$u-list-padding:                         0.666rem 1.2rem !default; // 10px 18px
+$u-list-padding-large:                   1.333rem 1.2rem !default; // 20px 18px
+
+
+// -------------------------------------
+//   utils
+// -------------------------------------
+
+// ----- avatar ----- //
+
+$avatar-width-xsmall:                     16px !default;
+$avatar-width-small:                      24px !default;
+$avatar-width:                            32px !default;
+$avatar-width-large:                      48px !default;
+$avatar-width-xlarge:                     64px !default;
+
+$avatar-height-xsmall:                    $avatar-width-xsmall !default;
+$avatar-height-small:                     $avatar-width-small !default;
+$avatar-height:                           $avatar-width !default;
+$avatar-height-large:                     $avatar-width-large !default;
+$avatar-height-xlarge:                    $avatar-width-xlarge !default;
+
+$avatar-border-radius-xsmall:             2px !default;
+$avatar-border-radius-small:              2px !default;
+$avatar-border-radius:                    3px !default;
+$avatar-border-radius-large:              4px !default;
+$avatar-border-radius-xlarge:             4px !default;
+
+$avatar-bg-color:                         lighten(#000, 94%) !default;
+
+$avatar-style: (
+  "xsmall": (
+    "width":                              $avatar-width-xsmall,
+    "height":                             $avatar-height-xsmall,
+    "border-radius":                      $avatar-border-radius-xsmall
+  ),
+  "small": (
+    "width":                              $avatar-width-small,
+    "height":                             $avatar-height-small,
+    "border-radius":                      $avatar-border-radius-small
+  ),
+  "large": (
+    "width":                              $avatar-width-large,
+    "height":                             $avatar-height-large,
+    "border-radius":                      $avatar-border-radius-large
+  ),
+  "xlarge": (
+    "width":                              $avatar-width-xlarge,
+    "height":                             $avatar-height-xlarge,
+    "border-radius":                      $avatar-border-radius-xlarge)) !default;
+
+// width badge
+$avatar-badge-xsmall:                     5px !default;
+$avatar-badge-small:                      7px !default;
+$avatar-badge:                            9px !default;
+$avatar-badge-large:                      13px !default;
+$avatar-badge-xlarge:                     17px !default;
+$avatar-badge-bg-color:                   $c-alarm !default;
+$avatar-badge-color:                      $c-white !default;
+$avatar-badge-border-radius-circle:       50% !default;
+$avatar-badge-border-radius:              4px !default;
+$avatar-badge-width:                      28px !default;
+$avatar-badge-half-width:                 ($avatar-badge-width)/2 !default;
+$avatar-badge-height:                     17px !default;
+$avatar-badge-half-height:                ($avatar-badge-height)/2 !default;
+$avatar-badge-pointer-height:              3px !default;
+
+$avatar-badge-style: (
+  "xsmall": (
+    "width":                              $avatar-badge-xsmall,
+    "height":                             $avatar-badge-xsmall
+  ),
+  "small": (
+    "width":                              $avatar-badge-small,
+    "height":                             $avatar-badge-small
+  ),
+  "large": (
+    "width":                              $avatar-badge-large,
+    "height":                             $avatar-badge-large
+  ),
+  "xlarge": (
+    "width":                              $avatar-badge-xlarge,
+    "height":                             $avatar-badge-xlarge)) !default;
+
+
+// ----- badge ----- //
+
+$badge-bg-color:                          $c-info !default;
+$badge-font-size:                         0.725rem !default;
+$badge-padding:                           0.25rem 0.75rem !default;
+$badge-border-radius:                     0.75rem !default;
+$badge-font-size:                         0.75rem !default;
+
+
+// ----- collapse ----- //
+
+$collapse-bg-color:                       $c-white !default;
+$collapse-border-color:                   nth($c-secondary-list, 4) !default;
+$collapse-border-radius:                  4px !default;
+
+$collapse-inverse-bg-color:               nth($c-secondary-list, 9) !default;
+$collapse-inverse-border-color:           nth($c-secondary-list, 6) !default;
+
+$collapse-title-padding:                  0.928rem 2.856rem 0.928rem 1.428rem !default;
+$collapse-title-font-size:                $font-size-large !default;
+$collapse-title-color:                    nth($c-secondary-list, 7) !default;
+$collapse-title-icon-color:               nth($c-secondary-list, 5) !default;
+
+$collapse-inverse-title-color:            $c-white !default;
+$collapse-inverse-title-icon-color:       nth($c-secondary-list, 4) !default;
+
+$collapse-content-font-size:              $font-size-large !default;
+$collapse-content-color:                  nth($c-secondary-list, 7) !default;
+$collapse-content-bg-color:               $c-white !default;
+$collapse-content-padding:                0.928rem 2.856rem 0.928rem 1.428rem !default;
+$collapse-content-line-height:            1.866rem !default;
+
+$collapse-inverse-content-color:          $c-white !default;
+$collapse-inverse-content-bg-color:       $collapse-inverse-bg-color !default;
+
+$collapse-open-icon-color:                $c-info !default;
+$collapse-open-icon-font-size:            $font-size-xsmall !default;
+$collapse-open-icon-width:                12px !default;
+$collapse-open-icon-height:               $collapse-open-icon-width !default;
+
+$collapse-inverse-with-bordered-title-bg-color:   nth($c-secondary-list, 7) !default;
+$collapse-inverse-with-bordered-bg-color:         nth($c-secondary-list, 8) !default;
+
+
+// ----- grid ----- //
+
+$grid-col:                                12 !default;
+
+
+// ----- helpers ----- //
+
+$btn-list-item-margin:                    0 $u-content-spacing 0 0 !default;
+$btn-list-item-line-margin:               $u-content-spacing 0 0 !default;
+
+
+// ----- modals ----- //
+
+$modal-backdrop-bg-color:                 nth($c-secondary-list, 9) !default;
+
+
+// ----- scroll-shadow ----- //
+
+$scroll-shadow-bg-color:                  $c-white !default;
+
+
+// ----- tooltip ----- //
+
+$tooltip-inner-bg-color:                  nth($c-secondary-list, 9) !default;
+$tooltip-inner-max-width:                 400px !default;
+$tooltip-inner-padding:                   $padding-base-vertical $padding-base-horizontal !default;
+$tooltip-inner-line-height:               17px !default;
+$tooltip-inner-color:                     #fff !default;
+$tooltip-inner-border-radius:             4px !default;
+$tooltip-arrow-width:                     5px !default;
+$tooltip-arrow-color:                     $tooltip-inner-bg-color !default;
+
+
+// -------------------------------------
+//   components
+// -------------------------------------
+
+// ----- breadcrumb ----- //
+
+$breadcrumb-active:                       nth($c-secondary-list, 4) !default;
+$breadcrumb-lighter-blue:                 nth($c-secondary-list, 2) !default;
+$breadcrumb-light-blue:                   nth($c-secondary-list, 5) !default;
+$breadcrumb-dark-blue:                    nth($c-secondary-list, 7) !default;
+
+$breadcrumb-border-light:                 1px solid nth($c-secondary-list, 4) !default;
+
+$breadcrumb-padding:                      2px 5px !default;
+
+
+// ----- buttons ----- //
+
+// default
+$c-btn-light:                             nth($c-secondary-list, 1) !default;
+$c-btn-light-border:                      nth($c-secondary-list, 4) !default;
+$c-btn-light-hover:                       nth($c-secondary-list, 3) !default;
+$c-btn-light-active:                      nth($c-secondary-list, 4) !default;
+
+$c-btn-light-text:                        $c-white !default;
+$c-btn-dark-text:                         nth($c-secondary-list, 7) !default;
+$c-btn-text:                              nth($c-secondary-list, 7) !default;
+
+// flat
+$c-btn-flat:                              nth($c-secondary-list, 2) !default;
+$c-btn-flat-border:                       nth($c-secondary-list, 2) !default;
+$c-btn-flat-hover:                        nth($c-secondary-list, 3) !default;
+$c-btn-flat-active:                       nth($c-secondary-list, 4) !default;
+$c-btn-flat-disable:                      nth($c-secondary-list, 2) !default;
+
+$c-btn-flat-text:                         $c-btn-dark-text !default;
+$c-btn-flat-disable-text:                 nth($c-secondary-list, 4) !default;
+
+// inverse
+$c-btn-inverse:                           transparent !default;
+$c-btn-inverse-border:                    nth($c-secondary-list, 4) !default;
+$c-btn-inverse-hover:                     nth($c-secondary-list, 5) !default;
+$c-btn-inverse-active:                    nth($c-secondary-list, 6) !default;
+$c-btn-inverse-disable:                   transparent !default;
+
+$c-btn-inverse-text:                      $c-white !default;
+$c-btn-inverse-disable-text:              nth($c-secondary-list, 3) !default;
+
+// basic
+$btn-basic: (
+  "default": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-btn-text,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-btn-dark-text,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-btn-dark-text,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-btn-text, 26%)
+  ),
+  "primary": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-primary,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-primary,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-primary,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-primary, 26%)
+  ),
+  "success": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-success,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-success,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-success,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-success, 26%)
+  ),
+  "info": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-info,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-info,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-info,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-info, 26%)
+  ),
+  "warning": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-warning,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-warning,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-warning,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-warning, 26%)
+  ),
+  "alarm": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-alarm,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-alarm,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-alarm,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-alarm, 26%)
+  ),
+  "link": (
+    "c-bg":                               transparent,
+    "c-border":                           transparent,
+    "c-txt":                              $link-color,
+    "c-hover-bg":                         transparent,
+    "c-hover-border":                     transparent,
+    "c-hover-txt":                        $link-hover-color,
+    "c-active-bg":                        transparent,
+    "c-active-border":                    transparent,
+    "c-active-txt":                       $link-active-color,
+    "c-disable-bg":                       transparent,
+    "c-disable-border":                   transparent,
+    "c-disable-txt":                      $link-disabled-color
+  ),
+  "darklink": (
+    "c-bg":                               transparent,
+    "c-border":                           transparent,
+    "c-txt":                              nth($c-secondary-list, 7),
+    "c-hover-bg":                         transparent,
+    "c-hover-border":                     transparent,
+    "c-hover-txt":                        nth($c-secondary-list, 6),
+    "c-active-bg":                        transparent,
+    "c-active-border":                    transparent,
+    "c-active-txt":                       nth($c-secondary-list, 8),
+    "c-disable-bg":                       transparent,
+    "c-disable-border":                   transparent,
+    "c-disable-txt":                      nth($c-secondary-list, 4))) !default;
+
+// light
+$btn-light: (
+  "default": (
+    "c-bg":                               $c-white,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-btn-text,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-btn-dark-text,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-btn-dark-text,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-btn-text, 26%)
+  ),
+  "primary": (
+    "c-bg":                               $c-white,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-primary,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-primary,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-primary,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-primary, 26%)
+  ),
+  "success": (
+    "c-bg":                               $c-white,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-success,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-success,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-success,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-success, 26%)
+  ),
+  "info": (
+    "c-bg":                               $c-white,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-info,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-info,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-info,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-info, 26%)
+  ),
+  "warning": (
+    "c-bg":                               $c-white,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-warning,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-warning,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-warning,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-warning, 26%)
+  ),
+  "alarm": (
+    "c-bg":                               $c-white,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-alarm,
+    "c-hover-bg":                         $c-btn-light-hover,
+    "c-hover-border":                     $c-btn-light-border,
+    "c-hover-txt":                        $c-alarm,
+    "c-active-bg":                        $c-btn-light-active,
+    "c-active-border":                    $c-btn-light-border,
+    "c-active-txt":                       $c-alarm,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-alarm, 26%))) !default;
+
+
+// flat
+$btn-flat: (
+  "default": (
+    "c-bg":                               $c-btn-flat,
+    "c-border":                           $c-btn-flat-border,
+    "c-txt":                              $c-btn-flat-text,
+    "c-hover-bg":                         $c-btn-flat-hover,
+    "c-hover-border":                     $c-btn-flat-hover,
+    "c-hover-txt":                        $c-btn-flat-text,
+    "c-active-bg":                        $c-btn-flat-active,
+    "c-active-border":                    $c-btn-flat-active,
+    "c-active-txt":                       $c-btn-flat-text,
+    "c-disable-bg":                       $c-btn-flat,
+    "c-disable-border":                   lighten($c-btn-flat-border, 10%),
+    "c-disable-txt":                      $c-btn-flat-disable-text
+  ),
+  "primary": (
+    "c-bg":                               $c-primary,
+    "c-border":                           $c-primary,
+    "c-txt":                              $c-btn-light,
+    "c-hover-bg":                         lighten($c-primary, 10%),
+    "c-hover-border":                     lighten($c-primary, 10%),
+    "c-hover-txt":                        $c-btn-light,
+    "c-active-bg":                        darken($c-primary, 12%),
+    "c-active-border":                    darken($c-primary, 12%),
+    "c-active-txt":                       $c-btn-light,
+    "c-disable-bg":                       lighten($c-primary, 40%),
+    "c-disable-border":                   lighten($c-primary, 40%),
+    "c-disable-txt":                      $c-btn-light
+  ),
+  "success": (
+    "c-bg":                               $c-success,
+    "c-border":                           $c-success,
+    "c-txt":                              $c-btn-light,
+    "c-hover-bg":                         lighten($c-success, 10%),
+    "c-hover-border":                     lighten($c-success, 10%),
+    "c-hover-txt":                        $c-btn-light,
+    "c-active-bg":                        darken($c-success, 12%),
+    "c-active-border":                    darken($c-success, 12%),
+    "c-active-txt":                       $c-btn-light,
+    "c-disable-bg":                       lighten($c-success, 40%),
+    "c-disable-border":                   lighten($c-success, 40%),
+    "c-disable-txt":                      $c-btn-light
+  ),
+  "info": (
+    "c-bg":                               $c-info,
+    "c-border":                           $c-info,
+    "c-txt":                              $c-btn-light,
+    "c-hover-bg":                         lighten($c-info, 10%),
+    "c-hover-border":                     lighten($c-info, 10%),
+    "c-hover-txt":                        $c-btn-light,
+    "c-active-bg":                        darken($c-info, 12%),
+    "c-active-border":                    darken($c-info, 12%),
+    "c-active-txt":                       $c-btn-light,
+    "c-disable-bg":                       lighten($c-info, 40%),
+    "c-disable-border":                   lighten($c-info, 40%),
+    "c-disable-txt":                      $c-btn-light
+  ),
+  "warning": (
+    "c-bg":                               $c-warning,
+    "c-border":                           $c-warning,
+    "c-txt":                              $c-btn-light,
+    "c-hover-bg":                         lighten($c-warning, 10%),
+    "c-hover-border":                     lighten($c-warning, 10%),
+    "c-hover-txt":                        $c-btn-light,
+    "c-active-bg":                        darken($c-warning, 12%),
+    "c-active-border":                    darken($c-warning, 12%),
+    "c-active-txt":                       $c-btn-light,
+    "c-disable-bg":                       lighten($c-warning, 40%),
+    "c-disable-border":                   lighten($c-warning, 40%),
+    "c-disable-txt":                      $c-btn-light
+  ),
+  "alarm": (
+    "c-bg":                               $c-alarm,
+    "c-border":                           $c-alarm,
+    "c-txt":                              $c-btn-light,
+    "c-hover-bg":                         lighten($c-alarm, 10%),
+    "c-hover-border":                     lighten($c-alarm, 10%),
+    "c-hover-txt":                        $c-btn-light,
+    "c-active-bg":                        darken($c-alarm, 12%),
+    "c-active-border":                    darken($c-alarm, 12%),
+    "c-active-txt":                       $c-btn-light,
+    "c-disable-bg":                       lighten($c-alarm, 40%),
+    "c-disable-border":                   lighten($c-alarm, 40%),
+    "c-disable-txt":                      $c-btn-light)) !default;
+
+
+// inverse
+$btn-inverse: (
+  "default": (
+    "c-bg":                               $c-btn-inverse,
+    "c-border":                           $c-btn-inverse-border,
+    "c-txt":                              $c-btn-inverse-text,
+    "c-hover-bg":                         $c-btn-inverse-hover,
+    "c-hover-border":                     $c-btn-inverse-hover,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        $c-btn-inverse-active,
+    "c-active-border":                    $c-btn-inverse-active,
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       $c-btn-inverse-disable,
+    "c-disable-border":                   lighten($c-btn-inverse-border, 10%),
+    "c-disable-txt":                      $c-btn-inverse-disable-text
+  ),
+  "primary": (
+    "c-bg":                               $c-btn-inverse,
+    "c-border":                           $c-primary,
+    "c-txt":                              $c-primary,
+    "c-hover-bg":                         $c-primary,
+    "c-hover-border":                     $c-primary,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-primary, 12%),
+    "c-active-border":                    darken($c-primary, 12%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       lighten($c-primary, 40%),
+    "c-disable-border":                   lighten($c-primary, 40%),
+    "c-disable-txt":                      $c-btn-light-text
+  ),
+  "success": (
+    "c-bg":                               $c-btn-inverse,
+    "c-border":                           $c-success,
+    "c-txt":                              $c-success,
+    "c-hover-bg":                         $c-success,
+    "c-hover-border":                     $c-success,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-success, 12%),
+    "c-active-border":                    darken($c-success, 12%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       lighten($c-success, 40%),
+    "c-disable-border":                   lighten($c-success, 40%),
+    "c-disable-txt":                      $c-btn-light-text
+  ),
+  "info": (
+    "c-bg":                               $c-btn-inverse,
+    "c-border":                           $c-info,
+    "c-txt":                              $c-info,
+    "c-hover-bg":                         $c-info,
+    "c-hover-border":                     $c-info,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-info, 12%),
+    "c-active-border":                    darken($c-info, 12%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       lighten($c-info, 40%),
+    "c-disable-border":                   lighten($c-info, 40%),
+    "c-disable-txt":                      $c-btn-light-text
+  ),
+  "warning": (
+    "c-bg":                               $c-btn-inverse,
+    "c-border":                           $c-warning,
+    "c-txt":                              $c-warning,
+    "c-hover-bg":                         $c-warning,
+    "c-hover-border":                     $c-warning,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-warning, 12%),
+    "c-active-border":                    darken($c-warning, 12%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       lighten($c-warning, 40%),
+    "c-disable-border":                   lighten($c-warning, 40%),
+    "c-disable-txt":                      $c-btn-light-text
+  ),
+  "alarm": (
+    "c-bg":                               $c-btn-inverse,
+    "c-border":                           $c-alarm,
+    "c-txt":                              $c-alarm,
+    "c-hover-bg":                         $c-alarm,
+    "c-hover-border":                     $c-alarm,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-alarm, 12%),
+    "c-active-border":                    darken($c-alarm, 12%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       lighten($c-alarm, 40%),
+    "c-disable-border":                   lighten($c-alarm, 40%),
+    "c-disable-txt":                      $c-btn-light-text)) !default;
+
+// social
+$btn-social: (
+  "facebook": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-facebook,
+    "c-hover-bg":                         $c-facebook,
+    "c-hover-border":                     $c-facebook,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-facebook, 10%),
+    "c-active-border":                    darken($c-facebook, 10%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-facebook, 26%)
+  ),
+  "twitter": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-twitter,
+    "c-hover-bg":                         $c-twitter,
+    "c-hover-border":                     $c-twitter,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-twitter, 10%),
+    "c-active-border":                    darken($c-twitter, 10%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-twitter, 26%)
+  ),
+  "youtube": (
+    "c-bg":                               $c-btn-light,
+    "c-border":                           $c-btn-light-border,
+    "c-txt":                              $c-youtube,
+    "c-hover-bg":                         $c-youtube,
+    "c-hover-border":                     $c-youtube,
+    "c-hover-txt":                        $c-btn-light-text,
+    "c-active-bg":                        darken($c-youtube, 10%),
+    "c-active-border":                    darken($c-youtube, 10%),
+    "c-active-txt":                       $c-btn-light-text,
+    "c-disable-bg":                       $c-btn-light,
+    "c-disable-border":                   lighten($c-btn-light-border, 10%),
+    "c-disable-txt":                      lighten($c-youtube, 26%)
+  ),
+) !default;
+
+// size
+$btn-border-radius:                       $border-radius !default;
+$btn-padding:                             calc(#{$padding-base-vertical} - 1px) $padding-base-horizontal !default;
+$btn-small-padding:                       calc(#{$padding-base-vertical} - 2px) $padding-base-horizontal !default;
+$btn-font-size:                           $font-size-base !default;
+$btn-line-height:                         $line-height-small !default;
+$btn-height:                              ($btn-font-size + $padding-base-vertical*2) !default;
+
+$b-size: (
+  "xlarge": (
+    "pad-size":                           $padding-xlarge-vertical $padding-xlarge-horizontal,
+    "font-size":                          $font-size-xlarge,
+    "border-radius":                      $border-radius + 2
+  ),
+  "large": (
+    "pad-size":                           $padding-large-vertical $padding-large-horizontal,
+    "font-size":                          $font-size-large,
+    "border-radius":                      $border-radius + 1
+  ),
+  "small": (
+    "pad-size":                           $padding-small-vertical $padding-small-horizontal,
+    "font-size":                          $font-size-small,
+    "border-radius":                      $border-radius - 1
+  ),
+  "xsmall": (
+    "pad-size":                           $padding-xsmall-vertical $padding-xsmall-horizontal,
+    "font-size":                          $font-size-xsmall,
+    "border-radius":                      $border-radius - 2)) !default;
+
+// components
+$btn-i-margin-top:                        -3px !default;
+$btn-i-spacing:                           0.4rem !default; // 6px
+$btn-icon-hover-color:                    nth($c-secondary-list, 4) !default;
+
+
+// ----- card ----- //
+
+$card-padding:                            0.75rem 1.25rem !default;
+$card-border-color:                       nth($c-secondary-list, 3) !default;
+$card-bg-color:                           $c-white !default;
+$card-header-title-color:                 nth($c-secondary-list, 7) !default;
+$card-header-min-height:                  50px !default;
+$card-header-hero-height:                 183px !default;
+$card-content-color:                      nth($c-secondary-list, 6) !default;
+$card-content-subtitle-color:             nth($c-secondary-list, 5) !default;
+$card-content-padding:                    0.75rem 1.25rem !default;
+$card-interactive-padding:                0.25rem 1.25rem !default;
+$card-interactive-min-height:             40px !default;
+$card-interactive-hover-bg-color:         nth($c-secondary-list, 2) !default;
+$card-interactive-active-bg-color:        nth($c-secondary-list, 3) !default;
+
+$card-btn-highlight-color:                $c-primary !default;
+$card-btn-bg-color:                       $c-white !default;
+$card-btn-hover-bg-color:                 nth($c-secondary-list, 3) !default;
+$card-btn-active-bg-color:                nth($c-secondary-list, 4) !default;
+$card-footer-link-color:                  nth($c-secondary-list, 7) !default;
+$card-footer-primary-link-color:          $c-primary !default;
+$card-footer-height:                      50px !default;
+
+// with icon
+$card-icon-max-width:                     300px !default;
+
+// with icon left
+$card-icon-left-max-width:                600px !default;
+$card-icon-left-icon-width:               120px !default;
+
+// with badge
+$card-header-badge-width:                 60px !default;
+
+// interactive
+$card-interactive-separate-bg-color:      nth($c-secondary-list, 3) !default;
+$card-interactive-color:                  nth($c-secondary-list, 5) !default;
+$card-interactive-btn-selected-color:     nth($c-alarm-list, 3) !default;
+
+// mask
+$card-mask-bg-color:                      rgba(nth($c-secondary-list, 6), 0.6) !default;
+
+
+// ----- checkbox ----- //
+
+// checkbox circle style
+$checkbox-bg-color:                       $c-white !default;
+$checkbox-default-color:                  nth($c-secondary-list, 4) !default;
+$checkbox-primary-color:                  $c-primary !default;
+$checkbox-shadow-color:                   rgba($c-primary, 0.2) !default;
+$checkbox-disable-color:                  nth($c-secondary-list, 5) !default;
+$checkbox-disable-border-color:           nth($c-secondary-list, 3) !default;
+$checkbox-default-border-color:           nth($c-secondary-list, 4) !default;
+$checkbox-size:                           16px !default;
+$checkbox-checked-size:                   14px !default;
+$checkbox-border-radius:                  2px !default;
+$checkbox-min-width:                      $checkbox-size !default;
+$checkbox-min-height:                     $checkbox-min-width !default;
+$checkbox-selected-color:                 $c-primary !default;
+$checkbox-bg-color:                       $c-white !default;
+
+// checkbox text style
+$checkbox-label-default-color:            nth($c-secondary-list, 7) !default;
+$checkbox-label-disable-color:            nth($c-secondary-list, 5) !default;
+$checkbox-label-margin:                   0 5px 0 0 !default;
+
+
+// ----- dropdown ----- //
+
+$dropdown-menu-min-width:                 160px !default;
+$dropdown-menu-padding:                   10px 0 !default;
+$dropdown-menu-margin:                    8px 0 0 !default;
+
+$dropdown-border-color:                   nth($c-secondary-list, 4) !default;
+$dropdown-border-width:                   1px !default;
+
+$dropdown-menu-border:                    $dropdown-border-width solid $dropdown-border-color !default;
+$dropdown-menu-font-size:                 $font-size-base !default;
+$dropdown-menu-color:                     $c-text !default;
+$dropdown-menu-bg-color:                  $c-white !default;
+$dropdown-menu-border-radius:             $border-radius !default;
+
+$dropdown-menu-toggle-bg-color:           $c-white !default;
+$dropdown-menu-toggle-hover-bg-color:     $c-btn-light-hover !default;
+
+$dropdown-menu-ul-arrow-size:             10px !default;
+$dropdown-menu-ul-arrow-bg-size:          11px !default;
+
+$dropdown-menu-li-padding:                0.3em 1em 0.35em !default;
+$dropdown-menu-li-line-height:            $line-height-small !default;
+$dropdown-menu-li-color:                  $c-text !default;
+$dropdown-menu-li-bg-color:               $c-text-bg !default;
+$dropdown-menu-li-hover-bg-color:         $c-text-hover-bg !default;
+
+$dropdown-caret-spacing:                  4px !default;
+$dropdown-caret-border-width:             4px !default;
+
+$dropdown-divider-margin:                 9px 0 !default;
+
+
+// ----- input ----- //
+
+// color
+$input-color:                             nth($c-secondary-list, 7) !default;
+$input-placeholder-color:                 nth($c-secondary-list, 5) !default;
+$input-bg-color:                          $c-text-bg !default;
+$input-border-color:                      nth($c-secondary-list, 4) !default;
+
+// z-index
+$input-z-index:                           z(module, base) !default;
+$input-focus-z-index:                     z(module, upper) !default;
+$input-icon-z-index:                      z(module, upper) !default;
+$input-btn-z-index:                       z(module, base) !default;
+
+// input
+$input-margin-bottom:                     1.333rem !default; // 20px;
+$input-border:                            1px solid $input-border-color !default;
+$input-font-size:                         $font-size-base !default;
+$input-border-radius:                     $border-radius !default;
+$input-line-height:                       $line-height-small !default;
+$input-vertical-padding:                  calc(#{$padding-base-vertical} - 1px) !default;
+$input-horizontal-padding:                $padding-small-horizontal !default;
+$input-height:                            ($line-height-small + $padding-base-vertical*2) !default;
+
+$input-focus-border:                      1px solid $c-primary !default;
+$input-focus-box-shadow:                  0 0 0 2px rgba($c-primary, 0.2) !default;
+
+// input addon
+$input-addon-weight:                      400 !default;
+$input-addon-color:                       $c-text !default;
+$input-addon-bg-color:                    nth($c-secondary-list, 2) !default;
+
+$input-addon-input-padding:               2px !default;
+$input-addon-input-margin:                -6px 0 -4px !default;
+$input-addon-input-height:                $input-height*0.74 !default;
+$input-addon-input-width:                 $input-addon-input-height !default;
+$input-addon-border-radius:               $input-border-radius !default;
+
+// input states
+$input-alarm-bg-color:                    nth($c-alarm-list, 1) !default;
+$input-alarm-border-color:                nth($c-alarm-list, 5) !default;
+$input-alarm-placeholder-color:           nth($c-alarm-list, 5) !default;
+$input-warning-border-color:              $c-warning !default;
+$input-success-border-color:              $c-success !default;
+$input-disable-bg-color:                  nth($c-secondary-list, 2) !default;
+$input-disable-border-color:              nth($c-secondary-list, 4) !default;
+$input-disable-placeholder-color:         nth($c-secondary-list, 4) !default;
+
+// input icon
+$input-icon-color:                        $c-text !default;
+$input-icon-width:                        2.2em !default;
+$input-icon-top:                          calc(50% - 0.5em) !default;
+
+// input label
+
+$input-label-font-size:                   $font-size-small !default;
+$input-label-color:                       $c-text !default;
+$input-label-line-height:                 $line-height-large !default;
+
+// inline
+$input-inline-label-width:                8rem !default; // 120px
+$input-inline-label-padding-right:        1.2rem !default; // 18px
+$input-inline-label-padding-top:          calc(#{$input-height/2 - $input-font-size/2} + 2px) !default;
+$input-inline-label-margin-bottom:        1.866rem !default; // 28px
+$input-inline-label-line-height:          $line-height-small !default;
+
+// hint
+$input-hint-font-size:                    $font-size-xsmall !default;
+$input-hint-line-height:                  $line-height-base !default;
+$input-hint-item-spacing:                 0.4rem !default; // 6px
+$input-hint-padding-left:                 1px !default; // input border width
+$input-hint-color:                        $c-text !default;
+
+// required
+$input-asterisk-size:                     4px !default;
+$input-asterisk-color:                    $c-alarm !default;
+$input-asterisk-margin:                   -$input-asterisk-size/2 8px 0 0 !default;
+$input-asterisk-padding-top:              $input-label-font-size*$input-label-line-height/2 !default;
+
+$input-asterisk-placeholder-width:        calc(100% - #{$input-asterisk-size + nth($input-asterisk-margin, 2)}) !default;
+$input-asterisk-placeholder-padding-top:  $input-height/2 !default;
+
+$input-asterisk-floating-input-margin-top:$input-label-font-size*$input-label-line-height !default;
+$input-asterisk-floating-padding-top:     $input-asterisk-floating-input-margin-top + $input-asterisk-placeholder-padding-top !default;
+
+$input-asterisk-inline-margin:            -$input-asterisk-size/2 0 0 8px !default;
+$input-asterisk-inline-padding-top:       $input-label-font-size/2 !default;
+
+
+// ----- list group ----- //
+
+$list-bg-color:                           $c-white !default;
+$list-item-color:                         nth($c-secondary-list, 7) !default;
+$list-item-border-color:                  nth($c-secondary-list, 3) !default;
+$list-item-hover-bg-color:                nth($c-secondary-list, 3) !default;
+$list-item-active-bg-color:               nth($c-secondary-list, 4) !default;
+$list-item-title-color:                   nth($c-secondary-list, 7) !default;
+$list-item-content-color:                 nth($c-secondary-list, 6) !default;
+$list-item-badge-bg-color:                $c-info !default;
+$list-item-last-width:                    65px !default;
+$list-item-padding:                       0.75rem 1rem !default;
+$list-item-font-size:                     1.125rem !default;
+$list-item-link-font-size:                10px !default;
+$list-avatar-padding: (
+  "xsmall": (
+    "padding-left":                       $avatar-width-xsmall
+  ),
+  "small": (
+    "padding-left":                       $avatar-width-small
+  ),
+  "large": (
+    "padding-left":                       $avatar-width-large
+  ),
+  "xlarge": (
+    "padding-left":                       $avatar-width-xlarge
+  )
+) !default;
+
+// default dark
+$dark-list-bg-color:                      nth($c-secondary-list, 7) !default;
+$dark-list-item-color:                    $c-white !default;
+$dark-list-item-border-color:             nth($c-secondary-list, 6) !default;
+$dark-list-item-hover-bg-color:           nth($c-secondary-list, 5) !default;
+$dark-list-item-active-bg-color:          nth($c-secondary-list, 6) !default;
+$dark-list-item-title-color:              $c-white !default;
+$dark-list-item-content-color:            $c-white !default;
+$dark-list-item-icon-color:               nth($c-secondary-list, 4) !default;
+
+
+// ----- menu ----- //
+
+$menu-item-padding-small:                 5px 10px !default;
+$menu-item-padding-middle:                10px 20px !default;
+$menu-item-padding-large:                 10px 30px !default;
+
+$menu-transition:                         all 300ms ease-out !default;
+
+$menu-border:                             1px solid nth($c-secondary-list, 5) !default;
+$menu-border-radius:                      0.25em !default;
+
+$menu-item-font-color:                    nth($c-secondary-list, 5) !default;
+$menu-item-font-color-hover:              nth($c-secondary-list, 7) !default;
+$menu-bg-color-blue:                      $link-color !default;
+$menu-bg-color-blue-hover:                nth($c-secondary-list, 2) !default;
+$menu-bg-color-gray:                      #dddddd !default;
+
+
+// ----- pagination ----- //
+
+$pagination-border-color:                 nth($c-secondary-list, 4) !default;
+$pagination-bg-color:                     nth($c-secondary-list, 1) !default;
+$pagination-hover-bg-color:               nth($c-secondary-list, 3) !default;
+$pagination-active-bg-color:              nth($c-secondary-list, 4) !default;
+$pagination-selected-bg-color:            nth($c-secondary-list, 4) !default;
+$pagination-color:                        nth($c-secondary-list, 7) !default;
+$pagination-link-padding:                 0.53rem 0.8rem  !default;
+$pagination-link-border-radius:           4px             !default;
+$pagination-link-margin:                  2px             !default;
+
+
+// ----- radio ----- //
+
+// radio circle style
+$radio-bg-color:                          $c-white !default;
+$radio-default-color:                     nth($c-secondary-list, 4) !default;
+$radio-primary-color:                     $c-primary !default;
+$radio-shadow-color:                      rgba($c-primary, 0.2) !default;
+$radio-disable-color:                     nth($c-secondary-list, 4) !default;
+$radio-disable-border-color:              nth($c-secondary-list, 3) !default;
+$radio-circle-size:                       15px !default;
+$radio-circle-selected-size:              9px !default;
+
+// radio text style
+$radio-label-default-color:               nth($c-secondary-list, 7) !default;
+$radio-label-disable-color:               nth($c-secondary-list, 5) !default;
+$radio-label-padding:                     0 0 0 ($radio-circle-size+5px) !default;
+$radio-label-margin:                      0 5px 10px 0 !default;
+
+
+// ----- switch ----- //
+
+$switch-border-radius:                    4px   !default;
+$switch-border-color:                     nth($c-secondary-list, 4) !default;
+$switch-width:                            53px  !default;
+$switch-height:                           24px  !default;
+
+$switch-circle-width:                     36px  !default;
+$switch-circle-height:                    $switch-circle-width !default;
+
+$switch-text-width:                       18px !default;
+$switch-text-height:                      $switch-text-width !default;
+
+$switch-label-bg-color:                   nth($c-secondary-list, 2) !default;
+$switch-btn-color:                        nth($c-secondary-list, 4) !default;
+
+$switch-checked-highlight-color:          $c-primary !default;
+$switch-label-checked-bg-color:           $switch-checked-highlight-color !default;
+$switch-label-checked-box-shadow:         0 0 0 1px $switch-checked-highlight-color !default;
+$switch-btn-checked-color:                $switch-checked-highlight-color !default;
+$switch-btn-checked-box-shadow:           0 0 0 3px rgba($switch-checked-highlight-color, 0.3) !default;
+$switch-btn-icon-checked-color:           $switch-checked-highlight-color !default;
+
+$switch-text-label-color:                 nth($c-secondary-list, 4) !default;
+$switch-disabled-btn-bg-color:            nth($c-secondary-list, 2) !default;
+
+
+// ----- table ----- //
+
+$table-td-color:                          nth($c-secondary-list, 7) !default;
+$table-th-color:                          nth($c-secondary-list, 7) !default;
+$table-border-color:                      nth($c-secondary-list, 3) !default;
+$table-striped-bg-color:                  nth($c-secondary-list, 1) !default;
+$table-highlight-bg-color:                nth($c-secondary-list, 3) !default;
+
+$table-selected-bg-color:                 #d0f2ff !default;
+
+
+// -------------------------------------
+//   structures
+// -------------------------------------
+
+// ----- layout ----- //
+
+$layout-body-bg:                          nth($c-secondary-list, 5) !default;
+
+$ap-header-z-index:                       z(module, base) !default;
+$ap-main-z-index:                         z(module, base) !default;
+$ap-nav-z-index:                          z(module, upper) !default;
+
+$ap-wrapper-bg-color:                     nth($c-black-list, 1) !default;
+$ap-wrapper-max-width:                    1440px !default;
+$ap-wrapper-bg-light-color:               $c-white !default;
+$ap-box-box-shadow:                       0px 5px 10px rgba($c-black, .33) !default;
+
+$ap-header-height:                        50px !default;
+$ap-header-top:                           0 !default;
+$ap-header-left:                          0 !default;
+$ap-header-right:                         0 !default;
+$ap-header-bg-color:                      $c-white !default;
+$ap-header-border-bottom:                 1px solid nth($c-secondary-list, 4) !default;
+
+$ap-nav-top:                              0 !default;
+$ap-nav-bottom:                           0 !default;
+$ap-nav-transition:                       width $transition-duration $transition-timing !default;
+$ap-nav-width-list:                       100% 45px 220px !default; // mobile, shrinking, normal
+$ap-nav-width:                            nth($ap-nav-width-list, 3) !default;
+$ap-nav-bg-color:                         nth($c-secondary-list, 7) !default;
+
+$ap-main-transition:                      all 0.5s cubic-bezier(0.86, 0, 0.07, 1) !default;
+$ap-main-padding-left:                    $ap-nav-width !default;
+$ap-main-padding-top:                     $ap-header-height !default;
+
+
+// ----- container ----- //
+
+$ap-main-padding-top:                     $ap-header-height !default;
+$container-max-width:                     1000px !default;
+
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+$bp: (
+  desktop:                                1440px,
+  pad-land:                               1024px,
+  pad-middle:                             800px,
+  pad-portrait:                           768px,
+  phone-land:                             667px,
+  phone-middle:                           480px,
+  phone-portrait:                         320px
+) !default;
+
+$layout-bp-list:                          480px 800px !default; // mobile, shrinking nav
+$grid-bp-list:                            480px 800px !default; // xs, md
+$table-bp-list:                           800px !default;
+
+// 開關左側欄 nav
+$open-nav-ap-nav-width:                   nth($ap-nav-width-list, 2) !default;
+$open-nav-ap-main-padding-left:           $open-nav-ap-nav-width !default;
+
+// 設定最大寬度
+$ap-wrapper-desktop-margin:               10px auto !default;
+$ap-wrapper-desktop-height:               calc(100% - #{nth($ap-wrapper-desktop-margin, 1)*2}) !default;
+

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="552px" height="753px" viewBox="0 0 552 753" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 39 Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="1.00629672%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#00C3FF" offset="0%"></stop>
+            <stop stop-color="#0E86FE" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="150" height="30" rx="4"></rect>
+        <rect id="path-3" x="270" y="103" width="160" height="30" rx="4"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-39-Copy-2" transform="translate(1.076143, 0.000000)">
+            <text id="bars-copy" font-family="FontAwesome" font-size="16" font-weight="normal" fill="#F7F9FE">
+                <tspan x="6" y="54"></tspan>
+            </text>
+            <rect id="body-bg-copy-2" fill="#F8F8F8" x="0" y="0" width="550" height="753"></rect>
+            <rect id="Rectangle-3" fill="#FFFFFF" x="230" y="462" width="298" height="236"></rect>
+            <path d="M91.0546875,26.0000255 C91.0546875,23.7908724 92.8468376,22 95.0629154,22 L546.655835,22 C548.869518,22 550.664062,23.7964248 550.664062,26.0000255 L550.664062,62 L91.0546875,62 L91.0546875,26.0000255 Z" id="header-copy-3" fill="url(#linearGradient-1)"></path>
+            <g id="Group-6-Copy-8" transform="translate(222.000000, 32.000000)" fill="#FFFFFF">
+                <path d="M0,3.9992748 C0,1.79053632 1.79293677,0 3.99215719,0 L130.007843,0 C132.21265,0 134,1.78679466 134,3.9992748 L134,30 L0,30 L0,3.9992748 Z" id="BG" opacity="0.3"></path>
+                <text id="7:20" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal">
+                    <tspan x="12.5982906" y="21">Paper docs</tspan>
+                </text>
+            </g>
+            <g id="Group-7-Copy-3" transform="translate(366.000000, 32.000000)">
+                <path d="M0,3.9992748 C0,1.79053632 1.78564453,0 4.00988126,0 L154.990119,0 C157.204715,0 159,1.78679466 159,3.9992748 L159,30 L0,30 L0,3.9992748 Z" id="BG" fill="#FFFFFF"></path>
+                <text id="7:20" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                    <tspan x="16" y="21">Electronic docs</tspan>
+                </text>
+            </g>
+            <rect id="nav-copy" fill="#456297" x="0" y="22" width="200" height="731"></rect>
+            <rect id="Rectangle-116-Copy" fill="#456297" x="0" y="22" width="200" height="50"></rect>
+            <g id="Group-2-Copy-24" transform="translate(42.000000, 32.000000)">
+                <g id="Group-4">
+                    <g id="Rectangle-35-Copy-7">
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        <rect stroke="#C3D1EB" stroke-width="1" x="0.5" y="0.5" width="149" height="29" rx="4"></rect>
+                    </g>
+                    <text id="documents" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                        <tspan x="12" y="21">documents</tspan>
+                    </text>
+                    <text id="sort-desc---fontawesome" font-family="FontAwesome" font-size="14" font-weight="normal" fill="#7189B6">
+                        <tspan x="129" y="17"></tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Group-21-Copy-2" transform="translate(0.000000, 192.000000)">
+                <rect id="Rectangle-944-Copy-18" fill="#1E3768" x="0" y="0" width="200" height="40"></rect>
+                <text id="Hardware" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="54" y="26">Hardware</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-944-Copy-21" fill="#1E3768" x="0" y="272" width="200" height="40"></rect>
+            <g id="Group-20-Copy" transform="translate(0.000000, 232.000000)">
+                <rect id="Rectangle-944-Copy-19" fill="#1E3768" x="0" y="0" width="200" height="40"></rect>
+                <text id="Software" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="54" y="26">Software</tspan>
+                </text>
+            </g>
+            <text id="Stationery-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="54" y="298">Stationery</tspan>
+            </text>
+            <rect id="Rectangle-944-Copy-22" fill="#2A487F" x="0" y="112" width="200" height="40"></rect>
+            <text id="Appointments-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#00C3FF">
+                <tspan x="39" y="138">Appointments</tspan>
+            </text>
+            <g id="Group-23-Copy-3" transform="translate(0.000000, 152.000000)">
+                <rect id="Rectangle-944-Copy-17" fill="#2A487F" x="0" y="0" width="200" height="40"></rect>
+                <text id="Requisitions" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="39" y="26">Requisitions</tspan>
+                </text>
+                <text id="-copy-3" transform="translate(180.000000, 20.000000) rotate(-180.000000) translate(-180.000000, -20.000000) " font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                    <tspan x="174" y="24"></tspan>
+                </text>
+            </g>
+            <rect id="Rectangle-944-Copy-2" fill="#456297" x="0" y="72" width="200" height="40"></rect>
+            <text id="-copy-2" transform="translate(180.000000, 92.000000) rotate(-180.000000) translate(-180.000000, -92.000000) " font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                <tspan x="174" y="96"></tspan>
+            </text>
+            <g id="Group-8-Copy" transform="translate(0.000000, 312.000000)">
+                <rect id="Rectangle-944-Copy-6" fill="#456297" x="0" y="0" width="200" height="40"></rect>
+                <rect id="Rectangle-944-Copy-8" fill="#456297" x="0" y="40" width="200" height="40"></rect>
+                <text id="Form-Operation" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="24" y="26">Form Operation</tspan>
+                </text>
+                <text id="File-Managment" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="24" y="66">File Managment</tspan>
+                </text>
+                <rect id="Rectangle-944-Copy-9" fill="#456297" x="0" y="80" width="200" height="40"></rect>
+                <text id="Integrated-Delivery" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="24" y="106">Integrated Delivery</tspan>
+                </text>
+                <rect id="Rectangle-944-Copy-10" fill="#456297" x="0" y="120" width="200" height="40"></rect>
+                <text id="Register-Operation" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="24" y="146">Register Operation</tspan>
+                </text>
+                <rect id="Rectangle-944-Copy-11" fill="#456297" x="0" y="160" width="200" height="40"></rect>
+                <text id="Remove-Operation" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="24" y="186">Remove Operation</tspan>
+                </text>
+                <text id="chevron-down---fontawesome" font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                    <tspan x="174" y="24"></tspan>
+                </text>
+                <text id="-copy-5" font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                    <tspan x="174" y="64"></tspan>
+                </text>
+                <text id="-copy-6" font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                    <tspan x="174" y="104"></tspan>
+                </text>
+                <text id="-copy-7" font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                    <tspan x="174" y="144"></tspan>
+                </text>
+                <text id="-copy-8" font-family="FontAwesome" font-size="12" font-weight="normal" fill="#00C3FF">
+                    <tspan x="174" y="184"></tspan>
+                </text>
+            </g>
+            <text id="Doc-Inbox-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#FFFFFF">
+                <tspan x="24" y="98">Doc Inbox</tspan>
+            </text>
+            <path d="M0,72 L200,72" id="Line-Copy-3" stroke="#7189B6" stroke-linecap="square"></path>
+            <text id="-copy" font-family="FontAwesome" font-size="15" font-weight="normal" fill="#FFFFFF">
+                <tspan x="332" y="53"></tspan>
+            </text>
+            <text id="-copy-2" font-family="FontAwesome" font-size="15" font-weight="normal" fill="#95ABD3">
+                <tspan x="504" y="53"></tspan>
+            </text>
+            <rect id="Rectangle-117-Copy-2" fill="#456297" x="228" y="93" width="300" height="50"></rect>
+            <text id="bars-copy-2" font-family="FontAwesome" font-size="16" font-weight="normal" fill="#F7F9FE">
+                <tspan x="243" y="124"></tspan>
+            </text>
+            <g id="Rectangle-35-Copy-8">
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                <rect stroke="#C3D1EB" stroke-width="1" x="270.5" y="103.5" width="159" height="29" rx="4"></rect>
+            </g>
+            <text id="Please-select…-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                <tspan x="282" y="124">Please select…</tspan>
+            </text>
+            <text id="sort-desc---fontawesome-copy" font-family="FontAwesome" font-size="14" font-weight="normal" fill="#456297">
+                <tspan x="412" y="121"></tspan>
+            </text>
+            <rect id="Rectangle-376-Copy-9" fill="#F7F9FE" x="228" y="143" width="300" height="40"></rect>
+            <rect id="Rectangle-376-Copy-10" fill="#F7F9FE" x="228" y="183" width="300" height="40"></rect>
+            <text id="Paper-docs-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                <tspan x="243" y="169">Paper docs</tspan>
+            </text>
+            <text id="Electronic-docs-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                <tspan x="243" y="209">Electronic docs</tspan>
+            </text>
+            <path d="M228,183 L528,183" id="Line-Copy-23" stroke="#D8E3F6" stroke-linecap="square"></path>
+            <rect id="Rectangle-376-Copy-11" fill="#F7F9FE" x="228" y="223" width="300" height="40"></rect>
+            <path d="M228,223 L528,223" id="Line-Copy-25" stroke="#D8E3F6" stroke-linecap="square"></path>
+            <text id="Online-Application-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                <tspan x="243" y="249">Online Application</tspan>
+            </text>
+            <path d="M228,275 L528,275" id="Line-Copy-26" stroke="#D8E3F6" stroke-linecap="square"></path>
+            <rect id="Rectangle-376-Copy-12" fill="#F7F9FE" x="228" y="263" width="300" height="40"></rect>
+            <path d="M228,263 L528,263" id="Line-Copy-27" stroke="#D8E3F6" stroke-linecap="square"></path>
+            <rect id="Rectangle-376-Copy-13" fill="#FFFFFF" x="228" y="303" width="300" height="40"></rect>
+            <text id="Transceive-detail-Copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal" fill="#456297">
+                <tspan x="243" y="289">Transceive detail</tspan>
+            </text>
+            <text id="type-monthly-copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal">
+                <tspan x="243" y="329" fill="#456297">type	</tspan>
+                <tspan x="299" y="329" fill="#333333">monthly</tspan>
+            </text>
+            <rect id="Rectangle-376-Copy-14" fill="#FFFFFF" x="228" y="342" width="300" height="40"></rect>
+            <rect id="Rectangle-376-Copy-15" fill="#FFFFFF" x="228" y="382" width="300" height="40"></rect>
+            <text id="date-105/04/01---105-copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal">
+                <tspan x="243" y="368" fill="#456297">date	</tspan>
+                <tspan x="299" y="368" fill="#333333">105/04/01 - 105/04/30</tspan>
+            </text>
+            <text id="1.-If-you-are-going-Copy" font-family=".AppleSystemUIFont" font-size="13" font-weight="normal" line-spacing="17" letter-spacing="0.300000012" fill="#456297">
+                <tspan x="243" y="496">1. If you are going to use a passage of </tspan>
+                <tspan x="243" y="513">Lorem Ipsum</tspan>
+                <tspan x="325.88828" y="513" font-family=".PingFangTC-Regular, .PingFang TC">,</tspan>
+                <tspan x="329.88028" y="513"> you need to be sure there </tspan>
+                <tspan x="243" y="530">isn't anything embarrassing hidden in the </tspan>
+                <tspan x="243" y="547">middle of text</tspan>
+                <tspan x="243" y="564"></tspan>
+                <tspan x="243" y="581">2. All the Lorem Ipsum generators on the </tspan>
+                <tspan x="243" y="598">Internet tend to repeat predefined </tspan>
+                <tspan x="243" y="615">chunks as necessary</tspan>
+                <tspan x="384.778591" y="615" font-family=".PingFangTC-Regular, .PingFang TC">,</tspan>
+                <tspan x="388.770591" y="615"> making this the </tspan>
+                <tspan x="243" y="632">first true generator on the Internet</tspan>
+            </text>
+            <text id="week-一-二-三-四-五-六-日-copy" font-family="PingFangTC-Regular, PingFang TC" font-size="15" font-weight="normal">
+                <tspan x="243" y="408" fill="#456297">week		</tspan>
+                <tspan x="327" y="408" fill="#333333">一</tspan>
+                <tspan x="342" y="408" fill="#456296">  </tspan>
+                <tspan x="351.99" y="408" fill="#333333">二  三  四  五</tspan>
+                <tspan x="441.96" y="408" fill="#2A4880">  </tspan>
+                <tspan x="451.95" y="408" fill="#EB5000">六  日</tspan>
+            </text>
+            <g id="Group-14-Copy-3" transform="translate(228.000000, 422.000000)">
+                <path d="M0,20 L300,20" id="Line-Copy-5" stroke="#D8E3F6" stroke-linecap="square"></path>
+                <rect id="Rectangle-117-Copy" fill="#EEF2FC" x="0" y="0" width="300" height="40"></rect>
+                <text id="caption" font-family="PingFangTC-Regular, PingFang TC" font-size="16" font-weight="normal" fill="#2A487F">
+                    <tspan x="15" y="26">caption</tspan>
+                </text>
+            </g>
+            <g id="Group-17-Copy-3" transform="translate(499.000000, 300.000000)" font-size="12" font-family="PingFangTC-Medium, PingFang TC" fill="#FFFFFF" font-weight="400">
+                <text id="1:8">
+                    <tspan x="0" y="13">9</tspan>
+                </text>
+            </g>
+            <rect id="listitem-current-copy" fill="#00C3FF" x="0" y="112" width="4" height="40"></rect>
+        </g>
+    </g>
+</svg>

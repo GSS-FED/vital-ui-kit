@@ -1,0 +1,182 @@
+// *************************************
+//
+//   sec2
+//
+// *************************************
+
+.landing-sec2 {
+  position: relative;
+  text-align: center;
+  background: $landing-sec2-bg;
+  background: $landing-sec2-bg-gradient;
+  box-shadow: 0 25px 23px 0 rgba(184, 184, 184, 0.50);
+  width: 100%;
+  height: 90vh;
+  max-height: 660px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+
+  // triangle
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 18vw 50vw 0 50vw;
+    border-color: #ffffff transparent transparent transparent;
+  }
+
+  .txt-wrap {
+    position: relative;
+    top: 50%;
+  }
+
+  h2 {
+    color: #fff;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  p {
+    color: #fff;
+  }
+  
+  .circle-container {
+    top: 0;
+    left: 50%;
+    margin-left: -185px;
+    width: 370px;
+    height: 327px;
+    position: absolute;
+    //border: 1px solid #CCC;
+    -webkit-perspective: 1100px;
+    -moz-perspective: 1100px;
+    -o-perspective: 1100px;
+    perspective: 70vw;
+    z-index: 10;
+
+    .animation-box {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      transform: translateZ(-894px);
+      transition: transform 0.5s ease-in-out;
+
+      .animation-block {
+        display: block;
+        position: absolute;
+        width: 350px;
+        height: 307px;
+        left: 10px;
+        top: 10px;
+        line-height: 116px;
+        font-size: 80px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        opacity: 1;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+    }
+  }
+
+  .vital-orgchoose-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -175px;
+    margin-top: -153px;
+    width: 350px;
+    height: 307px;
+    background: url(../img/landing-page/sec2/vital-orgchoose-card.svg);
+    background-repeat: no-repeat;
+    z-index: 5;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+
+  .vital-malefemale-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -80px;
+    margin-top: -153px;
+    width: 200px;
+    height: 307px;
+    background: url(../img/landing-page/sec2/vital-malefemale-card.svg);
+    background-repeat: no-repeat;
+    z-index: 4;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
+    &:hover {
+      margin-left: -135px;
+    }
+  }
+
+  .vital-fillreport-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -255px;
+    margin-top: -153px;
+    width: 350px;
+    height: 307px;
+    background: url(../img/landing-page/sec2/vital-fillreport-card.svg);
+    background-repeat: no-repeat;
+    z-index: 4;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
+    
+    &:hover {
+      margin-left: -155px;
+    }
+  }
+
+  .vital-register-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -153px;
+    width: 200px;
+    height: 307px;
+    background: url(../img/landing-page/sec2/vital-register-card.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
+    
+    &:hover {
+      margin-left: -5px;
+    }
+  }
+
+  .vital-register2-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -153px;
+    width: 200px;
+    height: 307px;
+    background: url(../img/landing-page/sec2/vital-register-card.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47), margin-left 0.35s cubic-bezier(.57, -0.47, .61, 1.47);
+    
+    &:hover {
+      margin-left: -185px;
+    }
+  }
+}
+

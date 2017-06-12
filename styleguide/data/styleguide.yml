@@ -1,0 +1,28 @@
+# Colors
+colors:
+  Basic:
+    $c-white: "#fefefe"
+    $c-black: "#0d0d0d"
+  Gray:
+    $c-gray-dark:             "#555555"
+    $c-gray:                  "#aaaaaa"
+    $c-gray-light:            "#dddddd"
+
+  # Theme Colors (PLEASE CHANGE HERE!)
+  Theme:
+    $c-brand: "#00b4ff"
+    $c-primary: "#0e86fb"
+    $c-secondary: "#0040bf"
+    $c-tertiary: "#1e3868"
+  State:
+    $c-success: "#2Bcd86"
+    $c-alarm: "#eb5000"
+    $c-warning: "#ffb400"
+    $c-stable: "#999999"
+    $c-inverse: "#444444"
+    $c-info: "#00c3ff"
+    $c-selected: "#0e86fe"
+
+# Prefix
+prefix: "sg"
+state: "sg-state"

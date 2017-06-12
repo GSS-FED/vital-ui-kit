@@ -1,0 +1,163 @@
+// *************************************
+//
+//   sec6
+//
+// *************************************
+
+.landing-sec6 {
+  background: $landing-sec6-bg;
+  background: $landing-sec6-bg-gradient;
+  width: 100vw;
+  height: 100vh;
+  max-height: 590px;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 28vw 50vw 0 50vw;
+    border-color: #ffffff transparent transparent transparent;
+    z-index: 1;
+  }
+
+  .triangle2 {
+    position: absolute;
+    bottom: 35vh;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 28vw 0 0 50vw;
+    border-color: transparent transparent transparent #ffffff;
+    z-index: 10;
+  }
+
+  .triangle3 {
+    position: absolute;
+    bottom: 35vh;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 28vw 50vw;
+    border-color: transparent transparent #ffffff transparent;
+    z-index: 10;
+  }
+
+  .square1 {
+    position: absolute;
+    bottom: -15vh;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    background-color: #ffffff;
+    z-index: 10;
+  }
+  .vital-reciced-card {
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    margin-left: -175px;
+    width: 350px;
+    height: 490px;
+    background: url(../img/landing-page/sec6/vital-reciced-card.svg);
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .vital-reciced-card0 {
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    margin-left: -375px;
+    width: 350px;
+    height: 490px;
+    background: url(#{$img-path}/landing-page/sec6/sec6-card-3.svg);
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .vital-reciced-card1 {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    margin-left: -575px;
+    width: 350px;
+    height: 490px;
+    background: url(#{$img-path}/landing-page/sec6/sec6-card-2.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .vital-reciced-card2 {
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    margin-left: -775px;
+    width: 350px;
+    height: 490px;
+    background: url(#{$img-path}/landing-page/sec6/sec6-card-1.svg);
+    background-repeat: no-repeat;
+    z-index: 4;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .vital-reciced-card3 {
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    margin-left: 25px;
+    width: 350px;
+    height: 490px;
+    background: url(#{$img-path}/landing-page/sec6/sec6-card-6.svg);
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .vital-reciced-card4 {
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    margin-left: 225px;
+    width: 350px;
+    height: 490px;
+    background: url(#{$img-path}/landing-page/sec6/sec6-card-5.svg);
+    background-repeat: no-repeat;
+    z-index: 3;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .vital-reciced-card5 {
+    position: absolute;
+    top: 40vh;
+    left: 50%;
+    margin-left: 425px;
+    width: 350px;
+    height: 490px;
+    background: url(#{$img-path}/landing-page/sec6/sec6-card-4.svg);
+    background-repeat: no-repeat;
+    z-index: 4;
+    background-size: 100% auto;
+    transition: transform 0.25s cubic-bezier(.57, -0.47, .61, 1.47);
+  }
+  .scroll-trigger {
+    position: absolute;
+    top: 30vw;
+    left: 0;
+    height: 1vw;
+    width: 10vw;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+

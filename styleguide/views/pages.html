@@ -1,0 +1,19 @@
+---
+title: Pages
+fabricator: true
+javascript: styleguide.js
+---
+
+<h1 class="f-labels" data-f-toggle="labels">{{title}}</h1>
+
+<div class="f-item-group">
+  <ul class="f-list">
+  {{#each views.pages.items}}
+
+  	<li>
+  		<a href="pages/{{@key}}.html" class="f-item-heading" target="_blank">{{name}}</a>
+  	</li>
+
+  {{/each}}
+  </ul>
+</div>

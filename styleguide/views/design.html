@@ -1,0 +1,55 @@
+---
+title: Design
+fabricator: true
+javascript: styleguide.js
+---
+
+<h1 class="f-labels" data-f-toggle="labels">{{title}}</h1>
+
+<!-- Color -->
+<div class="f-item-group">
+  <div class="f-item-heading-group">
+    <h2 class="f-item-heading">Color</h2>
+  </div>
+
+  {{#each styleguide.colors}}
+    <div class="f-color-chips">
+    {{#each this}}
+      <div class="f-color-chip">
+        <div class="f-color-chip__name">{{@key}}</div>
+        <div class="f-color-chip__color">{{this}}</div>
+      </div>
+    {{/each}}
+    </div>
+  {{/each}}
+</div>
+
+<!-- Logo -->
+<div class="f-item-group">
+  <div class="f-item-heading-group">
+    <h2 class="f-item-heading">Logo</h2>
+  </div>
+
+  <div class="f-item-preview">
+    <img src="./img/icon.png">
+  </div>
+
+</div>
+
+<!-- Typography -->
+<div class="f-item-group">
+  <div class="f-item-heading-group">
+    <h2 class="f-item-heading">Typography</h2>
+  </div>
+
+  <p class="f-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
+
+  <div class="f-item-preview">
+    <h1>Heading Level 1</h1>
+    <h2>Heading Level 2</h2>
+    <h3>Heading Level 3</h3>
+    <h4>Heading Level 4</h4>
+    <h5>Heading Level 5</h5>
+    <h6>Heading Level 6</h6>
+  </div>
+</div>

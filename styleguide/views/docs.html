@@ -1,0 +1,18 @@
+---
+title: Docs
+fabricator: true
+javascript: styleguide.js
+---
+
+<h1 class="f-labels" data-f-toggle="labels">{{title}}</h1>
+
+{{#each docs}}
+
+	<div class="f-item-group">
+    <div class="f-item-heading-group">
+      <h2 id="{{@key}}" class="f-item-heading"><a href="#{{@key}}">{{name}}</a></h2>
+    </div>
+		{{{content}}}
+	</div>
+
+{{/each}}

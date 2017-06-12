@@ -1,0 +1,24 @@
+// *************************************
+//
+//   Scrollable
+//
+// *************************************
+
+.#{$prefix}-scroll--x {
+  overflow-y:hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.#{$prefix}-scroll--y {
+  overflow-x:hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.#{$prefix}-scroll {
+  overflow:auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.#{$prefix}-scroll--frozen {
+  overflow:hidden;
+}

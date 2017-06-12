@@ -1,0 +1,225 @@
+// *************************************
+//
+//   Demo
+//
+// *************************************
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+.demo-title {
+  padding: 10px 0;
+}
+
+.demo-bg-black {
+  background-color: black;
+}
+
+
+// -------------------------------------
+//   Buttons
+// -------------------------------------
+
+.demo-btn-paragraph {
+  margin-bottom: 10px;
+}
+
+.demo-btn-level {
+  width: 320px;
+  margin: 10px;
+}
+
+.demo-btn-title {
+  padding: 15px 0;
+}
+
+
+// -------------------------------------
+//   Card
+// -------------------------------------
+
+.demo-basic-card {
+  width: 300px;
+  height: 220px;
+  margin: 10px;
+}
+
+.demo-hero-card {
+  width: 300px;
+  height: 400px;
+  margin: 10px;
+  float: left;
+}
+
+#hero-card .fa-facebook { color: #3b5998; }
+#hero-card .fa-twitter { color: #55acee; }
+#hero-card .fa-tumblr { color: #32506d; }
+
+.demo-icon-card {
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+// -------------------------------------
+//   Elements
+// -------------------------------------
+
+.demo-checkbox-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.demo-radio-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.demo-switches--example {
+  margin-bottom: 40px;
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.demo-tooltip {
+  margin-right: 5px;
+}
+
+.demo-tooltip-avatar {
+  vertical-align: middle;
+}
+
+
+// -------------------------------------
+//   Avartar
+// -------------------------------------
+  
+.demo-avatar {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.demo-avatar-badge-row {
+  margin-bottom: 30px;
+}
+
+.demo-avatar-badge {
+  margin-right: 25px;
+}
+
+.demo-avatar-size-row {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+
+// -------------------------------------
+//   Cell
+// -------------------------------------
+
+
+.demo-cell-group{
+  margin-bottom: 10px;
+}
+
+.demo-cell-group {
+  .#{$prefix}-cell,
+  .#{$prefix}-col {
+    position: relative;
+    background-color: pink;
+    padding: 10px;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content:'';
+      width: 1px;
+      height: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+
+// -------------------------------------
+//   Shadow
+// -------------------------------------
+
+.demo-scrollshadow {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+
+.demo-scrollshadow li {
+  padding: 10px;
+  height:50px;
+}
+
+.demo-scrollshadow-h li{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.demo-shadow {
+  display: inline-block;
+  width: 160px;
+  height: 120px;
+  margin: 10px;
+  background-color: rgba(245, 245, 245, 1);
+}
+
+
+// -------------------------------------
+//   Typography
+// -------------------------------------
+    
+.demo-ellipsis {
+  background: #ddd;
+  width: 300px;
+  padding: 10px;
+}
+
+.demo-quote {
+  background: #eee; 
+  padding-left: 5px;
+  padding:10px;
+  width: 300px;
+  
+  &:before {
+    color: #ccc;
+  }
+}
+
+
+// -------------------------------------
+//   Ulol
+// -------------------------------------
+
+.demo-ol-wrap,.demo-ul-wrap {
+  background: #eee;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.demo-ul-wrap ul,.demo-ol-wrap ol {
+  display: inline-block;
+  margin-right:20px;
+  padding:10px;
+  padding-left: 20px;
+}
+
+.demo-ul-wrap li,.demo-ol-wrap li {
+  margin:10px 0;
+}
+
+.demo-ol-wrap {
+  padding-left: 20px;
+}
+

@@ -1,0 +1,120 @@
+// *************************************
+//
+//   Dropdown
+//   -> Dropdown button style
+//
+// *************************************
+
+.#{$prefix}-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: z(module, upper);
+  display: none;
+  float: left;
+  min-width: $dropdown-menu-min-width;
+  padding: $dropdown-menu-padding;
+  margin: $dropdown-menu-margin;
+  font-size: $dropdown-menu-font-size;
+  text-align: left;
+  list-style: none;
+  background-color: $dropdown-menu-bg-color;
+  background-clip: padding-box;
+  border: $dropdown-menu-border;
+  border-radius: $dropdown-menu-border-radius;
+
+  // triangle
+  // &:after, &:before {
+  //   bottom: 100%;
+  //   left: 20%;
+  //   border: solid transparent;
+  //   content: '';
+  //   height: 0;
+  //   width: 0;
+  //   position: absolute;
+  //   pointer-events: none;
+  // }
+
+  // &:before {
+  //   border-width: $dropdown-menu-ul-arrow-bg-size;
+  //   border-bottom-color: $dropdown-border-color;
+  //   margin-left: -$dropdown-menu-ul-arrow-bg-size;
+  // }
+
+  // &:after {
+  //   border-width: $dropdown-menu-ul-arrow-size;
+  //   border-bottom-color: $dropdown-menu-li-bg-color;
+  //   margin-left: -$dropdown-menu-ul-arrow-size;
+  // }
+
+  .open > & {
+    display: block;
+  }
+
+  & > li > a {
+    display: block;
+    padding: $dropdown-menu-li-padding;
+    clear: both;
+    line-height: $dropdown-menu-li-line-height;
+    color: $dropdown-menu-li-color;
+    white-space: nowrap;
+
+    &:hover {
+      color: $dropdown-menu-li-color;
+      text-decoration: none;
+      background-color: $dropdown-menu-li-hover-bg-color;
+    }
+  }
+
+  &.#{$state}--right {
+    right: 0;
+    left: auto;
+  }
+}
+
+
+// -------------------------------------
+//   components
+// -------------------------------------
+
+// ----- toggle btn ----- //
+
+.#{$prefix}-btn-default[data-toggle="dropdown"] {
+  background-color: $dropdown-menu-toggle-bg-color;
+
+  &:hover {
+    background-color: $dropdown-menu-toggle-hover-bg-color;
+  }
+}
+
+
+// ----- caret ----- //
+
+.#{$prefix}-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+  border-top: $dropdown-caret-border-width dashed;
+  border-top: $dropdown-caret-border-width solid\9; // ie hack
+  border-right: $dropdown-caret-border-width solid transparent;
+  border-left: $dropdown-caret-border-width solid transparent;
+
+  & + .#{$prefix}-btn-txt {
+    margin-left: $dropdown-caret-spacing;
+  }
+
+  .#{$prefix}-btn-txt + & {
+    margin-left: $dropdown-caret-spacing;
+  }
+}
+
+
+// ----- divider ----- //
+
+.#{$prefix}-dropdown-menu .#{$prefix}-divider { 
+  height: 1px;
+  margin: $dropdown-divider-margin;
+  overflow: hidden;
+  background-color: $dropdown-border-color;
+}

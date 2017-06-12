@@ -1,0 +1,24 @@
+---
+notes: |
+  Place one add-on or button on either side of an input. You may also place one on both sides of an input.
+
+  We do not support multiple add-ons (.input-group-addon or .input-group-btn) on a single side.
+
+  We do not support multiple form-controls in a single input group.
+---
+
+<div class="{{styleguide.prefix}}-input-group">
+  <span class="{{styleguide.prefix}}-input-group__addon">http://</span>
+  <input type="text" placeholder="Label Addon on the left side" class="{{styleguide.prefix}}-input">
+</div>
+
+<div class="{{styleguide.prefix}}-input-group">
+  <input type="text" placeholder="Label Addon on the right side" class="{{styleguide.prefix}}-input">
+  <span class="{{styleguide.prefix}}-input-group__addon">kg</span>
+</div>
+
+<div class="{{styleguide.prefix}}-input-group">
+  <span class="{{styleguide.prefix}}-input-group__addon">$</span>
+  <input type="text" placeholder="Label Addons on both side" class="{{styleguide.prefix}}-input">
+  <span class="{{styleguide.prefix}}-input-group__addon">.00</span>
+</div>

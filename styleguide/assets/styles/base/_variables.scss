@@ -1,0 +1,109 @@
+// *************************************
+//
+//   styleguide Variables
+//
+// *************************************
+
+// -------------------------------------
+//   constant
+// -------------------------------------
+
+$prefix:                                  'demo';
+$kit-prefix:                              'sg';
+$img-path:                                '../img';
+
+
+// -------------------------------------
+//   base
+// -------------------------------------
+
+$c-brand-purple:                          #6654EC;
+$c-brand-blue:                            #54CAF9;
+$c-brand-blue2:                           #35AFFF;
+
+// z-index
+$nav-z-index:                             z(nav-head);
+
+// bp
+$content-max-width:                       1280px;
+
+
+// -------------------------------------
+//   Z-index
+// -------------------------------------
+
+// ex: z-index: z(module, upper)/z(head)...
+$z-layers: (
+  "mask":                                 10010,
+  "popup":                                9000,
+  "fix":                                  100,
+  "head":                                 99,
+  "nav-head":                             9,
+  "module": (
+    "upper":                              7,
+    "base":                               5,
+    "lower":                              3
+  ),
+  "default":                              1,
+  "below":                                -1,
+  "hidden":                               -9000
+);
+
+
+// -------------------------------------
+//   components
+// -------------------------------------
+
+// ----- nav ----- //
+
+$nav-bg:                                  url(#{$img-path}/landing-page/ui-kit-nav-bg.png) center/cover;
+$nav-bg-gradient:                         radial-gradient(circle, $c-brand-purple 0%, $c-brand-blue 90%);
+$nav-height:                              55px;
+$nav-dropdown-menu-bg:                    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKCAYAAAB10jRKAAAAPUlEQVQYVwEyAM3/AILT+f0Ahcv3/ACHxff4AIi/9fcAi7n18wCMsfLyAI+r8u4AkKXw7QCTnvDpAJSY7+gZ4B+DRKjcpwAAAABJRU5ErkJggg==) 0/100% 100%;
+$nav-dropdown-menu-bg-gradient:           linear-gradient(to top, rgba(#6561ee, 0.6), rgba(#57c8f6, 0.8));
+
+// rwd
+$nav-bp:                                  890px 500px;
+
+
+// ----- btn ----- //
+
+$btn-bg-primary-bg:                       url(#{$img-path}/landing-page/ui-kit-btn-primary-bg.png) center/100% 100%;
+$btn-bg-primary-bg-gradient:              linear-gradient(300deg, #5B9EF5, $c-brand-blue);
+
+
+// -------------------------------------
+//   page
+// -------------------------------------
+
+// ----- landing page ----- //
+
+$landing-sec0-card-upper-z-index:         z(module, upper);
+$landing-sec1-z-index:                    z(module, base);
+$landing-sec0-card-lower-z-index:         z(module, lower);
+$landing-sec0-card-default-z-index:       z(default);
+$landing-sec0-card-below-z-index:         z(below);
+
+$landing-sec0-bg:                         url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKCAYAAAB10jRKAAAAL0lEQVQYV2MIOfXzPwMaEbbz+3+GqOXf/jPETPn8nyG+6eN/hsT89/8ZUuPe/gcA6WQddHOuWpYAAAAASUVORK5CYII=) 0/100% 100%;
+$landing-sec0-bg-gradient:                linear-gradient(38deg, $c-brand-purple 0%, $c-brand-blue 64%);
+
+$landing-sec2-bg:                         url(#{$img-path}/landing-page/ui-kit-sec1-bg.png) 0/100% 120%;
+$landing-sec2-bg-gradient:                radial-gradient(circle, $c-brand-purple 0%, $c-brand-blue 130%);
+$landing-sec4-bg:                         url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAo0lEQVQoU43PTQrCMBAF4DdJwG7qQgQxybHqwpULoVfxKB5F8CziQnBROsnI1J9SrD/ZzOablzdUHRvBH49Wh0bE/pa03l+Fg4UU9FXTZneRNhhwcMjlZ0zb+iwcLdhb6EwzM5pMdXWSPKUukb0BRwdevOMOakQuCClatN4gBQetA9NXeUHFen2KboBlcscD+CzHSwt+HKg/SGnGoS6keY916Qawz0HXqTejJAAAAABJRU5ErkJggg==) 0/100% 100%;
+$landing-sec4-bg-gradient:                linear-gradient(22deg, $c-brand-purple 22%, $c-brand-blue 49%);
+$landing-sec4-calendar-bg:                url(#{$img-path}/landing-page/ui-kit-sec4-calendar-bg.png) 0/100% 100%;
+$landing-sec4-calendar-bg-gradient:       linear-gradient(134deg, #d8dbe9 38px, #bcbebf 0, #bcbebf 87px, #2581d6 0, #2581d6 245px, #d8dbe9 0, #d8dbe9 360px, #E2E2E2 0);
+$landing-sec6-bg:                         url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKCAYAAAB10jRKAAAAPUlEQVQYVwEyAM3/AFXE+P8AV7n3/wBYrPX/AFuh9f8AXJXz/wBeifL/AF998P8AYnLw/wBjZe7/AGVa7f/TYRyoo7vMqwAAAABJRU5ErkJggg==) 0/100% 100%;
+$landing-sec6-bg-gradient:                linear-gradient(to bottom, $c-brand-blue, $c-brand-purple);
+
+$landing-footer-bg:                       url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAABCAYAAADn9T9+AAAAK0lEQVQYV2MMPfLjP9OX/wyMX/4xMH1lYGAC0VA+89f/DIyf/zMwff3PAACgwBOthgMccQAAAABJRU5ErkJggg==) 0/100% 100%;
+$landing-footer-bg-gradient:                    linear-gradient(120deg, #54C9F8, #645EED);
+$landing-footer-dropdown-menu-bg:               $nav-dropdown-menu-bg;
+$landing-footer-dropdown-menu-bg-gradient:      $nav-dropdown-menu-bg-gradient;
+
+
+// ----- template ----- //
+
+$template-bg-gradient:                    linear-gradient(110deg, rgba($c-brand-purple, 0.77) 20%, rgba($c-brand-blue2, 0.77) 70%) 0 0/100% 290px no-repeat;
+$template-subtab-bg-gradient:             linear-gradient(to right, nth($c-skyblue-list, 5), nth($c-info-list, 5));
+

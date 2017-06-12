@@ -1,0 +1,34 @@
+// *************************************
+//
+//   Typography
+//
+// *************************************
+
+// -------------------------------------
+//   Heading Text
+// -------------------------------------
+
+h1 { @include heading-text(2.027rem, 2.027em); }
+h2 { @include heading-text(1.802rem, 1.802em); }
+h3 { @include heading-text(1.602rem, 1.602em); }
+h4 { @include heading-text(1.424rem, 1.424em); }
+h5 { @include heading-text(1.266rem, 1.266em); }
+h6 { @include heading-text(1.125rem, 1.125em); }
+
+
+// -------------------------------------
+//   Link
+// -------------------------------------
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $link-active-color;
+    text-decoration: underline;
+  }
+}

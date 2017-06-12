@@ -1,0 +1,66 @@
+---
+title: 範例應用 - 內嵌框架
+htmlClass: sg-layout-body
+javascript: example.js
+---
+
+<!-- ap-wrapper 設定背景, 設定最大寬度 -->
+<div class="{{styleguide.prefix}}-ap-wrapper">
+  <!-- ap-box 內容結構的外盒 -->
+  <div class="{{styleguide.prefix}}-ap-box">
+    <div class="{{styleguide.prefix}}-ap-header"></div>
+    <div class="{{styleguide.prefix}}-ap-nav"></div>
+    <div class="{{styleguide.prefix}}-ap-main">
+    
+      <div class="demo-fn-body__inner">
+        <div class="{{styleguide.prefix}}-ap-box">
+          <div class="{{styleguide.prefix}}-ap-header"></div>
+          <div class="{{styleguide.prefix}}-ap-nav" style="background-color: #7189B6"></div>
+          <div class="{{styleguide.prefix}}-ap-main">
+            
+            <div class="demo-fn-body__inner">
+              <div class="{{styleguide.prefix}}-ap-box">
+                <div class="{{styleguide.prefix}}-ap-header">
+                </div>
+                <div class="{{styleguide.prefix}}-ap-nav" style="background-color: #95ACD4"></div>
+                <div class="{{styleguide.prefix}}-ap-main">
+                  <div style="display: block; width: 100%; height: 100%; overflow: auto;">
+                    <ul>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                      <li style="height: 100px">Demo Content</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  setTimeout(function() {
+    $(window).resize(function() {
+      $('.sg-ap-nav').removeClass('sg-state--open');
+    });
+
+    $('.sg-ap-nav').click(function(){
+      if($(window).width() > 480) {
+        $(this).toggleClass('sg-state--open');
+      }
+    });
+  });
+</script>
+

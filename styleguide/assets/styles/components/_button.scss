@@ -1,0 +1,47 @@
+// *************************************
+//
+//   button
+//
+// *************************************
+
+.#{$prefix}-btn {
+  padding: 15px 30px 14px;
+  font-size: 14px;
+  display: inline-block;
+  cursor: pointer;
+
+  .#{$prefix}-btn-txt + i,
+  i + .#{$prefix}-btn-txt {
+    margin-left: 8px;
+  }
+}
+
+a.#{$prefix}-btn {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.#{$prefix}-btn-default {
+  color: $c-white;
+  background-color: $c-black;
+
+  &:hover {
+    color: $c-white;
+    opacity: 0.8;
+  }
+}
+
+.#{$prefix}-btn-primary {
+  color: $c-white;
+  background: $btn-bg-primary-bg;
+  background: $btn-bg-primary-bg-gradient;
+
+  &:hover {
+    color: $c-white;
+    opacity: 0.8;
+  }
+}
+
+
+

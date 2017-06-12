@@ -1,0 +1,215 @@
+// *************************************
+//
+//   landing page
+//
+// *************************************
+
+[class^="landing-"] {
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 1.802em;
+    padding-bottom: 1.802em;
+    letter-spacing: 7px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    padding-top: 1.602em;
+    padding-bottom: 1.602em;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 3px;
+  }
+}
+
+@import "landing-page/sec0";
+@import "landing-page/sec1";
+@import "landing-page/sec2";
+@import "landing-page/sec3";
+@import "landing-page/sec4";
+@import "landing-page/sec5";
+@import "landing-page/sec6";
+@import "landing-page/sec7";
+
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+.landing-container {
+  max-width: $content-max-width;
+}
+
+@include bp($content-max-width) {
+}
+
+
+// -------------------------------------
+//   footer
+// -------------------------------------
+
+.foot-dropdown-wrapper {
+  margin: 0 auto;
+  width: 500px;
+  background: url(../img/landing-page/ui-kit-btn-bg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 85%;
+    box-shadow: 0 50px 100px rgba(#008FFF, 0.35);
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+    &:before {
+      opacity: 0;
+    }
+
+    .foot-dropdown-menu {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .foot-dropdown-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: $landing-footer-dropdown-menu-bg;
+    background: $landing-footer-dropdown-menu-bg-gradient;
+    padding-bottom: 10px;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: 50% -10px;
+    transition: transform 300ms cubic-bezier(0.680, -0.550, 0.265, 1.550), opacity 400ms 100ms;
+    z-index: 1;
+
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 20px 30px;
+      position: relative;
+      transition: all 200ms;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        right: 50%;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.6);
+        transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+      }
+
+      &:hover {
+        &:before {
+          left: 30%;
+          right: 30%;
+        }
+      }
+    }
+  }
+
+  .foot-dropdown-toggle {
+    color: #fff;
+    display: inline-block;
+    padding: 30px 115px;
+    font-size: 34px;
+    position: relative;
+    left: 24px;
+    text-decoration: none;
+    transition: all 200ms;
+    letter-spacing: 5px;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      background: url(../img/landing-page/download-icon.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 45px;
+      position: absolute;
+      left: 56px;
+      top: 24px;
+      height: 38px;
+      transition: all 200ms;
+    }
+  }
+}
+
+.footer {
+  background: $landing-footer-bg;
+  background: $landing-footer-bg-gradient;
+  padding: 0 3% 30px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    height: 50px;
+    bottom: 70px;
+    box-shadow: 0 40px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  .footer-inner {
+    background: #373737;
+    position: relative;
+    top: -13px;
+    margin: 0 auto;
+    padding: 30px 0;
+    vertical-align: middle;
+  }
+
+  .info-wrap {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .info-logo {
+    display: inline-block;
+    margin: 0 15px;
+    width: 250px;
+    height: 75px;
+    background: url(../img/landing-page/ui-kit-vital-logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .info-content {
+    display: inline-block;
+    padding: 0 15px;
+    text-align: left;
+
+    div {
+      padding: 20px 0;
+    }
+
+    .info-gss {
+      color: #fff;
+    }
+  }
+}
+
