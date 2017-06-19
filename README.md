@@ -5,6 +5,7 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 * 適合各系統畫面
 * 整合了常用的前端框架
 * 重視使用者經驗
+* 與Kendo UI風格無縫整合
 
 ## 檔案結構
 
@@ -66,6 +67,9 @@ Step 3. 接著再執行
 
 為了網頁技術的推進，以及為使用者帶來更好的體驗，瀏覽器支援度我們會專注在最新版的主流瀏覽器上。
 
+| [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/edge.png" alt="IE / Edge" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/firefox.png" alt="Firefox" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/chrome.png" alt="Chrome" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/safari.png" alt="Safari" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/godban/browsers-support-badges/master/src/images/opera.png" alt="Opera" width="16px" height="16px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
+| :---------: | :---------: | :---------: | :---------:| :---------: |
+| IE9, IE10, IE11, Edge|  ✓ |  ✓ |  ✓ |  ✓ 
 
 # Copyright and License
 [MIT License](https://github.com/GSS-FED/Vital-UI-Kit/blob/master/LICENSE)
