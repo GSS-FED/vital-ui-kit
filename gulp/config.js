@@ -178,6 +178,10 @@ module.exports = {
         'src': [
           'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
+        'styleguideSrc': [
+          'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
+          'static/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+        ],
         'dest': 'www/dist/css/fonts',
         'styleGuideDest': 'www/styleguide/css/fonts'
       }
