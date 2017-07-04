@@ -42,12 +42,18 @@ gulp.task('dependency', function () {
     .pipe(gulp.dest(config.dependency.images.styleGuideDest));
 
   // fonts
-  return gulp.src(config.dependency.fonts.src)
+  gulp.src(config.dependency.fonts.src)
     .pipe(plumber({errorHandler: function(error) {
       handleErrors(error, 'Dependency Fonts');
       this.emit('end');
     }}))
-    .pipe(gulp.dest(config.dependency.fonts.dest))
+    .pipe(gulp.dest(config.dependency.fonts.dest));
+    
+  return gulp.src(config.dependency.fonts.styleguideSrc)
+    .pipe(plumber({errorHandler: function(error) {
+      handleErrors(error, 'Dependency Fonts');
+      this.emit('end');
+    }}))
     .pipe(gulp.dest(config.dependency.fonts.styleGuideDest));
 
 });
