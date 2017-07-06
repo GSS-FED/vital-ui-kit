@@ -64,10 +64,6 @@ function taskSass(type) {
     .pipe(postcss([
       autoprefixer(sassEntry.autoprefixer)
     ]))
-    // .pipe(gulpif(
-    //   global.isProd,
-    //   postcss([ cssnano() ])
-    // ))
     .pipe(concat(sassEntry.output))
     .pipe(gulpif(
       createSourceMap,

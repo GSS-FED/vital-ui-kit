@@ -6,6 +6,8 @@ var del         = require('del');
 
 gulp.task('clean', function(cb) {
 
-  return del(['www'], cb);
+  var dirs = process.argv[2] === 'prod'? [config.root.build, config.root.docs] : [config.root.dist];
+
+  return del(dirs, cb);
 
 });
