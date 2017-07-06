@@ -1,5 +1,13 @@
 # Release Notes
 
+## 0.0.5 (2017-07-06)
+
+- fix gulp task bug
+- fix font path
+- update readme file
+- update download link 
+
+
 ## 0.0.4 (2017-06-12)
 
 - Github 上架
