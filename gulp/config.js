@@ -33,8 +33,8 @@ module.exports = {
       output: 'vital-ui-kit.css',
       outputMin: 'vital-ui-kit.min.css',
       dest: 'www/css',
-      destProd: 'www/dist/css',
-      sassProd: 'www/dist/scss'
+      destProd: 'build/dist/css',
+      sassProd: 'build/dist/scss'
     },
 
     styleguideSass: {
@@ -52,7 +52,7 @@ module.exports = {
       output: 'styleguide.css',
       outputMin: 'styleguide.min.css',
       dest: 'www/css',
-      destProd: 'www/styleguide/css'
+      destProd: 'build/styleguide/css'
     },
 
 
@@ -70,7 +70,7 @@ module.exports = {
       output: 'vital-ui-kit.js',
       outputMin: 'vital-ui-kit.min.js',
       dest: 'www/js',
-      destProd: 'www/dist/js'
+      destProd: 'build/dist/js'
     },
 
     styleguideScripts: {
@@ -106,7 +106,7 @@ module.exports = {
         ]
       },
       dest: 'www/js',
-      destProd: 'www/styleguide/js'
+      destProd: 'build/styleguide/js'
     },
 
 
@@ -115,11 +115,10 @@ module.exports = {
   // -------------------------------------
 
     styleguideHtml: {
-      src: [
-        'www/**/*.html'
-      ],
-      dest: 'www/',
-      destProd: 'www/styleguide',
+      src: 'www/**/*.html',
+      srcProd: 'build/styleguide/**/*.html',
+      dest: 'www',
+      destProd: 'build/styleguide',
       htmlmin: {
         removeComments: true,
         collapseWhitespace: true,
@@ -149,41 +148,40 @@ module.exports = {
     },
 
     // dependency
-    'dependency': {
-      'static': {
-        'src': [
-          'static/README.md'
+    dependency: {
+      static: {
+        src: [
+          'README.md'
         ],
-        'dest': 'www'
+        dest: 'build'
       },
-      'scripts': {
-        'src': [
-          // 'bower_components/kendo-ui-core/src/messages/kendo.messages.zh-TW.js'
+      scripts: {
+        src: [
         ],
-        'dest': 'www/dist/js'
+        dest: 'build/dist/js'
       },
-      'styles': {
-        'src': [
+      styles: {
+        src: [
         ],
-        'dest': 'www/dist/css'
+        dest: 'build/dist/css'
       },
-      'images': {
-        'src': [
+      images: {
+        src: [
           'static/img/**/*'
         ],
-        'dest': 'www/dist/img',
-        'styleGuideDest': 'www/styleguide/img'
+        dest: 'build/dist/img',
+        styleGuideDest: 'build/styleguide/img'
       },
-      'fonts': {
-        'src': [
+      fonts: {
+        src: [
           'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
-        'styleguideSrc': [
+        styleguideSrc: [
           'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
           'static/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
-        'dest': 'www/dist/css/fonts',
-        'styleGuideDest': 'www/styleguide/css/fonts'
+        dest: 'build/dist/css/fonts',
+        styleGuideDest: 'build/styleguide/css/fonts'
       }
     },
 
@@ -192,15 +190,18 @@ module.exports = {
   //   Utitlity
   // -------------------------------------
 
-    // gzip: {
-    //   src: 'www/**/*.+(html|xml|json|css|js|js.map|css.map)',
-    //   options: {},
-    //   dest: 'www/'
-    // },
+    root: {
+      dist: 'www',
+      build: 'build',
+      docs: 'docs',
+      buildDist: 'build/dist',
+      buildStyleguide: 'build/styleguide',
+    },
 
-    dist: {
-      root: 'www',
-      index: 'www/index.html'
+    zip: {
+      src: 'build/**/*',
+      filename: 'vital-ui-kit.zip',
+      dest: 'build'
     },
 
     // Banner
@@ -212,7 +213,7 @@ module.exports = {
                 ' * <%= pkg.name %>, v<%= pkg.version %>',
                 ' * <%= pkg.description %>',
                 ' *',
-                ' * By <%= pkg.author %>',
+                ' * By <%= pkg.contributors %>',
                 ' *',
                 ' * License: <%= pkg.license %>',
                 ' *',
@@ -248,7 +249,7 @@ module.exports = {
         },
         helpers: {},
         dest: 'www',
-        destProd: 'www/styleguide'
+        destProd: 'build/styleguide'
       }
     },
 
@@ -260,7 +261,7 @@ module.exports = {
     tasks: {
       dev:   ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'fonts', 'images'],
       watch: ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'fonts', 'images'],
-      prod:  ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'dependency']
+      prod:  ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'dependency', 'docs', 'zip']
     }
 
 };
