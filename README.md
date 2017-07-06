@@ -78,7 +78,7 @@ vital-ui-kit/
 ```
 
 
-# Browser Support
+## Browser Support
 
 為了網頁技術的推進，以及為使用者帶來更好的體驗，瀏覽器支援度我們會專注在最新版的主流瀏覽器上。
 
@@ -87,7 +87,7 @@ vital-ui-kit/
 | IE9, IE10, IE11, Edge|  ✓ |  ✓ |  ✓ |  ✓ 
 
 
-# Copyright and License
+## Copyright and License
 
 [MIT License](https://github.com/GSS-FED/Vital-UI-Kit/blob/master/LICENSE)
 
