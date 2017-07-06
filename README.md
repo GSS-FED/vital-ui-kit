@@ -3,7 +3,7 @@
   <p align="center">
     簡單、輕量級、模組化的 UI library
     <br>
-    <a href="https://gss-fed.github.io/Vital-UI-Kit/"><strong>View Documents &raquo;</strong></a>
+    <a href="https://gss-fed.github.io/vital-ui-kit/"><strong>View Documents &raquo;</strong></a>
     <br>
   </p>
 </p>
