@@ -10,16 +10,16 @@ var htmlmin        = require('gulp-htmlmin');
 var handleErrors   = require('../util/handleErrors');
 
 function taskHtml(type) {
-  var htmlEntry = type==='kitHtml'? config.kitHtml : config.styleguideHtml;
-  var htmlDest = global.isProd? htmlEntry.destProd : htmlEntry.dest;
+  var htmlSrc = global.isProd? config.styleguideHtml.srcProd : config.styleguideHtml.src;
+  var htmlDest = global.isProd? config.styleguideHtml.destProd : config.styleguideHtml.dest;
 
-  return gulp.src(htmlEntry.src)
+  return gulp.src(htmlSrc)
     .pipe(plumber({errorHandler: function(error) {
       handleErrors(error, 'HTML');
       this.emit('end');
     }}))
-    .pipe(htmlmin(htmlEntry.htmlmin))
-    .pipe(gulp.dest(htmlEntry.dest))
+    .pipe(htmlmin(config.styleguideHtml.htmlmin))
+    .pipe(gulp.dest(htmlDest))
     .pipe(gulpif(
       global.isWatching, 
       browserSync.reload({ stream:true })
