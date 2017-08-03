@@ -9,15 +9,14 @@
 //   Custom styles
 // -------------------------------------
 
-// icomoon
-@import '../../../static/styleguide/variables';
-@import '../../../static/styleguide/style.scss';
 // vital
-@import '../../../src/base/variables';
-
+@import '../../../src/sass/base/variables';
 @import 'base/base';
 @import 'base/mixin';
 @import 'base/variables';
+// icomoon
+@import '../../../styleguide/assets/icomoon/variables';
+@import '../../../styleguide/assets/icomoon/style.scss';
 @import 'base/icon';
 
 @import 'components/button';

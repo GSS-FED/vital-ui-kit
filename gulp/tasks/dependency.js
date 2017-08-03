@@ -8,53 +8,90 @@ var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 
+function outputDependency(type) {
+  var dependencyDest = 'dest';
+  if(type) {
+    dependencyDest = (type === 'styleguide'? 'styleguideDestProd' : 'destProd');
+  }
+
+  return Promise.all([
+    new Promise(function(resolve, reject) {
+      // scripts
+      gulp.src(config.dependency.scripts.src)
+        .pipe(plumber({errorHandler: function(error) {
+          handleErrors(error, 'Dependency Scripts');
+          this.emit('end');
+          reject();
+        }}))
+        .pipe(gulp.dest(config.dependency.scripts[dependencyDest]))
+        .on('end', resolve)
+    }),
+    new Promise(function(resolve, reject) {
+      // images ui kit
+      if(type == 'uikit') {
+        gulp.src(config.dependency.images.src)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency Images');
+            this.emit('end');
+            reject();
+          }}))
+          .pipe(gulp.dest(config.dependency.images[dependencyDest]))
+          .on('end', resolve)
+      } else {
+      // images styleguide
+        gulp.src(config.dependency.images.styleguideSrc)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency Images');
+            this.emit('end');
+            reject();
+          }}))
+          .pipe(gulp.dest(config.dependency.images[dependencyDest]))
+          .on('end', resolve)
+        }
+    }),
+    new Promise(function(resolve, reject) {
+      // fonts ui kit
+      if(type == 'uikit') {
+        gulp.src(config.dependency.fonts.src)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency Fonts');
+            this.emit('end');
+            reject();
+          }}))
+          .pipe(gulp.dest(config.dependency.fonts[dependencyDest]))
+          .on('end', resolve);
+      } else {
+      // fonts styleguide
+        gulp.src(config.dependency.fonts.styleguideSrc)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency Fonts');
+            this.emit('end');
+            reject();
+          }}))
+          .pipe(gulp.dest(config.dependency.fonts[dependencyDest]))
+          .on('end', resolve);
+        }
+    })
+  ]);
+}
+
 gulp.task('dependency', function () {
-  // static
-  gulp.src(config.dependency.static.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Static');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.static.dest));
 
-  // scripts
-  gulp.src(config.dependency.scripts.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Scripts');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.scripts.dest));
-
-  // styles
-  gulp.src(config.dependency.styles.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Styles');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.styles.dest));
-
-  // images
-  gulp.src(config.dependency.images.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Images');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.images.styleGuideDest));
-
-  // fonts
-  gulp.src(config.dependency.fonts.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Fonts');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.fonts.dest));
-    
-  return gulp.src(config.dependency.fonts.styleguideSrc)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Fonts');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.fonts.styleGuideDest));
+  if(global.isProd) {
+    return outputDependency('styleguide').then(function(success) {
+      outputDependency('uikit').then(function(success) {
+        // document
+        return gulp.src(config.dependency.document.src)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency Document');
+            this.emit('end');
+          }}))
+          .pipe(gulp.dest(config.dependency.document.destProd));
+      });
+    });
+  } else {
+    return outputDependency();
+  }
 
 });
 

@@ -10,6 +10,10 @@ if (typeof jQuery === 'undefined') {
  * @namespace
  */
 var sg = window.sg = {};
+var PREFIX = 'sg';
+var STATE_PREFIX = 'sg-state';
+var _PREFIX = '.sg';
+var _STATE_PREFIX = '.sg-state';
 
 
 /**
@@ -17,25 +21,6 @@ var sg = window.sg = {};
  * @type {Object}
  */
 sg.options = {};
-
-
-/**
- * @name setConstant
- * @desc set sg constant
- */
-sg.setConstant = function() {
-
-  // -------------------------------------
-  //   Global variables
-  // -------------------------------------
-
-  PREFIX = 'sg';
-  STATE_PREFIX = 'sg-state';
-  _PREFIX = '.sg';
-  _STATE_PREFIX = '.sg-state';
-
-  return this;
-};
 
 
 /** 
@@ -397,7 +382,6 @@ sg.onWindowResize = function() {
 (function() {
 
   sg
-    .setConstant()
     .initializeComponents()
     .initializeEvents()
     .initializeInput()

@@ -1,0 +1,42 @@
+// *************************************
+//
+//   Core CSS
+//   
+// *************************************
+
+// -------------------------------------
+//   Reset
+// -------------------------------------
+
+@import "base/reset";
+
+
+// -------------------------------------
+//   Base
+// -------------------------------------
+
+@import "utils/mixins";
+@import "base/variables";
+@import "base/basic";
+@import "base/typography";
+// icomoon
+@import "../../assets/icomoon/variables";
+@import "../../assets/icomoon/style.scss";
+@import "base/icon";
+
+
+// -------------------------------------
+//   Components & Structures
+// -------------------------------------
+
+@import "components/components.core";
+
+@import "structures/structures.core";
+
+
+// -------------------------------------
+//   Utilities
+// -------------------------------------
+
+@import "utils/utilities.core";
+
