@@ -10,10 +10,10 @@
 // -------------------------------------
 
 // icomoon
-@import '../../../static/styleguide/variables';
-@import '../../../static/styleguide/style.scss';
+@import '../../../assets/styleguide/variables';
+@import '../../../assets/styleguide/style.scss';
 // vital
-@import '../../../src/base/variables';
+@import '../../../src/sass/base/variables';
 
 @import 'base/base';
 @import 'base/mixin';

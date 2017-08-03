@@ -133,7 +133,7 @@ module.exports = {
 
     // Images
     images: {
-      src: ['static/img/**/*.+(jpg|jpeg|gif|png|svg)'],
+      src: ['assets/img/**/*.+(jpg|jpeg|gif|png|svg)'],
       filter: [],
       dest: 'www/img'
     },
@@ -141,15 +141,15 @@ module.exports = {
     // Fonts
     fonts: {
       src: [
-        'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
-        'static/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+        'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
+        'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
       ],
       dest: 'www/css/fonts'
     },
 
     // dependency
     dependency: {
-      static: {
+      assets: {
         src: [
           'README.md'
         ],
@@ -167,18 +167,18 @@ module.exports = {
       },
       images: {
         src: [
-          'static/img/**/*'
+          'assets/img/**/*'
         ],
         dest: 'build/dist/img',
         styleGuideDest: 'build/styleguide/img'
       },
       fonts: {
         src: [
-          'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+          'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
         styleguideSrc: [
-          'static/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
-          'static/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+          'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
+          'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
         dest: 'build/dist/css/fonts',
         styleGuideDest: 'build/styleguide/css/fonts'

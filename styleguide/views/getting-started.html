@@ -16,14 +16,14 @@ usageScripts2: ./js/vital-ui-kit.js
       <p>Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選擇適合您的方式開始應用。</p>
       <ul>
         <li>
-          <h5>1. 下載 Vital UI Kit </h5>
+          <h5>下載 Vital UI Kit </h5>
           <div>
             <p>如果您不需要開發原始碼或是還不熟悉Sass，您可以使用此種方式，方便且快速就可以應用 Vital UI Kit 在您的產品或專案上。</p>
             <a role="button" class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default" href="https://git.gss.com.tw/FED/vital-ui-kit/repository/archive.zip?ref=master"><span class="{{styleguide.prefix}}-btn-txt">下載</span><i class="icon-download icon-right"></i></a>
           </div>
         </li>
         <li>
-          <h5>2. 安裝 Gulp</h5>
+          <h5>安裝 Gulp</h5>
           <ul>
             <li>
               <p>Step 1. 在使用 Gulp 之前，請先至 <a href="https://git.gss.com.tw/FED/vital-ui-kit" target="_blank">Vital UI Kit</a> ，利用版本控管工具 clone 整份檔案到您的本地端(建議使用Https)。</p>
@@ -84,12 +84,14 @@ vital-ui-kit/
 		<p>如果您是利用 Gulp 方式，則以下會是您所看見得資料夾結構：</p>
 		<pre class="language-markup"><code class="language-markup">
 vital-ui-kit/
-├── jade/
-├── js/
+├── src/
+│   ├── js/
+│   └── sass/
+├── styleguide/
 ├── sass/
-└── static/
+└── assets/
 		</code></pre>
-		<p>原始碼中，我們使用了 Jade(<a href="https://pugjs.org/api/getting-started.html" target="_blank"> Pug </a>)這個 Template Engine 來產出 Html，sass 則採取 scss 寫法並經編譯產出 css。static 則放置其他外部來源或不太變動的元素，例如 fonts 與 images。</p>
+		<p>原始碼中，我們使用了 <a href="https://fbrctr.github.io/" target="_blank"> fabricator </a> 這個 plugin 來產出 styleguide html，sass 則採取 scss 寫法並經編譯產出 css。assets 則放置其他外部來源或不太變動的元素，例如 fonts 與 images。</p>
 		</li>
 		<li><h5>Sass Folder</h5>
 		<p>Vital UI Kit 最精華的部分，開發者若想變動 theme 或是風格，此處得特別暸解：</p>

@@ -11,7 +11,16 @@ gulp.task('watch', ['browserSync', 'server'], function() {
   // ForEach Task
   var watchTasks = config.tasks.watch;
   watchTasks.forEach(function(task) {
-    watch(config[task].src, function(){
+    var src = config[task].src;
+    if(task === 'fabricator') {
+      src = config.styleguide.fabricator.src;
+    } else if (task === 'scripts') {
+      src = config.styleguide.scripts.src.concat(config.uikit.scripts.src);
+    } else if (task === 'styles') {
+      src = config.styleguide.styles.src.concat(config.uikit.styles.src);
+    }
+
+    watch(src, function(){
       gulp.start( [task] );
     });
   });

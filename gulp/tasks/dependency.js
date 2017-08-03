@@ -9,13 +9,13 @@ var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 
 gulp.task('dependency', function () {
-  // static
-  gulp.src(config.dependency.static.src)
+  // asstes
+  gulp.src(config.dependency.assets.src)
     .pipe(plumber({errorHandler: function(error) {
       handleErrors(error, 'Dependency Static');
       this.emit('end');
     }}))
-    .pipe(gulp.dest(config.dependency.static.dest));
+    .pipe(gulp.dest(config.dependency.assets.dest));
 
   // scripts
   gulp.src(config.dependency.scripts.src)

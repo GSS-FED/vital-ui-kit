@@ -17,7 +17,19 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 * 適合各系統畫面
 * 整合了常用的前端框架
 * 重視使用者經驗
-* 與Kendo UI風格無縫整合
+* 與 Kendo UI 風格無縫整合
+
+
+## Dependency
+
+[icomoon]
+[fontawesome]
+jquery
+
+
+## Development Dependency
+
+fabricator
 
 
 ## Quick Start
