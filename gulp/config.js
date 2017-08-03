@@ -14,163 +14,206 @@ module.exports = {
 
 
   // -------------------------------------
-  //   Stylesheets
+  //   Styleguide
   // -------------------------------------
 
-    kitSass: {
-      src: [
-        'bower_components/tooltipster/dist/css/tooltipster.bundle.min.css',
-        'src/**/*.+(sass|scss)'
-      ],
-      sourcemap: true,
-      autoprefixer: {
-        browsers: [
-          'not ie <= 8',
-          'last 2 versions'
+    styleguide: {
+      fabricator: {
+        src: [
+          'styleguide/**/*.{html,md,yaml,json}'
         ],
-        cascade: false
+        assemble: {
+          layout: 'styleguide-template',
+          layouts: 'styleguide/views/layouts/*',
+          layoutIncludes: 'styleguide/views/layouts/includes/*',
+          data: 'styleguide/data/**/*.{json,yml}',
+          materials: 'styleguide/materials/**/*',
+          views: [
+            'src/views/**/*.{html,md}',
+            'styleguide/views/**/*',
+            '!styleguide/views/+(layouts)/**'
+          ],
+          docs: 'styleguide/docs/**/*.md',
+          keys: {
+            materials: 'materials',
+            views: 'views',
+            docs: 'docs'
+          },
+          helpers: {},
+          dest: 'www',
+          destProd: 'build/styleguide'
+        }
       },
-      output: 'vital-ui-kit.css',
-      outputMin: 'vital-ui-kit.min.css',
-      dest: 'www/css',
-      destProd: 'build/dist/css',
-      sassProd: 'build/dist/scss'
-    },
-
-    styleguideSass: {
-      src: [
-        'styleguide/assets/styles/**/*.+(sass|scss)'
-      ],
-      sourcemap: true,
-      autoprefixer: {
-        browsers: [
-          'not ie <= 8',
-          'last 2 versions'
-        ],
-        cascade: false
+      views: {
+        src: 'www/**/*.html',
+        srcProd: 'build/styleguide/**/*.html',
+        dest: 'www',
+        destProd: 'build/styleguide',
+        htmlmin: {
+          removeComments: true,
+          collapseWhitespace: true,
+          collapseInlineTagWhitespace: true
+        }
       },
-      output: 'styleguide.css',
-      outputMin: 'styleguide.min.css',
-      dest: 'www/css',
-      destProd: 'build/styleguide/css'
-    },
-
-
-  // -------------------------------------
-  //   Scripts
-  // -------------------------------------
-
-    kitScripts: {
-      src: [
-        // TODO: 若有套kendo, 需註解此行
-        'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/tooltipster/dist/js/tooltipster.bundle.min.js',
-        'src/scripts/**/*.js'
-      ],
-      output: 'vital-ui-kit.js',
-      outputMin: 'vital-ui-kit.min.js',
-      dest: 'www/js',
-      destProd: 'build/dist/js'
-    },
-
-    styleguideScripts: {
-      src: [
-        'styleguide/assets/scripts/**/*.js',
-      ],
-      output: {
-        'styleguide.js': [
-          'styleguide/assets/scripts/styleguide/**/*.js'
+      styles: {
+        src: [
+          'styleguide/assets/styles/**/*.+(sass|scss)',
         ],
-        'landingpage.js': [
-          'styleguide/assets/scripts/landingpage/ScrollMagic.js',
-          'styleguide/assets/scripts/landingpage/TweenMax.min.js',
-          'styleguide/assets/scripts/landingpage/animation.gsap.js',
-          'styleguide/assets/scripts/landingpage/**/*.js'
-        ],
-        'template.js': [
-          'styleguide/assets/scripts/template/**/*.js'
-        ]
+        sass: {
+          src: [
+            'styleguide/assets/styles/**/*.+(sass|scss)'
+          ],
+        },
+        sourcemap: true,
+        autoprefixer: {
+          browsers: [
+            'not ie <= 8',
+            'last 2 versions'
+          ],
+          cascade: false
+        },
+        output: 'styleguide.css',
+        outputMin: 'styleguide.min.css',
+        dest: 'www/css',
+        destProd: 'build/styleguide/css'
       },
-      outputMin: {
-        'styleguide.js': [
-          'styleguide/assets/scripts/styleguide/**/*.js'
+      scripts: {
+        src: [
+          'styleguide/assets/scripts/**/*.js',
         ],
-        'landingpage.js': [
-          'styleguide/assets/scripts/landingpage/ScrollMagic.js',
-          'styleguide/assets/scripts/landingpage/TweenMax.min.js',
-          'styleguide/assets/scripts/landingpage/animation.gsap.js',
-          'styleguide/assets/scripts/landingpage/**/*.js'
-        ],
-        'template.js': [
-          'styleguide/assets/scripts/template/**/*.js'
-        ]
+        output: {
+          'styleguide.js': [
+            'styleguide/assets/scripts/styleguide/**/*.js'
+          ],
+          'landingpage.js': [
+            'styleguide/assets/scripts/landingpage/ScrollMagic.js',
+            'styleguide/assets/scripts/landingpage/TweenMax.min.js',
+            'styleguide/assets/scripts/landingpage/animation.gsap.js',
+            'styleguide/assets/scripts/landingpage/**/*.js'
+          ],
+          'template.js': [
+            'styleguide/assets/scripts/template/**/*.js'
+          ]
+        },
+        outputMin: {
+          'styleguide.js': [
+            'styleguide/assets/scripts/styleguide/**/*.js'
+          ],
+          'landingpage.js': [
+            'styleguide/assets/scripts/landingpage/ScrollMagic.js',
+            'styleguide/assets/scripts/landingpage/TweenMax.min.js',
+            'styleguide/assets/scripts/landingpage/animation.gsap.js',
+            'styleguide/assets/scripts/landingpage/**/*.js'
+          ],
+          'template.js': [
+            'styleguide/assets/scripts/template/**/*.js'
+          ]
+        },
+        dest: 'www/js',
+        destProd: 'build/styleguide/js'
       },
-      dest: 'www/js',
-      destProd: 'build/styleguide/js'
+      assets: {
+        img: {
+          src: [
+            'assets/img/**/*.+(jpg|jpeg|gif|png|svg)'
+          ],
+          filter: [],
+          dest: 'www/img'
+        },
+        fonts: {
+          src: [
+            'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
+            'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+          ],
+          dest: 'www/css/fonts'
+        },
+      },
     },
 
 
   // -------------------------------------
-  //   Templates
+  //   UI Kit
   // -------------------------------------
 
-    styleguideHtml: {
-      src: 'www/**/*.html',
-      srcProd: 'build/styleguide/**/*.html',
-      dest: 'www',
-      destProd: 'build/styleguide',
-      htmlmin: {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseInlineTagWhitespace: true
-      }
+    uikit: {
+      styles: {
+        src: [
+          'src/sass/**/*.+(sass|scss)',
+          'src/less/**/*.less'
+        ],
+        sass: {
+          src: [
+            'src/sass/**/*.+(sass|scss)'
+          ],
+          destSrc: 'build/dist/scss'
+        },
+        less: {
+          src: [
+            'src/less/**'
+          ],
+          destSrc: 'build/dist/less'
+        },
+        sourcemap: true,
+        autoprefixer: {
+          browsers: [
+            'not ie <= 8',
+            'last 2 versions'
+          ],
+          cascade: false
+        },
+        output: 'vital-ui-kit.css',
+        outputMin: 'vital-ui-kit.min.css',
+        dest: 'www/css',
+        destProd: 'build/dist/css'
+      },
+      scripts: {
+        src: [
+          'src/scripts/**/*.js'
+        ],
+        output: 'vital-ui-kit.js',
+        outputMin: 'vital-ui-kit.min.js',
+        dest: 'www/js',
+        destProd: 'build/dist/js'
+      },
     },
 
 
   // -------------------------------------
-  //   Static Sources
+  //   Assets
   // -------------------------------------
-
-    // Images
-    images: {
-      src: ['assets/img/**/*.+(jpg|jpeg|gif|png|svg)'],
-      filter: [],
-      dest: 'www/img'
-    },
-
-    // Fonts
-    fonts: {
-      src: [
-        'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
-        'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
-      ],
-      dest: 'www/css/fonts'
-    },
 
     // dependency
     dependency: {
-      assets: {
+      src: [
+        'assets/**/*'
+      ],
+      document: {
         src: [
           'README.md'
         ],
-        dest: 'build'
+        destProd: 'build'
       },
       scripts: {
         src: [
         ],
-        dest: 'build/dist/js'
+        dest: 'www/js',
+        destProd: 'build/dist/js',
+        styleguideDestProd: 'build/styleguide/js'
       },
       styles: {
         src: [
         ],
-        dest: 'build/dist/css'
+        dest: 'www/css',
+        destProd: 'build/dist/css',
+        styleguideDestProd: 'build/styleguide/css'
       },
       images: {
         src: [
           'assets/img/**/*'
         ],
-        dest: 'build/dist/img',
-        styleGuideDest: 'build/styleguide/img'
+        dest: 'www/img',
+        destProd: 'build/dist/img',
+        styleguideDestProd: 'build/styleguide/img'
       },
       fonts: {
         src: [
@@ -180,8 +223,9 @@ module.exports = {
           'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
           'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
-        dest: 'build/dist/css/fonts',
-        styleGuideDest: 'build/styleguide/css/fonts'
+        dest: 'www/fonts',
+        destProd: 'build/dist/fonts',
+        styleguideDestProd: 'build/styleguide/fonts'
       }
     },
 
@@ -204,7 +248,6 @@ module.exports = {
       dest: 'build'
     },
 
-    // Banner
     banner: {
       header: [
                 '/*******************************************',
@@ -224,44 +267,13 @@ module.exports = {
 
 
   // -------------------------------------
-  //   Fabricator Assemble
-  //   For developing usage, will deal with fabricator sources.
-  // -------------------------------------
-
-    fabricator:{
-      src: ['styleguide/**/*.{html,md,yaml,json}'],
-      assemble: {
-        layout: 'styleguide-template',
-        layouts: 'styleguide/views/layouts/*',
-        layoutIncludes: 'styleguide/views/layouts/includes/*',
-        data: 'styleguide/data/**/*.{json,yml}',
-        materials: 'styleguide/materials/**/*',
-        views: [
-          'src/views/**/*.{html,md}',
-          'styleguide/views/**/*',
-          '!styleguide/views/+(layouts)/**'
-        ],
-        docs: 'styleguide/docs/**/*.md',
-        keys: {
-          materials: 'materials',
-          views: 'views',
-          docs: 'docs'
-        },
-        helpers: {},
-        dest: 'www',
-        destProd: 'build/styleguide'
-      }
-    },
-
-
-  // -------------------------------------
-  //   Tasks Runner (Dev, Prod, Watch)
+  //   Tasks Runner
   // -------------------------------------
 
     tasks: {
-      dev:   ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'fonts', 'images'],
-      watch: ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'fonts', 'images'],
-      prod:  ['fabricator', 'kitScripts', 'kitSass', 'styleguideSass', 'styleguideScripts', 'dependency', 'docs', 'zip']
+      dev:   ['fabricator', 'scripts', 'styles', 'dependency'],
+      watch: ['fabricator', 'scripts', 'styles', 'dependency'],
+      prod:  ['fabricator', 'scripts', 'styles', 'dependency', 'docs', 'zip']
     }
 
 };

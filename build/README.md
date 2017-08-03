@@ -3,7 +3,7 @@
   <p align="center">
     簡單、輕量級、模組化的 UI library
     <br>
-    <a href="https://gss-fed.github.io/Vital-UI-Kit/"><strong>View Documents &raquo;</strong></a>
+    <a href="https://gss-fed.github.io/vital-ui-kit/"><strong>View Documents &raquo;</strong></a>
     <br>
   </p>
 </p>
@@ -17,7 +17,19 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 * 適合各系統畫面
 * 整合了常用的前端框架
 * 重視使用者經驗
-* 與Kendo UI風格無縫整合
+* 與 Kendo UI 風格無縫整合
+
+
+## Dependency
+
+[icomoon]
+[fontawesome]
+jquery
+
+
+## Development Dependency
+
+fabricator
 
 
 ## Quick Start
@@ -78,7 +90,7 @@ vital-ui-kit/
 ```
 
 
-# Browser Support
+## Browser Support
 
 為了網頁技術的推進，以及為使用者帶來更好的體驗，瀏覽器支援度我們會專注在最新版的主流瀏覽器上。
 
@@ -87,7 +99,7 @@ vital-ui-kit/
 | IE9, IE10, IE11, Edge|  ✓ |  ✓ |  ✓ |  ✓ 
 
 
-# Copyright and License
+## Copyright and License
 
 [MIT License](https://github.com/GSS-FED/Vital-UI-Kit/blob/master/LICENSE)
 

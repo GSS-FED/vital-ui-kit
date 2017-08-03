@@ -8,14 +8,11 @@ var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 
-gulp.task('dependency', function () {
-  // asstes
-  gulp.src(config.dependency.assets.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Static');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.assets.dest));
+function outputDependency(type) {
+  var dependencyDest = 'dest';
+  if(type) {
+    dependencyDest = (type === 'styleguide'? 'styleguideDestProd' : 'destProd');
+  }
 
   // scripts
   gulp.src(config.dependency.scripts.src)
@@ -23,7 +20,7 @@ gulp.task('dependency', function () {
       handleErrors(error, 'Dependency Scripts');
       this.emit('end');
     }}))
-    .pipe(gulp.dest(config.dependency.scripts.dest));
+    .pipe(gulp.dest(config.dependency.scripts[dependencyDest]));
 
   // styles
   gulp.src(config.dependency.styles.src)
@@ -31,7 +28,7 @@ gulp.task('dependency', function () {
       handleErrors(error, 'Dependency Styles');
       this.emit('end');
     }}))
-    .pipe(gulp.dest(config.dependency.styles.dest));
+    .pipe(gulp.dest(config.dependency.styles[dependencyDest]));
 
   // images
   gulp.src(config.dependency.images.src)
@@ -39,22 +36,44 @@ gulp.task('dependency', function () {
       handleErrors(error, 'Dependency Images');
       this.emit('end');
     }}))
-    .pipe(gulp.dest(config.dependency.images.styleGuideDest));
+    .pipe(gulp.dest(config.dependency.images[dependencyDest]));
 
-  // fonts
-  gulp.src(config.dependency.fonts.src)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Fonts');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.fonts.dest));
+  // fonts ui kit
+  if(type !== 'styleguide') {
+    gulp.src(config.dependency.fonts.src)
+      .pipe(plumber({errorHandler: function(error) {
+        handleErrors(error, 'Dependency Fonts');
+        this.emit('end');
+      }}))
+      .pipe(gulp.dest(config.dependency.fonts[dependencyDest]));
+  }
     
-  return gulp.src(config.dependency.fonts.styleguideSrc)
-    .pipe(plumber({errorHandler: function(error) {
-      handleErrors(error, 'Dependency Fonts');
-      this.emit('end');
-    }}))
-    .pipe(gulp.dest(config.dependency.fonts.styleGuideDest));
+  // fonts styleguide
+  if(type !== 'uikit') {
+    gulp.src(config.dependency.fonts.styleguideSrc)
+      .pipe(plumber({errorHandler: function(error) {
+        handleErrors(error, 'Dependency Fonts');
+        this.emit('end');
+      }}))
+      .pipe(gulp.dest(config.dependency.fonts[dependencyDest]));
+    }
+}
+
+gulp.task('dependency', function () {
+
+  if(global.isProd) {
+    outputDependency('styleguide');
+    outputDependency('uikit');
+    // document
+    gulp.src(config.dependency.document.src)
+      .pipe(plumber({errorHandler: function(error) {
+        handleErrors(error, 'Dependency Document');
+        this.emit('end');
+      }}))
+      .pipe(gulp.dest(config.dependency.document.destProd));
+  } else {
+    outputDependency();
+  }
 
 });
 

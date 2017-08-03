@@ -23,14 +23,14 @@ sg.demoControl = function() {
   });
 
 
-  // ----- tooltip ----- //
+  // // ----- tooltip ----- //
 
-  // Vital ui tooltip
-  $(_PREFIX + '-tooltip').tooltipster({
-    contentCloning: true,
-    theme: PREFIX + '-tooltip--theme__default',
-    interactive: true
-  });
+  // // Vital ui tooltip
+  // $(_PREFIX + '-tooltip').tooltipster({
+  //   contentCloning: true,
+  //   theme: PREFIX + '-tooltip--theme__default',
+  //   interactive: true
+  // });
 
   return this;
 };
