@@ -3,8 +3,9 @@ title: Getting Started
 fabricator: true
 javascript: styleguide.js
 
-usageStyle: ./css/basic.css
-usageScripts1: ./js/jquery.min.js
+usageStyle1: ./css/vital-ui-kit.css
+usageStyle2: ./css/kendo.custom.vital-ui-kit.css
+usageScripts1: https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 usageScripts2: ./js/vital-ui-kit.js
 ---
 
@@ -14,105 +15,79 @@ usageScripts2: ./js/vital-ui-kit.js
     <h3>Install</h3>
     <div>
       <p>Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選擇適合您的方式開始應用。</p>
+      <p>首先，請先下載 Vital UI Kit 並解壓縮：
+        <a role="button" class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default" href="https://github.com/GSS-FED/Vital-UI-Kit/raw/master/build/vital-ui-kit.zip" style="margin-right: 5px"><span class="{{styleguide.prefix}}-btn-txt">下載</span><i class="icon-download icon-right"></i></a>
+      </p>
       <ul>
-        <li>
-          <h5>下載 Vital UI Kit </h5>
-          <div>
-            <p>如果您不需要開發原始碼或是還不熟悉Sass，您可以使用此種方式，方便且快速就可以應用 Vital UI Kit 在您的產品或專案上。</p>
-            <a role="button" class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default" href="https://git.gss.com.tw/FED/vital-ui-kit/repository/archive.zip?ref=master"><span class="{{styleguide.prefix}}-btn-txt">下載</span><i class="icon-download icon-right"></i></a>
-          </div>
+        <li class="demo-ol-wrap" style="background: white">
+          <h5>直接開始使用 Vital UI Kit</h5>
+          <p>如果您不需要開發原始碼或是還不熟悉 Sass，可以使用以下方式，方便且快速地應用 Vital UI Kit 在您的產品或專案上。</p>
+          <ol class="{{styleguide.prefix}}-ol--decimal">
+            <li>將 dist 資料夾底下的 css、fonts、img、js 資料夾複製到您的專案環境根目錄</li>
+            <li>
+              在您的 Html 中引入
+              <pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;{{usageStyle1}}&quot;&gt;</code><br/><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;{{usageStyle2}}&quot;&gt;</code> (optional)<br/><code class="language-markup">&lt;script src=&quot;{{usageScripts1}}&quot;&gt;&lt;/script&gt;</code><br/><code class="language-markup">&lt;script src=&quot;{{usageScripts2}}&quot;&gt;&lt;/script&gt;</code></pre>
+              <p>接下來只要按照 styleguide/index.html 的說明，即可立刻看到套用 Vital UI Kit 的效果了！</p>
+            </li>
+          </ol>
         </li>
-        <li>
-          <h5>安裝 Gulp</h5>
-          <ul>
-            <li>
-              <p>Step 1. 在使用 Gulp 之前，請先至 <a href="https://git.gss.com.tw/FED/vital-ui-kit" target="_blank">Vital UI Kit</a> ，利用版本控管工具 clone 整份檔案到您的本地端(建議使用Https)。</p>
+        <li class="demo-ol-wrap" style="background: white">
+          <h5>客製化 Vital UI Kit</h5>
+          <p>如果您想要客製化自己的 Vital UI Kit，更改 UI Kit 顏色，可使用以下方法。</p>
+          <ol class="{{styleguide.prefix}}-ol--decimal">
+            <li>將 dist 資料夾底下的 fonts、img、js 資料夾複製到您的專案環境輸出目錄</li>
+            <li>將 sass 資料夾複製到您的專案環境開發用資料夾，編譯輸出的 css 檔案路徑需和 fonts 平行</li>
+            <li>在 vital-ui-kit.scss 可 import 自己客製化的變數檔與加入樣式，可參考 base/_variables.scss 看有哪些變數可供更改。<br/>
+              <pre class="language-markup"><code class="language-markup">
+sass/
+├── base/
+│    ├── _variables.scss
+│    ├── ...
+├── components/
+├── structures/
+├── utils/
+├── _core.scss
+└── vital-ui-kit.scss</code></pre>
             </li>
-            <li>
-              <p>Step 2. 下載後，請打開您的終端機並且將路徑改成 Step 1.的資料夾，並輸入：</p>
-              <pre class="language-markup"><code class="language-markup">npm install</code></pre>
-              <p>這個動作我們會幫您建立 Vital UI Kit 所需要用到的工具：Node.js 與 Bower</p>
-              <p>您可以至<a href="http://gulpjs.com/" target="_blank"> Gulp </a>, <a href="https://nodejs.org/" target="_blank"> Node.js </a>, <a href="https://www.npmjs.com/" target="_blank"> NPM </a> 以及 <a href="https://bower.io/" target="_blank"> Bower </a>進一步了解它們。</p>
-            </li>
-            <li>
-              <p>Step 3. 接著再執行</p>
-              <pre class="language-markup"><code class="language-markup">npm start</code></pre>
-              <p>專案便會開始啟動！</p>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h5>在您的 Html 中引入</h5>
-          <pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;{{usageStyle}}&quot;&gt;</code></pre>
-          <pre class="language-markup"><code class="language-markup">&lt;script src=&quot;{{usageScripts1}}&quot;&gt;&lt;/script&gt;</code><br/><code class="language-markup">&lt;script src=&quot;{{usageScripts2}}&quot;&gt;&lt;/script&gt;</code></pre>
-          <p>接下來只要按照文件中的寫法，即可立刻看到套用 Vital UI Kit 的效果了！</p>
+          </ol>
         </li>
       </ul>
     </div>
   </section>
   <section>
+    <h3>File Structure</h3>
+    <p>下載 Vital UI Kit 解壓縮後的資料夾中，build/dist 包含編譯後的原始檔案與壓縮檔，與 css 編譯前的 sass 原始檔案，提供給開發者修改變數、客製化樣式。</p>
+    <p>build/styleguide 包含 Vital UI Kit 的使用說明，可打開 index.html 閱讀。</p>
+    <p>
+      <pre class="language-markup"><code class="language-markup">
+vital-ui-kit/
+├── dist/
+│    ├── css/
+│    │    ├── kendo.custom.vital-ui-kit.css
+│    │    ├── vital-ui-kit.css
+│    │    ├── ...
+│    ├── js/
+│    │    ├── vital-ui-kit.js
+│    │    ├── ...
+│    ├── img/
+│    ├── fonts/
+│    ├── less/
+│    └── sass/
+├─── styleguide/
+│    ├── index.html
+│    ├── ...</code></pre>
+    </p>
+  </section>
+  <section>
   	<h3>Browser Support</h3>
   	<p>為了網頁技術的推進，以及為使用者帶來更好的體驗，瀏覽器支援度我們會專注在最新版的主流瀏覽器上。</p>
   	<ul class="browser-list">
-  		<li><i class="icon-chrome"></i>：latest</li>
-  		<li><i class="icon-firefox"></i>：latest</li>
-  		<li><i class="icon-safari"></i>：latest</li>
-  		<li><i class="icon-opera"></i>：latest</li>
-  		<li><i class="icon-internet-explorer"></i>：9</li>
+  		<li><i class="icon-chrome" style="color: #169d5b"></i>：latest</li>
+  		<li><i class="icon-firefox" style="color: #df692a"></i>：latest</li>
+  		<li><i class="icon-safari" style="color: #0bbced"></i>：latest</li>
+  		<li><i class="icon-opera" style="color: #fb1831"></i>：latest</li>
+  		<li><i class="icon-internet-explorer" style="color: #1ebbee"></i>：9</li>
   	</ul>
-  </section>
-  <section>
-  	<h3>Contents</h3>
-  	<ul>
-  	<li><h5>Compressed Folder</h5>
-  	<p>如果您是經由Install的第一種方式：下載 Vial UI Kit，那麼您解壓縮後會獲得以下內容：</p>
-		<pre class="language-markup"><code class="language-markup">
-vital-ui-kit/
-├── css/
-│   ├── basic.min.css
-│   └── basic.min.css.map
-└── js/
-│   └── vital-ui-kit.min.js
-└── fonts/
-		├── icomoon.eot
-		├── icomoon.svg
-		├── icomoon.ttf
-		└── icomoon.woff
-		</code></pre>
-		</li>
-		<li><h5>Source Code Folder</h5>
-		<p>如果您是利用 Gulp 方式，則以下會是您所看見得資料夾結構：</p>
-		<pre class="language-markup"><code class="language-markup">
-vital-ui-kit/
-├── src/
-│   ├── js/
-│   └── sass/
-├── styleguide/
-├── sass/
-└── assets/
-		</code></pre>
-		<p>原始碼中，我們使用了 <a href="https://fbrctr.github.io/" target="_blank"> fabricator </a> 這個 plugin 來產出 styleguide html，sass 則採取 scss 寫法並經編譯產出 css。assets 則放置其他外部來源或不太變動的元素，例如 fonts 與 images。</p>
-		</li>
-		<li><h5>Sass Folder</h5>
-		<p>Vital UI Kit 最精華的部分，開發者若想變動 theme 或是風格，此處得特別暸解：</p>
-		<pre class="language-markup"><code class="language-markup">
-sass/
-├── base/
-├── module/
-└── plugin/
-		├── _vital-ui-kit.custom.scss
-		├── _vital-ui-kit.variables.scss
-		└── vital-ui-kit/
-				├── base/
-				├── components/
-				├── pages/
-				├── scripts/
-				├── structures/
-				└── utils
-
-		</code></pre>
-		</li>
-		</ul>
   </section>
 
 </article>

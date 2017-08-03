@@ -145,7 +145,7 @@ module.exports = {
           src: [
             'src/sass/**/*.+(sass|scss)'
           ],
-          destSrc: 'build/dist/scss'
+          destSrc: 'build/dist/sass'
         },
         less: {
           src: [
