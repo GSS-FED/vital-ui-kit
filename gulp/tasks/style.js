@@ -18,7 +18,6 @@ var header       = require('gulp-header');
 var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
-var merge        = require('merge-stream');
 
 var pkg          = require('../../package.json');
 

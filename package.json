@@ -58,7 +58,6 @@
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.5",
     "gulp-zip": "^4.0.0",
-    "merge-stream": "^1.0.1",
     "morgan": "^1.6.1",
     "object-assign": "^4.0.1",
     "path": "^0.12.7",
