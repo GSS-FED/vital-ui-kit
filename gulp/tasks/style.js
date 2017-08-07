@@ -60,52 +60,49 @@ function uikitStyle(isMin) {
     cssnano()
   ] : [autoprefixer(styleEntry.autoprefixer)];
   var styleOutput = (isMin? styleEntry.outputMin : styleEntry.output);
-  var styleOutputWithKendo = (isMin?
-    styleEntry.output.slice(0, -4) + '-with-kendo.min.css'
-    : styleEntry.output.slice(0, -4) + '-with-kendo.css');
+  var kendoOutput = (isMin? styleEntry.outputMinKendo : styleEntry.outputKendo);
 
-  // compile sass to css
-  var sassStream = gulp.src(styleEntry.sass.src)
-    .pipe(plumber({errorHandler: function(error) {
-      gutil.log(gutil.colors.grey(error.message));
-      handleErrors(error, 'SASS');
-      this.emit('end');
-    }}))
-    .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.init()))
-    .pipe(sass())
-    .pipe(postcss(postcssPlugins));
+  return Promise.all([
+    new Promise(function(resolve, reject) {
+      // compile sass to css
+      gulp.src(styleEntry.sass.src)
+        .pipe(plumber({errorHandler: function(error) {
+          gutil.log(gutil.colors.grey(error.message));
+          handleErrors(error, 'SASS');
+          this.emit('end');
+          reject();
+        }}))
+        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.init()))
+        .pipe(sass())
+        .pipe(postcss(postcssPlugins))
+        .pipe(concat(styleOutput))
+        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.write('.')))
+        .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
+        .pipe(gulp.dest(styleDest))
+        .on('end', resolve)
+    }),
+    new Promise(function(resolve, reject) {
+      // compile less to css
+      gulp.src(styleEntry.less.src + '/[^_]*.less')
+        .pipe(plumber({errorHandler: function(error) {
+          gutil.log(gutil.colors.grey(error.message));
+          handleErrors(error, 'Less');
+          this.emit('end');
+          reject();
+        }}))
+        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.init()))
+        .pipe(less({
+          paths: [ path.join(__dirname, 'less', 'includes') ]
+        }))
+        .pipe(postcss(postcssPlugins))
+        .pipe(concat(kendoOutput))
+        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.write('.')))
+        .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
+        .pipe(gulp.dest(styleDest))
+        .on('end', resolve)
+    })
+  ]);
 
-  // compile less to css
-  var lessStream = gulp.src(styleEntry.less.src + '/[^_]*.less')
-    .pipe(plumber({errorHandler: function(error) {
-      gutil.log(gutil.colors.grey(error.message));
-      handleErrors(error, 'Less');
-      this.emit('end');
-    }}))
-    .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.init()))
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(postcss(postcssPlugins));
-
-  // output no kendo less to dist
-  sassStream
-    .pipe(concat(styleOutput))
-    .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.write('.')))
-    .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
-    .pipe(gulp.dest(styleDest));
-
-  // output with kendo less to dist
-  return merge(sassStream, lessStream)
-    .pipe(concat(styleOutputWithKendo))
-    .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.write('.')))
-    .pipe(gulp.dest(styleDest))
-    .pipe(gulpif(
-      global.isWatching,
-      browserSync.stream({
-        match: '**/*.css'
-      })
-    ));
 }
 
 gulp.task('styleguidStyle', function() {
@@ -119,7 +116,6 @@ gulp.task('uikitStyle', function() {
 gulp.task('styles', ['styleguidStyle', 'uikitStyle'], function() {
   if(global.isProd) {
     // compile min.css
-    styleguidStyle(true);
     uikitStyle(true);
     // copy sass, less source code
     gulp.src(config.uikit.styles.sass.src)
@@ -127,9 +123,9 @@ gulp.task('styles', ['styleguidStyle', 'uikitStyle'], function() {
     gulp.src(config.uikit.styles.less.src)
       .pipe(gulp.dest(config.uikit.styles.less.destSrc));
     // copy vital-ui-kit css to styleguide
-    gulp.src([
+    return gulp.src([
         (config.uikit.styles.destProd + '/' + config.uikit.styles.output),
-        (config.uikit.styles.destProd + '/' + config.uikit.styles.output.slice(0, -4) + '-with-kendo.css')
+        (config.uikit.styles.destProd + '/' + config.uikit.styles.outputKendo)
       ])
       .pipe(gulp.dest(config.styleguide.styles.destProd));
   }

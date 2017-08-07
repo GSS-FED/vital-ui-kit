@@ -22,73 +22,85 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 
 ## Dependency
 
-[icomoon]
-[fontawesome]
-jquery
+- [Jquery](https://jquery.com/)
 
 
 ## Development Dependency
 
-fabricator
+- [Icomoon](https://icomoon.io/)
+- [Fabricator](https://fbrctr.github.io/)
 
 
 ## Quick Start
 
- Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選擇適合您的方式開始應用。
+Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選擇適合您的方式開始應用。
 
-**[直接下載 Vital UI Kit](https://github.com/GSS-FED/Vital-UI-Kit/raw/master/build/vital-ui-kit.zip)**
+1. 直接開始使用 Vital UI Kit
 
-如果您不需要開發原始碼或是還不熟悉Sass，您可以使用此種方式，方便且快速就可以應用 Vital UI Kit 在您的產品或專案上。
+    如果您不需要開發原始碼或是還不熟悉Sass，您可以使用此種方式，方便且快速就可以應用 Vital UI Kit 在您的產品或專案上。
 
-**使用 Npm & Gulp**
+    1. 下載 [Vital UI Kit](https://github.com/GSS-FED/Vital-UI-Kit/raw/master/build/vital-ui-kit.zip)
 
-1. 在使用 Gulp 之前，請先至Vital UI Kit，利用版本控管工具 clone 整份檔案到您的本地端(建議使用Https)。
+    1. 下載後解壓縮，將 `dist/css`、`dist/js` 資料夾複製到您的專案環境
 
-1. 下載後，請打開您的終端機並且將路徑改成 Step 1.的資料夾，並輸入： `npm install`
+    1. 在您的 Html 中引入
 
-    這個動作我們會幫您建立 Vital UI Kit 所需要用到的工具：Node.js 與 Bower
+        ```
+        <link rel="stylesheet" href="./css/vital-ui-kit.css">
+        (optional) <link rel="stylesheet" href="./css/kendo.custom.vital-ui-kit.css">
+        ```
 
-    您可以至 Gulp, Node.js, NPM 以及 Bower 進一步了解它們。
+        ```
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="./dist/js/vital-ui-kit.js"></script>
+        ```
 
-1. 接著再執行 `npm start` 專案便會開始啟動！
+    接下來只要按照 `styleguide/index.html` 的說明，即可立刻看到套用 Vital UI Kit 的效果了！
 
-1. 別急，接下來記得在 Html 中引入
 
-```
-<link rel="stylesheet" href="./css/basic.css">
-```
+1. 客製化 Vital UI Kit
 
-```
-<script src="./js/jquery.min.js"></script>
-<script src="./js/vital-ui-kit.js"></script>
-```
+    1. 下載 [Vital UI Kit](https://github.com/GSS-FED/Vital-UI-Kit/raw/master/build/vital-ui-kit.zip)
+
+    1. `dist/scss`
+        ```
+        ├── _vital-ui-kit.custom.scss
+        ├── _vital-ui-kit.variables.scss
+        └── vital-ui-kit/
+            ├── base/
+            ├── components/
+            ├── pages/
+            ├── scripts/
+            ├── structures/
+            └── utils
+        ```
+    1. `npm start`
 
 
 ## File Structure
 
-下載後的資料夾中, `dist/` 包含編譯後的原始檔案與壓縮檔，與 css 編譯前的 sass 原始檔案，提供給開發者修改變數、客製化樣式。
-`styleguide/` 包含 Vital UI Kit 的使用說明，可打開 `index.html` 閱讀。並包含 `README.md` 說明檔。
+[Vital UI Kit](https://github.com/GSS-FED/Vital-UI-Kit/raw/master/build/vital-ui-kit.zip) 解壓縮後的資料夾中，`build/dist/` 包含編譯後的原始檔案與壓縮檔，與 css 編譯前的 sass 原始檔案，提供給開發者修改變數、客製化樣式。
+
+`build/styleguide/` 包含 Vital UI Kit 的使用說明，可打開 `index.html` 閱讀。
 
 ```
 vital-ui-kit/
 ├── dist/
 │    ├── css/
-│    │    ├── fonts
+│    │    ├── kendo.custom.vital-ui-kit.css
 │    │    ├── vital-ui-kit.css
-│    │    ├── vital-ui-kit.min.css
-│    │    └── vital-ui-kit.min.css.map
+│    │    ├── ...
 │    ├── js/
 │    │    ├── vital-ui-kit.js
-│    │    └── vital-ui-kit.min.js
-│    └── scss/
-│         ├── vital-ui-kit.scss
-│         ├── ...
-├── styleguide/
+│    │    ├── ...
+│    ├── img/
+│    ├── fonts/
+│    ├── less/
+│    └── sass/
+├─── styleguide/
 │    ├── index.html
 │    ├── ...
-└── README.md   
 ```
-
 
 ## Browser Support
 
@@ -102,4 +114,3 @@ vital-ui-kit/
 ## Copyright and License
 
 [MIT License](https://github.com/GSS-FED/Vital-UI-Kit/blob/master/LICENSE)
-

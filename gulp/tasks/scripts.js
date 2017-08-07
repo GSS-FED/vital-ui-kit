@@ -67,7 +67,7 @@ gulp.task('scripts', ['styleguidScript', 'uikitScript'], function() {
     styleguidScript(true);
     uikitScript(true);
     // copy vital-ui-kit js to styleguide
-    gulp.src(config.uikit.scripts.destProd + '/' + config.uikit.scripts.output)
+    return gulp.src(config.uikit.scripts.destProd + '/' + config.uikit.scripts.output)
       .pipe(gulp.dest(config.styleguide.scripts.destProd));
   }
 });

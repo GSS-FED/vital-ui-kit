@@ -163,6 +163,8 @@ module.exports = {
         },
         output: 'vital-ui-kit.css',
         outputMin: 'vital-ui-kit.min.css',
+        outputKendo: 'kendo.custom.vital-ui-kit.css',
+        outputMinKendo: 'kendo.custom.vital-ui-kit.min.css',
         dest: 'www/css',
         destProd: 'build/dist/css'
       },
@@ -211,6 +213,10 @@ module.exports = {
         src: [
           'assets/img/**/*'
         ],
+        styleguideSrc: [
+          'assets/img/**/*',
+          'styleguide/assets/img/**/*'
+        ],
         dest: 'www/img',
         destProd: 'build/dist/img',
         styleguideDestProd: 'build/styleguide/img'
@@ -221,7 +227,7 @@ module.exports = {
         ],
         styleguideSrc: [
           'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
-          'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+          'styleguide/assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
         dest: 'www/fonts',
         destProd: 'build/dist/fonts',
@@ -251,7 +257,7 @@ module.exports = {
     banner: {
       header: [
                 '/*******************************************',
-                ' * Copyright ' + currentYear,
+                ' * Copyright © ' + currentYear + ' <%= pkg.author %>',
                 ' *',
                 ' * <%= pkg.name %>, v<%= pkg.version %>',
                 ' * <%= pkg.description %>',

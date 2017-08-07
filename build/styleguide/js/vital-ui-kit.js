@@ -1,10 +1,10 @@
 /*******************************************
- * Copyright 2017
+ * Copyright © 2017 Galaxy Software Services
  *
  * vital-ui-kit, v0.0.5
  * UI Kit for GSS Vital Family
  *
- * By Neil Lin (https://github.com/Neil-Lin),YuRu Lee (https://github.com/YuRu-Lee),Laura Lee (https://github.com/l443018),Patric,CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
+ * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
  *
  * License: MIT
  *
@@ -21,6 +21,10 @@ if (typeof jQuery === 'undefined') {
  * @namespace
  */
 var sg = window.sg = {};
+var PREFIX = 'sg';
+var STATE_PREFIX = 'sg-state';
+var _PREFIX = '.sg';
+var _STATE_PREFIX = '.sg-state';
 
 
 /**
@@ -28,25 +32,6 @@ var sg = window.sg = {};
  * @type {Object}
  */
 sg.options = {};
-
-
-/**
- * @name setConstant
- * @desc set sg constant
- */
-sg.setConstant = function() {
-
-  // -------------------------------------
-  //   Global variables
-  // -------------------------------------
-
-  PREFIX = 'sg';
-  STATE_PREFIX = 'sg-state';
-  _PREFIX = '.sg';
-  _STATE_PREFIX = '.sg-state';
-
-  return this;
-};
 
 
 /** 
@@ -408,7 +393,6 @@ sg.onWindowResize = function() {
 (function() {
 
   sg
-    .setConstant()
     .initializeComponents()
     .initializeEvents()
     .initializeInput()

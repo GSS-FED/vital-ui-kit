@@ -1,10 +1,10 @@
 /*******************************************
- * Copyright 2017
+ * Copyright © 2017 Galaxy Software Services
  *
  * vital-ui-kit, v0.0.5
  * UI Kit for GSS Vital Family
  *
- * By Neil Lin (https://github.com/Neil-Lin),YuRu Lee (https://github.com/YuRu-Lee),Laura Lee (https://github.com/l443018),Patric,CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
+ * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
  *
  * License: MIT
  *
@@ -5756,123 +5756,6 @@ img.sg-avatar {
 
 .sg-ol--cjk-ideographic {
   list-style-type: cjk-ideographic; }
-
-.sg-tooltip--templates {
-  display: none; }
-
-.sg-tooltip--theme__default .tooltipster-box {
-  background: #1E3768;
-  border: 0;
-  border-radius: 4px; }
-
-.sg-tooltip--theme__default .tooltipster-content {
-  padding: 0.533rem 1.066rem;
-  color: #fff;
-  text-align: center; }
-
-.sg-tooltip--theme__default .sg-tooltip-content__basic .title {
-  font-size: 1.2rem;
-  line-height: 1.5rem; }
-
-.sg-tooltip--theme__default .sg-tooltip-content__basic .content {
-  font-size: 1rem;
-  line-height: 17px; }
-
-.sg-tooltip--theme__default .tooltipster-arrow-border {
-  border: 0; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip .tooltipster-arrow-background {
-  border-width: 5px; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
-  border-top-color: #1E3768;
-  top: 2px; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip.tooltipster-bottom .tooltipster-box {
-  margin-top: 5px; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
-  border-bottom-color: #1E3768;
-  top: 5px; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip.tooltipster-right .tooltipster-box {
-  margin-left: 5px; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background {
-  border-right-color: #1E3768;
-  left: 5px;
-  top: 5px; }
-
-.sg-tooltip--theme__default.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background {
-  border-left-color: #1E3768;
-  left: 2px;
-  top: 5px; }
-
-.tooltip {
-  display: block;
-  position: absolute;
-  z-index: 9000;
-  opacity: 0;
-  transition: opacity 120ms linear; }
-  .tooltip.in {
-    opacity: 1; }
-  .tooltip.top {
-    margin-top: -3px;
-    padding: 5px 0; }
-  .tooltip.right {
-    margin-left: 3px;
-    padding: 0 5px; }
-  .tooltip.bottom {
-    margin-top: 3px;
-    padding: 5px 0; }
-  .tooltip.left {
-    margin-left: -3px;
-    padding: 0 5px; }
-
-.tooltip-inner {
-  max-width: 400px;
-  padding: 0.533rem 1.066rem;
-  color: #fff;
-  background: #1E3768;
-  border-radius: 4px;
-  font-size: 1rem;
-  line-height: 17px;
-  text-align: center; }
-
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid; }
-
-.tooltip.top .tooltip-arrow {
-  bottom: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px 5px 0;
-  border-top-color: #1E3768; }
-
-.tooltip.right .tooltip-arrow {
-  top: 50%;
-  left: 0;
-  margin-top: -5px;
-  border-width: 5px 5px 5px 0;
-  border-right-color: #1E3768; }
-
-.tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #1E3768; }
-
-.tooltip.bottom .tooltip-arrow {
-  top: 0;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 0 5px 5px;
-  border-bottom-color: #1E3768; }
 
 .sg-clearfix:before, .sg-clearfix:after {
   content: "";
