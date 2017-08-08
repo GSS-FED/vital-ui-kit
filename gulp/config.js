@@ -20,7 +20,7 @@ module.exports = {
     styleguide: {
       fabricator: {
         src: [
-          'styleguide/**/*.{html,md,yaml,json}'
+          'styleguide/**/*.{html,md,yaml,json}',
         ],
         assemble: {
           layout: 'styleguide-template',
@@ -31,7 +31,8 @@ module.exports = {
           views: [
             'src/views/**/*.{html,md}',
             'styleguide/views/**/*',
-            '!styleguide/views/+(layouts)/**'
+            '!styleguide/views/+(layouts)/**',
+            '!styleguide/views/kendo-demo.html',
           ],
           docs: 'styleguide/docs/**/*.md',
           keys: {
@@ -43,6 +44,9 @@ module.exports = {
           dest: 'www',
           destProd: 'build/styleguide'
         }
+      },
+      static: {
+        kendo: 'styleguide/views/kendo-demo.html',
       },
       views: {
         src: 'www/**/*.html',
