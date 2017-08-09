@@ -158,6 +158,10 @@
 // 598
 .k-numerictextbox .k-link {
   line-height: 0;
+
+  &:hover {
+    background-color: @hover-background-color;
+  }
 }
 
 // 602 改變 tag 樣式
@@ -170,6 +174,7 @@
 .k-colorpicker {
   .k-picker-wrap {
     line-height: 1;
+    height: @input-height;
   }
 
   .k-selected-color {
@@ -359,6 +364,11 @@ html .k-upload {
   background-color: @c-primary;
 }
 
+// 1158
+.k-widget {
+  border-radius: @main-border-radius;
+}
+
 // 1199 下拉選單陰影去除
 .k-popup,
 .k-menu .k-menu-group,
@@ -401,6 +411,15 @@ html .k-upload {
   border-radius: @main-border-radius @main-border-radius @main-border-radius @main-border-radius;
 }
 
+// 1555
+.k-dropdown-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-input,
+.k-picker-wrap.k-state-border-down .k-selected-color,
+.k-numeric-wrap.k-state-border-down .k-input
+{
+    border-radius: @main-border-radius;
+}
+
 // 1798 input hover 樣式
 .k-autocomplete.k-state-hover,
 .k-picker-wrap.k-state-hover,
@@ -436,6 +455,18 @@ html .k-upload {
 //   window.less
 // -------------------------------------
 
+// 5
+div.k-window-content {
+  padding-top: 2rem;
+}
+
+// 15
+.k-block > .k-header,
+.k-window-titlebar {
+  padding: .4rem 0;
+  margin-top: -2rem;
+}
+
 // 58
 div.k-window-content {
   padding: 0;
@@ -458,6 +489,23 @@ div.k-window-content {
 }
 
 
+// ----- dialog ----- //
+
+.k-dialog-buttongroup {
+  .k-button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .k-button:not(:last-child) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+
 // ----- grid ----- //
 
 .k-grid {
@@ -471,10 +519,6 @@ div.k-window-content {
 
   td {
     white-space: nowrap;
-  }
-
-  .k-state-selected {
-    background-color: @grid-selected-bg-color;
   }
 }
 
@@ -607,8 +651,13 @@ div.k-window-content {
   .k-button {
     color: @c-white;
     border-color: transparent;
-    background-color: @c-primary;
+    background-color: @primary-button-background-color;
     border-radius: @multiselect-border-radius; // theme-template.less 1379
+
+    &:hover,
+    &.k-state-hover {
+      background-color: @primary-hover-background-color;
+    }
   }
 }
 
@@ -670,9 +719,16 @@ div.k-window-content {
 // ----- picker ----- //
 // datepicker timepicker combobox
 
-.k-combobox .k-select,
-.k-picker-wrap .k-select {
-  background-color: extract(@c-secondary-list, 2);
+.k-combobox,
+.k-picker-wrap {
+  .k-select {
+    background-color: extract(@c-secondary-list, 2);
+
+    &:hover,
+    .k-state-hover & {
+      background-color: @hover-background-color;
+    }
+  }
 }
 
 
@@ -683,6 +739,20 @@ div.k-window-content {
   .k-state-selected .k-i-arrow-s:before { content: @icon-chevron-down; }
   .k-i-arrow-n:before { content: @icon-chevron-up; }
   .k-i-arrow-s:before { content: @icon-chevron-down; }
+}
+
+// ----- scheduler ----- //
+
+.k-scheduler-toolbar {
+  border-radius: @main-border-radius @main-border-radius 0 0;
+}
+
+.k-scheduler-footer {
+  border-radius: 0 0 @main-border-radius @main-border-radius;
+
+  .k-link:hover {
+    background-color: @hover-background-color;
+  }
 }
 
 

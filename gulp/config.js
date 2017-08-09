@@ -68,7 +68,7 @@ module.exports = {
             'styleguide/assets/styles/**/*.+(sass|scss)'
           ],
         },
-        sourcemap: true,
+        sourcemap: false,
         autoprefixer: {
           browsers: [
             'not ie <= 8',
