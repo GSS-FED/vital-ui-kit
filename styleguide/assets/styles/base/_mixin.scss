@@ -8,44 +8,38 @@
 //   RWD
 // -------------------------------------
 
-@mixin bp($_bp:null, $_bp_max:null, $_bp_min:null) {
-  @if $_bp_max {
-    @if map-has-key($bp, $_bp) && map-has-key($bp, $_bp_max) {
-      @media (min-width: #{map-get($bp, $_bp)}) and (max-width: #{map-get($bp, $_bp_max)}) {
-        @content;
-      }
-    } @else {
-      @media (max-width: $_bp) and (min-width: $_bp_max) {
-        @content;
-      }
+@mixin bp($_bp: false, $_bp_max: false, $_bp_min: false) {
+  @if($_bp_max) {
+    @if(map-has-key($bp, $_bp)) {
+      $_bp: #{map-get($bp, $_bp)};
+    }
+    @if(map-has-key($bp, $_bp_max)) {
+      $_bp_max: #{map-get($bp, $_bp_max)};
+    }
+    @media (min-width: $_bp) and (max-width: $_bp_max) {
+      @content;
     }
   }
-  @else if $_bp {
-    @if map-has-key($bp, $_bp) {
-      @media (max-width: #{map-get($bp, $_bp)}) {
-        @content;
-      }
-    } @else {
-      @media (max-width: $_bp) {
-        @content;
-      }
+  @else if($_bp) {
+    @if(map-has-key($bp, $_bp)) {
+      $_bp: #{map-get($bp, $_bp)};
+    }
+    @media (max-width: $_bp) {
+      @content;
     }
   }
-  @else if $_bp_min {
-    @if map-has-key($bp, $_bp_min) {
-      @media (min-width: #{map-get($bp, $_bp_min)}) {
-        @content;
-      }
-    } @else {
-      @media (min-width: $_bp_min) {
-        @content;
-      }
+  @else if($_bp_min) {
+    @if(map-has-key($bp, $_bp_min)) {
+      $_bp_min: #{map-get($bp, $_bp_min)};
+    }
+    @media (min-width: $_bp_min) {
+      @content;
     }
   }
-  // @else {
-  //   @warn "Unfortunately, no value could be retrieved from `#{$bp}`. "
-  //       + "Please make sure it is defined in `$bp` map.";
-  // }
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$bp}`. "
+        + "Please make sure it is defined in `$bp` map.";
+  }
 }
 
 

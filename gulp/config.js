@@ -68,7 +68,7 @@ module.exports = {
             'styleguide/assets/styles/**/*.+(sass|scss)'
           ],
         },
-        sourcemap: true,
+        sourcemap: false,
         autoprefixer: {
           browsers: [
             'not ie <= 8',
@@ -191,7 +191,8 @@ module.exports = {
     // dependency
     dependency: {
       src: [
-        'assets/**/*'
+        'assets/**/*',
+        'styleguide/assets/+(img|icomoon)/**/*'
       ],
       document: {
         src: [

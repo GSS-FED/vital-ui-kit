@@ -1,4 +1,3 @@
-// *************************************
 //
 //   template
 //   -> 範例頁面
@@ -13,8 +12,6 @@
 
 .#{$prefix}-template-wrapper {
   height: calc(100% - #{nth($nav-height-list, 1)});
-  background: $template-bg;
-  background: $template-bg-gradient;
   text-align: center;
   overflow: auto;
 }
@@ -24,6 +21,20 @@
   padding: 0 10px;
   max-width: 920px;
   text-align: left;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -50%;
+    right: -50%;
+    height: 290px;
+    background: $template-bg;
+    background: $template-bg-gradient;
+    z-index: -1;
+  }
 }
 
 .#{$prefix}-template-header {
@@ -40,7 +51,8 @@
 .#{$prefix}-template-info {
   position: relative;
   height: 340px;
-  width: 820px;
+  width: 90%;
+  max-width: 820px;
   padding: 30px 40px;
   background-color: $c-black;
   overflow: hidden;
@@ -67,7 +79,8 @@
   .#{$prefix}-info-content {
     color: $c-white;
     font-size: 14px;
-    width: 250px;
+    width: 36%;
+    max-width: 250px;
     line-height: 1.8;
   }
 }
@@ -82,7 +95,8 @@
   position: absolute;
   top: -30px;
   right: 0;
-  width: 570px;
+  width: 64%;
+  max-width: 570px;
   height: 295px;
 
   // box-shadow
@@ -102,6 +116,7 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -113,10 +128,10 @@
       background-image: url('#{$img-path}/template/template-container-row2.png');
     }
     .#{$prefix}-template-sec:nth-child(3) & {
-      background-image: url('#{$img-path}/template/template-layout.png');
+      background-image: url('#{$img-path}/template/template-container-col2.png');
     }
     .#{$prefix}-template-sec:nth-child(4) & {
-      background-image: url('#{$img-path}/template/template-container-col2.png');
+      background-image: url('#{$img-path}/template/template-layout.png');
     }
     .#{$prefix}-template-sec:nth-child(5) & {
       background-image: url('#{$img-path}/template/template-layout-frame3.png');
@@ -171,6 +186,8 @@
 
 .#{$prefix}-tab {
   padding: 10px 10px 0;
+  max-height: 48px;
+  overflow: hidden;
 
   .#{$prefix}-item {
     display: inline-block;
@@ -198,6 +215,8 @@
   padding: 10px 12px 0;
   background: $template-subtab-bg-gradient;
   font-size: 0;
+  max-height: 40px;
+  overflow: hidden;
 
   .#{$prefix}-item {
     display: inline-block;
@@ -274,5 +293,53 @@
   }
 
 } // END container
+
+
+// -------------------------------------
+//   RWD
+// -------------------------------------
+
+@include bp(620px, 890px) {
+  .#{$prefix}-template-header {
+    padding-top: 100px;
+    padding-left: 3%;
+  }
+}
+
+@include bp(nth($nav-bp, 2)) {
+
+  .#{$prefix}-template-info {
+    height: auto;
+    width: auto;
+    max-width: none;
+
+    &:after {
+      content: none;
+    }
+
+    .#{$prefix}-info-content {
+      width: auto;
+      max-width: none;
+    }
+  }
+
+  .#{$prefix}-template-preview {
+    position: relative;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    max-width: none;
+
+    &:after {
+      box-shadow: 0 15px 28px rgba($c-black, 0.2);
+    }
+  }
+
+  .#{$prefix}-template-actions {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
 
 

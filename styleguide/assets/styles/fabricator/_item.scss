@@ -40,6 +40,13 @@
   width: 35em;
 }
 
+.demo-btn-paragraph,
+.f-item-preview {
+  & > *:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
 .f-item-border-bottom {
 	border-bottom: 1px solid color(light);
 }

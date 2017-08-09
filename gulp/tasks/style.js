@@ -18,7 +18,6 @@ var header       = require('gulp-header');
 var handleErrors = require('../util/handleErrors');
 var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
-var merge        = require('merge-stream');
 
 var pkg          = require('../../package.json');
 
@@ -39,9 +38,11 @@ function styleguidStyle(isMin) {
       handleErrors(error, 'SASS');
       this.emit('end');
     }}))
+    .pipe(gulpif(styleEntry.sourcemap, sourcemaps.init()))
     .pipe(sass())
     .pipe(postcss(postcssPlugins))
     .pipe(concat(styleOutput))
+    .pipe(gulpif(styleEntry.sourcemap, sourcemaps.write('.')))
     .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
     .pipe(gulp.dest(styleDest))
     .pipe(gulpif(
@@ -72,14 +73,20 @@ function uikitStyle(isMin) {
           this.emit('end');
           reject();
         }}))
-        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.init()))
+        .pipe(gulpif(styleEntry.sourcemap, sourcemaps.init()))
         .pipe(sass())
         .pipe(postcss(postcssPlugins))
         .pipe(concat(styleOutput))
-        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.write('.')))
+        .pipe(gulpif(styleEntry.sourcemap, sourcemaps.write('.')))
         .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
         .pipe(gulp.dest(styleDest))
         .on('end', resolve)
+        .pipe(gulpif(
+          global.isWatching,
+          browserSync.stream({
+            match: '**/*.css'
+          })
+        ));
     }),
     new Promise(function(resolve, reject) {
       // compile less to css
@@ -90,16 +97,22 @@ function uikitStyle(isMin) {
           this.emit('end');
           reject();
         }}))
-        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.init()))
+        .pipe(gulpif(styleEntry.sourcemap, sourcemaps.init()))
         .pipe(less({
           paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
         .pipe(postcss(postcssPlugins))
         .pipe(concat(kendoOutput))
-        .pipe(gulpif(styleEntry.sourcemap && isMin, sourcemaps.write('.')))
+        .pipe(gulpif(styleEntry.sourcemap, sourcemaps.write('.')))
         .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
         .pipe(gulp.dest(styleDest))
         .on('end', resolve)
+        .pipe(gulpif(
+          global.isWatching,
+          browserSync.stream({
+            match: '**/*.css'
+          })
+        ));
     })
   ]);
 

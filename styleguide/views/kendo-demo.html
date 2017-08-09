@@ -7,16 +7,18 @@
   <meta name="description" content="">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
   <title>Kendo UI Demos</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
   <link rel="canonical" href="http://demos.telerik.com/kendo-ui/themebuilder/" />
   <link href="https://kendo.cdn.telerik.com/2014.3.1316/styles/kendo.common.min.css" rel="stylesheet" />
   <link href="https://kendo.cdn.telerik.com/2014.3.1316/styles/kendo.rtl.min.css" rel="stylesheet" />
   <link href="http://demos.telerik.com/kendo-ui/content/shared/styles/examples.css" rel="stylesheet" />
   <!-- Vital UI Kit -->
-  <link href="./css/vital-ui-kit-with-kendo.css" rel="stylesheet" />
+  <link href="./css/vital-ui-kit.css" rel="stylesheet" />
+  <link href="./css/kendo.custom.vital-ui-kit.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
   <script src="https://kendo.cdn.telerik.com/2014.3.1316/js/jszip.min.js"></script>
   <script src="https://kendo.cdn.telerik.com/2014.3.1316/js/kendo.all.min.js"></script>
+  <script src="https://kendo.cdn.telerik.com/2014.3.1316/js/messages/kendo.messages.zh-TW.min.js"></script>
   <script src="https://kendo.cdn.telerik.com/2014.3.1316/js/kendo.timezones.min.js"></script>
   <script src="http://demos.telerik.com/kendo-ui/content/shared/js/kendo-dojo.js"></script>
   <script src="http://demos.telerik.com/kendo-ui/content/shared/js/console.js"></script>
@@ -29,6 +31,7 @@
 
 <body>
   <div id="main">
+    <h2 class="sg-txt--center">HTML Code is copied from <a href="http://demos.telerik.com/kendo-ui/themebuilder/" target="_blank">Kendo UI Theme Builder</a></h2>
     <div id="example" class="k-content">
       <div class="column">
         <h3>Button</h3>
@@ -55,10 +58,26 @@
           <li disabled="disabled">Disabled</li>
         </ul>
         <h3>Grid</h3>
-        <div data-role="grid" data-bind="source: sharedDataSource" data-scrollable="false" data-selectable="true" data-filterable="true" data-sortable="{ allowUnsort: false }" data-columns="[
-                {field:'year',title:'Year',width:100},
-                {field:'value',title:'Estimated Users'}
-            ]"></div>
+        <div data-role="grid" 
+             data-source="{
+               data: [
+                 { year: '2012', value: '30' },
+                 { year: '2013', value: '50' },
+                 { year: '2013', value: '50' },
+                 { year: '2013', value: '50' },
+                 { year: '2013', value: '50' },
+                 { year: '2015', value: '770'
+               }]
+             }"
+             data-scrollable="false"  
+             data-selectable="true" 
+             data-filterable="true" 
+             data-sortable="{ allowUnsort: false }" 
+             data-pageable="{ pageSize: 3 }" 
+             data-columns="[
+              {field:'year',title:'Year',width:100},
+              {field:'value',title:'Estimated Users'}
+             ]"></div>
         <h3>TabStrip</h3>
         <div data-role="tabstrip">
           <ul>
@@ -190,7 +209,7 @@
         <div id="notification"></div>
       </div>
       <div id="scheduler"></div>
-      <div class="column">
+      <!-- <div class="column">
         <div id="area-chart"></div>
         <div id="bubble-chart"></div>
       </div>
@@ -201,7 +220,7 @@
       <div class="column">
         <div id="pie-chart"></div>
         <div id="radial-gauge"></div>
-      </div>
+      </div> -->
     </div>
   </div>
   <style>
@@ -667,6 +686,7 @@
   $(document).ready(initialize);
   $("#example").bind("kendo:skinChange", initialize);
   </script>
+
 </body>
 
 </html>
