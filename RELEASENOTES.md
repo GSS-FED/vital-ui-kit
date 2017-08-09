@@ -1,5 +1,14 @@
 # Release Notes
 
+## 0.0.6 (2017-08-09)
+
+- add sass, less source files to dist
+- add vital ui kit theme for kendo
+- update document
+- change gulp task
+- 3 developers will go to Japan for fun :D
+
+
 ## 0.0.5 (2017-07-06)
 
 - fix gulp task bug
