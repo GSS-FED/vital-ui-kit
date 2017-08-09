@@ -1,18 +1,21 @@
 /*******************************************
- * Copyright 2017
+ * Copyright © 2017 Galaxy Software Services
  *
- * vital-ui-kit, v0.0.5
+ * vital-ui-kit, v0.0.6
  * UI Kit for GSS Vital Family
  *
- * By Neil Lin (https://github.com/Neil-Lin),Evan Wu (https://github.com/evanwu-tw),YuRu Lee (https://github.com/YuRu-Lee),Laura Lee (https://github.com/l443018),Patric,CJies Tan (https://github.com/cjies)
+ * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
  *
- * License: Galaxy Software Services Corporation | 叡揚資訊股份有限公司 版權所有 © 2016
+ * License: MIT
  *
  ******************************************/
 @charset "UTF-8";
+body {
+  overflow-x: hidden; }
+
 @font-face {
   font-family: 'styleguide';
-  src: url("fonts/styleguide.ttf?h5mytd") format("truetype"), url("fonts/styleguide.woff?h5mytd") format("woff"), url("fonts/styleguide.svg?h5mytd#styleguide") format("svg");
+  src: url("../fonts/styleguide.ttf?h5mytd") format("truetype"), url("../fonts/styleguide.woff?h5mytd") format("woff"), url("../fonts/styleguide.svg?h5mytd#styleguide") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -2393,9 +2396,6 @@
 .icon-meetup:before {
   content: ""; }
 
-body {
-  overflow-x: hidden; }
-
 .nav-dropdown-wrapper .nav-dropdown-toggle:before, .nav-dropdown-wrapper .nav-dropdown-menu a:before, .landing-sec4 .vital-icons i, .footer-dropdown-wrapper .footer-dropdown-toggle:before, .footer-dropdown-wrapper .footer-dropdown-menu a:before, [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -2445,7 +2445,8 @@ a.demo-btn:hover {
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   position: relative;
-  z-index: 9; }
+  z-index: 9;
+  font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC"; }
   .nav-wrapper .nav-menu {
     display: inline-block;
     position: relative;
@@ -2457,13 +2458,14 @@ a.demo-btn:hover {
     z-index: 9; }
     .nav-wrapper .nav-menu a {
       display: inline-block;
+      vertical-align: middle;
       position: relative;
       color: #fff;
       background-color: #333333;
       font-size: 16px;
       padding: 16px 0;
       height: 50px;
-      width: 25%;
+      width: 20%;
       text-decoration: none;
       text-align: center;
       transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55); }
@@ -2542,7 +2544,7 @@ a.demo-btn:hover {
     .nav-wrapper .nav-menu a {
       padding-left: 0;
       padding-right: 0;
-      width: 50%; } }
+      width: 33.3%; } }
 
 @media (max-width: 620px) {
   .nav-wrapper {
@@ -2553,7 +2555,7 @@ a.demo-btn:hover {
       width: 100%;
       padding-right: 45px; }
       .nav-wrapper .nav-menu a {
-        width: 25%;
+        width: 20%;
         height: 45px;
         padding-top: 14px;
         padding-bottom: 14px; }
@@ -2575,6 +2577,12 @@ a.demo-btn:hover {
         position: absolute;
         top: 9px;
         left: 12px; } }
+
+@media (max-width: 537px) {
+  .nav-wrapper .nav-menu a {
+    padding-top: 8px; }
+    .nav-wrapper .nav-menu a span {
+      display: block; } }
 
 .demo-title {
   padding: 10px 0; }
@@ -2653,14 +2661,14 @@ a.demo-btn:hover {
 .demo-cell-group {
   margin-bottom: 10px; }
 
-.demo-cell-group .demo-cell,
-.demo-cell-group .demo-col {
+.demo-cell-group .sg-cell,
+.demo-cell-group .sg-col {
   position: relative;
-  background-color: pink;
+  background-color: #D9ECFF;
   padding: 10px;
   text-align: center; }
-  .demo-cell-group .demo-cell:after,
-  .demo-cell-group .demo-col:after {
+  .demo-cell-group .sg-cell:after,
+  .demo-cell-group .sg-col:after {
     position: absolute;
     top: 0;
     right: 0;
@@ -2773,7 +2781,7 @@ a.demo-btn:hover {
     margin-left: -155px;
     width: 249px;
     height: 75px;
-    background-image: url(../img/landing-page/vital-title.svg);
+    background-image: url(../img/landing-page/vital-title.png);
     background-repeat: no-repeat;
     background-size: 100% auto; }
   .landing-sec0 .vital-logo-font {
@@ -2806,7 +2814,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-weather-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-weather-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-weather-card:after {
       content: "";
@@ -2832,7 +2840,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-nicetomeetyou-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-nicetomeetyou-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-nicetomeetyou-card:after {
       content: "";
@@ -2858,7 +2866,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-oops-card.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-oops-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-oops-card:after {
       content: "";
@@ -2885,7 +2893,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-lock-card.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-lock-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-lock-card:after {
       content: "";
@@ -2901,7 +2909,9 @@ a.demo-btn:hover {
     margin-left: -200px;
     width: 590px;
     height: 255px;
-    background: url(../img/landing-page/vital-news-card2.svg);
+    background: url(../img/landing-page/vital-news-card.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     transform: rotate(45deg);
     z-index: 3;
     filter: blur(1px); }
@@ -2922,7 +2932,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-ohno-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-ohno-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-ohno-card:after {
       content: "";
@@ -2948,7 +2958,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-schedule-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-schedule-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-schedule-card:after {
       content: "";
@@ -2964,7 +2974,7 @@ a.demo-btn:hover {
     margin-left: -750px;
     width: 166px;
     height: 480px;
-    background: url(../img/landing-page/vital-congrats-card.svg);
+    background: url(../img/landing-page/vital-congrats-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: rotate(45deg);
@@ -2976,7 +2986,7 @@ a.demo-btn:hover {
     margin-left: -935px;
     width: 300px;
     height: 480px;
-    background: url(../img/landing-page/vital-finished-card.svg);
+    background: url(../img/landing-page/vital-congrats-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: rotate(45deg);
@@ -2988,7 +2998,7 @@ a.demo-btn:hover {
     margin-left: 598px;
     width: 161px;
     height: 480px;
-    background: url(../img/landing-page/vital-finished-card.svg);
+    background: url(../img/landing-page/vital-finished-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: rotate(45deg);
@@ -3017,7 +3027,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-calendar-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-calendar-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-calendar-card:after {
       content: "";
@@ -3043,7 +3053,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-404big-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-404big-card2.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-404big-card:after {
       content: "";
@@ -3069,7 +3079,7 @@ a.demo-btn:hover {
       border-radius: 4px;
       width: 100%;
       height: 100%;
-      background: url(../img/landing-page/vital-update-card2.svg) 0 0/100% auto no-repeat;
+      background: url(../img/landing-page/vital-update-card.png) 0 0/100% auto no-repeat;
       z-index: 1; }
     .landing-sec0 .vital-update-card:after {
       position: absolute;
@@ -4164,9 +4174,6 @@ a.demo-btn:hover {
   padding: 10px 0;
   line-height: 1.4rem; }
 
-.getting-started .demo-btn .icon-right {
-  margin-left: 4px; }
-
 .getting-started li {
   padding: 10px 0; }
 
@@ -4180,8 +4187,6 @@ a.demo-btn:hover {
 
 .demo-template-wrapper {
   height: calc(100% - 55px);
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA/klEQVQoU02QMW7DMAxFSUohrdiWcrc4R6h6qA4dOnQp0KVDhwy9T53ZkmtbBW0HyCjo4f3/ibHrf8aGJLWG88lIai2nQJK85blCWQAYAQSfu/46MVbZG0necPZWhkB8fyu0wk/n/hsJXWpQ1s9gDzkYGVrLOZDMjAxqjJfbF5bi/iqq1Dgq3BoeTiTZW84NCagxnvtPQDgWKC4HK8nfY7XrVmc5IGO89B9lKU7hyall76rx3h40IdfEGLvfdwA8FgAH2lUHrdCjmdbVbwXBQVG4uKmmamgNj3ts8iRDsOvqV10NZYufzXaq7A2nhxoYu9sLwgaVHR7rDVrh3fwPwVNxEFJvon4AAAAASUVORK5CYII=) center top/100% 290px no-repeat;
-  background: linear-gradient(110deg, rgba(102, 84, 236, 0.77) 20%, rgba(53, 175, 255, 0.77) 70%) 0 0/100% 290px no-repeat;
   text-align: center;
   overflow: auto; }
 
@@ -4189,7 +4194,19 @@ a.demo-btn:hover {
   margin: 0 auto;
   padding: 0 10px;
   max-width: 920px;
-  text-align: left; }
+  text-align: left;
+  position: relative; }
+  .demo-template-content:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -50%;
+    right: -50%;
+    height: 290px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA/klEQVQoU02QMW7DMAxFSUohrdiWcrc4R6h6qA4dOnQp0KVDhwy9T53ZkmtbBW0HyCjo4f3/ibHrf8aGJLWG88lIai2nQJK85blCWQAYAQSfu/46MVbZG0necPZWhkB8fyu0wk/n/hsJXWpQ1s9gDzkYGVrLOZDMjAxqjJfbF5bi/iqq1Dgq3BoeTiTZW84NCagxnvtPQDgWKC4HK8nfY7XrVmc5IGO89B9lKU7hyall76rx3h40IdfEGLvfdwA8FgAH2lUHrdCjmdbVbwXBQVG4uKmmamgNj3ts8iRDsOvqV10NZYufzXaq7A2nhxoYu9sLwgaVHR7rDVrh3fwPwVNxEFJvon4AAAAASUVORK5CYII=) center top/100% 290px no-repeat;
+    background: linear-gradient(110deg, rgba(102, 84, 236, 0.77) 20%, rgba(53, 175, 255, 0.77) 70%) 0 0/100% 290px no-repeat;
+    z-index: -1; }
 
 .demo-template-header {
   font-size: 36px;
@@ -4203,7 +4220,8 @@ a.demo-btn:hover {
 .demo-template-info {
   position: relative;
   height: 340px;
-  width: 820px;
+  width: 90%;
+  max-width: 820px;
   padding: 30px 40px;
   background-color: #0D0D0D;
   overflow: hidden; }
@@ -4224,7 +4242,8 @@ a.demo-btn:hover {
   .demo-template-info .demo-info-content {
     color: #FFFFFF;
     font-size: 14px;
-    width: 250px;
+    width: 36%;
+    max-width: 250px;
     line-height: 1.8; }
 
 .demo-template-actions {
@@ -4236,7 +4255,8 @@ a.demo-btn:hover {
   position: absolute;
   top: -30px;
   right: 0;
-  width: 570px;
+  width: 64%;
+  max-width: 570px;
   height: 295px; }
   .demo-template-preview:after {
     content: "";
@@ -4249,8 +4269,10 @@ a.demo-btn:hover {
     top: 0; }
   .demo-template-preview .demo-preview-img {
     position: relative;
+    background-color: white;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
     height: 100%;
     width: 100%;
     z-index: 1; }
@@ -4259,9 +4281,9 @@ a.demo-btn:hover {
     .demo-template-sec:nth-child(2) .demo-template-preview .demo-preview-img {
       background-image: url("../img/template/template-container-row2.png"); }
     .demo-template-sec:nth-child(3) .demo-template-preview .demo-preview-img {
-      background-image: url("../img/template/template-layout.png"); }
-    .demo-template-sec:nth-child(4) .demo-template-preview .demo-preview-img {
       background-image: url("../img/template/template-container-col2.png"); }
+    .demo-template-sec:nth-child(4) .demo-template-preview .demo-preview-img {
+      background-image: url("../img/template/template-layout.png"); }
     .demo-template-sec:nth-child(5) .demo-template-preview .demo-preview-img {
       background-image: url("../img/template/template-layout-frame3.png"); }
 
@@ -4292,7 +4314,9 @@ a.demo-btn:hover {
   min-width: 80px; }
 
 .sg-layout-body .demo-tab {
-  padding: 10px 10px 0; }
+  padding: 10px 10px 0;
+  max-height: 48px;
+  overflow: hidden; }
   .sg-layout-body .demo-tab .demo-item {
     display: inline-block;
     height: 35px;
@@ -4310,7 +4334,9 @@ a.demo-btn:hover {
 .sg-layout-body .demo-subtab {
   padding: 10px 12px 0;
   background: linear-gradient(to right, #0E86FE, #00C3FF);
-  font-size: 0; }
+  font-size: 0;
+  max-height: 40px;
+  overflow: hidden; }
   .sg-layout-body .demo-subtab .demo-item {
     display: inline-block;
     height: 30px;
@@ -4359,6 +4385,34 @@ a.demo-btn:hover {
 
 .demo-template-container .sg-col:nth-child(6) .sg-card-header {
   background-image: url(../img/template/template-container-card6.png); }
+
+@media (min-width: 620px) and (max-width: 890px) {
+  .demo-template-header {
+    padding-top: 100px;
+    padding-left: 3%; } }
+
+@media (max-width: 620px) {
+  .demo-template-info {
+    height: auto;
+    width: auto;
+    max-width: none; }
+    .demo-template-info:after {
+      content: none; }
+    .demo-template-info .demo-info-content {
+      width: auto;
+      max-width: none; }
+  .demo-template-preview {
+    position: relative;
+    top: 0;
+    left: -10px;
+    width: calc(100% + 20px);
+    max-width: none; }
+    .demo-template-preview:after {
+      box-shadow: 0 15px 28px rgba(13, 13, 13, 0.2); }
+  .demo-template-actions {
+    position: relative;
+    text-align: center;
+    margin-top: 30px; } }
 
 /**
  * Github-like theme for Prism.js
@@ -4567,6 +4621,10 @@ pre[class*='language-'] {
   .f-item-preview:before, .f-item-preview:after {
     display: table;
     content: ' '; }
+
+.demo-btn-paragraph > *:not(:last-child),
+.f-item-preview > *:not(:last-child) {
+  margin-right: 5px; }
 
 .f-item-border-bottom {
   border-bottom: 1px solid #cccccc; }

@@ -51,7 +51,7 @@
     margin-left: -155px;
     width: 249px;
     height: 75px;
-    background-image: url(../img/landing-page/vital-title.svg);
+    background-image: url(../img/landing-page/vital-title.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -82,7 +82,7 @@
     z-index: $landing-sec0-card-base-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-weather-card2.svg");
+      @include landing-sec0-card-bg("vital-weather-card.png");
     }
 
     &:after {
@@ -101,7 +101,7 @@
     z-index: $landing-sec0-card-upper-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-nicetomeetyou-card2.svg");
+      @include landing-sec0-card-bg("vital-nicetomeetyou-card.png");
     }
 
     &:after {
@@ -120,7 +120,7 @@
     filter: blur(2px);
 
     &:before {
-      @include landing-sec0-card-bg("vital-oops-card.svg");
+      @include landing-sec0-card-bg("vital-oops-card.png");
     }
 
     &:after {
@@ -140,7 +140,7 @@
     z-index: $landing-sec0-card-lower-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-lock-card.svg");
+      @include landing-sec0-card-bg("vital-lock-card.png");
     }
 
     &:after {
@@ -155,7 +155,9 @@
     margin-left: -200px;
     width: 590px;
     height: 255px;
-    background: url(../img/landing-page/vital-news-card2.svg);
+    background: url(../img/landing-page/vital-news-card.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
     transform: rotate(45deg);
     z-index: $landing-sec0-card-lower-z-index;
     filter: blur(1px);
@@ -172,7 +174,7 @@
     filter: blur(1px);
 
     &:before {
-      @include landing-sec0-card-bg("vital-ohno-card2.svg");
+      @include landing-sec0-card-bg("vital-ohno-card.png");
     }
 
     &:after {
@@ -191,7 +193,7 @@
     z-index: $landing-sec0-card-lower-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-schedule-card2.svg");
+      @include landing-sec0-card-bg("vital-schedule-card.png");
     }
 
     &:after {
@@ -206,7 +208,7 @@
     margin-left: -750px;
     width: 166px;
     height: 480px;
-    background: url(../img/landing-page/vital-congrats-card.svg);
+    background: url(../img/landing-page/vital-congrats-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: rotate(45deg);
@@ -220,7 +222,7 @@
     margin-left: -935px;
     width: 300px;
     height: 480px;
-    background: url(../img/landing-page/vital-finished-card.svg);
+    background: url(../img/landing-page/vital-congrats-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: rotate(45deg);
@@ -234,7 +236,7 @@
     margin-left: 598px;
     width: 161px;
     height: 480px;
-    background: url(../img/landing-page/vital-finished-card.svg);
+    background: url(../img/landing-page/vital-finished-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: rotate(45deg);
@@ -261,7 +263,7 @@
     z-index: $landing-sec0-card-upper-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-calendar-card2.svg");
+      @include landing-sec0-card-bg("vital-calendar-card.png");
     }
 
     &:after {
@@ -280,7 +282,7 @@
     z-index: $landing-sec0-card-upper-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-404big-card2.svg");
+      @include landing-sec0-card-bg("vital-404big-card2.png");
     }
 
     &:after {
@@ -298,7 +300,7 @@
     z-index: $landing-sec0-card-upper-z-index;
 
     &:before {
-      @include landing-sec0-card-bg("vital-update-card2.svg");
+      @include landing-sec0-card-bg("vital-update-card.png");
     }
 
     &:after {

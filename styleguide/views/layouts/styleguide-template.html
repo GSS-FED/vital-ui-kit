@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 	<title>{{#if title}}{{title}} | {{/if}}Vital UI Kit</title>
-
+	
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
 	<link rel="stylesheet" href="./css/vital-ui-kit.css">
 	<link rel="stylesheet" href="./css/styleguide.css">
 
@@ -26,9 +27,10 @@
 	  <nav class="nav-wrapper">
 	    <div class="nav-menu">
 	      <a href="index.html">首頁</a>
-	      <a href="getting-started.html">開始使用</a>
-	      <a href="template.html">範例應用</a>
-	      <a href="#">聯絡我們</a>
+	      <a href="getting-started.html"><span>開始</span><span>使用</span></a>
+	      <a href="kendo-demo.html"><span>Kendo Theme</a>
+	      <a href="template.html"><span>範例</span><span>應用</span></a>
+	      <a href="https://uwillx.com/" target="_blank"><span>聯絡</span><span>我們</span></a>
 	    </div>
 	    <div class="nav-dropdown-wrapper download-wrapper">
 	    	<div class="nav-dropdown-toggle">下載 UI KIT</div>
@@ -53,6 +55,7 @@
 		</div>
 	{{/if}}
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./js/vital-ui-kit.js"></script>
 	{{#if javascript}}<script src="./js/{{javascript}}"></script>{{/if}}
 

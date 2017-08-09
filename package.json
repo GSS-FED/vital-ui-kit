@@ -1,16 +1,19 @@
 {
   "name": "vital-ui-kit",
-  "version": "0.0.5",
+  "version": "0.0.6",
+  "author": "Galaxy Software Services",
   "contributors": [
     "Neil Lin (https://github.com/Neil-Lin)",
-    "Evan Wu (https://github.com/evanwu-tw)",
-    "YuRu Lee (https://github.com/YuRu-Lee)",
-    "Laura Lee (https://github.com/l443018)",
     "Patric",
-    "CJies Tan (https://github.com/cjies)"
+    "Laura Lee (https://github.com/l443018)",
+    "Eric Yip (https://github.com/ericyip)",
+    "Vibrissa (https://github.com/Vibrissa)",
+    "YuRu Lee (https://github.com/YuRu-Lee)",
+    "CJies Tan (https://github.com/cjies)",
+    "Evan Wu (https://github.com/evanwu-tw)"
   ],
   "description": "UI Kit for GSS Vital Family",
-  "license": "Galaxy Software Services Corporation | 叡揚資訊股份有限公司 版權所有 © 2016",
+  "license": "MIT",
   "main": "gulpfile.js",
   "engines": {
     "node": ">=0.14.x"
@@ -42,11 +45,9 @@
     "gulp-eslint": "^1.1.1",
     "gulp-filter": "^3.0.1",
     "gulp-header": "^1.7.1",
-    "gulp-htmlmin": "^1.3.0",
+    "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-jsonminify": "^1.0.0",
     "gulp-less": "^3.0.5",
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.1",
@@ -59,9 +60,9 @@
     "gulp-zip": "^4.0.0",
     "morgan": "^1.6.1",
     "object-assign": "^4.0.1",
+    "path": "^0.12.7",
     "pretty-hrtime": "^1.0.1",
     "run-sequence": "^1.1.5",
-    "sass-mq": "^3.2.8",
     "yargs": "^6.3.0"
   }
 }

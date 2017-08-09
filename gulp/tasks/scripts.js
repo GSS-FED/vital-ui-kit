@@ -12,72 +12,21 @@ var browserSync  = require('browser-sync');
 var handleErrors = require('../util/handleErrors');
 var pkg          = require('../../package.json');
 
-function taskScripts(type) {
-  var scriptsEntry = type==='kitScripts'? config.kitScripts : config.styleguideScripts;
-  var scriptsDest = global.isProd? scriptsEntry.destProd : scriptsEntry.dest;
+function styleguidScript(isMin) {
+  var scriptEntry = config.styleguide.scripts;
+  var scriptDest = global.isProd? scriptEntry.destProd : scriptEntry.dest;
+  var scriptOutput = (isMin? scriptEntry.outputMin : scriptEntry.output);
 
-  if(global.isProd) {
-
-    // copy vital-ui-kit.js
-    if(type === 'styleguideScripts') {
-      gulp.src(config.kitScripts.destProd + '/' + config.kitScripts.output)
-        .pipe(gulp.dest(scriptsDest));
-    }
-
-    // *.min.js
-    if (type === 'styleguideScripts') {
-      for (var key in scriptsEntry.outputMin) {
-        gulp.src(scriptsEntry.outputMin[key])
-          .pipe(plumber({errorHandler: function(error) {
-            handleErrors(error, 'Min Script');
-            this.emit('end');
-          }}))
-          .pipe(concat(key))
-          .pipe(uglify())
-          .pipe(header(config.banner.header, {pkg: pkg})) // Header Banner
-          .pipe(gulp.dest(scriptsDest));
-        }
-      } else {
-          gulp.src(scriptsEntry.src)
-          .pipe(plumber({errorHandler: function(error) {
-            handleErrors(error, 'Min Script');
-            this.emit('end');
-          }}))
-          .pipe(concat(scriptsEntry.outputMin))
-          .pipe(uglify())
-          .pipe(header(config.banner.header, {pkg: pkg})) // Header Banner
-          .pipe(gulp.dest(scriptsDest));
-      }
-    }
-
-  // *.js
-  if(type === 'styleguideScripts') {
-    for(var key in scriptsEntry.output) {
-      gulp.src(scriptsEntry.output[key])
-        .pipe(plumber({errorHandler: function(error) {
-          handleErrors(error, 'JS');
-          this.emit('end');
-        }}))
-        .pipe(concat(key))
-        .pipe(gulpif(global.isProd,
-          header(config.banner.header, {pkg: pkg})
-        ))
-        .pipe(gulp.dest(scriptsDest))
-        .pipe(gulpif(global.isWatching,
-          browserSync.stream({ once: true })
-        ));
-    }
-  } else {
-    return gulp.src(scriptsEntry.src)
+  for(var key in scriptOutput) {
+    gulp.src(scriptOutput[key])
       .pipe(plumber({errorHandler: function(error) {
         handleErrors(error, 'JS');
         this.emit('end');
       }}))
-      .pipe(concat(scriptsEntry.output))
-      .pipe(gulpif(global.isProd,
-        header(config.banner.header, {pkg: pkg})
-      ))
-      .pipe(gulp.dest(scriptsDest))
+      .pipe(concat(key))
+      .pipe(gulpif(isMin, uglify()))
+      .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
+      .pipe(gulp.dest(scriptDest))
       .pipe(gulpif(global.isWatching,
         browserSync.stream({ once: true })
       ));
@@ -85,6 +34,41 @@ function taskScripts(type) {
 
 }
 
-gulp.task('kitScripts', function() { return taskScripts('kitScripts') });
-gulp.task('styleguideScripts', ['kitScripts'], function() { return taskScripts('styleguideScripts') });
+function uikitScript(isMin) {
+  var scriptEntry = config.uikit.scripts;
+  var scriptDest = global.isProd? scriptEntry.destProd : scriptEntry.dest;
+  var scriptOutput = (isMin? scriptEntry.outputMin : scriptEntry.output);
+
+  return gulp.src(scriptEntry.src)
+    .pipe(plumber({errorHandler: function(error) {
+      handleErrors(error, 'JS');
+      this.emit('end');
+    }}))
+    .pipe(concat(scriptOutput))
+    .pipe(gulpif(isMin, uglify()))
+    .pipe(gulpif(global.isProd, header(config.banner.header, {pkg: pkg})))
+    .pipe(gulp.dest(scriptDest))
+    .pipe(gulpif(global.isWatching,
+      browserSync.stream({ once: true })
+    ));
+}
+
+gulp.task('styleguidScript', function() {
+  return styleguidScript();
+});
+
+gulp.task('uikitScript', function() {
+  return uikitScript();
+});
+
+gulp.task('scripts', ['styleguidScript', 'uikitScript'], function() {
+  if(global.isProd) {
+    // compile min.css
+    styleguidScript(true);
+    uikitScript(true);
+    // copy vital-ui-kit js to styleguide
+    return gulp.src(config.uikit.scripts.destProd + '/' + config.uikit.scripts.output)
+      .pipe(gulp.dest(config.styleguide.scripts.destProd));
+  }
+});
 

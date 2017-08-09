@@ -10,9 +10,5 @@
   "homepage": "",
   "private": true,
   "dependencies": {
-    "bootstrap": "^3.3.6",
-    "kendo-ui": "kendo-ui-core#^2016.2.523",
-    "jquery": "^2.1.1",
-    "tooltipster": "^4.1.4"
   }
 }
