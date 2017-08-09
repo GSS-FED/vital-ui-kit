@@ -32,7 +32,7 @@ gulp.task('fabricator-assemble', function () {
 
 });
 
-gulp.task('fabricator-compress-html', ['fabricator-assemble', 'static'], function() {
+gulp.task('fabricator-compress-html', ['fabricator-assemble'], function() {
 
   var htmlSrc = global.isProd? config.styleguide.views.srcProd : config.styleguide.views.src;
   var htmlDest = global.isProd? config.styleguide.views.destProd : config.styleguide.views.dest;
@@ -51,16 +51,16 @@ gulp.task('fabricator-compress-html', ['fabricator-assemble', 'static'], functio
 
 });
 
-gulp.task('fabricator', ['fabricator-compress-html'], function() {
-  if(global.isWatching) {
-    browserSync.reload({ stream:true });
-  }
-});
-
-gulp.task('static', function() {
+gulp.task('fabricator-static', function() { // temp
   var htmlSrc = config.styleguide.static.kendo;
   var htmlDest = config.styleguide.fabricator.assemble.dest;
 
   return gulp.src(htmlSrc)
     .pipe(gulp.dest(htmlDest));
+});
+
+gulp.task('fabricator', ['fabricator-compress-html', 'fabricator-static'], function() {
+  if(global.isWatching) {
+    browserSync.reload({ stream:true });
+  }
 });
