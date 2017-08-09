@@ -191,7 +191,8 @@ module.exports = {
     // dependency
     dependency: {
       src: [
-        'assets/**/*'
+        'assets/**/*',
+        'styleguide/assets/+(img|icomoon)/**/*'
       ],
       document: {
         src: [
