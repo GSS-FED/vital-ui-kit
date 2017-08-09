@@ -170,6 +170,8 @@
 
 .#{$prefix}-tab {
   padding: 10px 10px 0;
+  max-height: 48px;
+  overflow: hidden;
 
   .#{$prefix}-item {
     display: inline-block;
@@ -197,6 +199,8 @@
   padding: 10px 12px 0;
   background: $template-subtab-bg-gradient;
   font-size: 0;
+  max-height: 40px;
+  overflow: hidden;
 
   .#{$prefix}-item {
     display: inline-block;

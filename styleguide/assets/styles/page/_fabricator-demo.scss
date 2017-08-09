@@ -125,10 +125,10 @@
 }
 
 .demo-cell-group {
-  .#{$prefix}-cell,
-  .#{$prefix}-col {
+  .#{$kit-prefix}-cell,
+  .#{$kit-prefix}-col {
     position: relative;
-    background-color: pink;
+    background-color: nth($c-skyblue-list, 1);
     padding: 10px;
     text-align: center;
 
