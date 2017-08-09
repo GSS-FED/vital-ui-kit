@@ -91,7 +91,7 @@
 /* Selected State */
 @selected-text-color: @widget-text-color;
 @selected-gradient: none;
-@selected-background-color: extract(@c-secondary-list, 2);
+@selected-background-color: extract(@c-secondary-list, 4);
 @selected-border-color: @selected-background-color;
 @selected-shadow: none;
 
@@ -162,7 +162,7 @@
 /* Scheduler */
 @scheduler-background-color: @widget-background-color;
 @current-time-color: @error-border-color;
-@event-background-color: #ffdac1;
+@event-background-color: extract(@c-secondary-list, 1);
 @event-text-color: @widget-text-color;
 @event-inverse-text-color: @scheduler-background-color;
 @scheduler-nonwork-background-color: #f2f2f2;
@@ -189,7 +189,7 @@
 @shadow-inset-color: #ddd;
 
 /* Border Radii */
-@main-border-radius: 4px;
+@main-border-radius: @border-radius;
 @list-border-radius: @main-border-radius - 1;
 @inner-border-radius: @main-border-radius - 1;
 @slider-border-radius: 13px;
@@ -233,13 +233,13 @@
 
 @primary-button-text-color: @c-white;
 @primary-button-background-color: @c-primary;
-@primary-button-border-color: transparent;
+@primary-button-border-color: @primary-button-background-color;
 @primary-gradient: none;
 @primary-shadow:none;
 
 @primary-hover-text-color: @primary-button-text-color;
-@primary-hover-background-color: lighten(@primary-button-background-color, 10%);
-@primary-hover-border-color: @primary-button-border-color;
+@primary-hover-background-color: extract(@c-primary-list, 4);
+@primary-hover-border-color: @primary-hover-background-color;
 @primary-hover-gradient: none;
 @primary-hover-shadow:none;
 
@@ -249,9 +249,9 @@
 @primary-focused-active-item-shadow: none;
 
 @primary-active-text-color: @primary-button-text-color;
-@primary-active-background-color: darken(@primary-button-background-color, 10%);
+@primary-active-background-color: extract(@c-primary-list, 6);
 @primary-active-gradient: none;
-@primary-active-border-color: @primary-button-border-color;
+@primary-active-border-color: @primary-active-background-color;
 @primary-active-shadow:none;
 
 @primary-disabled-text-color: @c-white;
