@@ -7,7 +7,7 @@ install:
   - npm install
 
 script:
-  -
+  - "if [ ${TRAVIS_PULL_REQUEST} = 'false' ]; then npm run deploy; fi"
 
 branches:
   only:
