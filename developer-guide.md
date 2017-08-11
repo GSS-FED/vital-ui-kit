@@ -15,7 +15,7 @@ More Details: [vital UI Kit Rules](https://csid.hackpad.com/vital-Web-UI-Kit-Rbs
 
 ## Install
 
-安裝 Node.js 及 bower 套件
+安裝套件
 
 ```
 npm install
@@ -90,16 +90,6 @@ styleguide/             styleguide js, scss, html
 參數與檔案路徑集中在 ```gulp/config.js``` 管理
 
 若需要新增 task, 在 ```gulp/task``` 裡面新增
-
-- Bower: [Bower Packages](http://bower.io/docs/creating-packages/)
-
-使用 bower 新增 dependencies (如: font-awesome, JQuery)
-
-請注意 ```bower.json``` 是否有註明版本號, 需做好版控
-
-```
-bower install <package> --save
-```
 
 - Icon: [Icomoon](https://icomoon.io/)
 
