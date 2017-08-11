@@ -12,6 +12,7 @@ node_modules/
 
 ### Released File ###
 www/
+build/
 
 ### Sublime ###
 *.sublime-project
