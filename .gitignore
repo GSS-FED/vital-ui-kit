@@ -6,12 +6,6 @@ config.codekit
 ### Sass ###
 .sass-cache
 
-### Bower ###
-bower_components
-.bower-cache
-.bower-registry
-.bower-tmp
-
 ### NPM ###
 npm-debug.log
 node_modules/
