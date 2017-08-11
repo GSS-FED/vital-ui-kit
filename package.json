@@ -23,7 +23,9 @@
     "build": "gulp prod",
     "test": "gulp test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "kendo-ui-core": "telerik/kendo-ui-core#2014.3.1316"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.11.1",

@@ -3354,6 +3354,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+kendo-ui-core@telerik/kendo-ui-core#2014.3.1316:
+  version "1.0.0"
+  resolved "https://codeload.github.com/telerik/kendo-ui-core/tar.gz/11435985186a69b4a78b608ce52a1492cd4af0be"
+
 kind-of@^3.0.2:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
