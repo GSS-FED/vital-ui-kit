@@ -93,6 +93,8 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
 `build/styleguide/` 包含 Vital UI Kit 的使用說明，可打開 `index.html` 閱讀。
 
+我們也提供 [Kendo](https://www.telerik.com/kendo-ui) 套件的樣式，目前支援版本 `kendo-ui-core^1.0.0`，2016 以後的版本樣式仍在開發中，可從線上 [less2016](https://github.com/GSS-FED/vital-ui-kit/tree/master/src/less2016) 資料夾看到測試中的 less 原碼，自行下載採用。
+
 ```
 vital-ui-kit/
 ├── dist/
