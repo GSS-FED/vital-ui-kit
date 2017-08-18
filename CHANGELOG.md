@@ -1,5 +1,14 @@
 # Release Notes
 
+## 0.0.7 (2017-08-18)
+
+- Move kendo-ui-core dependency from bower to npm and remove bower
+- Add Travis CI config
+- Upload kendo less 2016 src
+- Change build target form "build directory" to "build branch"
+- 1 developer has gone to Tokyo, the other will go there too the next week :DD
+
+
 ## 0.0.6 (2017-08-09)
 
 - add sass, less source files to dist
