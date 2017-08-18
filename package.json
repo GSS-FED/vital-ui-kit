@@ -19,17 +19,15 @@
     "node": ">=0.14.x"
   },
   "scripts": {
-    "postinstall": "bower install",
     "start": "gulp dev",
     "build": "gulp prod",
-    "test": "gulp test"
+    "deploy": "npm run build && sh ./deploy.sh"
   },
   "dependencies": {
-    "bower": "^1.7.7"
+    "kendo-ui-core": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
-    "bower": "^1.7.7",
     "browser-sync": "^2.11.1",
     "cssnano": "^3.4.0",
     "del": "^2.2.0",
