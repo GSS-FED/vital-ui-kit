@@ -21,7 +21,7 @@
   "scripts": {
     "start": "gulp dev",
     "build": "gulp prod",
-    "test": "gulp test"
+    "deploy": "npm run build && sh ./deploy.sh"
   },
   "dependencies": {
     "kendo-ui-core": "telerik/kendo-ui-core#2014.3.1316"
