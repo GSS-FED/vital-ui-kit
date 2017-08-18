@@ -24,7 +24,7 @@
     "deploy": "npm run build && sh ./deploy.sh"
   },
   "dependencies": {
-    "kendo-ui-core": "telerik/kendo-ui-core#2014.3.1316"
+    "kendo-ui-core": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
