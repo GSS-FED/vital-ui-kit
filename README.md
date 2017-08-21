@@ -12,6 +12,8 @@
 
 ## Intro
 
+[![Join the chat at https://gitter.im/GSS-FED/vital-ui-kit](https://badges.gitter.im/GSS-FED/vital-ui-kit.svg)](https://gitter.im/GSS-FED/vital-ui-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 不不僅整理了常用又實用的元件，而且每一項元素都經過設計師與工程師合力精雕細琢產生，讓您在實作上能輕易的應用，也兼顧設計性、互動性與易用性。
 
 * 適合各系統畫面
