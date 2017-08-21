@@ -253,12 +253,6 @@ module.exports = {
       buildStyleguide: 'build/styleguide',
     },
 
-    zip: {
-      src: 'build/**/*',
-      filename: 'vital-ui-kit.zip',
-      dest: 'build'
-    },
-
     banner: {
       header: [
                 '/*******************************************',
@@ -284,7 +278,7 @@ module.exports = {
     tasks: {
       dev:   ['fabricator', 'scripts', 'styles', 'dependency'],
       watch: ['fabricator', 'scripts', 'styles', 'dependency'],
-      prod:  ['fabricator', 'scripts', 'styles', 'dependency', 'docs', 'zip']
+      prod:  ['fabricator', 'scripts', 'styles', 'dependency', 'docs']
     }
 
 };
