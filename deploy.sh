@@ -1,4 +1,5 @@
-#!/bin/sh -xe
+#!/bin/sh
+set -xe
 
 DEPLOY_FOLDER="deploy"
 DEPLOY_BRANCH="build"
