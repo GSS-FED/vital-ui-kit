@@ -3,7 +3,7 @@
   <p align="center">
     簡單、輕量級、模組化的 UI library
     <br>
-    <a href="https://gss-fed.github.io/vital-ui-kit/"><strong>View Documents &raquo;</strong></a>
+    <a href="https://gss-fed.github.io/vital-ui-kit/" target="_blank"><strong>View Documents &raquo;</strong></a>
     <br>
   </p>
 </p>
@@ -46,7 +46,7 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
     如果您不需要建立開發環境，可以使用以下方式，方便且快速地應用 Vital UI Kit 在您的產品或專案上。
 
-    1. 下載 [Vital UI Kit](https://github.com/GSS-FED/Vital-UI-Kit/raw/build/vital-ui-kit.zip) 並解壓縮
+    1. 下載 [Vital UI Kit](https://github.com/GSS-FED/vital-ui-kit/archive/build.zip) 並解壓縮
 
     1. 將 `dist` 資料夾底下的 `css`、`fonts`、`img`、`js` 資料夾複製到您的專案環境根目錄
 
