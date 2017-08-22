@@ -37,7 +37,7 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 ## Installation
 
 ```
-npm install @gssfed/vital-ui-kit
+npm install vital-ui-kit
 ```
 
 
