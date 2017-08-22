@@ -1,4 +1,5 @@
-#!/bin/sh -xe
+#!/bin/sh
+set -xe
 
 DEPLOY_FOLDER="deploy"
 DEPLOY_BRANCH="build"
@@ -22,7 +23,7 @@ git push --tag --force origin-pages || exit 1
 git clone -b $DEPLOY_BRANCH --single-branch "https://${GH_REPO}" $DEPLOY_FOLDER
 
 # Clean up files from last build(except .git)
-find ./$DEPLOY_FOLDER/* ! -path "./${DEPLOY_FOLDER}/.git/*" ! -name ".git" | xargs rm -rf
+find ./$DEPLOY_FOLDER/{.??,}* ! -path "./${DEPLOY_FOLDER}/.git/*" ! -name ".git" | xargs rm -rf
 
 # Copy built files
 cp -R ./build/. ./$DEPLOY_FOLDER
@@ -37,7 +38,13 @@ git commit -m "Built at Travis-${TRAVIS_BUILD_NUMBER} (${TRAVIS_COMMIT_RANGE})"
 git remote add origin-pages "https://${GH_TOKEN}@${GH_REPO}" > /dev/null 2>&1
 git push --set-upstream origin-pages $DEPLOY_BRANCH
 
-# Publish to npm
-echo "Deploying v${PACKAGE_VERSION} to npm..."
-echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > "${TRAVIS_BUILD_DIR}/${DEPLOY_FOLDER}"/.npmrc
-npm publish || exit 1
+# Publish to npm before check version number
+export NPM_PACKAGE_VERSION=$(npm view vital-ui-kit version)
+if [ "${PACKAGE_VERSION}" == ${NPM_PACKAGE_VERSION} ]; then
+  echo "Not deploy current master commit to npm (prevent hotfix build)"
+  exit 0
+else
+  echo "Deploying v${PACKAGE_VERSION} to npm..."
+  echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > "${TRAVIS_BUILD_DIR}/${DEPLOY_FOLDER}"/.npmrc
+  npm publish || exit 1
+fi

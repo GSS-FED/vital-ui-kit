@@ -15,14 +15,14 @@ usageScripts2: ./js/vital-ui-kit.js
     <h3>Install</h3>
     <div>
       <p>Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選擇適合您的方式開始應用。</p>
-      <p>首先，請先下載 Vital UI Kit 並解壓縮：
-        <a role="button" class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default" href="https://github.com/GSS-FED/Vital-UI-Kit/raw/build/vital-ui-kit.zip" style="margin-right: 5px"><span class="{{styleguide.prefix}}-btn-txt">下載</span><i class="icon-download icon-right"></i></a>
-      </p>
       <ul>
         <li class="demo-ol-wrap" style="background: white">
           <h5>直接開始使用 Vital UI Kit</h5>
-          <p>如果您不需要開發原始碼或是還不熟悉 Sass，可以使用以下方式，方便且快速地應用 Vital UI Kit 在您的產品或專案上。</p>
+          <p>如果您不需要建立開發環境，可以使用以下方式，方便且快速地應用 Vital UI Kit 在您的產品或專案上。</p>
           <ol class="{{styleguide.prefix}}-ol--decimal">
+            <li>首先，請先下載 Vital UI Kit 並解壓縮：
+              <a role="button" class="{{styleguide.prefix}}-btn {{styleguide.prefix}}-btn-default" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip" style="margin-right: 5px"><span class="{{styleguide.prefix}}-btn-txt">下載</span><i class="icon-download icon-right"></i></a>
+            </li>
             <li>將 dist 資料夾底下的 css、fonts、img、js 資料夾複製到您的專案環境根目錄</li>
             <li>
               在您的 Html 中引入
@@ -33,10 +33,14 @@ usageScripts2: ./js/vital-ui-kit.js
         </li>
         <li class="demo-ol-wrap" style="background: white">
           <h5>客製化 Vital UI Kit</h5>
-          <p>如果您想要客製化自己的 Vital UI Kit，更改 UI Kit 顏色，可使用以下方法。</p>
+          <p>如果您是開發者，想要客製化自己的 Vital UI Kit、更改 UI Kit 顏色，可使用以下方法。</p>
           <ol class="{{styleguide.prefix}}-ol--decimal">
-            <li>將 dist 資料夾底下的 fonts、img、js 資料夾複製到您的專案環境輸出目錄</li>
-            <li>將 sass 資料夾複製到您的專案環境開發用資料夾，編譯輸出的 css 檔案路徑需和 fonts 平行</li>
+            <li>
+              安裝 vital-ui-kit
+              <pre class="language-markup"><code class="language-markup">npm install vital-ui-kit</code></pre>
+            </li>
+            <li>在專案環境引用 node_modules/vital-ui-kit/dist 資料夾底下的 fonts、img、js</li>
+            <li>在專案環境引用 node_modules/vital-ui-kit/sass 資料夾，編譯輸出的 css 檔案路徑需和 fonts 平行</li>
             <li>在 vital-ui-kit.scss 可 import 自己客製化的變數檔與加入樣式，可參考 base/_variables.scss 看有哪些變數可供更改。<br/>
               <pre class="language-markup"><code class="language-markup">
 sass/
