@@ -1,4 +1,5 @@
-#!/bin/sh -xe
+#!/bin/sh
+set -xe
 
 DEPLOY_FOLDER="deploy"
 DEPLOY_BRANCH="build"
@@ -22,7 +23,7 @@ git push --tag --force origin-pages || exit 1
 git clone -b $DEPLOY_BRANCH --single-branch "https://${GH_REPO}" $DEPLOY_FOLDER
 
 # Clean up files from last build(except .git)
-find ./$DEPLOY_FOLDER/* ! -path "./${DEPLOY_FOLDER}/.git/*" ! -name ".git" | xargs rm -rf
+find ./$DEPLOY_FOLDER/{.??,}* ! -path "./${DEPLOY_FOLDER}/.git/*" ! -name ".git" | xargs rm -rf
 
 # Copy built files
 cp -R ./build/. ./$DEPLOY_FOLDER
