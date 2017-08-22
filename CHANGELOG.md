@@ -1,11 +1,18 @@
 # Release Notes
 
+## 0.0.8 (2017-08-22)
+
+- Remove dot files, zip file from builded content
+- Change document link path
+
+
 ## 0.0.7 (2017-08-18)
 
 - Move kendo-ui-core dependency from bower to npm and remove bower
 - Add Travis CI config
 - Upload kendo less 2016 src
 - Change build target form "build directory" to "build branch"
+- Publish vital-ui-kit to npm
 - 1 developer has gone to Tokyo, the other will go there too the next week :DD
 
 
