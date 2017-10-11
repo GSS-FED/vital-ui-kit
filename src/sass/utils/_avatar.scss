@@ -45,7 +45,7 @@ img.#{$prefix}-avatar  {
   position: relative;
   display: inline-block;
   &.#{$prefix}-avatar-badge--point {
-    .badge--circle:before {
+    .#{$prefix}-badge--circle:before {
       content:'';
       position: absolute;
       top: calc(50% - (#{$avatar-badge-pointer-height}/2));
@@ -56,7 +56,7 @@ img.#{$prefix}-avatar  {
       height: $avatar-badge-pointer-height;
     }
     &.#{$prefix}-avatar-badge--xsmall{
-      .badge--circle:before {
+      .#{$prefix}-badge--circle:before {
         width: 1px;
         height: 1px;
         top: calc(50% - 0.5px);
@@ -66,14 +66,14 @@ img.#{$prefix}-avatar  {
   }
   // if this is a circle image with badge
   &.#{$prefix}-avatar-badge--circle {
-    .badge {
+    .#{$prefix}-badge {
       top: 0;
       left: 70%;
       right: auto;
     }
   }
   // else
-  .badge {
+  .#{$prefix}-badge {
     position: absolute;
     background: $avatar-badge-bg-color;
     padding: 0 5px;
@@ -82,7 +82,7 @@ img.#{$prefix}-avatar  {
     top: -($avatar-badge-half-height);
     right: -12%;
   }
-  .badge--circle {
+  .#{$prefix}-badge--circle {
     border-radius: 50%;
     font-size: 0;
     padding: 0;
@@ -97,7 +97,7 @@ img.#{$prefix}-avatar  {
 @each $_size, $_value in $avatar-badge-style {
   $_width: map-get($_value, width);
   $_height: map-get($_value, height);
-  .#{$prefix}-avatar-badge--#{$_size} .badge--circle{
+  .#{$prefix}-avatar-badge--#{$_size} .#{$prefix}-badge--circle{
     width: $_width;
     height: $_height;
     top: -($_width/2);
