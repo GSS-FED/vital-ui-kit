@@ -6,34 +6,48 @@
 // *************************************
 
 .#{$prefix}-checkbox {
-  position: relative;
-  appearance: none;
-  width: $checkbox-size;
-  height: $checkbox-size;
-  border: 1px solid $checkbox-default-border-color;
-  border-radius: $checkbox-border-radius;
-  background-color: $checkbox-bg-color;
-  transition: all 120ms ease-out;
-  margin: -2px 0 0 0;
-  outline: none;
-  &:after {
+  display: none;
+
+  + span {
+    position: relative;
+  }
+
+  + span:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid $checkbox-default-border-color;
+    border-radius: $checkbox-border-radius;
+    background-color: $checkbox-bg-color;
+    transition: all 120ms ease-out;
+    margin: -2px 0.6em 0 0;
+    vertical-align: middle;
+  }
+
+  + span:after {
     @extend %icon;
+    font-size: $checkbox-checked-size;
     content: $icon-check;
     position: absolute;
     width: $checkbox-checked-size;
     height: $checkbox-checked-size;
-    top: calc((#{$checkbox-size} - #{$checkbox-checked-size})/2);
-    left: calc((#{$checkbox-size} - #{$checkbox-checked-size})/2);
+    top: $checkbox-size - $checkbox-checked-size;
+    left: ($checkbox-size - $checkbox-checked-size)/2;
     opacity: 0;
     pointer-events: none;
     color: $checkbox-primary-color;
-    font-size: 0.8rem;
     transform: scale(0);
     transition: all 120ms ease-out;
   }
+
   &:checked {
-    border-color: $radio-primary-color;
-    &:after {
+    + span:before {
+      border-color: $checkbox-primary-color;
+    }
+
+    + span:after {
       opacity: 1;
       transform: scale(1);
     }
@@ -51,7 +65,7 @@
   font-size: 1rem;
   cursor: pointer;
   &:hover {
-    .#{$prefix}-checkbox {
+    .#{$prefix}-checkbox + span:before {
       box-shadow: 0 0 0 2px $checkbox-shadow-color;
       border-color: $checkbox-primary-color;
     }
@@ -61,12 +75,12 @@
     pointer-events: none;
     color: $checkbox-label-disable-color;
     &:hover {
-      .#{$prefix}-checkbox {
+      .#{$prefix}-checkbox + span:before {
         box-shadow: none;
         border-color: $checkbox-disable-border-color;
       }
     }
-    .#{$prefix}-checkbox {
+    .#{$prefix}-checkbox + span:before {
       border-color: $checkbox-disable-border-color;
       &:checked {
         + span {
@@ -79,7 +93,7 @@
     }
   }
   &.#{$prefix}-checkbox-label--circle {
-    .#{$prefix}-checkbox {
+    .#{$prefix}-checkbox + span:before {
       border-radius: 50%;
       &:checked {
         background-color: $checkbox-selected-color;
@@ -89,7 +103,7 @@
       }
     }
     &.#{$state}--disable {
-      .#{$prefix}-checkbox {
+      .#{$prefix}-checkbox + span:before {
         &:checked {
           background-color: $checkbox-default-color;
         }
@@ -97,7 +111,3 @@
     }
   }
 }
-
-
-
-

@@ -42,7 +42,7 @@
 
 .demo-btn-paragraph,
 .f-item-preview {
-  & > *:not(:last-child) {
+  & > button:not(:last-child) {
     margin-right: 5px;
   }
 }

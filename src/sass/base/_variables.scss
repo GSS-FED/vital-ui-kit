@@ -871,8 +871,8 @@ $checkbox-shadow-color:                   rgba($c-primary, 0.2) !default;
 $checkbox-disable-color:                  nth($c-secondary-list, 5) !default;
 $checkbox-disable-border-color:           nth($c-secondary-list, 3) !default;
 $checkbox-default-border-color:           nth($c-secondary-list, 4) !default;
-$checkbox-size:                           16px !default;
-$checkbox-checked-size:                   14px !default;
+$checkbox-size:                           1.066rem !default; // 16px
+$checkbox-checked-size:                   0.933rem !default; // 14px
 $checkbox-border-radius:                  2px !default;
 $checkbox-min-width:                      $checkbox-size !default;
 $checkbox-min-height:                     $checkbox-min-width !default;
