@@ -1,8 +1,13 @@
 # Release Notes
 
+## 0.0.9 (2017-08-22)
+
+- Fix #10 bug, now published package won't included any dot files
+
+
 ## 0.0.8 (2017-08-22)
 
-- Remove dot files, zip file from builded content
+- Remove dot files, zip file from built content
 - Change document link path
 
 
