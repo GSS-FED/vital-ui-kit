@@ -69,7 +69,7 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
     如果您是開發者，想要客製化自己的 Vital UI Kit、更改 UI Kit 顏色，可使用以下方法。
 
-    1. `npm install @gssfed/vital-ui-kit`
+    1. `npm install vital-ui-kit`
 
     1. 在專案環境引用 `node_modules/vital-ui-kit/dist` 資料夾底下的 `fonts`、`img`、`js`
 

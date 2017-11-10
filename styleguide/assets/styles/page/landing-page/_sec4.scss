@@ -16,6 +16,7 @@
   .landing-container {
     position: relative;
     height: 100%;
+    overflow: hidden;
 
     // background blue
     &:before {

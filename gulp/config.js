@@ -157,6 +157,12 @@ module.exports = {
           ],
           destSrc: 'build/dist/less'
         },
+        icomoon: {
+          src: [
+            'src/icomoon/**/*'
+          ],
+          destSrc: 'build/dist/icomoon'
+        },
         sourcemap: true,
         autoprefixer: {
           browsers: [
