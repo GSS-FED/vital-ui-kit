@@ -56,6 +56,11 @@ gulp.task('fabricator-static', function() { // temp
   var htmlDest = config.styleguide.fabricator.assemble.dest;
 
   return gulp.src(htmlSrc)
+    .pipe(plumber({errorHandler: function(error) {
+      handleErrors(error, 'HTML');
+      this.emit('end');
+    }}))
+    .pipe(htmlmin(config.styleguide.views.htmlmin))
     .pipe(gulp.dest(htmlDest));
 });
 

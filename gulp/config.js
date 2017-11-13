@@ -126,7 +126,7 @@ module.exports = {
         },
         fonts: {
           src: [
-            'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
+            'src/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
             'assets/styleguide/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
           ],
           dest: 'www/css/fonts'
@@ -156,6 +156,12 @@ module.exports = {
             'src/less/**'
           ],
           destSrc: 'build/dist/less'
+        },
+        icomoon: {
+          src: [
+            'src/icomoon/**/*'
+          ],
+          destSrc: 'build/dist/icomoon'
         },
         sourcemap: true,
         autoprefixer: {
@@ -228,10 +234,10 @@ module.exports = {
       },
       fonts: {
         src: [
-          'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
+          'src/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
         styleguideSrc: [
-          'assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
+          'src/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)',
           'styleguide/assets/icomoon/fonts/**/*.+(woff|woff2|ttf|eot|svg)'
         ],
         dest: 'www/fonts',

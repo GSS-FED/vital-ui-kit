@@ -32,6 +32,10 @@
       box-shadow: 0 0 8px 16px rgba(#B7B7B7, 0.5);
       z-index: -1;
     }
+
+    @include bp($content-max-width) {
+      overflow: hidden;
+    }
   }
 
   .vital-icons {

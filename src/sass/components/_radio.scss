@@ -63,7 +63,7 @@
     .#{$prefix}-radio {
       border-color: $radio-disable-border-color;
       &:checked {
-        border-color: $radio-disable-color;
+        border-color: $radio-default-color;
         + span {
           color: $radio-label-default-color;
         }
@@ -72,6 +72,9 @@
         }
       }
     }
+  }
+  span {
+    padding-left: 4px;
   }
 }
 

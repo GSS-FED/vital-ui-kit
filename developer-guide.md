@@ -38,7 +38,7 @@ npm start
 
 產生整包 ui kit 介面設定環境檔案
 
-會將檔名前方不含底線的 sass, js, imgage, fonts...等檔案編譯壓縮, 並輸出至 ```www/vital-ui-kit``` 資料夾
+會將檔名前方不含底線的 sass, js, imgage, fonts...等檔案編譯壓縮, 並輸出至 ```build```
 
 **NOTE: 此輸出僅針對 UI Kit 的 source code, 不含 style guide**
 
