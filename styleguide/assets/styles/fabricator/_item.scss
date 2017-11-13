@@ -41,8 +41,9 @@
 }
 
 .demo-btn-paragraph,
-.f-item-preview {
-  & > button:not(:last-child) {
+.f-item-preview,
+.demo-btn-title {
+  & > .sg-btn:not(:last-child) {
     margin-right: 5px;
   }
 }

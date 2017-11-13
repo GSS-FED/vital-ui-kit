@@ -60,6 +60,12 @@
   box-sizing: border-box;
   width: @radio-label-size;
   height: @radio-label-size;
+  border-radius: 50%;
+  border-width: 1px;
+}
+
+.k-radio-label:after {
+  border-radius: 50%;
 }
 
 // 810
@@ -69,6 +75,7 @@
   height: @radio-label-after-size;
   top: @radio-label-spacing;
   left: @radio-label-spacing;
+  background-color: @widget-text-color;
 }
 
 
@@ -739,7 +746,40 @@ div.k-window-content {
   .k-state-selected .k-i-arrow-s:before { content: @icon-chevron-down; }
   .k-i-arrow-n:before { content: @icon-chevron-up; }
   .k-i-arrow-s:before { content: @icon-chevron-down; }
+
+  .k-first {
+    &.k-item {
+      border-radius: 4px 4px 0 0;
+    }
+    .k-header {
+      border-radius: 3px 3px 0 0;
+    }
+  }
+
+  .k-last {
+    .k-header {
+      border-bottom-width: 0;
+    }
+    &.k-item {
+      border-radius: 0 0 4px 4px;
+    }
+    .k-header {
+      border-radius: 0 0 3px 3px;
+    }
+  }
 }
+
+// panelbar icon position
+.k-panelbar-collapse,
+.k-panelbar-expand {
+  &.k-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.7rem;
+    margin-top: -8px;
+  }
+}
+
 
 // ----- scheduler ----- //
 

@@ -7,7 +7,7 @@
 <p align="center">
   簡單、輕量級、模組化的 UI library
   <br>
-  <a href="https://gss-fed.github.io/vital-ui-kit/getting-started.html" target="_blank">
+  <a href="https://gss-fed.github.io/vital-ui-kit/getting-started.html">
     <strong>View Documents &raquo;</strong>
   </a>
   <br>
