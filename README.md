@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://gss-fed.github.io/vital-ui-kit/">
-    <img src="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png" alt="" width=72 height=72 />
+    <img src="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png" height=72 />
   </a>
 </p>
 <h3 align="center">Vital UI Kit</h3>
