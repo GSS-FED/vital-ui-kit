@@ -868,15 +868,14 @@ $checkbox-bg-color:                       $c-white !default;
 $checkbox-default-color:                  nth($c-secondary-list, 4) !default;
 $checkbox-primary-color:                  $c-primary !default;
 $checkbox-shadow-color:                   rgba($c-primary, 0.2) !default;
-$checkbox-disable-color:                  nth($c-secondary-list, 5) !default;
+$checkbox-disable-color:                  nth($c-secondary-list, 4) !default;
 $checkbox-disable-border-color:           nth($c-secondary-list, 3) !default;
 $checkbox-default-border-color:           nth($c-secondary-list, 4) !default;
 $checkbox-size:                           1.066rem !default; // 16px
-$checkbox-checked-size:                   0.933rem !default; // 14px
+$checkbox-checked-size:                   0.8rem !default; // 12px
 $checkbox-border-radius:                  2px !default;
 $checkbox-min-width:                      $checkbox-size !default;
 $checkbox-min-height:                     $checkbox-min-width !default;
-$checkbox-selected-color:                 $c-primary !default;
 $checkbox-bg-color:                       $c-white !default;
 
 // checkbox text style
@@ -1082,7 +1081,7 @@ $radio-bg-color:                          $c-white !default;
 $radio-default-color:                     nth($c-secondary-list, 4) !default;
 $radio-primary-color:                     $c-primary !default;
 $radio-shadow-color:                      rgba($c-primary, 0.2) !default;
-$radio-disable-color:                     nth($c-secondary-list, 4) !default;
+$radio-disable-color:                     nth($c-secondary-list, 5) !default;
 $radio-disable-border-color:              nth($c-secondary-list, 3) !default;
 $radio-circle-size:                       15px !default;
 $radio-circle-selected-size:              9px !default;

@@ -8,11 +8,11 @@
 .#{$prefix}-checkbox {
   display: none;
 
-  + span {
+  & + span {
     position: relative;
   }
 
-  + span:before {
+  & + span:before {
     content: '';
     position: relative;
     display: inline-block;
@@ -26,15 +26,15 @@
     vertical-align: middle;
   }
 
-  + span:after {
+  & + span:after {
     @extend %icon;
     font-size: $checkbox-checked-size;
     content: $icon-check;
     position: absolute;
     width: $checkbox-checked-size;
     height: $checkbox-checked-size;
-    top: $checkbox-size - $checkbox-checked-size;
-    left: ($checkbox-size - $checkbox-checked-size)/2;
+    top: ($checkbox-size - $checkbox-checked-size)*2/3;
+    left: ($checkbox-size - $checkbox-checked-size)/3;
     opacity: 0;
     pointer-events: none;
     color: $checkbox-primary-color;
@@ -80,32 +80,50 @@
         border-color: $checkbox-disable-border-color;
       }
     }
-    .#{$prefix}-checkbox + span:before {
-      border-color: $checkbox-disable-border-color;
-      &:checked {
-        + span {
-          color: $checkbox-label-default-color;
+    .#{$prefix}-checkbox {
+      & + span {
+        &:before {
+          border-color: $checkbox-disable-border-color;
         }
         &:after {
           color: $checkbox-disable-color;
         }
       }
+      &:checked {
+        & + span:before {
+          border-color: $checkbox-default-border-color;
+        }
+      }
     }
   }
+
   &.#{$prefix}-checkbox-label--circle {
-    .#{$prefix}-checkbox + span:before {
-      border-radius: 50%;
+    .#{$prefix}-checkbox {
+      & + span:before {
+        border-radius: 50%;
+      }
       &:checked {
-        background-color: $checkbox-selected-color;
-        &:after {
-          color: $checkbox-bg-color;
+        & + span {
+          &:before {
+            color: $checkbox-bg-color;
+            background-color: $checkbox-primary-color;
+          }
+          &:after {
+            color: $checkbox-bg-color;
+          }
         }
       }
     }
     &.#{$state}--disable {
-      .#{$prefix}-checkbox + span:before {
+      .#{$prefix}-checkbox {
+        & + span:before {
+          border-color: $checkbox-disable-color;
+        }
         &:checked {
-          background-color: $checkbox-default-color;
+          + span:before {
+            background-color: $checkbox-disable-color;
+            border-color: $checkbox-disable-color;
+          }
         }
       }
     }

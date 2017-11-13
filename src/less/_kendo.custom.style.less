@@ -31,51 +31,124 @@
   }
 }
 
-// 753
-.k-checkbox-label:before {
-  box-sizing: border-box;
-  width: @checkbox-label-size;
-  height: @checkbox-label-size;
-}
-
 // 764
-.k-checkbox-label:after {
-  box-sizing: border-box;
-  padding-top: 1px;
-  width: @checkbox-label-size;
-  height: @checkbox-label-size;
-  font-size: @checkbox-label-after-font-size;
+.k-checkbox-label {
+  &:before {
+    content: none;
+  }
+  &:after {
+    box-sizing: border-box;
+    padding-top: 1px;
+    width: @checkbox-label-size;
+    height: @checkbox-label-size;
+    font-size: @checkbox-label-after-font-size;
+    border-color: @checkbox-default-border-color;
+    border-radius: @checkbox-border-radius;
+    color: @checkbox-primary-color;
+  }
+  
+  &:hover:after {
+    box-shadow: 0 0 0 2px @radio-shadow-color;
+    border-color: @radio-primary-color;
+  }
 }
 
 // 775 取代 kendo icon
-.k-checkbox:checked + .k-checkbox-label:after {
-  content: @icon-check;
-  font-family: 'icomoon' !important;
-  width: @checkbox-label-size;
-  height: @checkbox-label-size;
+.k-checkbox:checked {
+  & + .k-checkbox-label:after {
+    content: @icon-check;
+    font-family: 'icomoon' !important;
+    width: @checkbox-label-size;
+    height: @checkbox-label-size;
+    border-color: @checkbox-primary-color;
+  }
+}
+
+.k-checkbox:disabled {
+  & + .k-checkbox-label {
+    color: @checkbox-label-disable-color;
+    pointer-events: none;
+
+    &:hover:before {
+      box-shadow: none;
+    }
+
+    &:after {
+      border-color: @checkbox-disable-border-color;
+      color: @checkbox-disable-color;
+    }
+  }
+  
+  &:checked {
+    & + .k-checkbox-label {
+      &:after {
+        border-color: @checkbox-default-color;
+      }
+    }
+  }
 }
 
 // 800
-.k-radio-label:before {
-  box-sizing: border-box;
-  width: @radio-label-size;
-  height: @radio-label-size;
-  border-radius: 50%;
-  border-width: 1px;
-}
-
-.k-radio-label:after {
-  border-radius: 50%;
+.k-radio-label {
+  &:before {
+    box-sizing: border-box;
+    width: @radio-label-size;
+    height: @radio-label-size;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: @radio-default-color;
+  }
+  
+  &:hover:before {
+    box-shadow: 0 0 0 2px @radio-shadow-color;
+    border-color: @radio-primary-color;
+  }
+  
+  &:after {
+    border-radius: 50%;
+  }
 }
 
 // 810
-.k-radio:checked + .k-radio-label:after {
-  box-sizing: border-box;
-  width: @radio-label-after-size;
-  height: @radio-label-after-size;
-  top: @radio-label-spacing;
-  left: @radio-label-spacing;
-  background-color: @widget-text-color;
+.k-radio:checked {
+  & + .k-radio-label {
+    &:before {
+      border-color: @radio-primary-color;
+    }
+
+    &:after {
+      box-sizing: border-box;
+      width: @radio-label-after-size;
+      height: @radio-label-after-size;
+      top: @radio-label-spacing;
+      left: @radio-label-spacing;
+      background-color: @radio-primary-color;
+    }
+  }
+}
+
+.k-radio:disabled {
+  & + .k-radio-label {
+    color: @radio-label-disable-color;
+    pointer-events: none;
+
+    &:before {
+      border-color: @radio-disable-border-color;
+    }
+
+    &:hover:before {
+      box-shadow: none;
+    }
+
+    &:after {
+      background-color: @radio-disable-color;
+    }
+  }
+  &:checked {
+    & + .k-radio-label:before {
+      border-color: @radio-default-color;
+    }
+  }    
 }
 
 
