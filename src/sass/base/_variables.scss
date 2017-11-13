@@ -996,6 +996,8 @@ $input-hint-color:                        $c-text !default;
 $input-asterisk-size:                     0.266rem !default;
 $input-asterisk-color:                    $c-alarm !default;
 $input-asterisk-margin:                   -$input-asterisk-size/2 0.533rem 0 0 !default;
+$input-asterisk-top:                      0.666rem !default;
+$input-asterisk-left:                     -0.666rem !default;
 
 $input-asterisk-placeholder-width:        calc(100% - #{$input-asterisk-size + nth($input-asterisk-margin, 2)}) !default;
 
