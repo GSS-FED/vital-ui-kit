@@ -139,7 +139,7 @@
       @include landing-sec5-card-shadow($_box-shadow);
       width: $_width;
       height: $_height;
-      background-image: url(#{$img-path}/landing-page/sec5/floating-card-#{$name}.svg);
+      background-image: url(#{$img-path}/landing-page/sec5/floating-card-#{$name}.png);
       transform: $_transform-2D;
       transform: $_transform;
       

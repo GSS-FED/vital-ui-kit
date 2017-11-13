@@ -590,11 +590,25 @@ textarea.#{$prefix}-input {
 // -------------------------------------
 
 .#{$prefix}-input-item.#{$state}--required {
+  &:not(.#{$prefix}-txt--right):before {
+    content: "";
+    display: inline-block;
+    background-color: $input-asterisk-color;
+    margin: $input-asterisk-margin;
+    vertical-align: middle;
+    height: $input-asterisk-size;
+    width: $input-asterisk-size;
+    border-radius: 50%;
+    position: absolute;
+    left: $input-asterisk-left;
+    top: $input-asterisk-top;
+  }
+
 
   // asterisk
-  &.#{$prefix}-placeholder:before,
-  &.#{$prefix}-input-floating:before,
-  .#{$prefix}-input-label:before {
+  &.#{$prefix}-txt--right.#{$prefix}-placeholder:before,
+  &.#{$prefix}-txt--right.#{$prefix}-input-floating:before,
+  &.#{$prefix}-txt--right .#{$prefix}-input-label:before {
     content: "";
     display: inline-block;
     background-color: $input-asterisk-color;

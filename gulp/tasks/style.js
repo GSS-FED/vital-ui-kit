@@ -135,6 +135,9 @@ gulp.task('styles', ['styleguidStyle', 'uikitStyle'], function() {
       .pipe(gulp.dest(config.uikit.styles.sass.destSrc));
     gulp.src(config.uikit.styles.less.src)
       .pipe(gulp.dest(config.uikit.styles.less.destSrc));
+    // copy icomoon source code
+    gulp.src(config.uikit.styles.icomoon.src)
+      .pipe(gulp.dest(config.uikit.styles.icomoon.destSrc));
     // copy vital-ui-kit css to styleguide
     return gulp.src([
         (config.uikit.styles.destProd + '/' + config.uikit.styles.output),

@@ -1,7 +1,7 @@
 /*******************************************
  * Copyright © 2017 Galaxy Software Services
  *
- * vital-ui-kit, v0.0.8
+ * vital-ui-kit, v0.0.9
  * UI Kit for GSS Vital Family
  *
  * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
@@ -3165,7 +3165,7 @@ a.demo-btn:hover {
     height: 307px;
     max-width: 350px;
     margin-left: -175px;
-    background: url(../img/landing-page/sec2/vital-orgchoose-card.svg);
+    background: url(../img/landing-page/sec2/vital-orgchoose-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     z-index: 5; }
@@ -3179,7 +3179,7 @@ a.demo-btn:hover {
     height: 307px;
     max-width: 198px;
     margin-left: -305px;
-    background: url(../img/landing-page/sec2/vital-malefemale-card.svg);
+    background: url(../img/landing-page/sec2/vital-malefemale-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: scale(0.9);
@@ -3194,7 +3194,7 @@ a.demo-btn:hover {
     height: 307px;
     max-width: 345px;
     margin-left: -20px;
-    background: url(../img/landing-page/sec2/vital-fillreport-card.svg);
+    background: url(../img/landing-page/sec2/vital-fillreport-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: scale(0.9);
@@ -3209,7 +3209,7 @@ a.demo-btn:hover {
     height: 307px;
     max-width: 197px;
     margin-left: -405px;
-    background: url(../img/landing-page/sec2/vital-register-card.svg);
+    background: url(../img/landing-page/sec2/vital-register-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: scale(0.7);
@@ -3224,7 +3224,7 @@ a.demo-btn:hover {
     height: 307px;
     max-width: 197px;
     margin-left: 210px;
-    background: url(../img/landing-page/sec2/vital-register-card.svg);
+    background: url(../img/landing-page/sec2/vital-register-card.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     transform: scale(0.7);
@@ -3294,6 +3294,9 @@ a.demo-btn:hover {
       transform: skew(-60deg);
       box-shadow: 0 0 8px 16px rgba(183, 183, 183, 0.5);
       z-index: -1; }
+    @media (max-width: 1280px) {
+      .landing-sec4 .landing-container {
+        overflow: hidden; } }
   .landing-sec4 .vital-icons {
     position: absolute;
     top: 0;
@@ -3347,7 +3350,7 @@ a.demo-btn:hover {
     right: 1%;
     width: 20%;
     padding-bottom: 6%;
-    background: url(../img/landing-page/sec4/vital-calendar-part1.svg);
+    background: url(../img/landing-page/sec4/vital-calendar-part1.png);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto; }
@@ -3358,7 +3361,7 @@ a.demo-btn:hover {
     width: 25%;
     height: 0;
     padding-bottom: 39%;
-    background: url(../img/landing-page/sec4/vital-calendar-part2.svg) 0 0/102% auto;
+    background: url(../img/landing-page/sec4/vital-calendar-part2.png) 0 0/102% auto;
     background-repeat: no-repeat;
     z-index: 2;
     transform: rotate3d(1, 0.5, -0.9, 70deg);
@@ -3398,7 +3401,7 @@ a.demo-btn:hover {
     left: 3%;
     width: 98%;
     padding-bottom: 10%;
-    background: url(../img/landing-page/sec4/vital-calendar-part3.svg);
+    background: url(../img/landing-page/sec4/vital-calendar-part3.png);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto; }
@@ -3408,7 +3411,7 @@ a.demo-btn:hover {
     left: 2%;
     width: 98%;
     padding-bottom: 10%;
-    background: url(../img/landing-page/sec4/vital-calendar-part4.svg);
+    background: url(../img/landing-page/sec4/vital-calendar-part4.png);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto; }
@@ -3418,7 +3421,7 @@ a.demo-btn:hover {
     left: 3px;
     width: 100%;
     padding-bottom: 52%;
-    background: url(../img/landing-page/sec4/vital-calendar-part5.svg);
+    background: url(../img/landing-page/sec4/vital-calendar-part5.png);
     background-repeat: no-repeat;
     background-size: 100% auto;
     box-shadow: -30px 30px 53px rgba(13, 25, 34, 0.5);
@@ -3564,7 +3567,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box1 {
     width: 205px;
     height: 255px;
-    background-image: url(../img/landing-page/sec5/floating-card-1.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-1.png);
     transform: rotate(53deg) ;
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateX(-30px) translateY(50px) translateZ(-50px);
     z-index: 4;
@@ -3580,7 +3583,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box2 {
     width: 160px;
     height: 255px;
-    background-image: url(../img/landing-page/sec5/floating-card-2.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-2.png);
     transform: rotate(53deg) translateX(50px) translateY(50px);
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateX(20px) translateY(-90px) translateZ(-150px);
     z-index: 3;
@@ -3596,7 +3599,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box3 {
     width: 150px;
     height: 190px;
-    background-image: url(../img/landing-page/sec5/floating-card-3.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-3.png);
     transform: rotate(53deg) translateX(100px) translateY(100px);
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateX(80px) translateY(-40px) translateZ(-250px);
     z-index: 2;
@@ -3612,7 +3615,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box4 {
     width: 150px;
     height: 290px;
-    background-image: url(../img/landing-page/sec5/floating-card-4.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-4.png);
     transform: rotate(53deg) translateX(170px) translateY(-220px);
     transform: rotateX(233deg) rotateY(179deg) rotateZ(46deg) translateX(-270px) translateY(240px) translateZ(75px);
     z-index: 2;
@@ -3628,7 +3631,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box5 {
     width: 290px;
     height: 260px;
-    background-image: url(../img/landing-page/sec5/floating-card-5.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-5.png);
     transform: rotate(53deg) translateX(150px) translateY(-160px);
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateX(150px) translateY(-160px) translateZ(-175px);
     animation-name: floating_box_5;
@@ -3643,7 +3646,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box6 {
     width: 295px;
     height: 355px;
-    background-image: url(../img/landing-page/sec5/floating-card-6.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-6.png);
     transform: rotate(53deg) translateX(370px) translateY(140px);
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(46deg) translateX(370px) translateY(140px) translateZ(-100px);
     z-index: 2; }
@@ -3657,7 +3660,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box7 {
     width: 253px;
     height: 305px;
-    background-image: url(../img/landing-page/sec5/floating-card-7.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-7.png);
     transform: rotate(53deg) translateX(500px) translateY(-265px);
     transform: rotateX(233deg) rotateY(179deg) rotateZ(46deg) translateX(-510px) translateY(320px) translateZ(75px); }
     .landing-sec5 .floating-box7:before {
@@ -3670,7 +3673,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box8 {
     width: 275px;
     height: 375px;
-    background-image: url(../img/landing-page/sec5/floating-card-8.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-8.png);
     transform: rotate(53deg) translateX(250px) translateY(850px);
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateX(-10px) translateY(850px) translateZ(175px);
     z-index: 2;
@@ -3686,7 +3689,7 @@ a.demo-btn:hover {
   .landing-sec5 .floating-box9 {
     width: 180px;
     height: 230px;
-    background-image: url(../img/landing-page/sec5/floating-card-9.svg);
+    background-image: url(../img/landing-page/sec5/floating-card-9.png);
     transform: rotate(53deg) translateX(130px) translateY(500px);
     transform: rotateX(53deg) rotateY(-1deg) rotateZ(-46deg) translateX(130px) translateY(500px) translateZ(-175px); }
     .landing-sec5 .floating-box9:before {
@@ -3933,7 +3936,7 @@ a.demo-btn:hover {
     margin-left: -290px;
     width: 280px;
     height: 490px;
-    background: url(../img/landing-page/sec6/sec6-card-3.svg);
+    background: url(../img/landing-page/sec6/sec6-card-3.png);
     background-repeat: no-repeat;
     z-index: 2;
     background-size: 100% auto;
@@ -3945,7 +3948,7 @@ a.demo-btn:hover {
     margin-left: calc(-290px - 12%);
     width: 280px;
     height: 490px;
-    background: url(../img/landing-page/sec6/sec6-card-2.svg);
+    background: url(../img/landing-page/sec6/sec6-card-2.png);
     background-repeat: no-repeat;
     z-index: 3;
     background-size: 100% auto;
@@ -3957,7 +3960,7 @@ a.demo-btn:hover {
     margin-left: calc(-290px - 24%);
     width: 280px;
     height: 490px;
-    background: url(../img/landing-page/sec6/sec6-card-1.svg);
+    background: url(../img/landing-page/sec6/sec6-card-1.png);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto;
@@ -3969,7 +3972,7 @@ a.demo-btn:hover {
     margin-left: 10px;
     width: 280px;
     height: 490px;
-    background: url(../img/landing-page/sec6/sec6-card-6.svg);
+    background: url(../img/landing-page/sec6/sec6-card-6.png);
     background-repeat: no-repeat;
     z-index: 2;
     background-size: 100% auto;
@@ -3981,7 +3984,7 @@ a.demo-btn:hover {
     margin-left: calc(10px + 12%);
     width: 280px;
     height: 490px;
-    background: url(../img/landing-page/sec6/sec6-card-5.svg);
+    background: url(../img/landing-page/sec6/sec6-card-5.png);
     background-repeat: no-repeat;
     z-index: 3;
     background-size: 100% auto;
@@ -3993,7 +3996,7 @@ a.demo-btn:hover {
     margin-left: calc(10px + 24%);
     width: 280px;
     height: 490px;
-    background: url(../img/landing-page/sec6/sec6-card-4.svg);
+    background: url(../img/landing-page/sec6/sec6-card-4.png);
     background-repeat: no-repeat;
     z-index: 4;
     background-size: 100% auto;
@@ -4189,6 +4192,17 @@ a.demo-btn:hover {
   height: calc(100% - 55px);
   text-align: center;
   overflow: auto; }
+  .demo-template-wrapper:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 45px;
+    left: 0;
+    right: 0;
+    height: 290px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA/klEQVQoU02QMW7DMAxFSUohrdiWcrc4R6h6qA4dOnQp0KVDhwy9T53ZkmtbBW0HyCjo4f3/ibHrf8aGJLWG88lIai2nQJK85blCWQAYAQSfu/46MVbZG0necPZWhkB8fyu0wk/n/hsJXWpQ1s9gDzkYGVrLOZDMjAxqjJfbF5bi/iqq1Dgq3BoeTiTZW84NCagxnvtPQDgWKC4HK8nfY7XrVmc5IGO89B9lKU7hyall76rx3h40IdfEGLvfdwA8FgAH2lUHrdCjmdbVbwXBQVG4uKmmamgNj3ts8iRDsOvqV10NZYufzXaq7A2nhxoYu9sLwgaVHR7rDVrh3fwPwVNxEFJvon4AAAAASUVORK5CYII=) center top/100% 290px no-repeat;
+    background: linear-gradient(110deg, rgba(102, 84, 236, 0.77) 20%, rgba(53, 175, 255, 0.77) 70%) 0 0/100% 290px no-repeat;
+    z-index: -1; }
 
 .demo-template-content {
   margin: 0 auto;
@@ -4196,17 +4210,6 @@ a.demo-btn:hover {
   max-width: 920px;
   text-align: left;
   position: relative; }
-  .demo-template-content:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -50%;
-    right: -50%;
-    height: 290px;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA/klEQVQoU02QMW7DMAxFSUohrdiWcrc4R6h6qA4dOnQp0KVDhwy9T53ZkmtbBW0HyCjo4f3/ibHrf8aGJLWG88lIai2nQJK85blCWQAYAQSfu/46MVbZG0necPZWhkB8fyu0wk/n/hsJXWpQ1s9gDzkYGVrLOZDMjAxqjJfbF5bi/iqq1Dgq3BoeTiTZW84NCagxnvtPQDgWKC4HK8nfY7XrVmc5IGO89B9lKU7hyall76rx3h40IdfEGLvfdwA8FgAH2lUHrdCjmdbVbwXBQVG4uKmmamgNj3ts8iRDsOvqV10NZYufzXaq7A2nhxoYu9sLwgaVHR7rDVrh3fwPwVNxEFJvon4AAAAASUVORK5CYII=) center top/100% 290px no-repeat;
-    background: linear-gradient(110deg, rgba(102, 84, 236, 0.77) 20%, rgba(53, 175, 255, 0.77) 70%) 0 0/100% 290px no-repeat;
-    z-index: -1; }
 
 .demo-template-header {
   font-size: 36px;
@@ -4622,8 +4625,9 @@ pre[class*='language-'] {
     display: table;
     content: ' '; }
 
-.demo-btn-paragraph > *:not(:last-child),
-.f-item-preview > *:not(:last-child) {
+.demo-btn-paragraph > .sg-btn:not(:last-child),
+.f-item-preview > .sg-btn:not(:last-child),
+.demo-btn-title > .sg-btn:not(:last-child) {
   margin-right: 5px; }
 
 .f-item-border-bottom {

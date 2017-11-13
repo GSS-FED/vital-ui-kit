@@ -1,8 +1,17 @@
 # Release Notes
 
+## 0.0.9 (2017-11-13)
+
+- Fix #10 bug, now published package won't included any dot files
+- Fix #13, update document link path
+- Fix icomoon not included in the build/dist directory
+- Update some ui kit styles
+- Minify PNG images
+
+
 ## 0.0.8 (2017-08-22)
 
-- Remove dot files, zip file from builded content
+- Remove dot files, zip file from built content
 - Change document link path
 
 

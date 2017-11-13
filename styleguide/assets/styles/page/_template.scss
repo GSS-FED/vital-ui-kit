@@ -14,6 +14,19 @@
   height: calc(100% - #{nth($nav-height-list, 1)});
   text-align: center;
   overflow: auto;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: nth($nav-height-list, 2);
+    left: 0;
+    right: 0;
+    height: 290px;
+    background: $template-bg;
+    background: $template-bg-gradient;
+    z-index: -1;
+  }
 }
 
 .#{$prefix}-template-content {
@@ -22,19 +35,6 @@
   max-width: 920px;
   text-align: left;
   position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    left: -50%;
-    right: -50%;
-    height: 290px;
-    background: $template-bg;
-    background: $template-bg-gradient;
-    z-index: -1;
-  }
 }
 
 .#{$prefix}-template-header {

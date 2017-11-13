@@ -101,7 +101,14 @@
 // checkbox
 @checkbox-label-size:                     16px;
 @checkbox-label-after-font-size:          @font-size-xs;
-
+@checkbox-primary-color:                  @c-primary;
+@checkbox-shadow-color:                   rgba(14, 134, 254, 0.2);
+@checkbox-border-radius:                  2px;
+@checkbox-default-color:                  extract(@c-secondary-list, 4);
+@checkbox-default-border-color:           extract(@c-secondary-list, 4);
+@checkbox-disable-color:                  extract(@c-secondary-list, 4);
+@checkbox-disable-border-color:           extract(@c-secondary-list, 3);
+@checkbox-label-disable-color:            extract(@c-secondary-list, 5);
 
 // icon
 @icon-font-size:                          13px;
@@ -140,6 +147,12 @@
 @radio-label-size:                        17px;
 @radio-label-after-size:                  9px;
 @radio-label-spacing:                     4px;
+@radio-default-color:                     extract(@c-secondary-list, 4);
+@radio-primary-color:                     @c-primary;
+@radio-shadow-color:                      rgba(14, 134, 254, 0.2);
+@radio-disable-color:                     extract(@c-secondary-list, 5);
+@radio-disable-border-color:              extract(@c-secondary-list, 3);
+@radio-label-disable-color:               extract(@c-secondary-list, 5);
 
 // progressbar
 @progressbar-selected-color:              @c-primary;
