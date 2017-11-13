@@ -1,11 +1,16 @@
 <p align="center">
-  <h1 align="center">Vital UI Kit</h1>
-  <p align="center">
-    簡單、輕量級、模組化的 UI library
-    <br>
-    <a href="https://gss-fed.github.io/vital-ui-kit/" target="_blank"><strong>View Documents &raquo;</strong></a>
-    <br>
-  </p>
+  <a href="https://gss-fed.github.io/vital-ui-kit/">
+    <img src="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png" alt="" width=72 height=72 />
+  </a>
+</p>
+<h3 align="center">Vital UI Kit</h3>
+<p align="center">
+  簡單、輕量級、模組化的 UI library
+  <br>
+  <a href="https://gss-fed.github.io/vital-ui-kit/getting-started.html" target="_blank">
+    <strong>View Documents &raquo;</strong>
+  </a>
+  <br>
 </p>
 
 [![Join the chat at https://gitter.im/GSS-FED/vital-ui-kit](https://badges.gitter.im/GSS-FED/vital-ui-kit.svg)](https://gitter.im/GSS-FED/vital-ui-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
