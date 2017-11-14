@@ -22,8 +22,9 @@ git push --tag --force origin-pages || exit 1
 # Git clone
 git clone -b $DEPLOY_BRANCH --single-branch "https://${GH_REPO}" $DEPLOY_FOLDER
 
-# Clean up files from last build(except .git)
-find ./$DEPLOY_FOLDER/* ./$DEPLOY_FOLDER/.* ! -path "./${DEPLOY_FOLDER}/.git/*" ! -name ".git" | xargs rm -rf
+# Clean up directorys / files from last build (except .git/*)
+find ./$DEPLOY_FOLDER -type d ! -path "*/.git*" ! -path "./$DEPLOY_FOLDER" | xargs rm -rf
+find ./$DEPLOY_FOLDER -type f ! -path "*/.git/*" | xargs rm -rf
 
 # Copy built files
 cp -R ./build/. ./$DEPLOY_FOLDER
