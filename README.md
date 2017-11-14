@@ -1,11 +1,16 @@
 <p align="center">
-  <h1 align="center">Vital UI Kit</h1>
-  <p align="center">
-    簡單、輕量級、模組化的 UI library
-    <br>
-    <a href="https://gss-fed.github.io/vital-ui-kit/" target="_blank"><strong>View Documents &raquo;</strong></a>
-    <br>
-  </p>
+  <a href="https://gss-fed.github.io/vital-ui-kit/">
+    <img src="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png" height=72 />
+  </a>
+</p>
+<h3 align="center">Vital UI Kit</h3>
+<p align="center">
+  簡單、輕量級、模組化的 UI library
+  <br>
+  <a href="https://gss-fed.github.io/vital-ui-kit/getting-started.html">
+    <strong>View Documents &raquo;</strong>
+  </a>
+  <br>
 </p>
 
 [![Join the chat at https://gitter.im/GSS-FED/vital-ui-kit](https://badges.gitter.im/GSS-FED/vital-ui-kit.svg)](https://gitter.im/GSS-FED/vital-ui-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -69,7 +74,7 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
     如果您是開發者，想要客製化自己的 Vital UI Kit、更改 UI Kit 顏色，可使用以下方法。
 
-    1. `npm install @gssfed/vital-ui-kit`
+    1. `npm install vital-ui-kit`
 
     1. 在專案環境引用 `node_modules/vital-ui-kit/dist` 資料夾底下的 `fonts`、`img`、`js`
 

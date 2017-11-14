@@ -1,7 +1,7 @@
 /*******************************************
  * Copyright © 2017 Galaxy Software Services
  *
- * vital-ui-kit, v0.0.8
+ * vital-ui-kit, v0.0.9
  * UI Kit for GSS Vital Family
  *
  * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
@@ -2538,7 +2538,7 @@ a {
 .icon-meetup:before {
   content: ""; }
 
-.sg-checkbox:after, [class^="icon-"], [class*=" icon-"] {
+.sg-checkbox + span:after, [class^="icon-"], [class*=" icon-"] {
   display: inline-block;
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
@@ -4210,10 +4210,10 @@ html {
 .sg-input {
   display: block;
   width: 100%;
-  padding: calc(0.533rem - 1px) 0.8rem;
+  padding: 0.46633rem 0.8rem;
   font-size: 1rem;
   line-height: 1;
-  height: 2.066rem;
+  height: 1.93267rem;
   box-sizing: border-box;
   color: #456297;
   background-color: #FFFFFF;
@@ -4249,7 +4249,7 @@ textarea.sg-input {
   z-index: 7; }
 
 .sg-input-item .sg-btn {
-  height: 2.066rem; }
+  height: 1.93267rem; }
 
 .sg-input-item .sg-btn-icon.sg-state--clear {
   position: absolute;
@@ -4302,7 +4302,7 @@ textarea.sg-input {
 
 .sg-input-item .sg-input-item,
 .sg-input-group .sg-input-item {
-  height: 2.066rem; }
+  height: 1.93267rem; }
 
 .sg-input-item.sg-state--disable .sg-input,
 .sg-input-group.sg-state--disable .sg-input {
@@ -4445,11 +4445,11 @@ textarea.sg-input {
   border-right-width: 1px; }
 
 .sg-input-group__addon {
-  padding: calc(0.533rem - 1px) 0.8rem;
+  padding: 0.46633rem 0.8rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  height: 2.066rem;
+  height: 1.93267rem;
   color: #7189B6;
   text-align: center;
   background-color: #EEF2FC;
@@ -4459,9 +4459,9 @@ textarea.sg-input {
     float: none;
     display: inline-block;
     margin: -6px 0 -4px;
-    height: 1.52884rem;
+    height: 1.43017rem;
     padding: 0 !important;
-    width: 1.52884rem !important;
+    width: 1.43017rem !important;
     border-radius: 4px !important;
     padding: 2px; }
 
@@ -4634,7 +4634,7 @@ textarea.sg-input {
     padding-right: 1.2rem;
     line-height: 1;
     vertical-align: top;
-    padding-top: calc(0.533rem + 2px); }
+    padding-top: calc(0.46633rem + 2px); }
   .sg-input-inline .sg-input-group {
     width: 100%;
     margin-bottom: 0; }
@@ -4642,8 +4642,21 @@ textarea.sg-input {
 .sg-input-inline__content .sg-input-group {
   margin-bottom: 0; }
 
-.sg-input-item.sg-state--required.sg-placeholder:before, .sg-input-item.sg-state--required.sg-input-floating:before,
-.sg-input-item.sg-state--required .sg-input-label:before {
+.sg-input-item.sg-state--required:not(.sg-txt--right):before {
+  content: "";
+  display: inline-block;
+  background-color: #EB5000;
+  margin: -0.133rem 0.533rem 0 0;
+  vertical-align: middle;
+  height: 0.266rem;
+  width: 0.266rem;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.666rem;
+  top: 0.666rem; }
+
+.sg-input-item.sg-state--required.sg-txt--right.sg-placeholder:before, .sg-input-item.sg-state--required.sg-txt--right.sg-input-floating:before,
+.sg-input-item.sg-state--required.sg-txt--right .sg-input-label:before {
   content: "";
   display: inline-block;
   background-color: #EB5000;
@@ -4668,7 +4681,7 @@ textarea.sg-input {
 
 .sg-input-item.sg-state--required.sg-input-inline.sg-txt--right .sg-input-label:before {
   position: absolute;
-  top: 0.9rem;
+  top: 0.83333rem;
   right: 0; }
 
 .sg-input-inline__content.sg-state--has-hint {
@@ -4791,7 +4804,7 @@ textarea.sg-input {
   .sg-radio-label.sg-state--disable {
     cursor: not-allowed;
     pointer-events: none;
-    color: #C4D2EB; }
+    color: #95ACD4; }
     .sg-radio-label.sg-state--disable .sg-radio {
       border-color: #D8E3F6; }
       .sg-radio-label.sg-state--disable .sg-radio:checked {
@@ -4800,73 +4813,82 @@ textarea.sg-input {
           color: #456297; }
         .sg-radio-label.sg-state--disable .sg-radio:checked:after {
           background-color: #95ACD4; }
+  .sg-radio-label span {
+    padding-left: 4px; }
 
 .sg-checkbox {
-  position: relative;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #C4D2EB;
-  border-radius: 2px;
-  background-color: #FFFFFF;
-  transition: all 120ms ease-out;
-  margin: -2px 0 0 0;
-  outline: none; }
-  .sg-checkbox:after {
+  display: none; }
+  .sg-checkbox + span {
+    position: relative; }
+  .sg-checkbox + span:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 1.066rem;
+    height: 1.066rem;
+    border: 1px solid #C4D2EB;
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    transition: all 120ms ease-out;
+    margin: -2px 0.6em 0 0;
+    vertical-align: middle; }
+  .sg-checkbox + span:after {
+    font-size: 0.8rem;
     content: "";
     position: absolute;
-    width: 14px;
-    height: 14px;
-    top: calc((16px - 14px)/2);
-    left: calc((16px - 14px)/2);
+    width: 0.8rem;
+    height: 0.8rem;
+    top: 0.17733rem;
+    left: 0.08867rem;
     opacity: 0;
     pointer-events: none;
     color: #0E86FE;
-    font-size: 0.8rem;
     transform: scale(0);
     transition: all 120ms ease-out; }
-  .sg-checkbox:checked {
+  .sg-checkbox:checked + span:before {
     border-color: #0E86FE; }
-    .sg-checkbox:checked:after {
-      opacity: 1;
-      transform: scale(1); }
+  .sg-checkbox:checked + span:after {
+    opacity: 1;
+    transform: scale(1); }
 
 .sg-checkbox-label {
   position: relative;
-  min-width: 16px;
-  min-height: 16px;
+  min-width: 1.066rem;
+  min-height: 1.066rem;
   margin: 0 5px 0 0;
   word-break: break-word;
   color: #456297;
   line-height: 1.3333rem;
   font-size: 1rem;
   cursor: pointer; }
-  .sg-checkbox-label:hover .sg-checkbox {
+  .sg-checkbox-label:hover .sg-checkbox + span:before {
     box-shadow: 0 0 0 2px rgba(14, 134, 254, 0.2);
     border-color: #0E86FE; }
   .sg-checkbox-label.sg-state--disable {
     cursor: not-allowed;
     pointer-events: none;
     color: #95ACD4; }
-    .sg-checkbox-label.sg-state--disable:hover .sg-checkbox {
+    .sg-checkbox-label.sg-state--disable:hover .sg-checkbox + span:before {
       box-shadow: none;
       border-color: #D8E3F6; }
-    .sg-checkbox-label.sg-state--disable .sg-checkbox {
+    .sg-checkbox-label.sg-state--disable .sg-checkbox + span:before {
       border-color: #D8E3F6; }
-      .sg-checkbox-label.sg-state--disable .sg-checkbox:checked + span {
-        color: #456297; }
-      .sg-checkbox-label.sg-state--disable .sg-checkbox:checked:after {
-        color: #95ACD4; }
-  .sg-checkbox-label.sg-checkbox-label--circle .sg-checkbox {
+    .sg-checkbox-label.sg-state--disable .sg-checkbox + span:after {
+      color: #C4D2EB; }
+    .sg-checkbox-label.sg-state--disable .sg-checkbox:checked + span:before {
+      border-color: #C4D2EB; }
+  .sg-checkbox-label.sg-checkbox-label--circle .sg-checkbox + span:before {
     border-radius: 50%; }
-    .sg-checkbox-label.sg-checkbox-label--circle .sg-checkbox:checked {
-      background-color: #0E86FE; }
-      .sg-checkbox-label.sg-checkbox-label--circle .sg-checkbox:checked:after {
-        color: #FFFFFF; }
-  .sg-checkbox-label.sg-checkbox-label--circle.sg-state--disable .sg-checkbox:checked {
-    background-color: #C4D2EB; }
+  .sg-checkbox-label.sg-checkbox-label--circle .sg-checkbox:checked + span:before {
+    color: #FFFFFF;
+    background-color: #0E86FE; }
+  .sg-checkbox-label.sg-checkbox-label--circle .sg-checkbox:checked + span:after {
+    color: #FFFFFF; }
+  .sg-checkbox-label.sg-checkbox-label--circle.sg-state--disable .sg-checkbox + span:before {
+    border-color: #C4D2EB; }
+  .sg-checkbox-label.sg-checkbox-label--circle.sg-state--disable .sg-checkbox:checked + span:before {
+    background-color: #C4D2EB;
+    border-color: #C4D2EB; }
 
 .sg-switch-label {
   display: inline-block;
@@ -5070,7 +5092,7 @@ textarea.sg-input {
 
 .sg-avatar {
   box-sizing: border-box;
-  background-image: url(../img/avatar-default.png);
+  background-color: gray;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -5109,7 +5131,7 @@ img.sg-avatar {
 .sg-avatar-badge {
   position: relative;
   display: inline-block; }
-  .sg-avatar-badge.sg-avatar-badge--point .badge--circle:before {
+  .sg-avatar-badge.sg-avatar-badge--point .sg-badge--circle:before {
     content: '';
     position: absolute;
     top: calc(50% - (3px/2));
@@ -5118,16 +5140,16 @@ img.sg-avatar {
     border-radius: 50%;
     width: 3px;
     height: 3px; }
-  .sg-avatar-badge.sg-avatar-badge--point.sg-avatar-badge--xsmall .badge--circle:before {
+  .sg-avatar-badge.sg-avatar-badge--point.sg-avatar-badge--xsmall .sg-badge--circle:before {
     width: 1px;
     height: 1px;
     top: calc(50% - 0.5px);
     left: calc(50% - 0.5px); }
-  .sg-avatar-badge.sg-avatar-badge--circle .badge {
+  .sg-avatar-badge.sg-avatar-badge--circle .sg-badge {
     top: 0;
     left: 70%;
     right: auto; }
-  .sg-avatar-badge .badge {
+  .sg-avatar-badge .sg-badge {
     position: absolute;
     background: #EB5000;
     padding: 0 5px;
@@ -5135,7 +5157,7 @@ img.sg-avatar {
     line-height: 17px;
     top: -8.5px;
     right: -12%; }
-  .sg-avatar-badge .badge--circle {
+  .sg-avatar-badge .sg-badge--circle {
     border-radius: 50%;
     font-size: 0;
     padding: 0;
@@ -5145,35 +5167,35 @@ img.sg-avatar {
     right: -3px;
     left: auto; }
 
-.sg-avatar-badge--xsmall .badge--circle {
+.sg-avatar-badge--xsmall .sg-badge--circle {
   width: 5px;
   height: 5px;
   top: -2.5px;
   right: -2.5px;
   left: auto; }
 
-.sg-avatar-badge--small .badge--circle {
+.sg-avatar-badge--small .sg-badge--circle {
   width: 7px;
   height: 7px;
   top: -3.5px;
   right: -3.5px;
   left: auto; }
 
-.sg-avatar-badge--large .badge--circle {
+.sg-avatar-badge--large .sg-badge--circle {
   width: 13px;
   height: 13px;
   top: -6.5px;
   right: -6.5px;
   left: auto; }
 
-.sg-avatar-badge--xlarge .badge--circle {
+.sg-avatar-badge--xlarge .sg-badge--circle {
   width: 17px;
   height: 17px;
   top: -8.5px;
   right: -8.5px;
   left: auto; }
 
-.badge {
+.sg-badge {
   display: inline-block;
   vertical-align: middle;
   color: #FFFFFF;
@@ -5182,7 +5204,7 @@ img.sg-avatar {
   border-radius: 0.75rem;
   font-size: 0.725rem; }
 
-.badge--circle {
+.sg-badge--circle {
   border-radius: 50%;
   padding: 0;
   font-size: 0; }

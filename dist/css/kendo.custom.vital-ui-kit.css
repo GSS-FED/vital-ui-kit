@@ -1,7 +1,7 @@
 /*******************************************
  * Copyright © 2017 Galaxy Software Services
  *
- * vital-ui-kit, v0.0.8
+ * vital-ui-kit, v0.0.9
  * UI Kit for GSS Vital Family
  *
  * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
@@ -4997,9 +4997,7 @@ button:focus {
   border-top-width: 0;
 }
 .k-checkbox-label:before {
-  box-sizing: border-box;
-  width: 16px;
-  height: 16px;
+  content: none;
 }
 .k-checkbox-label:after {
   box-sizing: border-box;
@@ -5007,17 +5005,52 @@ button:focus {
   width: 16px;
   height: 16px;
   font-size: 0.8rem;
+  border-color: #C4D2EB;
+  border-radius: 2px;
+  color: #0E86FE;
+}
+.k-checkbox-label:hover:after {
+  box-shadow: 0 0 0 2px rgba(14, 134, 254, 0.2);
+  border-color: #0E86FE;
 }
 .k-checkbox:checked + .k-checkbox-label:after {
   content: "\f00c";
   font-family: 'icomoon' !important;
   width: 16px;
   height: 16px;
+  border-color: #0E86FE;
+}
+.k-checkbox:disabled + .k-checkbox-label {
+  color: #95ACD4;
+  pointer-events: none;
+}
+.k-checkbox:disabled + .k-checkbox-label:hover:before {
+  box-shadow: none;
+}
+.k-checkbox:disabled + .k-checkbox-label:after {
+  border-color: #D8E3F6;
+  color: #C4D2EB;
+}
+.k-checkbox:disabled:checked + .k-checkbox-label:after {
+  border-color: #C4D2EB;
 }
 .k-radio-label:before {
   box-sizing: border-box;
   width: 17px;
   height: 17px;
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: #C4D2EB;
+}
+.k-radio-label:hover:before {
+  box-shadow: 0 0 0 2px rgba(14, 134, 254, 0.2);
+  border-color: #0E86FE;
+}
+.k-radio-label:after {
+  border-radius: 50%;
+}
+.k-radio:checked + .k-radio-label:before {
+  border-color: #0E86FE;
 }
 .k-radio:checked + .k-radio-label:after {
   box-sizing: border-box;
@@ -5025,6 +5058,23 @@ button:focus {
   height: 9px;
   top: 4px;
   left: 4px;
+  background-color: #0E86FE;
+}
+.k-radio:disabled + .k-radio-label {
+  color: #95ACD4;
+  pointer-events: none;
+}
+.k-radio:disabled + .k-radio-label:before {
+  border-color: #D8E3F6;
+}
+.k-radio:disabled + .k-radio-label:hover:before {
+  box-shadow: none;
+}
+.k-radio:disabled + .k-radio-label:after {
+  background-color: #95ACD4;
+}
+.k-radio:disabled:checked + .k-radio-label:before {
+  border-color: #C4D2EB;
 }
 .k-autocomplete,
 .k-combobox,
@@ -5465,6 +5515,28 @@ div.k-window-content {
 }
 .k-panelbar .k-i-arrow-s:before {
   content: "\f078";
+}
+.k-panelbar .k-first.k-item {
+  border-radius: 4px 4px 0 0;
+}
+.k-panelbar .k-first .k-header {
+  border-radius: 3px 3px 0 0;
+}
+.k-panelbar .k-last .k-header {
+  border-bottom-width: 0;
+}
+.k-panelbar .k-last.k-item {
+  border-radius: 0 0 4px 4px;
+}
+.k-panelbar .k-last .k-header {
+  border-radius: 0 0 3px 3px;
+}
+.k-panelbar-collapse.k-icon,
+.k-panelbar-expand.k-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.7rem;
+  margin-top: -8px;
 }
 .k-scheduler-toolbar {
   border-radius: 4px 4px 0 0;

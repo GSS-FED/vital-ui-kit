@@ -868,15 +868,14 @@ $checkbox-bg-color:                       $c-white !default;
 $checkbox-default-color:                  nth($c-secondary-list, 4) !default;
 $checkbox-primary-color:                  $c-primary !default;
 $checkbox-shadow-color:                   rgba($c-primary, 0.2) !default;
-$checkbox-disable-color:                  nth($c-secondary-list, 5) !default;
+$checkbox-disable-color:                  nth($c-secondary-list, 4) !default;
 $checkbox-disable-border-color:           nth($c-secondary-list, 3) !default;
 $checkbox-default-border-color:           nth($c-secondary-list, 4) !default;
-$checkbox-size:                           16px !default;
-$checkbox-checked-size:                   14px !default;
+$checkbox-size:                           1.066rem !default; // 16px
+$checkbox-checked-size:                   0.8rem !default; // 12px
 $checkbox-border-radius:                  2px !default;
 $checkbox-min-width:                      $checkbox-size !default;
 $checkbox-min-height:                     $checkbox-min-width !default;
-$checkbox-selected-color:                 $c-primary !default;
 $checkbox-bg-color:                       $c-white !default;
 
 // checkbox text style
@@ -938,9 +937,9 @@ $input-border:                            1px solid $input-border-color !default
 $input-font-size:                         $font-size-base !default;
 $input-border-radius:                     $border-radius !default;
 $input-line-height:                       $line-height-small !default;
-$input-vertical-padding:                  calc(#{$padding-base-vertical} - 1px) !default;
+$input-vertical-padding:                  $padding-base-vertical - 1rem/($font-size-body/1px) !default;
 $input-horizontal-padding:                $padding-small-horizontal !default;
-$input-height:                            ($line-height-small + $padding-base-vertical*2) !default;
+$input-height:                            ($line-height-small + $input-vertical-padding*2) !default;
 
 $input-focus-border:                      1px solid $c-primary !default;
 $input-focus-box-shadow:                  0 0 0 2px rgba($c-primary, 0.2) !default;
@@ -997,6 +996,8 @@ $input-hint-color:                        $c-text !default;
 $input-asterisk-size:                     0.266rem !default;
 $input-asterisk-color:                    $c-alarm !default;
 $input-asterisk-margin:                   -$input-asterisk-size/2 0.533rem 0 0 !default;
+$input-asterisk-top:                      0.666rem !default;
+$input-asterisk-left:                     -0.666rem !default;
 
 $input-asterisk-placeholder-width:        calc(100% - #{$input-asterisk-size + nth($input-asterisk-margin, 2)}) !default;
 
@@ -1082,7 +1083,7 @@ $radio-bg-color:                          $c-white !default;
 $radio-default-color:                     nth($c-secondary-list, 4) !default;
 $radio-primary-color:                     $c-primary !default;
 $radio-shadow-color:                      rgba($c-primary, 0.2) !default;
-$radio-disable-color:                     nth($c-secondary-list, 4) !default;
+$radio-disable-color:                     nth($c-secondary-list, 5) !default;
 $radio-disable-border-color:              nth($c-secondary-list, 3) !default;
 $radio-circle-size:                       15px !default;
 $radio-circle-selected-size:              9px !default;
