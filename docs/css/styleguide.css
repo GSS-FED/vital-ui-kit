@@ -2646,7 +2646,8 @@ a.demo-btn:hover {
 
 .demo-avatar {
   display: inline-block;
-  margin-right: 10px; }
+  margin-right: 10px;
+  background-image: url("../img/avatar-default.png"); }
 
 .demo-avatar-badge-row {
   margin-bottom: 30px; }
