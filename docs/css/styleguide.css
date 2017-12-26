@@ -2445,7 +2445,7 @@ a.demo-btn:hover {
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
   position: relative;
-  z-index: 9;
+  z-index: 99;
   font-family: "Roboto", "Helvetica", "Segoe UI", "Arial", "sans-serif", "Microsoft JhengHei", "Heiti TC"; }
   .nav-wrapper .nav-menu {
     display: inline-block;
@@ -2455,7 +2455,7 @@ a.demo-btn:hover {
     width: 70%;
     box-shadow: 0 8px 19px rgba(0, 0, 0, 0.5);
     background-color: #333333;
-    z-index: 9; }
+    z-index: 99; }
     .nav-wrapper .nav-menu a {
       display: inline-block;
       vertical-align: middle;
@@ -2510,7 +2510,7 @@ a.demo-btn:hover {
     transform: scale(0);
     transform-origin: 50% -10px;
     transition: transform 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 400ms 100ms;
-    z-index: 9; }
+    z-index: 99; }
     .nav-dropdown-wrapper .nav-dropdown-menu a {
       display: block;
       color: #fff;
@@ -2563,7 +2563,7 @@ a.demo-btn:hover {
       top: 0;
       right: 0;
       padding: 0;
-      z-index: 9;
+      z-index: 99;
       width: 45px;
       background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAvElEQVQoU42QzUpDQQxGT2YyriyIuqnYn4fyqX0JK6XURSuC3XhnMilzL9zaFsGsT76TfPLy+uP8Y+QSlNy2HE9ytn4CO0f3Ffl2RMBuhfoY8TTwI6gfFd0U4pfj7tT7SJkGyjSewKbTt0JaG7ouCEJ+DpSF0i0i3MiQKNlJK0PfC2lT+0SbKXkeyUvt9aM6bo20rYRPox1pd4I9Nf0vdX9shrgzwmFoq04C9iDj91f10LWvG3Be7jX4R/lHB8pj5xTDzAUAAAAASUVORK5CYII=) 74% 34%/300%;
       background: radial-gradient(circle, #6654EC 0%, #54CAF9) right top/200%; }
@@ -2582,7 +2582,9 @@ a.demo-btn:hover {
   .nav-wrapper .nav-menu a {
     padding-top: 8px; }
     .nav-wrapper .nav-menu a span {
-      display: block; } }
+      display: block; }
+    .nav-wrapper .nav-menu a .single-line {
+      line-height: 30px; } }
 
 .demo-title {
   padding: 10px 0; }
@@ -2730,10 +2732,20 @@ a.demo-btn:hover {
 .demo-ol-wrap {
   padding-left: 20px; }
 
-.langing-page body {
+.landing-page .landing-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.landing-page body {
+  height: 100%;
   font-family: "Heiti TC"; }
 
-.langing-page h2 {
+.landing-page h2 {
   font-size: 48px;
   font-weight: 600;
   margin: 0;
@@ -2741,22 +2753,22 @@ a.demo-btn:hover {
   padding-bottom: 1.802em;
   letter-spacing: 7px; }
 
-.langing-page h3 {
+.landing-page h3 {
   font-size: 24px;
   font-weight: 600;
   margin: 0;
   padding-top: 1.602em;
   padding-bottom: 1.602em; }
 
-.langing-page p {
+.landing-page p {
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 3px; }
 
 @media (max-width: 667px) {
-  .langing-page h2 {
+  .landing-page h2 {
     font-size: 30px; }
-  .langing-page p {
+  .landing-page p {
     font-size: 15px; } }
 
 .landing-sec0 {
@@ -3168,8 +3180,9 @@ a.demo-btn:hover {
     margin-left: -175px;
     background: url(../img/landing-page/sec2/vital-orgchoose-card.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    z-index: 5; }
+    background-size: cover;
+    z-index: 5;
+    box-shadow: 8px 28px 40px rgba(57, 77, 135, 0.5); }
     .landing-sec2 .vital-orgchoose-card:hover {
       transform: scale(1.1, 1.1); }
   .landing-sec2 .vital-malefemale-card {
@@ -3182,9 +3195,10 @@ a.demo-btn:hover {
     margin-left: -305px;
     background: url(../img/landing-page/sec2/vital-malefemale-card.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     transform: scale(0.9);
-    z-index: 4; }
+    z-index: 4;
+    box-shadow: -8px 15px 40px rgba(57, 77, 135, 0.5); }
     .landing-sec2 .vital-malefemale-card:hover {
       margin-left: -335px; }
   .landing-sec2 .vital-fillreport-card {
@@ -3197,9 +3211,10 @@ a.demo-btn:hover {
     margin-left: -20px;
     background: url(../img/landing-page/sec2/vital-fillreport-card.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     transform: scale(0.9);
-    z-index: 4; }
+    z-index: 4;
+    box-shadow: 20px 8px 30px rgba(57, 77, 135, 0.5); }
     .landing-sec2 .vital-fillreport-card:hover {
       margin-left: 10px; }
   .landing-sec2 .vital-register-card {
@@ -3212,9 +3227,10 @@ a.demo-btn:hover {
     margin-left: -405px;
     background: url(../img/landing-page/sec2/vital-register-card.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     transform: scale(0.7);
-    z-index: 3; }
+    z-index: 3;
+    box-shadow: -10px 9px 40px rgba(57, 77, 135, 0.5); }
     .landing-sec2 .vital-register-card:hover {
       margin-left: -435px; }
   .landing-sec2 .vital-register2-card {
@@ -3227,9 +3243,10 @@ a.demo-btn:hover {
     margin-left: 210px;
     background: url(../img/landing-page/sec2/vital-register-card.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     transform: scale(0.7);
-    z-index: 3; }
+    z-index: 3;
+    box-shadow: 16px 10px 40px rgba(57, 77, 135, 0.5); }
     .landing-sec2 .vital-register2-card:hover {
       margin-left: 240px; }
 
@@ -4192,7 +4209,8 @@ a.demo-btn:hover {
 .demo-template-wrapper {
   height: calc(100% - 55px);
   text-align: center;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; }
   .demo-template-wrapper:before {
     content: '';
     position: absolute;
@@ -4204,6 +4222,9 @@ a.demo-btn:hover {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA/klEQVQoU02QMW7DMAxFSUohrdiWcrc4R6h6qA4dOnQp0KVDhwy9T53ZkmtbBW0HyCjo4f3/ibHrf8aGJLWG88lIai2nQJK85blCWQAYAQSfu/46MVbZG0necPZWhkB8fyu0wk/n/hsJXWpQ1s9gDzkYGVrLOZDMjAxqjJfbF5bi/iqq1Dgq3BoeTiTZW84NCagxnvtPQDgWKC4HK8nfY7XrVmc5IGO89B9lKU7hyall76rx3h40IdfEGLvfdwA8FgAH2lUHrdCjmdbVbwXBQVG4uKmmamgNj3ts8iRDsOvqV10NZYufzXaq7A2nhxoYu9sLwgaVHR7rDVrh3fwPwVNxEFJvon4AAAAASUVORK5CYII=) center top/100% 290px no-repeat;
     background: linear-gradient(110deg, rgba(102, 84, 236, 0.77) 20%, rgba(53, 175, 255, 0.77) 70%) 0 0/100% 290px no-repeat;
     z-index: -1; }
+  @media (max-width: 620px) {
+    .demo-template-wrapper {
+      height: calc(100% - 45px); } }
 
 .demo-template-content {
   margin: 0 auto;

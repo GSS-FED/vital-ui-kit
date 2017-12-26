@@ -5190,6 +5190,7 @@ button:focus {
 .k-splitbar-horizontal .k-icon {
   background-color: #95ACD4;
   border-radius: 5px;
+  left: 0;
 }
 .k-tabstrip-items .k-item,
 .k-panelbar .k-tabstrip-items .k-item {
