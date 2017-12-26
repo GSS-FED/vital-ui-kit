@@ -14,6 +14,7 @@
   height: calc(100% - #{nth($nav-height-list, 1)});
   text-align: center;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 
   &:before {
     content: '';
@@ -26,6 +27,11 @@
     background: $template-bg;
     background: $template-bg-gradient;
     z-index: -1;
+  }
+
+  // nav
+  @include bp(nth($nav-bp, 2)) {
+    height: calc(100% - #{nth($nav-height-list, 2)});
   }
 }
 

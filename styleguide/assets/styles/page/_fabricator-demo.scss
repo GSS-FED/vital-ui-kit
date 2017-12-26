@@ -99,6 +99,7 @@
 .demo-avatar {
   display: inline-block;
   margin-right: 10px;
+  background-image: url('#{$img-path}/avatar-default.png');
 }
 
 .demo-avatar-badge-row {

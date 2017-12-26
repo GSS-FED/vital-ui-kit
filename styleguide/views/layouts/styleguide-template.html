@@ -35,10 +35,10 @@
 
 	  <nav class="nav-wrapper">
 	    <div class="nav-menu">
-	      <a href="index.html">首頁</a>
+	      <a href="index.html"><span class="single-line">首頁</span></a>
 	      <a href="template.html"><span>範例</span><span>應用</span></a>
+	      <a href="kendo-demo.html"><span>Kendo Theme</a>
 	      <a href="getting-started.html" target="_blank"><span>開始</span><span>使用</span></a>
-	      <a href="kendo-demo.html" target="_blank"><span>Kendo Theme</a>
 	      <a href="https://uwillx.com/" target="_blank"><span>聯絡</span><span>我們</span></a>
 	    </div>
 	    <div class="nav-dropdown-wrapper download-wrapper">
@@ -64,6 +64,14 @@
 		</div>
 	{{/if}}
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110559968-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	 	gtag('config', 'UA-110559968-1');
+	</script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="./js/vital-ui-kit.js"></script>
 	{{#if javascript}}<script src="./js/{{javascript}}"></script>{{/if}}

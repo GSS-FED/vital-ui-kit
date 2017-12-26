@@ -14,7 +14,8 @@
   margin-left: $marginLeft;
   background: url(../img/landing-page/sec2/#{$bg});
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+
   @if($scale != 1) {
     transform: scale($scale);
   }
@@ -72,6 +73,7 @@
 
   .vital-orgchoose-card {
     @include landing-sec2-card(50%, 0, 350px, 45%, 307px, -175px, 1, 'vital-orgchoose-card.png', 5);
+    box-shadow: 8px 28px 40px rgba(#394D87, 0.5);
 
     &:hover {
       transform: scale(1.1, 1.1);
@@ -80,6 +82,7 @@
 
   .vital-malefemale-card {
     @include landing-sec2-card(50%, 0, 198px, 25%, 307px, -175px - 130px, 0.9, 'vital-malefemale-card.png', 4);
+    box-shadow: -8px 15px 40px rgba(#394D87, 0.5);
 
     &:hover {
       margin-left: -175px - 130px - 30px;
@@ -88,7 +91,8 @@
 
   .vital-fillreport-card {
     @include landing-sec2-card(50%, 0, 345px, 44%, 307px, -20px, 0.9, 'vital-fillreport-card.png', 4);
-
+    box-shadow: 20px 8px 30px rgba(#394D87, 0.5);
+    
     &:hover {
       margin-left: -20px + 30px;
     }
@@ -96,6 +100,7 @@
 
   .vital-register-card {
     @include landing-sec2-card(50%, 0, 197px, 23%, 307px, -175px - 130px - 100px, 0.7, 'vital-register-card.png', 3);
+    box-shadow: -10px 9px 40px rgba(#394D87, 0.5);
 
     &:hover {
       margin-left: -175px - 130px - 100px - 30px;
@@ -104,6 +109,7 @@
 
   .vital-register2-card {
     @include landing-sec2-card(50%, 0, 197px, 23%, 307px, 210px, 0.7, 'vital-register-card.png', 3);
+    box-shadow: 16px 10px 40px rgba(#394D87, 0.5);
 
     &:hover {
       margin-left: 210px + 30px;
