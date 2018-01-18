@@ -135,6 +135,8 @@ gulp.task('styles', ['styleguidStyle', 'uikitStyle'], function() {
       .pipe(gulp.dest(config.uikit.styles.sass.destSrc));
     gulp.src(config.uikit.styles.less.src)
       .pipe(gulp.dest(config.uikit.styles.less.destSrc));
+    gulp.src(config.uikit.styles.less.staticSrc)
+      .pipe(gulp.dest(config.uikit.styles.less.destStaticSrc));
     // copy icomoon source code
     gulp.src(config.uikit.styles.icomoon.src)
       .pipe(gulp.dest(config.uikit.styles.icomoon.destSrc));
