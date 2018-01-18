@@ -95,6 +95,27 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
         ```
 
 
+1. 客製化 Kendo theme (Vital UI Kit theme for Kendo)
+
+    如果您是開發者，且專案有使用 [Kendo UI Core](https://github.com/telerik/kendo-ui-core)，想要客製化自己的 Kendo theme，可使用以下方法。
+
+    1. `npm install vital-ui-kit`
+
+    1. 在專案環境引用 `node_modules/vital-ui-kit/dist/less` 資料夾底下的 `less2014`(kendo-ui-core<=1.0.2) 或是 `less2016`(kendo-ui-core>=2016.2.518 <=2017.3.1206)，編譯輸出的 css 檔案。
+
+    1. `_kendo.custom.theme.less` 可更改 Kendo theme 的變數檔，`_kendo.custom.style.less`可客製化自己的樣式，`_kendo.custom.style.variables.less` 可客製化自己的變數檔，`_icon.variables.less`可客製化 Kendo 使用的 icon (預設使用 vital-ui-kit 的 icomoon fonts)。
+
+        ```
+        less/
+        ├── less2014/
+        │    ├── _kendo.custom.theme.less
+        │    ├── _kendo.custom.style.less
+        │    ├── ...
+        └── less2016/
+        │    ├── ...
+        ```
+
+
 ## File Structure
 
 安裝後的資料夾中， `build/dist/` 包含編譯後的原始檔案與壓縮檔，與 css 編譯前的 sass 原始檔案，提供給開發者修改變數、客製化樣式。
