@@ -1,6 +1,8 @@
 // *************************************
 //
-//   Style Variables
+//   Kendo Custom Style Variables
+//   Vital UI Kit theme 客製化樣式變數
+//   for kendo-ui-core>=2016.2.518
 //   
 //   Copyright © 2017 Galaxy Software Services
 //   Licensed under the MIT License
@@ -25,9 +27,9 @@
 @c-black-list:                            #F8F8F8 #F0F0F0 #dddddd #cccccc #aaaaaa #888888 #555555 #333333 #0D0D0D;
 
 // main color
-@c-primary-list:                          @c-skyblue-list;
-@c-secondary-list:                        @c-water-list;
-@c-primary:                               extract(@c-primary-list, 5);
+@c-primary-list:                          #F0FFFE #C0F0EC #94E1DA #6DD1C9 #49C2B8 #2BB3A7 #10a498 #008F83 #00756B;
+@c-secondary-list:                        @c-black-list;
+@c-primary:                               extract(@c-primary-list, 7);
 
 // black & white
 @c-black:                                 extract(@c-black-list, 9);
@@ -101,14 +103,7 @@
 // checkbox
 @checkbox-label-size:                     16px;
 @checkbox-label-after-font-size:          @font-size-xs;
-@checkbox-primary-color:                  @c-primary;
-@checkbox-shadow-color:                   rgba(14, 134, 254, 0.2);
-@checkbox-border-radius:                  2px;
-@checkbox-default-color:                  extract(@c-secondary-list, 4);
-@checkbox-default-border-color:           extract(@c-secondary-list, 4);
-@checkbox-disable-color:                  extract(@c-secondary-list, 4);
-@checkbox-disable-border-color:           extract(@c-secondary-list, 3);
-@checkbox-label-disable-color:            extract(@c-secondary-list, 5);
+
 
 // icon
 @icon-font-size:                          13px;
@@ -119,7 +114,7 @@
 @input-line-height:                       1;
 @input-horizontal-padding:                @padding-small-horizontal;
 @colorpicker-selected-color-margin:       @border-width*2;
-@colorpicker-selected-color-height:       @input-height - @colorpicker-selected-color-margin*2;
+@colorpicker-selected-color-height:       @input-height - (@colorpicker-selected-color-margin + @border-width)*2;
 @colorpicker-selected-color-width:        @colorpicker-selected-color-height;
 
 // grid
@@ -147,12 +142,6 @@
 @radio-label-size:                        17px;
 @radio-label-after-size:                  9px;
 @radio-label-spacing:                     4px;
-@radio-default-color:                     extract(@c-secondary-list, 4);
-@radio-primary-color:                     @c-primary;
-@radio-shadow-color:                      rgba(14, 134, 254, 0.2);
-@radio-disable-color:                     extract(@c-secondary-list, 5);
-@radio-disable-border-color:              extract(@c-secondary-list, 3);
-@radio-label-disable-color:               extract(@c-secondary-list, 5);
 
 // progressbar
 @progressbar-selected-color:              @c-primary;
