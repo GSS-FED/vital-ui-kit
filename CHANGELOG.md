@@ -1,5 +1,12 @@
 # Release Notes
 
+## 0.0.10 (2018-01-19)
+
+- Add kendo theme sources
+- Update document page & document
+- Fix build faild (finally successed after 5 tries...)
+
+
 ## 0.0.9 (2017-11-13)
 
 - Fix #10 bug, now published package won't included any dot files

@@ -104,8 +104,8 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
     1. 在專案環境引用 `node_modules/vital-ui-kit/dist/kendo` 資料夾底下對應的 kendo sources，編譯輸出的 css 檔案。
 
         - `less2014` (for kendo-ui-core<=1.0.2)
-        - `less2016` (for kendo-ui-core>=2016.2.518 <=2017.3.1206)
-        - `sassAngualar` (for kendo-angular-ui)
+        - `less2016` (for kendo-ui-core>=2016.2.518 <=2017.3.1206，beta version)
+        - `sassAngualar` (for kendo-angular-ui，beta version)
 
     1. kendo sources 可 import 自己客製化的變數檔與加入樣式，各檔案說明如下：
 
@@ -115,14 +115,6 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
         - `_kendo.custom.theme` 可更改 Kendo theme 的變數檔
 
         ```
-        kendo/
-        ├── less2014/
-        │    ├── _icon.variables.less
-        │    ├── _kendo.custom.style.less
-        │    ├── ...
-        └── less2016/
-        │    ├── ...
-        ```
 
 
 ## File Structure
@@ -131,7 +123,7 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
 `build/styleguide/` 包含 Vital UI Kit 的使用說明，可打開 `index.html` 閱讀。
 
-我們也提供 [Kendo](https://www.telerik.com/kendo-ui) 套件的樣式，目前支援版本 `kendo-ui-core^1.0.0`，2016 以後的版本樣式仍在開發中，可從線上 [less2016](https://github.com/GSS-FED/vital-ui-kit/tree/master/src/less2016) 資料夾看到測試中的 less 原碼，自行下載採用。
+我們也提供 [Kendo](https://www.telerik.com/kendo-ui) 套件的樣式，目前支援版本 `kendo-ui-core<=1.0.2`，2016 以後的版本樣式為 beta 測試版，可自行微調使用。
 
 ```
 vital-ui-kit/
