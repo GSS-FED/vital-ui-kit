@@ -143,7 +143,7 @@ module.exports = {
       styles: {
         src: [
           'src/sass/**/*.+(sass|scss)',
-          'src/less/less2014/**/*.less'
+          'src/kendo/less2014/**/*.less'
         ],
         sass: {
           src: [
@@ -153,13 +153,14 @@ module.exports = {
         },
         less: {
           src: [
-            'src/less/less2014/**'
+            'src/kendo/less2014/**'
+          ]
+        },
+        kendo: {
+          src: [
+            'src/kendo/**'
           ],
-          staticSrc: [
-            'src/less/less2016/**'
-          ],
-          destSrc: 'build/dist/less/less2014',
-          destStaticSrc: 'build/dist/less/less2016'
+          destSrc: 'build/dist/kendo',
         },
         icomoon: {
           src: [
@@ -200,6 +201,10 @@ module.exports = {
 
     // dependency
     dependency: {
+      src: [
+        'assets/**/*',
+        'styleguide/assets/+(img|icomoon)/**/*'
+      ],
       document: {
         src: [
           'README.md'

@@ -1,5 +1,5 @@
 /*******************************************
- * Copyright © 2017 Galaxy Software Services
+ * Copyright © 2018 Galaxy Software Services
  *
  * vital-ui-kit, v0.0.9
  * UI Kit for GSS Vital Family
@@ -5241,6 +5241,9 @@ html .k-upload {
   border-color: #C4D2EB;
   background-color: #D8E3F6;
 }
+.k-calendar .k-footer .k-link {
+  border-radius: 4px;
+}
 .k-tool-icon {
   background-image: none !important;
 }
@@ -5330,15 +5333,25 @@ div.k-window-content {
   border-color: #016DD8;
   background-color: #016DD8;
 }
+.k-calendar .k-header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.k-dialog-buttongroup .k-button {
+  border-radius: 3px;
+  border-bottom-width: 0;
+}
 .k-dialog-buttongroup .k-button:not(:first-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
+  border-right-width: 0;
 }
 .k-dialog-buttongroup .k-button:not(:last-child) {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  border-left-width: 0;
 }
 .k-grid {
   height: 100%;

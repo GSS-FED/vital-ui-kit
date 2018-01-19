@@ -133,10 +133,8 @@ gulp.task('styles', ['styleguidStyle', 'uikitStyle'], function() {
     // copy sass, less source code
     gulp.src(config.uikit.styles.sass.src)
       .pipe(gulp.dest(config.uikit.styles.sass.destSrc));
-    gulp.src(config.uikit.styles.less.src)
-      .pipe(gulp.dest(config.uikit.styles.less.destSrc));
-    gulp.src(config.uikit.styles.less.staticSrc)
-      .pipe(gulp.dest(config.uikit.styles.less.destStaticSrc));
+    gulp.src(config.uikit.styles.kendo.src)
+      .pipe(gulp.dest(config.uikit.styles.kendo.destSrc));
     // copy icomoon source code
     gulp.src(config.uikit.styles.icomoon.src)
       .pipe(gulp.dest(config.uikit.styles.icomoon.destSrc));
