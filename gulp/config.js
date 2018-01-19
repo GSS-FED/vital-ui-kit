@@ -143,7 +143,7 @@ module.exports = {
       styles: {
         src: [
           'src/sass/**/*.+(sass|scss)',
-          'src/less/**/*.less'
+          'src/kendo/less2014/**/*.less'
         ],
         sass: {
           src: [
@@ -153,9 +153,14 @@ module.exports = {
         },
         less: {
           src: [
-            'src/less/**'
+            'src/kendo/less2014/**'
+          ]
+        },
+        kendo: {
+          src: [
+            'src/kendo/**'
           ],
-          destSrc: 'build/dist/less'
+          destSrc: 'build/dist/kendo',
         },
         icomoon: {
           src: [
