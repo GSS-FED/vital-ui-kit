@@ -1,7 +1,8 @@
 // *************************************
 //
-//   Kendo Custom Style (Vital UI Kit)
-//   for kendo-ui-core^1.0.0
+//   Kendo Custom Style
+//   客製化 Vital UI Kit theme for kendo
+//   for kendo-ui-core<=1.0.2
 //   
 //   kendo less path: node_modules/kendo-ui-core/dist/styles/web/common/**
 //   
@@ -340,6 +341,7 @@
 .k-splitbar-horizontal .k-icon {
   background-color: @resize-handle-bg-color;
   border-radius: 5px;
+  left: 0;
 }
 
 
@@ -429,6 +431,11 @@ html .k-upload {
     color: @button-hover-text-color;
     border-color: @button-active-border-color;
     background-color: @button-active-background;
+}
+
+// 665
+.k-calendar .k-footer .k-link {
+  border-radius: @border-radius;
 }
 
 // 892
@@ -569,19 +576,36 @@ div.k-window-content {
 }
 
 
+// ----- calendar ----- //
+
+.k-calendar {
+  .k-header {
+    border-top-left-radius: @border-radius;
+    border-top-right-radius: @border-radius;
+  }
+}
+
+
 // ----- dialog ----- //
 
 .k-dialog-buttongroup {
+  .k-button {
+    border-radius: @border-radius - 1;
+    border-bottom-width: 0;
+  }
+
   .k-button:not(:first-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
+    border-right-width: 0;
   }
 
   .k-button:not(:last-child) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border-left-width: 0;
   }
 }
 
