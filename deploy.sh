@@ -5,7 +5,7 @@ export PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
 export NPM_PACKAGE_VERSION=$(npm view vital-ui-kit version)
 
 # check version number before deploy
-if [ "${PACKAGE_VERSION}" == "${NPM_PACKAGE_VERSION}" ]; then
+if [[ $PACKAGE_VERSION == $NPM_PACKAGE_VERSION ]]; then
   echo "Not deploy current master commit to npm (prevent hotfix build)"
   exit 0
   
