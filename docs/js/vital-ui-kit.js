@@ -1,5 +1,5 @@
 /*******************************************
- * Copyright © 2017 Galaxy Software Services
+ * Copyright © 2018 Galaxy Software Services
  *
  * vital-ui-kit, v0.0.9
  * UI Kit for GSS Vital Family
