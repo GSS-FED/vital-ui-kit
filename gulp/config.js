@@ -71,8 +71,9 @@ module.exports = {
         sourcemap: false,
         autoprefixer: {
           browsers: [
+            '> 5%',
             'not ie <= 8',
-            'last 2 versions'
+            'last 2 Chrome versions'
           ],
           cascade: false
         },
@@ -171,8 +172,9 @@ module.exports = {
         sourcemap: true,
         autoprefixer: {
           browsers: [
+            '> 5%',
             'not ie <= 8',
-            'last 2 versions'
+            'last 2 Chrome versions'
           ],
           cascade: false
         },
