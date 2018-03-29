@@ -1,6 +1,6 @@
 // *************************************
 //
-//   CRM
+//   Kendo custom theme
 //
 // *************************************
 
@@ -9,26 +9,11 @@
 // -------------------------------------
 
 // vital ui kit
-@import "~vital-ui-kit/dist/sass/utils/mixins";
-// icomoon
-@import "~vital-ui-kit/dist/icomoon/variables";
+@import "vital-ui-kit/dist/sass/utils/mixins";
 
-%icon {
-  display: inline-block;
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-size: $icon-font-size;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// icon
+@import "vital-ui-kit/dist/icomoon/variables";
+@import "vital-ui-kit/dist/sass/base/icon";
 
 
 // -------------------------------------
@@ -36,5 +21,5 @@
 // -------------------------------------
 
 @import "kendo.custom.theme";
-@import "~@progress/kendo-theme-default/scss/all";
+@import "@progress/kendo-theme-default/scss/all";
 @import "kendo.custom.style";
