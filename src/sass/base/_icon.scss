@@ -5,10 +5,10 @@
 //
 // *************************************
 
-%icon, [class^="icon-"], [class*=" icon-"] {
+%icon {
   display: inline-block;
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: #{$icon-font-family} !important;
   speak: none;
   font-size: $icon-font-size;
   font-style: normal;

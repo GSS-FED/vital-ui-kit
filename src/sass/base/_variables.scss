@@ -10,7 +10,8 @@
 
 $prefix:                                  'sg' !default;
 $state:                                   '#{$prefix}-state' !default;
-$icomoon-font-path:                       '../fonts' !default;
+$icomoon-font-path:                       '../fonts' !default; // if use icomoon, define the font path here
+$icon-font-family:                        'icomoon' !default;
 
 // usage: z-index: z(module, upper), z-index: z(head)
 $z-layers: (
