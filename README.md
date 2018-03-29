@@ -11,6 +11,10 @@
     <strong>View Documents &raquo;</strong>
   </a>
   <br>
+  <a href="https://github.com/GSS-FED/vital-ui-kit-react">
+    <strong>(NEW!) React Component repository &raquo;</strong>
+  </a>
+  <br>
 </p>
 
 [![Join the chat at https://gitter.im/GSS-FED/vital-ui-kit](https://badges.gitter.im/GSS-FED/vital-ui-kit.svg)](https://gitter.im/GSS-FED/vital-ui-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
