@@ -1,4 +1,4 @@
-# Release Notes
+# Change Log
 
 ## 0.0.10 (2018-01-19)
 

@@ -6,10 +6,18 @@
 // *************************************
 
 // -------------------------------------
+//   Mixins (variables need z-index mixin)
+// -------------------------------------
+
+@import "utils/mixins";
+
+
+// -------------------------------------
 //   Custom Variables
 // -------------------------------------
 
 // import custom variables here
+// ex: @import "variables-custom";
 
 // -------------------------------------
 //   Core
@@ -31,3 +39,4 @@
 // -------------------------------------
 
 // import custom style here
+// ex: @import "vital-ui-kit-custom";

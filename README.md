@@ -46,7 +46,11 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 ## Installation
 
 ```
-npm install vital-ui-kit
+# yarn
+yarn add vital-ui-kit
+
+# npm
+npm i vital-ui-kit --save
 ```
 
 
@@ -67,7 +71,6 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
         ```
         <link rel="stylesheet" href="./css/vital-ui-kit.css">
         (optional) <link rel="stylesheet" href="./css/kendo.custom.vital-ui-kit.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="./js/vital-ui-kit.js"></script>
         ```
 
