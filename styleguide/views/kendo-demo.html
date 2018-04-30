@@ -15,13 +15,12 @@
   <meta property="og:description" content="Vital UI Kit, a graceful and customizable front-end UI kit for web development. - by Galaxy Software Services">
   <title>Kendo Theme</title>
 
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
   <link rel="canonical" href="http://demos.telerik.com/kendo-ui/themebuilder/" />
+  <link rel="icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
   <link href="https://kendo.cdn.telerik.com/2014.3.1316/styles/kendo.common.min.css" rel="stylesheet" />
   <link href="https://kendo.cdn.telerik.com/2014.3.1316/styles/kendo.rtl.min.css" rel="stylesheet" />
   <link href="http://demos.telerik.com/kendo-ui/content/shared/styles/examples.css" rel="stylesheet" />
-  <link rel="icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
   <!-- Vital UI Kit -->
   <link href="./css/styleguide.css" rel="stylesheet" >
@@ -57,10 +56,16 @@
   </nav>
 
   <div class="demo-template-wrapper">
-    <div id="main">
-      <h2 class="sg-txt--center demo-kendo-header">Vital UI Kit Kendo theme</h2>
-      <h3 class="sg-txt--center">HTML Code is copied from<a href="http://demos.telerik.com/kendo-ui/themebuilder/" target="_blank" style="padding-left: 0.5em">Kendo UI Theme Builder</a></h3>
-      <div id="example" class="k-content">
+    <div id="main" class="demo-template-content">
+      <div class="demo-template-header">
+        Vital UI Kit Kendo theme
+        <h6>HTML Code is copied from
+          <a class="sg-btn sg-btn-darklink" href="http://demos.telerik.com/kendo-ui/themebuilder/" target="_blank" style="padding-left: 0.5em;color: white; text-decoration: underline;">
+            Kendo UI Theme Builder
+          </a>
+        </h6>
+      </div>
+      <div id="example" class="k-content sg-shadow--blur__1dp">
         <div class="column">
           <h3>Button</h3>
           <button class="k-button" style="margin-right: 1em">Button</button>
@@ -270,18 +275,17 @@
     z-index: 8 !important;
   }
 
+  #example {
+    border-radius: 4px;
+    padding-bottom: 10px;
+  }
+
   .demo-template-wrapper {
     text-align: left;
   }
 
-  .demo-template-wrapper:before {
-    content: none;
-  }
-
-  @media (max-width: 890px) and (min-width: 620px) {
-    .demo-kendo-header {
-      padding-top: 60px;
-    }
+  .demo-template-content {
+    padding-bottom: 20px;
   }
 
   .chrome {

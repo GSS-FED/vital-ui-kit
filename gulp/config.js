@@ -33,6 +33,7 @@ module.exports = {
             'styleguide/views/**/*',
             '!styleguide/views/+(layouts)/**',
             '!styleguide/views/kendo-demo.html',
+            '!styleguide/views/react.html',
           ],
           docs: 'styleguide/docs/**/*.md',
           keys: {
@@ -46,7 +47,10 @@ module.exports = {
         }
       },
       static: {
-        kendo: 'styleguide/views/kendo-demo.html',
+        html: [
+          'styleguide/views/kendo-demo.html',
+          'styleguide/views/react.html',
+        ]
       },
       views: {
         src: 'www/**/*.html',

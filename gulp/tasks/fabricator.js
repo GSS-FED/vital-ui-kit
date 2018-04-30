@@ -52,7 +52,7 @@ gulp.task('fabricator-compress-html', ['fabricator-assemble'], function() {
 });
 
 gulp.task('fabricator-static', function() { // temp
-  var htmlSrc = config.styleguide.static.kendo;
+  var htmlSrc = config.styleguide.static.html;
   var htmlDest = config.styleguide.fabricator.assemble.dest;
 
   return gulp.src(htmlSrc)

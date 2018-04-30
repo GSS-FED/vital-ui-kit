@@ -35,7 +35,7 @@ $z-layers: (
 // -------------------------------------
 
 // 顏色系列 (左->右 淺->深 9種顏色)
-$c-water-list:                            #F7F9FD #EEF2FC #D8E2F5 #C3D1EB #95ABD3 #7189B6 #456296 #2A4880 #1E3768 !default;
+$c-water-list:                            #F7F9FD #EEF2FC #D8E2F5 #C3D1EB #95ABD3 #7189B6 #456296 #2A4880 #182D54 !default;
 $c-skyblue-list:                          #D9ECFF #A6D2FF #73B9FE #419FFE #0E86FE #016DD8 #0153A5 #003A73 #002040 !default;
 $c-success-list:                          #CFF5E4 #A5ECCD #7BE3B5 #51DA9E #2BCD86 #22A36A #19794F #104F33 #082518 !default;
 $c-info-list:                             #CCF3FF #99E7FF #66DBFF #33CFFF #00C3FF #009CCC #007599 #004E66 #002733 !default;
@@ -1137,6 +1137,26 @@ $table-striped-bg-color:                  nth($c-secondary-list, 1) !default;
 $table-highlight-bg-color:                nth($c-secondary-list, 3) !default;
 
 $table-selected-bg-color:                 #d0f2ff !default;
+
+
+// ----- tabs ----- //
+
+$tab-wrapper-border-color:                nth($c-secondary-list, 4) !default;
+$tab-wrapper-vertical-spacing:            $padding-base-vertical !default;
+$tab-wrapper-horizontal-spacing:          $padding-base-horizontal !default;
+$tab-wrapper-border-radius:               $border-radius !default;
+$tab-wrapper-light-bg-color:              nth($c-skyblue-list, 5) !default;
+$tab-wrapper-light-bg-image:              linear-gradient(to right, nth($c-skyblue-list, 5), nth($c-info-list, 5)) !default;
+$tab-wrapper-dark-bg-color:               nth($c-secondary-list, 9);
+$tab-color:                               $c-text;
+$tab-border-color:                        $tab-wrapper-border-color;
+$tab-bg-color:                            $c-white;
+$tab-padding:                             $padding-base-vertical $padding-base-horizontal;
+$tab-font-size:                           $font-size-base;
+$tab-border-radius:                       $border-radius;
+$tab-spacing:                             0.26em;
+$tab-hover-bg:                            $c-text-hover-bg;
+$tab-active-bg:                           $c-text-active-bg;
 
 
 // -------------------------------------

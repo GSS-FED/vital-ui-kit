@@ -23,10 +23,10 @@ var _STATE_PREFIX = '.sg-state';
 sg.options = {};
 
 
-/** 
+/**
  * @name initializeLayout
  * @desc 外層layout高度計算
- */ 
+ */
 sg.initializeLayout = function() {
   // fn layout
   var $fnBodyInner = $(_PREFIX + '-fn-body__inner');
@@ -35,14 +35,14 @@ sg.initializeLayout = function() {
     $fnBodyInner.css('height', $(_PREFIX + '-fn-body').outerHeight());
     $fnBodyInner[0].style.display = '';
   }
-    
+
   return this;
 };
 
 
 sg.initializeEvents = function() {
   $(window).on('resize', function() { sg.onWindowResize(); });
-  
+
   return this;
 }
 
@@ -63,7 +63,7 @@ sg.initializeInput = function() {
       $(_PREFIX + '-dropdown-menu').parent().removeClass('open');
       $(_PREFIX + '-dropdown-menu').attr('aria-expanded', 'false');
     }
-    
+
   });
 
   $(document).on('click', _PREFIX + '-interbtn--mainbtn', function() {
@@ -178,6 +178,24 @@ sg.initializeComponents = function() {
   $('#myModal').appendTo("body");
   $(_PREFIX + '-card-footer-btn--primary').on('click', function() {
     $('#myModal').modal('hide');
+  });
+
+
+  // ----- tabs ----- //
+
+  document.querySelectorAll(_PREFIX + '-tab').forEach(tab => {
+    tab.addEventListener('click', e => {
+      let target = e.path.filter(element => {
+        return element.className ? element.className.match(/^sg-tab$/) : false
+      });
+      if (target[0]) {
+        target = target[0];
+        target.parentElement.querySelectorAll('.sg-tab').forEach(function(siblings){
+          siblings.classList.remove(STATE_PREFIX + '--active');
+        });
+        target.classList.add(STATE_PREFIX + '--active');
+      }
+    });
   });
 
 
