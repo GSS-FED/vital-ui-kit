@@ -1,0 +1,49 @@
+// *************************************
+//
+//   Tabs
+//
+// *************************************
+
+.#{$prefix}-tab-wrapper {
+  border-bottom: 1px solid nth($c-secondary-list, 4);
+  font-size: 0;
+}
+
+.#{$prefix}-tab {
+  color: $c-text;
+  display: inline-block;
+  border: 1px solid nth($c-secondary-list, 4);
+  background-color: white;
+  border-bottom: none;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  font-size: 1rem;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &:hover {
+    background-color: $c-text-hover-bg;
+  }
+
+  &:active {
+    background-color: $c-text-active-bg;
+  }
+
+  &.#{$state}--active {
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+  }
+
+  .#{$prefix}-inline-txt {
+    vertical-align: top;
+  }
+
+  .#{$prefix}-badge {
+    margin-top: -0.2rem;
+    margin-bottom: -0.1rem;
+  }
+}
