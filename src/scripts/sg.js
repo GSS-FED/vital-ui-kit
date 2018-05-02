@@ -22,24 +22,6 @@ var _STATE_PREFIX = '.sg-state';
  */
 sg.options = {};
 
-
-/**
- * @name initializeLayout
- * @desc 外層layout高度計算
- */
-sg.initializeLayout = function() {
-  // fn layout
-  var $fnBodyInner = $(_PREFIX + '-fn-body__inner');
-  if($fnBodyInner.length !== 0) {
-    $fnBodyInner.css('display', 'none');
-    $fnBodyInner.css('height', $(_PREFIX + '-fn-body').outerHeight());
-    $fnBodyInner[0].style.display = '';
-  }
-
-  return this;
-};
-
-
 sg.initializeEvents = function() {
   $(window).on('resize', function() { sg.onWindowResize(); });
 
@@ -403,7 +385,6 @@ sg.onWindowResize = function() {
     .initializeComponents()
     .initializeEvents()
     .initializeInput()
-    .initializeLayout()
     ;
 
 }());

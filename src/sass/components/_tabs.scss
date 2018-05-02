@@ -42,6 +42,7 @@
   cursor: pointer;
   transition: background-color 0.3s;
   vertical-align: bottom;
+  line-height: $tab-line-height;
 
   &:not(:last-child) {
     margin-right: $tab-spacing;
@@ -80,6 +81,7 @@
   .#{$prefix}-tab-wrapper.#{$prefix}-tab-light &,
   .#{$prefix}-tab-wrapper.#{$prefix}-tab-dark & {
     border: none;
+    margin-bottom: 0;
 
     &:not(.sg-state--active) {
       color: white;
