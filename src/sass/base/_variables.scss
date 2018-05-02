@@ -791,11 +791,11 @@ $btn-social: (
 
 // size
 $btn-border-radius:                       $border-radius !default;
-$btn-padding:                             calc(#{$padding-base-vertical} - 1px) $padding-base-horizontal !default;
-$btn-small-padding:                       calc(#{$padding-base-vertical} - 2px) $padding-base-horizontal !default;
+$btn-padding:                             ($padding-base-vertical - 1px/$font-size-body) $padding-base-horizontal !default;
+$btn-small-padding:                       ($padding-base-vertical - 2px/$font-size-body) $padding-base-horizontal !default;
 $btn-font-size:                           $font-size-base !default;
 $btn-line-height:                         $line-height-small !default;
-$btn-height:                              ($btn-font-size + $padding-base-vertical*2) !default;
+$btn-height:                              ($btn-font-size*$btn-line-height + ($padding-base-vertical - 1px/$font-size-body)*2) !default;
 
 $b-size: (
   "xlarge": (

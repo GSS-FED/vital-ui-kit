@@ -22,12 +22,6 @@ var _STATE_PREFIX = '.sg-state';
  */
 sg.options = {};
 
-sg.initializeEvents = function() {
-  $(window).on('resize', function() { sg.onWindowResize(); });
-
-  return this;
-}
-
 
 /**
  * @name initializeInput
@@ -183,18 +177,17 @@ sg.initializeComponents = function() {
 
   // ----- Collapse ----- //
   /*
-    * Collapse plugin for jQuery
-    * --
-     * source: http://github.com/danielstocks/jQuery-Collapse/
+    * Collapse source code copy from jQuery-Collapse
+    *
+    * source: http://github.com/danielstocks/jQuery-Collapse/
     * site: http://webcloud.se/jQuery-Collapse
     *
     * @author Daniel Stocks (http://webcloud.se)
     * Copyright 2013, Daniel Stocks
     * Released under the MIT, BSD, and GPL Licenses.
-   */
-   /*
+    *
     * vital-ui-kit edit the controll name as "sgControl" to avoid conflict with other js framework
-   */
+    */
   (function($, exports) {
 
     // Constructor
@@ -361,21 +354,6 @@ sg.initializeComponents = function() {
 };
 
 
-sg.onWindowResize = function() {
-  // resize fn layout
-  setTimeout(function() {
-    var $fnBodyInner = $(_PREFIX + '-fn-body__inner');
-    if($fnBodyInner.length !== 0) {
-      $fnBodyInner.css('display', 'none');
-      $fnBodyInner.css('height', $(_PREFIX + '-fn-body').outerHeight());
-      $fnBodyInner[0].style.display = '';
-    }
-  }, 200);
-
-  return this;
-};
-
-
 /**
  * Initialization
  */
@@ -383,7 +361,6 @@ sg.onWindowResize = function() {
 
   sg
     .initializeComponents()
-    .initializeEvents()
     .initializeInput()
     ;
 
