@@ -89,10 +89,10 @@ sg.initializeInput = function() {
 
 
 /**
- * @name initializeComponents
- * @desc other components
+ * @name initializeTable
+ * @desc table checkbox
  */
-sg.initializeComponents = function() {
+sg.initializeTable = function() {
 
   // ----- table: check all checked or not ----- //
 
@@ -148,17 +148,15 @@ sg.initializeComponents = function() {
     });
   });
 
-
-  // ----- modals ----- //
-
-  $('#myModal').appendTo("body");
-  $(_PREFIX + '-card-footer-btn--primary').on('click', function() {
-    $('#myModal').modal('hide');
-  });
+  return this;
+};
 
 
-  // ----- tabs ----- //
-
+/**
+ * @name initializeTab
+ * @desc initialize tab
+ */
+sg.initializeTab = function() {
   document.querySelectorAll(_PREFIX + '-tab').forEach(tab => {
     tab.addEventListener('click', e => {
       let target = e.path.filter(element => {
@@ -173,21 +171,25 @@ sg.initializeComponents = function() {
       }
     });
   });
+}
 
 
-  // ----- Collapse ----- //
-  /*
-    * Collapse source code copy from jQuery-Collapse
-    *
-    * source: http://github.com/danielstocks/jQuery-Collapse/
-    * site: http://webcloud.se/jQuery-Collapse
-    *
-    * @author Daniel Stocks (http://webcloud.se)
-    * Copyright 2013, Daniel Stocks
-    * Released under the MIT, BSD, and GPL Licenses.
-    *
-    * vital-ui-kit edit the controll name as "sgControl" to avoid conflict with other js framework
-    */
+/**
+ * @name initializeCollapse
+ * @desc initialize collapse
+ *
+ * Collapse source code copy from jQuery-Collapse
+ *
+ * source: http://github.com/danielstocks/jQuery-Collapse/
+ * site: http://webcloud.se/jQuery-Collapse
+ *
+ * @author Daniel Stocks (http://webcloud.se)
+ * Copyright 2013, Daniel Stocks
+ * Released under the MIT, BSD, and GPL Licenses.
+ *
+ * vital-ui-kit edit the controll name as "sgControl" to avoid conflict with other js framework
+ */
+sg.initializeCollapse = function() {
   (function($, exports) {
 
     // Constructor
@@ -355,13 +357,93 @@ sg.initializeComponents = function() {
 
 
 /**
+ * @name initializeTooltip
+ * @desc initialize tooltip
+ */
+sg.initializeTooltip = function() {
+  $('body').append(
+    '<div class="' + PREFIX + '-tooltip">'
+      + '<div class="' + PREFIX + '-tooltip-inner"></div>'
+      + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
+    + '</div>'
+  );
+
+  $('[data-tooltip]').each((i, anchor) => {
+    $(anchor).on('click', function(e) {
+      try {
+        let $tooltip = $(_PREFIX + '-tooltip');
+        if ($tooltip.length === 0) {
+          $('body').append(
+            '<div class="' + PREFIX + '-tooltip">'
+              + '<div class="' + PREFIX + '-tooltip-inner"></div>'
+              + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
+            + '</div>'
+          );
+          $tooltip = $(_PREFIX + '-tooltip');
+        }
+        $tooltip[0].className = PREFIX + '-tooltip';
+
+        const $tooltipInner = $tooltip.find(_PREFIX + '-tooltip-inner');
+        $tooltip.addClass(anchor.dataset.position);
+        $tooltip.find(_PREFIX + '-tooltip-inner').text(anchor.dataset.tooltip);
+
+        let top = 0, left = 0;
+        $tooltip.css({'top': top, 'left': left});
+        switch(anchor.dataset.position) {
+          case 'top':
+            top = $(anchor).offset().top - $tooltip[0].offsetHeight;
+            left = $(anchor).offset().left + anchor.offsetWidth/2 - $tooltip[0].offsetWidth/2;
+            break;
+          case 'left':
+            top = $(anchor).offset().top + anchor.offsetHeight/2 - $tooltip[0].offsetHeight/2;
+            left = $(anchor).offset().left - $tooltip[0].offsetWidth;
+            break;
+          case 'right':
+            top = $(anchor).offset().top + anchor.offsetHeight/2 - $tooltip[0].offsetHeight/2;
+            left = $(anchor).offset().left + anchor.offsetWidth;
+            break;
+          case 'bottom':
+            top = $(anchor).offset().top + anchor.offsetHeight;
+            left = $(anchor).offset().left + anchor.offsetWidth/2 - $tooltip[0].offsetWidth/2;
+            break;
+          default:
+        }
+        top = (top < 0 ? 0 : top);
+        left = (left < 0 ? 0 : left);
+        $tooltip.css({'top': top, 'left': left});
+        $tooltip.addClass('in');
+      } catch (e) {}
+    });
+  });
+
+  $(document).on('click', function(e) {
+    // close tooltip
+    const target = $(e.target).closest('[data-tooltip]');
+    const target2 = $(e.target).closest(_PREFIX + '-tooltip');
+    if(target.length === 0 && target2.length === 0) {
+      $(_PREFIX + '-tooltip').removeClass('in');
+    }
+  });
+
+  $(document).on('scroll', function(e) {
+    $(_PREFIX + '-tooltip').removeClass('in');
+  });
+
+  return this;
+};
+
+
+/**
  * Initialization
  */
 (function() {
 
   sg
-    .initializeComponents()
     .initializeInput()
+    .initializeCollapse()
+    .initializeTooltip()
+    .initializeTable()
+    .initializeTab()
     ;
 
 }());
