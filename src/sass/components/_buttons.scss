@@ -325,7 +325,7 @@
   $_pad-size: map-get($value, pad-size);
   $_font-size: map-get($value, font-size);
   $_border-radius: map-get($value, border-radius);
-  $_btn-height: ($_font-size + nth($_pad-size, 1)*2);
+  $_btn-height: ($_font-size*$btn-line-height + nth($_pad-size, 1)*2);
 
   .#{$prefix}-btn-#{$name} {  
     padding: calc(#{nth($_pad-size, 1)} - 1px) nth($_pad-size, 2);

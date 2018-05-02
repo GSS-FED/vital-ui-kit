@@ -46,7 +46,11 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 ## Installation
 
 ```
-npm install vital-ui-kit
+# yarn
+yarn add vital-ui-kit
+
+# npm
+npm i vital-ui-kit --save
 ```
 
 
