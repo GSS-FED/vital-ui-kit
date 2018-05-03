@@ -85,22 +85,6 @@ $_direction: top bottom left right;
   }
 }
 
-// inline txt
-.#{$prefix}-inline-txt {
-  // 繼承 sg-btn-txt
-  vertical-align: middle;
-  display: inline-block;
-
-  i + &,
-  .#{$prefix}-badge + & {
-    margin-left: $btn-i-spacing;
-  }
-  & + i,
-  & + .#{$prefix}-badge {
-    margin-left: $btn-i-spacing;
-  }
-}
-
 
 // -------------------------------------
 //   State

@@ -1,0 +1,17 @@
+// *************************************
+//
+//   text-align
+//
+// *************************************
+
+.#{$prefix}-txt--left {
+  text-align: left;
+}
+
+.#{$prefix}-txt--center {
+  text-align: center;
+}
+
+.#{$prefix}-txt--left {
+  text-align: right;
+}

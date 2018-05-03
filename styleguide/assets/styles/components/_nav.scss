@@ -70,7 +70,6 @@
     color: #fff;
     font-size: 16px;
     letter-spacing: 4px;
-    display: block;
 
     // icon
     &:before {
@@ -220,11 +219,4 @@
     }
   }
 
-  @include bp(470px) {
-    .nav-menu {
-      a {
-        font-size: 14px;
-      }
-    }
-  }
 }

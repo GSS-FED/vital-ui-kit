@@ -244,4 +244,5 @@ $landing-sec6-card-right-shadow:          -20px 50px 50px rgba(#2F4B65, 0.5);
 
 $template-bg:                             url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAA/klEQVQoU02QMW7DMAxFSUohrdiWcrc4R6h6qA4dOnQp0KVDhwy9T53ZkmtbBW0HyCjo4f3/ibHrf8aGJLWG88lIai2nQJK85blCWQAYAQSfu/46MVbZG0necPZWhkB8fyu0wk/n/hsJXWpQ1s9gDzkYGVrLOZDMjAxqjJfbF5bi/iqq1Dgq3BoeTiTZW84NCagxnvtPQDgWKC4HK8nfY7XrVmc5IGO89B9lKU7hyall76rx3h40IdfEGLvfdwA8FgAH2lUHrdCjmdbVbwXBQVG4uKmmamgNj3ts8iRDsOvqV10NZYufzXaq7A2nhxoYu9sLwgaVHR7rDVrh3fwPwVNxEFJvon4AAAAASUVORK5CYII=) center top/100% 290px no-repeat;
 $template-bg-gradient:                    linear-gradient(110deg, rgba($c-brand-purple, 0.77) 20%, rgba($c-brand-blue2, 0.77) 70%) 0 0/100% 290px no-repeat;
+$template-subtab-bg-gradient:             linear-gradient(to right, nth($c-skyblue-list, 5), nth($c-info-list, 5));
 

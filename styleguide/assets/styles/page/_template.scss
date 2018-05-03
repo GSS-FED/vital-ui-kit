@@ -218,8 +218,33 @@
   }
 }
 
-.sg-tab {
-  min-width: 100px;
+.#{$prefix}-subtab {
+  padding: 10px 12px 0;
+  background: $template-subtab-bg-gradient;
+  font-size: 0;
+  max-height: 40px;
+  overflow: hidden;
+
+  .#{$prefix}-item {
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+    border-radius: $border-radius $border-radius 0 0;
+    background-color: rgba($c-white, 0.3);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+
+    &:hover {
+      background-color: rgba($c-white, 0.4);
+    }
+
+    &.#{$prefix}-active {
+      background-color: $c-white;
+    }
+  }
 }
 
 
