@@ -15,12 +15,13 @@
   <meta property="og:description" content="Vital UI Kit, a graceful and customizable front-end UI kit for web development. - by Galaxy Software Services">
   <title>Kendo Theme</title>
 
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
   <link rel="canonical" href="http://demos.telerik.com/kendo-ui/themebuilder/" />
-  <link rel="icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
   <link href="https://kendo.cdn.telerik.com/2014.3.1316/styles/kendo.common.min.css" rel="stylesheet" />
   <link href="https://kendo.cdn.telerik.com/2014.3.1316/styles/kendo.rtl.min.css" rel="stylesheet" />
   <link href="http://demos.telerik.com/kendo-ui/content/shared/styles/examples.css" rel="stylesheet" />
+  <link rel="icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
   <!-- Vital UI Kit -->
   <link href="./css/styleguide.css" rel="stylesheet" >
@@ -44,28 +45,30 @@
 
   <nav class="nav-wrapper">
     <div class="nav-menu">
+      <a href="index.html"><span class="single-line">首頁</span></a>
       <a href="template.html"><span>範例</span><span>應用</span></a>
       <a href="kendo-demo.html"><span>Kendo Theme</a>
-      <a href="getting-started.html"><span>開始</span><span>使用</span></a>
-      <a href="react.html">React Version</a>
+      <a href="getting-started.html" target="_blank"><span>開始</span><span>使用</span></a>
       <a href="https://uwillx.com/" target="_blank"><span>聯絡</span><span>我們</span></a>
     </div>
     <div class="nav-dropdown-wrapper download-wrapper">
-      <a class="nav-dropdown-toggle" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">下載 UI KIT</a>
+      <div class="nav-dropdown-toggle">下載 UI KIT</div>
+      <ul class="nav-dropdown-menu">
+        <li>
+          <a href="https://github.com/GSS-FED/vital-ui-kit/raw/master/UI_design/UI-Kit-201706.sketch">SKETCH</a>
+        </li>
+        <li>
+          <a href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">RELEASES</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
   <div class="demo-template-wrapper">
-    <div id="main" class="demo-template-content">
-      <div class="demo-template-header">
-        Vital UI Kit Kendo theme
-        <h6>HTML Code is copied from
-          <a class="sg-btn sg-btn-darklink" href="http://demos.telerik.com/kendo-ui/themebuilder/" target="_blank" style="padding-left: 0.5em;color: white; text-decoration: underline;">
-            Kendo UI Theme Builder
-          </a>
-        </h6>
-      </div>
-      <div id="example" class="k-content sg-shadow--blur__1dp">
+    <div id="main">
+      <h2 class="sg-txt--center demo-kendo-header">Vital UI Kit Kendo theme</h2>
+      <h3 class="sg-txt--center">HTML Code is copied from<a href="http://demos.telerik.com/kendo-ui/themebuilder/" target="_blank" style="padding-left: 0.5em">Kendo UI Theme Builder</a></h3>
+      <div id="example" class="k-content">
         <div class="column">
           <h3>Button</h3>
           <button class="k-button" style="margin-right: 1em">Button</button>
@@ -275,17 +278,18 @@
     z-index: 8 !important;
   }
 
-  #example {
-    border-radius: 4px;
-    padding-bottom: 10px;
-  }
-
   .demo-template-wrapper {
     text-align: left;
   }
 
-  .demo-template-content {
-    padding-bottom: 20px;
+  .demo-template-wrapper:before {
+    content: none;
+  }
+
+  @media (max-width: 890px) and (min-width: 620px) {
+    .demo-kendo-header {
+      padding-top: 60px;
+    }
   }
 
   .chrome {

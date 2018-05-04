@@ -216,11 +216,11 @@
 //   Heading Text
 // -------------------------------------
 
-@mixin heading-text($_font-size, $_margin-vertical, $_font-weight: normal) {
+@mixin heading-text($_font-size, $_padding-vertical, $_font-weight: normal) {
   font-size: $_font-size;
   font-weight: $_font-weight;
-  margin-top: $_margin-vertical;
-  margin-bottom: $_margin-vertical;
+  padding-top: $_padding-vertical;
+  padding-bottom: $_padding-vertical;
 }
 
 

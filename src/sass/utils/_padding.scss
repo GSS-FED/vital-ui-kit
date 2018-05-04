@@ -1,0 +1,20 @@
+// *************************************
+//
+//   padding
+//
+// *************************************
+
+.#{$prefix}-padding {
+  padding: 10px;
+  //background: rgb(163, 159, 159);
+}
+
+.#{$prefix}-padding--bottom {
+  padding-bottom: 10px;
+  //background: rgb(16, 159, 159);
+}
+
+.#{$prefix}-padding--top {
+  padding-top: 10px;
+  //background: rgb(163, 15, 159);
+}

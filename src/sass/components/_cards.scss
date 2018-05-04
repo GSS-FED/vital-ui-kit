@@ -148,6 +148,7 @@
   .#{$prefix}-btn {
     border: 0;
     color: $card-interactive-color;
+    background: none;
     transition: background-color 120ms ease-out;
     &:hover {
       background-color: $card-interactive-hover-bg-color;
@@ -176,9 +177,6 @@
       }
     }
   }
-  & > .#{$prefix}-btn {
-    background: none;
-  }
   .#{$prefix}-interbtn {
     display: inline-block;
     vertical-align: middle;
@@ -195,6 +193,7 @@
   .#{$prefix}-card--mask & {
     z-index: z(default);
     .#{$prefix}-btn {
+      background: none;
       pointer-events: none;
       margin: 0;
       color: $card-interactive-color;
