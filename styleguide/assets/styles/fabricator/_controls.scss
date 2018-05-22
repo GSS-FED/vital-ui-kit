@@ -11,7 +11,7 @@
 		padding: 1rem 0;
 
 		&.f-active {
-			box-shadow: inset 0 0.25rem 0 0 color(accent);
+			box-shadow: inset 0 -0.25rem 0 0 color(accent);
 
 			use {
 				fill: color(menu-text);
@@ -50,26 +50,35 @@
 
 .f-control-bar {
 	@include clearfix;
-	padding: 1rem;
 	position: fixed;
-	top: 0;
+	top: nth($nav-height-list, 1);
 	left: 0;
 	background: white;
 	z-index: 99;
 	width: 100%;
+	padding-top: 20px;
 
 	.f-menu-active & {
     margin-left: 14rem;
 	}
+
+  @include bp(nth($nav-bp, 2)) {
+		top: nth($nav-height-list, 2);
+  }
 }
 
 .f-menu-toggle {
 	cursor: pointer;
 	vertical-align: middle;
+	padding: 1rem 2rem;
 
 	svg {
 		display: block;
 		float: left;
 		margin-bottom: -1px;
+	}
+
+	&:hover {
+		opacity: 0.5;
 	}
 }

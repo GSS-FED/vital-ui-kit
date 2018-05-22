@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-TW" class="{{#if htmlClass}}{{htmlClass}}{{/if}}">
+<html lang="zh-TW" class="{{#if htmlClass}}{{htmlClass}}{{/if}}{{#if fabricator}} fabricator{{/if}}">
 <head>
 
 	<meta charset="utf-8">
@@ -24,6 +24,20 @@
 </head>
 <body>
 
+	  <nav class="nav-wrapper">
+	    <div class="nav-menu">
+	      <a class="{{#if fabricator}}is-active{{/if}}" href="getting-started.html">Documentation</a>
+	    	<a class="logo {{#if isIndex}}is-active{{/if}}" href="index.html"></a>
+	      <a class="{{#if isTemplate}}is-active{{/if}}" href="template.html">Examples</a>
+	      <a class="{{#if isKendo}}is-active{{/if}}" href="kendo-demo.html"><span>Kendo theme</a>
+      	<a class="{{#if isReact}}is-active{{/if}}" href="react.html">React Version</a>
+	      <a href="https://uwillx.com/" target="_blank">Contact</a>
+	    </div>
+	    <div class="nav-dropdown-wrapper download-wrapper">
+	    	<a class="nav-dropdown-toggle" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">下載 UI KIT</a>
+	    </div>
+	  </nav>
+
 	{{#if fabricator}}
 
 		{{> f-icons}}
@@ -32,21 +46,6 @@
 			{{> f-control-bar}}
 
 	{{else if mainPage}}
-
-	  <nav class="nav-wrapper">
-	    <div class="nav-menu">
-	    	<a class="logo {{#if isIndex}}is-active{{/if}}" href="index.html"></a>
-	      <a class="{{#if isTemplate}}is-active{{/if}}" href="template.html">Demo</a>
-	      <a class="{{#if isKendo}}is-active{{/if}}" href="kendo-demo.html"><span>Kendo theme</a>
-      	<a class="{{#if isReact}}is-active{{/if}}" href="react.html">React Version</a>
-	      <a href="getting-started.html">Quick start</a>
-	      <a href="https://uwillx.com/" target="_blank">Contact</a>
-	    </div>
-	    <div class="nav-dropdown-wrapper download-wrapper">
-	    	<a class="nav-dropdown-toggle" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">下載 UI KIT</a>
-	    </div>
-	  </nav>
-
 	{{/if}}
 
 
