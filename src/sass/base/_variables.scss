@@ -104,6 +104,13 @@ $link-hover-color:                       nth($c-primary-list, 4) !default;
 $link-active-color:                      nth($c-primary-list, 5) !default;
 $link-disabled-color:                    nth($c-primary-list, 2) !default;
 
+$h1-padding-vertical:                    2.027rem !default;
+$h2-padding-vertical:                    1.802rem !default;
+$h3-padding-vertical:                    1.602rem !default;
+$h4-padding-vertical:                    1.424rem !default;
+$h5-padding-vertical:                    1.266rem !default;
+$h6-padding-vertical:                    1.125rem !default;
+
 
 // ----- others ----- //
 
@@ -1169,8 +1176,8 @@ $tab-line-height:                         1;
 
 $layout-body-bg:                          nth($c-secondary-list, 5) !default;
 
-$ap-header-z-index:                       z(module, base) !default;
 $ap-main-z-index:                         z(module, base) !default;
+$ap-header-z-index:                       z(module, upper) !default;
 $ap-nav-z-index:                          z(module, upper) !default;
 
 $ap-wrapper-bg-color:                     nth($c-black-list, 1) !default;

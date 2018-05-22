@@ -50,15 +50,16 @@
 
 .f-control-bar {
 	@include clearfix;
-	padding: 1rem 0;
-	// laura
-	@include bp(960px) {
-		position: fixed;
-		top: 0;
-		left: 10px;
-		background: white;
-		z-index: 99;
-		width: 100%;
+	padding: 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: white;
+	z-index: 99;
+	width: 100%;
+
+	.f-menu-active & {
+    margin-left: 14rem;
 	}
 }
 

@@ -1,129 +1,95 @@
-<!DOCTYPE html>
-<html class="demo-template">
+---
+title: React Version
+htmlClass: demo-template
+mainPage: true
+isReact: true
+---
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-  <meta name="keywords" content="GSS, UI kit, Vital, UI design, web applications">
-  <meta name="description" content="Vital UI Kit, a graceful and customizable front-end UI kit for web development. - by Galaxy Software Services">
-  <meta property="og:title" content="Vital UI Kit">
-  <meta property="og:image" content="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png">
-  <meta property="og:site_name" content="Vital UI Kit">
-  <meta property="og:type" content="object">
-  <meta property="og:url" content="https://gss-fed.github.io/vital-ui-kit/">
-  <meta property="og:description" content="Vital UI Kit, a graceful and customizable front-end UI kit for web development. - by Galaxy Software Services">
-  <title>React Version</title>
-
-  <link rel="icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/GSS-FED/vital-ui-kit/develop/assets/img/icon.png"/>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet'>
-  <!-- Vital UI Kit -->
-  <link href="./css/styleguide.css" rel="stylesheet" >
-  <link href="./css/vital-ui-kit.css" rel="stylesheet" />
-</head>
-
-<body>
-  <nav class="nav-wrapper">
-    <div class="nav-menu">
-      <a href="template.html"><span>範例</span><span>應用</span></a>
-      <a href="kendo-demo.html"><span>Kendo Theme</a>
-      <a href="getting-started.html"><span>開始</span><span>使用</span></a>
-      <a href="react.html">React Version</a>
-      <a href="https://uwillx.com/" target="_blank"><span>聯絡</span><span>我們</span></a>
-    </div>
-    <div class="nav-dropdown-wrapper download-wrapper">
-      <a class="nav-dropdown-toggle" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">下載 UI KIT</a>
-    </div>
-  </nav>
-
-  <div class="demo-template-wrapper">
-    <ul class="sg-list sg-mobile-group">
-      <li class="sg-item">
-        <a href="https://github.com/GSS-FED/vital-ui-kit-react" class="sg-item__content sg-item__link" target="_blank">
-          Github<i class="icon-external-link sg-pull--right"></i>
-        </a>
-      </li>
-      <li class="sg-item">
-        <a href="http://react.vitaluikit.com/" class="sg-item__content sg-item__link" target="_blank">
-          Storybook<i class="icon-external-link sg-pull--right"></i>
-        </a>
-      </li>
-      <li class="sg-item">
-        <a href="https://speed-vital-react.netlify.com/" class="sg-item__content sg-item__link" target="_blank">
-          範例應用<i class="icon-external-link sg-pull--right"></i>
-        </a>
-      </li>
-    </ul>
-
-    <div class="sg-tab-wrapper sg-txt--right">
-      <a class="sg-btn sg-btn-inverse-default sg-btn-icon" href="https://github.com/GSS-FED/vital-ui-kit-react" target="_blank" style="margin-right: 5px">
-        <i class="icon-github" style="font-size: 25px"></i>
+<div class="demo-template-wrapper">
+  <ul class="sg-list sg-mobile-group">
+    <li class="sg-item">
+      <a href="https://github.com/GSS-FED/vital-ui-kit-react" class="sg-item__content sg-item__link" target="_blank">
+        Github<i class="icon-external-link sg-pull--right"></i>
       </a>
-      <a class="sg-tab sg-state--active" href="http://react.vitaluikit.com/" target="iframe">Storybook</a>
-      <a class="sg-tab" href="https://speed-vital-react.netlify.com/" target="iframe">範例應用</a>
-    </div>
+    </li>
+    <li class="sg-item">
+      <a href="http://react.vitaluikit.com/" class="sg-item__content sg-item__link" target="_blank">
+        Storybook<i class="icon-external-link sg-pull--right"></i>
+      </a>
+    </li>
+    <li class="sg-item">
+      <a href="https://speed-vital-react.netlify.com/" class="sg-item__content sg-item__link" target="_blank">
+        範例應用<i class="icon-external-link sg-pull--right"></i>
+      </a>
+    </li>
+  </ul>
 
-    <div class="iframe">
-      <div class="sg-btn sg-btn-light-default sg-btn-square" onClick="window.open(document.getElementsByClassName('sg-state--active')[0].href)"><i class="icon-external-link"></i></div>
-      <iframe width="100%" height="100%" src="http://react.vitaluikit.com/" name="iframe"></iframe>
-    </div>
+  <div class="sg-tab-wrapper sg-txt--right">
+    <a class="sg-btn sg-btn-inverse-default sg-btn-icon" href="https://github.com/GSS-FED/vital-ui-kit-react" target="_blank" style="margin-right: 5px">
+      <i class="icon-github" style="font-size: 25px"></i>
+    </a>
+    <a class="sg-tab sg-state--active" href="http://react.vitaluikit.com/" target="iframe">Storybook</a>
+    <a class="sg-tab" href="https://speed-vital-react.netlify.com/" target="iframe">範例應用</a>
   </div>
 
-  <style>
-    .demo-template-wrapper {
-      padding: 40px 20px 20px;
-    }
+  <div class="iframe">
+    <div class="sg-btn sg-btn-light-default sg-btn-square" onClick="window.open(document.getElementsByClassName('sg-state--active')[0].href)"><i class="icon-external-link"></i></div>
+    <iframe width="100%" height="100%" src="http://react.vitaluikit.com/" name="iframe"></iframe>
+  </div>
+</div>
 
-    .iframe {
-      position: relative;
-      width: 100%;
-      height: calc(100% - 35px);
-      border: 1px solid #C3D1EB;
-      border-radius: 4px;
-      overflow: hidden;
-    }
+<style>
+  .demo-template-wrapper {
+    padding: 40px 20px 20px;
+    height: calc(100% - 75px);
+  }
 
-    .iframe .sg-btn {
-      position: absolute;
-      right: 5px;
-      top: 5px;
-    }
+  .iframe {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 35px);
+    border: 1px solid #C3D1EB;
+    border-radius: 4px;
+    overflow: hidden;
+    background: white;
+  }
 
-    .sg-mobile-group {
+  .iframe .sg-btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .sg-mobile-group {
+    display: none;
+  }
+
+  .sg-tab-wrapper {
+    margin-right: 20px;
+    margin-bottom: -1px;
+    position: relative;
+    z-index: 99;
+  }
+
+  .sg-tab:hover {
+    text-decoration: none;
+    color: #7189B6;
+  }
+
+  @media (max-width: 620px) {
+    .iframe,
+    .sg-tab-wrapper {
       display: none;
     }
 
-    .sg-tab-wrapper {
-      margin-right: 20px;
-      margin-bottom: -1px;
-      position: relative;
-      z-index: 99;
+    .sg-mobile-group {
+      display: block;
     }
+  }
 
-    .sg-tab:hover {
-      text-decoration: none;
-      color: #7189B6;
+  @media (max-width: 890px) {
+    .demo-template-wrapper {
+      padding-top: 50px;
     }
-
-    @media (max-width: 620px) {
-      .iframe,
-      .sg-tab-wrapper {
-        display: none;
-      }
-
-      .sg-mobile-group {
-        display: block;
-      }
-    }
-
-    @media (max-width: 890px) {
-      .demo-template-wrapper {
-        padding-top: 50px;
-      }
-    }
-  </style>
-  <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
-  <script src="./js/vital-ui-kit.js"></script>
-</body>
-</html>
+  }
+</style>

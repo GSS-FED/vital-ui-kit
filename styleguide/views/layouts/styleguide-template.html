@@ -35,11 +35,12 @@
 
 	  <nav class="nav-wrapper">
 	    <div class="nav-menu">
-	      <a href="template.html"><span>範例</span><span>應用</span></a>
-	      <a href="kendo-demo.html"><span>Kendo Theme</a>
-	      <a href="getting-started.html"><span>開始</span><span>使用</span></a>
-      	<a href="react.html">React Version</a>
-	      <a href="https://uwillx.com/" target="_blank"><span>聯絡</span><span>我們</span></a>
+	    	<a class="logo {{#if isIndex}}is-active{{/if}}" href="index.html"></a>
+	      <a class="{{#if isTemplate}}is-active{{/if}}" href="template.html">Demo</a>
+	      <a class="{{#if isKendo}}is-active{{/if}}" href="kendo-demo.html"><span>Kendo theme</a>
+      	<a class="{{#if isReact}}is-active{{/if}}" href="react.html">React Version</a>
+	      <a href="getting-started.html">Quick start</a>
+	      <a href="https://uwillx.com/" target="_blank">Contact</a>
 	    </div>
 	    <div class="nav-dropdown-wrapper download-wrapper">
 	    	<a class="nav-dropdown-toggle" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">下載 UI KIT</a>

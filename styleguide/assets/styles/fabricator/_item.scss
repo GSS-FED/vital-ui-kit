@@ -1,7 +1,7 @@
 .f-item-group {
 	@include clearfix;
 	margin-top: 3rem;
-	margin-bottom: 3rem;
+	// margin-bottom: 3rem;
 	padding-bottom: 3rem;
 	border-bottom: 1px solid color(light);
 
@@ -56,6 +56,14 @@
 	@include clearfix;
 	margin-bottom: 1.5rem;
 	vertical-align: middle;
+
+  .f-item-group & {
+    padding-top: 45px;
+  }
+
+  .f-item-group .f-item-group & {
+    padding-top: 0;
+  }
 }
 
 .f-item-heading {
