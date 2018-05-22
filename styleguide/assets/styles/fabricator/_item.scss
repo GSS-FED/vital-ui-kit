@@ -1,6 +1,6 @@
 .f-item-group {
 	@include clearfix;
-	margin-top: 3rem;
+	// margin-top: 3rem;
 	// margin-bottom: 3rem;
 	padding-bottom: 3rem;
 	border-bottom: 1px solid color(light);
@@ -16,7 +16,7 @@
 
 	& > & {
 		padding-bottom: 1.5rem;
-		margin-bottom: 1.5rem;
+		// margin-bottom: 1.5rem;
 		border-bottom: 0;
 
 		&:first-of-type {
@@ -56,14 +56,7 @@
 	@include clearfix;
 	margin-bottom: 1.5rem;
 	vertical-align: middle;
-
-  .f-item-group & {
-    padding-top: 45px;
-  }
-
-  .f-item-group .f-item-group & {
-    padding-top: 0;
-  }
+  padding-top: 45px;
 }
 
 .f-item-heading {
@@ -72,7 +65,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 1;
-  font-size: 1.2em;
+  // font-size: 1.2em;
   a {
     color: inherit;
     text-decoration: none;
@@ -127,7 +120,7 @@
 }
 
 .f-labels {
-  font-size: 1.5em;
+  // font-size: 1.5em;
 }
 
 .f-list {

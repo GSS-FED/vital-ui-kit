@@ -97,22 +97,7 @@ $font-size-body:                         15px !default;
 $icon-font-size:                         0.95em !default;
 
 
-// ----- typography ----- //
-
-$link-color:                             $c-primary !default;
-$link-hover-color:                       nth($c-primary-list, 4) !default;
-$link-active-color:                      nth($c-primary-list, 5) !default;
-$link-disabled-color:                    nth($c-primary-list, 2) !default;
-
-$h1-padding-vertical:                    2.027rem !default;
-$h2-padding-vertical:                    1.802rem !default;
-$h3-padding-vertical:                    1.602rem !default;
-$h4-padding-vertical:                    1.424rem !default;
-$h5-padding-vertical:                    1.266rem !default;
-$h6-padding-vertical:                    1.125rem !default;
-
-
-// ----- others ----- //
+// ----- utilities ----- //
 
 $font-size-xxsmall:                      0.66rem !default;  // 10 px
 $font-size-xsmall:                       0.8rem !default;   // 12 px
@@ -165,6 +150,28 @@ $u-content-margin-large:                 1rem !default;
 
 $u-list-padding:                         0.666rem 1.2rem !default; // 10px 18px
 $u-list-padding-large:                   1.333rem 1.2rem !default; // 20px 18px
+
+
+// ----- typography ----- //
+
+$link-color:                             $c-primary !default;
+$link-hover-color:                       nth($c-primary-list, 4) !default;
+$link-active-color:                      nth($c-primary-list, 5) !default;
+$link-disabled-color:                    nth($c-primary-list, 2) !default;
+
+$h1-padding-vertical:                    $padding-xlarge-vertical*1.2*1.2 !default;
+$h2-padding-vertical:                    $padding-xlarge-vertical*1.2 !default;
+$h3-padding-vertical:                    $padding-large-vertical*1.2 !default;
+$h4-padding-vertical:                    $padding-base-vertical*1.2 !default;
+$h5-padding-vertical:                    $padding-xsmall-vertical*1.2 !default;
+$h6-padding-vertical:                    $padding-xsmall-vertical*1.2 !default;
+
+$h1-font-size:                           2.027rem !default;
+$h2-font-size:                           1.802rem !default;
+$h3-font-size:                           1.602rem !default;
+$h4-font-size:                           1.424rem !default;
+$h5-font-size:                           1.266rem !default;
+$h6-font-size:                           1.125rem !default;
 
 
 // -------------------------------------
