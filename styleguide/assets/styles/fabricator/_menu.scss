@@ -4,9 +4,9 @@
 	position: fixed;
 	top: nth($nav-height-list, 1);
 	left: 0;
+	bottom: 0;
 	transform: translate(-$menu-width, 0);
 	width: $menu-width;
-	height: 100%;
 	z-index: 1;
 	// background-color: color(menu-background);
 	overflow-x: hidden;
