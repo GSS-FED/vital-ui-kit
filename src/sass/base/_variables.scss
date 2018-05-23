@@ -1162,17 +1162,18 @@ $tab-wrapper-horizontal-spacing:          $padding-base-horizontal !default;
 $tab-wrapper-border-radius:               $border-radius !default;
 $tab-wrapper-light-bg-color:              nth($c-skyblue-list, 5) !default;
 $tab-wrapper-light-bg-image:              linear-gradient(to right, nth($c-skyblue-list, 5), nth($c-info-list, 5)) !default;
-$tab-wrapper-dark-bg-color:               nth($c-secondary-list, 9);
-$tab-color:                               $c-text;
-$tab-border-color:                        $tab-wrapper-border-color;
-$tab-bg-color:                            $c-white;
-$tab-padding:                             $padding-base-vertical $padding-base-horizontal;
-$tab-font-size:                           $font-size-base;
-$tab-border-radius:                       $border-radius;
-$tab-spacing:                             0.26em;
-$tab-hover-bg:                            $c-text-hover-bg;
-$tab-active-bg:                           $c-text-active-bg;
-$tab-line-height:                         1;
+$tab-wrapper-dark-bg-color:               nth($c-secondary-list, 9) !default;
+$tab-color:                               $c-text !default;
+$tab-border-color:                        $tab-wrapper-border-color !default;
+$tab-bg-color:                            $c-white !default;
+$tab-padding:                             $padding-base-vertical $padding-base-horizontal !default;
+$tab-font-size:                           $font-size-base !default;
+$tab-border-radius:                       $border-radius !default;
+$tab-spacing:                             0.26em !default;
+$tab-hover-bg:                            $c-text-hover-bg !default;
+$tab-active-bg:                           $c-text-active-bg !default;
+$tab-line-height:                         1 !default;
+$tab-min-height:                          $tab-font-size*$tab-line-height + nth($tab-padding, 1)*2 !default;
 
 
 // -------------------------------------

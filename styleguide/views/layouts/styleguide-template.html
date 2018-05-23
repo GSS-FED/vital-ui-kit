@@ -24,6 +24,8 @@
 </head>
 <body>
 
+	{{#if singlePage}}
+	{{else}}
 	  <nav class="nav-wrapper">
 	    <div class="nav-menu">
 	      <a class="{{#if fabricator}}is-active{{/if}}" href="getting-started.html">Documentation</a>
@@ -37,6 +39,7 @@
 	    	<a class="nav-dropdown-toggle" href="https://github.com/GSS-FED/vital-ui-kit/archive/build.zip">下載 UI KIT</a>
 	    </div>
 	  </nav>
+	{{/if}}
 
 	{{#if fabricator}}
 

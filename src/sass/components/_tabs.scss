@@ -43,6 +43,7 @@
   transition: background-color 0.3s;
   vertical-align: bottom;
   line-height: $tab-line-height;
+  min-height: $tab-min-height;
 
   &:not(:last-child) {
     margin-right: $tab-spacing;
