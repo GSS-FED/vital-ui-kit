@@ -32,8 +32,6 @@ module.exports = {
             'src/views/**/*.{html,md}',
             'styleguide/views/**/*',
             '!styleguide/views/+(layouts)/**',
-            '!styleguide/views/kendo-demo.html',
-            '!styleguide/views/react.html',
           ],
           docs: 'styleguide/docs/**/*.md',
           keys: {
@@ -48,8 +46,6 @@ module.exports = {
       },
       static: {
         html: [
-          'styleguide/views/kendo-demo.html',
-          'styleguide/views/react.html',
         ]
       },
       views: {
