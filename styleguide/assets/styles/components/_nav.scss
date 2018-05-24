@@ -32,6 +32,7 @@
       background-color: #333333;
       font-size: 16px;
       padding: 16px 0;
+      height: 50px;
       width: 20%;
       text-decoration: none;
       text-align: center;
@@ -53,7 +54,7 @@
     .logo {
       position: absolute;
       width: 50px;
-      left: -50px;
+      left: -60px;
       background-size: 58%;
       background-repeat: no-repeat;
       background-position: center;
@@ -200,6 +201,7 @@
         width: 20%;
         padding-top: 14px;
         padding-bottom: 14px;
+        height: nth($nav-height-list, 2);
       }
     }
 

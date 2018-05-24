@@ -69,3 +69,84 @@ body {
   position: fixed;
 }
 
+.fabricator {
+
+	.nav-wrapper {
+	  // nav, download btn 全寬
+	  @include bp(nth($nav-bp, 1)) {
+	    height: nth($nav-height-list, 2);
+
+	    .nav-menu {
+	      top: 0;
+	      left: 0;
+	      width: 100%;
+	      padding-right: $nav-dropdown-mobile-width;
+
+	      a {
+	        width: 20%;
+	        padding-top: 14px;
+	        padding-bottom: 14px;
+	        height: nth($nav-height-list, 2);
+	      }
+	    }
+
+	    .nav-dropdown-wrapper {
+	      top: 0;
+	      right: 0;
+	      padding: 0;
+	      z-index: $nav-z-index;
+	      width: $nav-dropdown-mobile-width;
+	      background: $nav-dropdown-mobile-bg;
+	      background: $nav-dropdown-mobile-bg-gradient;
+	    }
+
+	    .nav-dropdown-menu {
+	      width: auto;
+	    }
+
+	    .nav-dropdown-toggle {
+	      font-size: 0;
+	      position: relative;
+	      height: 100%;
+
+	      &:before {
+	        position: absolute;
+	        top: 9px;
+	        left: 12px;
+	      }
+	    }
+	  }
+
+	  @include bp(537px) {
+	    .nav-menu {
+	      a {
+	        padding-top: 8px;
+
+	        span {
+	          display: block;
+	        }
+
+	        .single-line {
+	          line-height: 30px;
+	        }
+	      }
+	    }
+	  }
+
+	  @include bp(470px) {
+	    .nav-menu {
+	      a {
+	        font-size: 14px;
+	      }
+	    }
+	  }
+	}
+
+}
+
+@include bp(nth($nav-bp, 1)) {
+	.f-control-bar,
+	.f-menu {
+		top: 45px;
+	}
+}

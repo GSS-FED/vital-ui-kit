@@ -1,8 +1,9 @@
 /*! Sooge UI | Galaxy Software Services Corporation */
+
 'use strict';
 
 if (typeof jQuery === 'undefined') {
-  throw new Error('Sooge UI\'s JavaScript requires jQuery')
+  throw new Error('Sooge UI\'s JavaScript requires jQuery');
 }
 
 /**
@@ -157,9 +158,9 @@ sg.initializeTable = function() {
  * @desc initialize tab
  */
 sg.initializeTab = function() {
-  document.querySelectorAll(_PREFIX + '-tab').forEach(tab => {
-    tab.addEventListener('click', e => {
-      let target = e.path.filter(element => {
+  document.querySelectorAll(_PREFIX + '-tab').forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      var target = e.path.filter(function(element) {
         return element.className ? element.className.match(/^sg-tab$/) : false
       });
       if (target[0]) {
@@ -368,10 +369,10 @@ sg.initializeTooltip = function() {
     + '</div>'
   );
 
-  $('[data-tooltip]').each((i, anchor) => {
+  $('[data-tooltip]').each(function(i, anchor) {
     $(anchor).on('click', function(e) {
       try {
-        let $tooltip = $(_PREFIX + '-tooltip');
+        var $tooltip = $(_PREFIX + '-tooltip');
         if ($tooltip.length === 0) {
           $('body').append(
             '<div class="' + PREFIX + '-tooltip">'
@@ -383,11 +384,11 @@ sg.initializeTooltip = function() {
         }
         $tooltip[0].className = PREFIX + '-tooltip';
 
-        const $tooltipInner = $tooltip.find(_PREFIX + '-tooltip-inner');
+        var $tooltipInner = $tooltip.find(_PREFIX + '-tooltip-inner');
         $tooltip.addClass(anchor.dataset.position);
         $tooltip.find(_PREFIX + '-tooltip-inner').text(anchor.dataset.tooltip);
 
-        let top = 0, left = 0;
+        var top = 0, left = 0;
         $tooltip.css({'top': top, 'left': left});
         switch(anchor.dataset.position) {
           case 'top':
@@ -418,8 +419,8 @@ sg.initializeTooltip = function() {
 
   $(document).on('click', function(e) {
     // close tooltip
-    const target = $(e.target).closest('[data-tooltip]');
-    const target2 = $(e.target).closest(_PREFIX + '-tooltip');
+    var target = $(e.target).closest('[data-tooltip]');
+    var target2 = $(e.target).closest(_PREFIX + '-tooltip');
     if(target.length === 0 && target2.length === 0) {
       $(_PREFIX + '-tooltip').removeClass('in');
     }
