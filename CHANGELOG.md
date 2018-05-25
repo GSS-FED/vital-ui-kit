@@ -2,6 +2,7 @@
 
 ## 1.0.0 (2018-05-24)
 
+- Remove icon dependency
 - Add tab component
 - Add some utilities
 - Add react page
