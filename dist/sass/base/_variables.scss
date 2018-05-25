@@ -10,7 +10,8 @@
 
 $prefix:                                  'sg' !default;
 $state:                                   '#{$prefix}-state' !default;
-$icomoon-font-path:                       '../fonts' !default;
+$icomoon-font-path:                       '../fonts' !default; // if use icomoon, define the font path here
+$icon-font-family:                        'icomoon' !default;
 
 // usage: z-index: z(module, upper), z-index: z(head)
 $z-layers: (
@@ -34,7 +35,7 @@ $z-layers: (
 // -------------------------------------
 
 // 顏色系列 (左->右 淺->深 9種顏色)
-$c-water-list:                            #F7F9FE #EEF2FC #D8E3F6 #C4D2EB #95ACD4 #7189B6 #456297 #2A487F #1E3768 !default;
+$c-water-list:                            #F7F9FD #EEF2FC #D8E2F5 #C3D1EB #95ABD3 #7189B6 #456296 #2A4880 #182D54 !default;
 $c-skyblue-list:                          #D9ECFF #A6D2FF #73B9FE #419FFE #0E86FE #016DD8 #0153A5 #003A73 #002040 !default;
 $c-success-list:                          #CFF5E4 #A5ECCD #7BE3B5 #51DA9E #2BCD86 #22A36A #19794F #104F33 #082518 !default;
 $c-info-list:                             #CCF3FF #99E7FF #66DBFF #33CFFF #00C3FF #009CCC #007599 #004E66 #002733 !default;
@@ -69,7 +70,8 @@ $c-stable:                                nth($c-black-list, 5) !default;
 $c-text:                                  nth($c-secondary-list, 6) !default; // 文字主色
 $c-text-bg:                               $c-white !default; // 文字背景主色
 $c-text-hover:                            $c-text !default;
-$c-text-hover-bg:                         nth($c-secondary-list, 2) !default;
+$c-text-hover-bg:                         nth($c-secondary-list, 3) !default;
+$c-text-active-bg:                        nth($c-secondary-list, 4) !default;
 
 $c-border-list:                           #F8F8F8 #F0F0F0 #dddddd #cccccc #aaaaaa !default;
 
@@ -95,16 +97,9 @@ $font-size-body:                         15px !default;
 $icon-font-size:                         0.95em !default;
 
 
-// ----- typography ----- //
+// ----- utilities ----- //
 
-$link-color:                             $c-primary !default;
-$link-hover-color:                       nth($c-primary-list, 4) !default;
-$link-active-color:                      nth($c-primary-list, 5) !default;
-$link-disabled-color:                    nth($c-primary-list, 2) !default;
-
-
-// ----- others ----- //
-
+$font-size-xxsmall:                      0.66rem !default;  // 10 px
 $font-size-xsmall:                       0.8rem !default;   // 12 px
 $font-size-small:                        0.866rem !default; // 13 px
 $font-size-base:                         1rem !default;     // 15 px
@@ -155,6 +150,28 @@ $u-content-margin-large:                 1rem !default;
 
 $u-list-padding:                         0.666rem 1.2rem !default; // 10px 18px
 $u-list-padding-large:                   1.333rem 1.2rem !default; // 20px 18px
+
+
+// ----- typography ----- //
+
+$link-color:                             $c-primary !default;
+$link-hover-color:                       nth($c-primary-list, 4) !default;
+$link-active-color:                      nth($c-primary-list, 5) !default;
+$link-disabled-color:                    nth($c-primary-list, 2) !default;
+
+$h1-padding-vertical:                    $padding-xlarge-vertical*1.2*1.2 !default;
+$h2-padding-vertical:                    $padding-xlarge-vertical*1.2 !default;
+$h3-padding-vertical:                    $padding-large-vertical*1.2 !default;
+$h4-padding-vertical:                    $padding-base-vertical*1.2 !default;
+$h5-padding-vertical:                    $padding-xsmall-vertical*1.2 !default;
+$h6-padding-vertical:                    $padding-xsmall-vertical*1.2 !default;
+
+$h1-font-size:                           2.027rem !default;
+$h2-font-size:                           1.802rem !default;
+$h3-font-size:                           1.602rem !default;
+$h4-font-size:                           1.424rem !default;
+$h5-font-size:                           1.266rem !default;
+$h6-font-size:                           1.125rem !default;
 
 
 // -------------------------------------
@@ -213,12 +230,15 @@ $avatar-badge-xlarge:                     17px !default;
 $avatar-badge-bg-color:                   $c-alarm !default;
 $avatar-badge-color:                      $c-white !default;
 $avatar-badge-border-radius-circle:       50% !default;
-$avatar-badge-border-radius:              4px !default;
+$avatar-badge-border-radius:              0.75em !default;
 $avatar-badge-width:                      28px !default;
 $avatar-badge-half-width:                 ($avatar-badge-width)/2 !default;
 $avatar-badge-height:                     17px !default;
 $avatar-badge-half-height:                ($avatar-badge-height)/2 !default;
 $avatar-badge-pointer-height:              3px !default;
+$avatar-badge-color:                       $c-white !default;
+$avatar-badge-font-size:                   $font-size-xxsmall !default;
+$avatar-badge-padding:                     0 5px !default;
 
 $avatar-badge-style: (
   "xsmall": (
@@ -240,11 +260,11 @@ $avatar-badge-style: (
 
 // ----- badge ----- //
 
+$badge-color:                             $c-white !default;
 $badge-bg-color:                          $c-info !default;
-$badge-font-size:                         0.725rem !default;
-$badge-padding:                           0.25rem 0.75rem !default;
+$badge-font-size:                         $font-size-xsmall !default;
+$badge-padding:                           0.2rem 0.5rem !default;
 $badge-border-radius:                     0.75rem !default;
-$badge-font-size:                         0.75rem !default;
 
 
 // ----- collapse ----- //
@@ -313,6 +333,7 @@ $tooltip-inner-color:                     #fff !default;
 $tooltip-inner-border-radius:             4px !default;
 $tooltip-arrow-width:                     5px !default;
 $tooltip-arrow-color:                     $tooltip-inner-bg-color !default;
+$tooltip-font-size:                       $font-size-base !default;
 
 
 // -------------------------------------
@@ -336,8 +357,8 @@ $breadcrumb-padding:                      2px 5px !default;
 // default
 $c-btn-light:                             nth($c-secondary-list, 1) !default;
 $c-btn-light-border:                      nth($c-secondary-list, 4) !default;
-$c-btn-light-hover:                       nth($c-secondary-list, 3) !default;
-$c-btn-light-active:                      nth($c-secondary-list, 4) !default;
+$c-btn-light-hover:                       $c-text-hover-bg !default;
+$c-btn-light-active:                      $c-text-active-bg !default;
 
 $c-btn-light-text:                        $c-white !default;
 $c-btn-dark-text:                         nth($c-secondary-list, 7) !default;
@@ -785,11 +806,11 @@ $btn-social: (
 
 // size
 $btn-border-radius:                       $border-radius !default;
-$btn-padding:                             calc(#{$padding-base-vertical} - 1px) $padding-base-horizontal !default;
-$btn-small-padding:                       calc(#{$padding-base-vertical} - 2px) $padding-base-horizontal !default;
+$btn-padding:                             ($padding-base-vertical - 1px/$font-size-body) $padding-base-horizontal !default;
+$btn-small-padding:                       ($padding-base-vertical - 2px/$font-size-body) $padding-base-horizontal !default;
 $btn-font-size:                           $font-size-base !default;
 $btn-line-height:                         $line-height-small !default;
-$btn-height:                              ($btn-font-size + $padding-base-vertical*2) !default;
+$btn-height:                              ($btn-font-size*$btn-line-height + ($padding-base-vertical - 1px/$font-size-body)*2) !default;
 
 $b-size: (
   "xlarge": (
@@ -831,13 +852,13 @@ $card-content-subtitle-color:             nth($c-secondary-list, 5) !default;
 $card-content-padding:                    0.75rem 1.25rem !default;
 $card-interactive-padding:                0.25rem 1.25rem !default;
 $card-interactive-min-height:             40px !default;
-$card-interactive-hover-bg-color:         nth($c-secondary-list, 2) !default;
-$card-interactive-active-bg-color:        nth($c-secondary-list, 3) !default;
+$card-interactive-hover-bg-color:         $c-text-hover-bg !default;
+$card-interactive-active-bg-color:        $c-text-active-bg !default;
 
 $card-btn-highlight-color:                $c-primary !default;
 $card-btn-bg-color:                       $c-white !default;
-$card-btn-hover-bg-color:                 nth($c-secondary-list, 3) !default;
-$card-btn-active-bg-color:                nth($c-secondary-list, 4) !default;
+$card-btn-hover-bg-color:                 $c-text-hover-bg !default;
+$card-btn-active-bg-color:                $c-text-active-bg !default;
 $card-footer-link-color:                  nth($c-secondary-list, 7) !default;
 $card-footer-primary-link-color:          $c-primary !default;
 $card-footer-height:                      50px !default;
@@ -1010,8 +1031,8 @@ $input-asterisk-align-right-margin-top:   $input-height/2 - $input-asterisk-size
 $list-bg-color:                           $c-white !default;
 $list-item-color:                         nth($c-secondary-list, 7) !default;
 $list-item-border-color:                  nth($c-secondary-list, 3) !default;
-$list-item-hover-bg-color:                nth($c-secondary-list, 3) !default;
-$list-item-active-bg-color:               nth($c-secondary-list, 4) !default;
+$list-item-hover-bg-color:                $c-text-hover-bg !default;
+$list-item-active-bg-color:               $c-text-active-bg !default;
 $list-item-title-color:                   nth($c-secondary-list, 7) !default;
 $list-item-content-color:                 nth($c-secondary-list, 6) !default;
 $list-item-badge-bg-color:                $c-info !default;
@@ -1059,7 +1080,7 @@ $menu-border-radius:                      0.25em !default;
 $menu-item-font-color:                    nth($c-secondary-list, 5) !default;
 $menu-item-font-color-hover:              nth($c-secondary-list, 7) !default;
 $menu-bg-color-blue:                      $link-color !default;
-$menu-bg-color-blue-hover:                nth($c-secondary-list, 2) !default;
+$menu-bg-color-blue-hover:                $c-text-hover-bg !default;
 $menu-bg-color-gray:                      #dddddd !default;
 
 
@@ -1067,8 +1088,8 @@ $menu-bg-color-gray:                      #dddddd !default;
 
 $pagination-border-color:                 nth($c-secondary-list, 4) !default;
 $pagination-bg-color:                     nth($c-secondary-list, 1) !default;
-$pagination-hover-bg-color:               nth($c-secondary-list, 3) !default;
-$pagination-active-bg-color:              nth($c-secondary-list, 4) !default;
+$pagination-hover-bg-color:               $c-text-hover-bg !default;
+$pagination-active-bg-color:              $c-text-active-bg !default;
 $pagination-selected-bg-color:            nth($c-secondary-list, 4) !default;
 $pagination-color:                        nth($c-secondary-list, 7) !default;
 $pagination-link-padding:                 0.53rem 0.8rem  !default;
@@ -1133,6 +1154,28 @@ $table-highlight-bg-color:                nth($c-secondary-list, 3) !default;
 $table-selected-bg-color:                 #d0f2ff !default;
 
 
+// ----- tabs ----- //
+
+$tab-wrapper-border-color:                nth($c-secondary-list, 4) !default;
+$tab-wrapper-vertical-spacing:            $padding-base-vertical !default;
+$tab-wrapper-horizontal-spacing:          $padding-base-horizontal !default;
+$tab-wrapper-border-radius:               $border-radius !default;
+$tab-wrapper-light-bg-color:              nth($c-skyblue-list, 5) !default;
+$tab-wrapper-light-bg-image:              linear-gradient(to right, nth($c-skyblue-list, 5), nth($c-info-list, 5)) !default;
+$tab-wrapper-dark-bg-color:               nth($c-secondary-list, 9) !default;
+$tab-color:                               $c-text !default;
+$tab-border-color:                        $tab-wrapper-border-color !default;
+$tab-bg-color:                            $c-white !default;
+$tab-padding:                             $padding-base-vertical $padding-base-horizontal !default;
+$tab-font-size:                           $font-size-base !default;
+$tab-border-radius:                       $border-radius !default;
+$tab-spacing:                             0.26em !default;
+$tab-hover-bg:                            $c-text-hover-bg !default;
+$tab-active-bg:                           $c-text-active-bg !default;
+$tab-line-height:                         1 !default;
+$tab-min-height:                          $tab-font-size*$tab-line-height + nth($tab-padding, 1)*2 !default;
+
+
 // -------------------------------------
 //   structures
 // -------------------------------------
@@ -1141,8 +1184,8 @@ $table-selected-bg-color:                 #d0f2ff !default;
 
 $layout-body-bg:                          nth($c-secondary-list, 5) !default;
 
-$ap-header-z-index:                       z(module, base) !default;
 $ap-main-z-index:                         z(module, base) !default;
+$ap-header-z-index:                       z(module, upper) !default;
 $ap-nav-z-index:                          z(module, upper) !default;
 
 $ap-wrapper-bg-color:                     nth($c-black-list, 1) !default;

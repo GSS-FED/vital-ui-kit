@@ -51,7 +51,7 @@
 // 775 取代 kendo icon
 .k-checkbox:checked + .k-checkbox-label:after {
   content: @icon-check;
-  font-family: 'icomoon' !important;
+  font-family: @icon-font-family !important;
   width: @checkbox-label-size;
   height: @checkbox-label-size;
 }
@@ -73,7 +73,7 @@
 }
 
 // new kendo 854
-// replace WebComponentsIcons to icomoon
+// replace WebComponentsIcons to custom icon
 // custom
 .k-icon,
 .k-font-icon,
@@ -83,7 +83,7 @@
   
   &:before, &:after {
     font-size: @icon-font-size;
-    font-family: icomoon;
+    font-family: @icon-font-family;
     font-weight: normal;
     font-style: normal;
     text-decoration: inherit;

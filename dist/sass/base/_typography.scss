@@ -8,12 +8,12 @@
 //   Heading Text
 // -------------------------------------
 
-h1 { @include heading-text(2.027rem, 2.027em); }
-h2 { @include heading-text(1.802rem, 1.802em); }
-h3 { @include heading-text(1.602rem, 1.602em); }
-h4 { @include heading-text(1.424rem, 1.424em); }
-h5 { @include heading-text(1.266rem, 1.266em); }
-h6 { @include heading-text(1.125rem, 1.125em); }
+h1 { @include heading-text($h1-font-size, $h1-padding-vertical); }
+h2 { @include heading-text($h2-font-size, $h2-padding-vertical); }
+h3 { @include heading-text($h3-font-size, $h3-padding-vertical); }
+h4 { @include heading-text($h4-font-size, $h4-padding-vertical); }
+h5 { @include heading-text($h5-font-size, $h5-padding-vertical); }
+h6 { @include heading-text($h6-font-size, $h6-padding-vertical); }
 
 
 // -------------------------------------

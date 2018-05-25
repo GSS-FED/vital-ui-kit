@@ -58,7 +58,7 @@
 .k-checkbox:checked {
   & + .k-checkbox-label:after {
     content: @icon-check;
-    font-family: 'icomoon' !important;
+    font-family: @icon-font-family !important;
     width: @checkbox-label-size;
     height: @checkbox-label-size;
     border-color: @checkbox-primary-color;
@@ -640,7 +640,7 @@ div.k-window-content {
 
 
 // ----- icon ----- //
-// replace k-icon to icomoon
+// replace k-icon to custom icon
 
 // custom
 .k-icon {
@@ -648,7 +648,7 @@ div.k-window-content {
   
   &:before, &:after {
     font-size: @icon-font-size;
-    font-family: icomoon;
+    font-family: @icon-font-family;
     font-weight: normal;
     font-style: normal;
     display: inline-block;

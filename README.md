@@ -11,6 +11,10 @@
     <strong>View Documents &raquo;</strong>
   </a>
   <br>
+  <a href="https://github.com/GSS-FED/vital-ui-kit-react">
+    <strong>(NEW!) React Component repository &raquo;</strong>
+  </a>
+  <br>
 </p>
 
 [![Join the chat at https://gitter.im/GSS-FED/vital-ui-kit](https://badges.gitter.im/GSS-FED/vital-ui-kit.svg)](https://gitter.im/GSS-FED/vital-ui-kit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -42,7 +46,11 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 ## Installation
 
 ```
-npm install vital-ui-kit
+# yarn
+yarn add vital-ui-kit
+
+# npm
+npm i vital-ui-kit --save
 ```
 
 
@@ -76,11 +84,11 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
     1. `npm install vital-ui-kit`
 
-    1. 在專案環境引用 `node_modules/vital-ui-kit/dist` 資料夾底下的 `fonts`、`img`、`js`
+    1. 在專案環境輸出 `node_modules/vital-ui-kit/dist` 資料夾底下的 `fonts`、`img`、`js` 檔案
 
-    1. 在專案環境引用 `node_modules/vital-ui-kit/sass` 資料夾，編譯輸出的 css 檔案路徑需和 `fonts` 平行
+    1. 在客製化的 sass 檔案引用 `node_modules/vital-ui-kit/sass` 資料夾的 `core` 與字體檔案，編譯輸出的 css 檔案路徑需和 `fonts` 平行
 
-    1. 在 `vital-ui-kit.scss` 可 import 自己客製化的變數檔與加入樣式，可參考 `~sass/base/_variables.scss` 看有哪些變數可供更改。
+    1. 可參考 `vital-ui-kit.scss` 的方式 import 自己客製化的變數檔與加入樣式，以及在 `~sass/base/_variables.scss` 看有哪些變數可供更改。
 
         ```
         sass/
