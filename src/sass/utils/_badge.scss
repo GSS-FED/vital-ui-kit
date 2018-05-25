@@ -1,7 +1,7 @@
 .#{$prefix}-badge {
   display: inline-block;
   vertical-align: middle;
-  color: $c-white;
+  color: $badge-color;
   background-color: $badge-bg-color;
   padding: $badge-padding;
   border-radius: $badge-border-radius;

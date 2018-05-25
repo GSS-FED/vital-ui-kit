@@ -8,11 +8,20 @@
   quotes: '"' '"' "'" "'";
   font-style: italic;
   letter-spacing: 1px;
-  &:before{
-   content: open-quote;
+
+  &:before,
+  &:after {
    font-size: 4em;
    line-height: 140%;
    margin-right: 0.25em;
    vertical-align: -0.4em;
+  }
+
+  &:before {
+   content: open-quote;
+  }
+
+  &:after {
+   content: close-quote;
   }
 }

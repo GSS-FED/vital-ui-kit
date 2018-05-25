@@ -32,7 +32,6 @@ module.exports = {
             'src/views/**/*.{html,md}',
             'styleguide/views/**/*',
             '!styleguide/views/+(layouts)/**',
-            '!styleguide/views/kendo-demo.html',
           ],
           docs: 'styleguide/docs/**/*.md',
           keys: {
@@ -46,7 +45,8 @@ module.exports = {
         }
       },
       static: {
-        kendo: 'styleguide/views/kendo-demo.html',
+        html: [
+        ]
       },
       views: {
         src: 'www/**/*.html',
@@ -71,8 +71,9 @@ module.exports = {
         sourcemap: false,
         autoprefixer: {
           browsers: [
+            '> 5%',
             'not ie <= 8',
-            'last 2 versions'
+            'last 2 Chrome versions'
           ],
           cascade: false
         },
@@ -171,8 +172,9 @@ module.exports = {
         sourcemap: true,
         autoprefixer: {
           browsers: [
+            '> 5%',
             'not ie <= 8',
-            'last 2 versions'
+            'last 2 Chrome versions'
           ],
           cascade: false
         },

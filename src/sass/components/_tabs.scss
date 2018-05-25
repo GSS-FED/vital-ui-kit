@@ -1,0 +1,106 @@
+// *************************************
+//
+//   Tabs
+//
+// *************************************
+
+.#{$prefix}-tab-wrapper {
+  border-bottom: 1px solid $tab-wrapper-border-color;
+  font-size: 0;
+  text-align: left;
+
+  &.#{$prefix}-tab-light,
+  &.#{$prefix}-tab-dark {
+    padding-top: $tab-wrapper-vertical-spacing;
+    padding-right: $tab-wrapper-horizontal-spacing;
+    padding-left: $tab-wrapper-horizontal-spacing;
+    border-top-left-radius: $tab-wrapper-border-radius;
+    border-top-right-radius: $tab-wrapper-border-radius;
+    border-bottom: none;
+  }
+
+  &.#{$prefix}-tab-light {
+    background-color: $tab-wrapper-light-bg-color;
+    background-image: $tab-wrapper-light-bg-image;
+  }
+
+  &.#{$prefix}-tab-dark {
+    background-color: $tab-wrapper-dark-bg-color;
+  }
+}
+
+.#{$prefix}-tab {
+  color: $tab-color;
+  display: inline-block;
+  border: 1px solid $tab-border-color;
+  background-color: $tab-bg-color;
+  border-bottom: none;
+  padding: $tab-padding;
+  font-size: $tab-font-size;
+  border-top-left-radius: $tab-border-radius;
+  border-top-right-radius: $tab-border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  vertical-align: bottom;
+  line-height: $tab-line-height;
+  min-height: $tab-min-height;
+
+  &:not(:last-child) {
+    margin-right: $tab-spacing;
+  }
+
+  &:hover {
+    background-color: $tab-hover-bg;
+  }
+
+  &:active {
+    background-color: $tab-active-bg;
+  }
+
+  &.#{$state}--active {
+    border-bottom: 1px solid $tab-bg-color;
+    margin-bottom: -1px;
+    pointer-events: none;
+    cursor: default;
+    
+    &:hover,
+    &:active {
+      background-color: $tab-bg-color;
+    }
+
+  }
+
+  .#{$prefix}-inline-txt {
+    vertical-align: top;
+  }
+
+  .#{$prefix}-badge {
+    margin-top: -0.2rem;
+    margin-bottom: -0.1rem;
+  }
+
+  .#{$prefix}-tab-wrapper.#{$prefix}-tab-light &,
+  .#{$prefix}-tab-wrapper.#{$prefix}-tab-dark & {
+    border: none;
+    margin-bottom: 0;
+
+    &:not(.sg-state--active) {
+      color: white;
+      background-color: rgba($tab-bg-color, 0.3);
+
+      &:hover {
+        background-color: rgba($tab-bg-color, 0.5);
+      }
+
+      &:active {
+        background-color: rgba($tab-bg-color, 0.65);
+      }
+
+      // inverse color
+      .#{$prefix}-badge {
+        color: $badge-bg-color;
+        background-color: $badge-color;
+      }
+    }
+  }
+}

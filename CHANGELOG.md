@@ -1,4 +1,13 @@
-# Release Notes
+# Change Log
+
+## 1.0.0 (2018-05-24)
+
+- Remove icon dependency
+- Add tab component
+- Add some utilities
+- Add react page
+- Update document
+
 
 ## 0.0.10 (2018-01-19)
 

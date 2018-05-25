@@ -1,6 +1,6 @@
 The MIT License
 
-Copyright © 2017 Galaxy Software Services
+Copyright © 2018 Galaxy Software Services
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

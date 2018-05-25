@@ -6,10 +6,18 @@
 // *************************************
 
 // -------------------------------------
+//   Mixins (variables need z-index mixin)
+// -------------------------------------
+
+@import "utils/mixins";
+
+
+// -------------------------------------
 //   Custom Variables
 // -------------------------------------
 
 // import custom variables here
+// ex: @import "variables-custom";
 
 // -------------------------------------
 //   Core
@@ -17,8 +25,18 @@
 
 @import "core";
 
+
+// -------------------------------------
+//   Icon
+//   default to icomoon
+// -------------------------------------
+
+@import "../icomoon/style.scss";
+
+
 // -------------------------------------
 //   Custom
 // -------------------------------------
 
 // import custom style here
+// ex: @import "vital-ui-kit-custom";
