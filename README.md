@@ -47,10 +47,10 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 
 ```
 # yarn
-yarn add vital-ui-kit
+yarn add @gssfed/vital-ui-kit
 
 # npm
-npm i vital-ui-kit --save
+npm i @gssfed/vital-ui-kit --save
 ```
 
 
