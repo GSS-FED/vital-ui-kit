@@ -1,0 +1,17 @@
+// *************************************
+//
+//   padding
+//
+// *************************************
+
+.#{$prefix}-padding {
+  padding: 10px;
+}
+
+.#{$prefix}-padding--bottom {
+  padding-bottom: 10px;
+}
+
+.#{$prefix}-padding--top {
+  padding-top: 10px;
+}
