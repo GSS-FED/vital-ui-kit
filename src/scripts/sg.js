@@ -74,7 +74,7 @@ sg.initializeInput = function() {
 
   // ----- bind ----- //
 
-  $(_PREFIX + '-input').on('keyup', function() {
+  $(document).on('keyup', _PREFIX + '-input', function() {
     var me = $(this);
     var item = me.closest(_PREFIX + '-input-item');
     if (me.val() !== '') {
@@ -158,19 +158,9 @@ sg.initializeTable = function() {
  * @desc initialize tab
  */
 sg.initializeTab = function() {
-  document.querySelectorAll(_PREFIX + '-tab').forEach(function(tab) {
-    tab.addEventListener('click', function(e) {
-      var target = e.path.filter(function(element) {
-        return element.className ? element.className.match(/^sg-tab$/) : false
-      });
-      if (target[0]) {
-        target = target[0];
-        target.parentElement.querySelectorAll('.sg-tab').forEach(function(siblings){
-          siblings.classList.remove(STATE_PREFIX + '--active');
-        });
-        target.classList.add(STATE_PREFIX + '--active');
-      }
-    });
+  $(document).on('click', _PREFIX + '-tab', function(e) {
+    $(this).siblings().removeClass(STATE_PREFIX + '--active');
+    $(this).addClass(STATE_PREFIX + '--active');
   });
 }
 

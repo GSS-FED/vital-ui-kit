@@ -32,17 +32,17 @@ usageScripts2: ./js/vital-ui-kit.js
           </ol>
         </li>
         <li class="demo-ol-wrap" style="background: white">
-          <h5>客製化 Vital UI Kit</h5>
+          <h5>使用 NPM 安裝 Vital UI Kit</h5>
           <p>如果您是開發者，想要客製化自己的 Vital UI Kit、更改 UI Kit 顏色，可使用以下方法。</p>
           <ol class="{{styleguide.prefix}}-ol--decimal">
             <li>
               安裝 vital-ui-kit
-              <pre class="language-markup"><code class="language-markup">npm install vital-ui-kit</code></pre>
+              <pre class="language-markup">npm i @gssfed/vital-ui-kit</pre>
             </li>
             <li>在專案環境引用 node_modules/vital-ui-kit/dist 資料夾底下的 fonts、img、js</li>
             <li>在專案環境引用 node_modules/vital-ui-kit/sass 資料夾，編譯輸出的 css 檔案路徑需和 fonts 平行</li>
             <li>在 vital-ui-kit.scss 可 import 自己客製化的變數檔與加入樣式，可參考 base/_variables.scss 看有哪些變數可供更改。<br/>
-              <pre class="language-markup"><code class="language-markup">
+              <pre class="language-markup">
 sass/
 ├── base/
 │    ├── _variables.scss
@@ -51,7 +51,7 @@ sass/
 ├── structures/
 ├── utils/
 ├── _core.scss
-└── vital-ui-kit.scss</code></pre>
+└── vital-ui-kit.scss</pre>
             </li>
           </ol>
         </li>
