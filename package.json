@@ -19,6 +19,7 @@
     "node": ">=0.14.x"
   },
   "scripts": {
+    "lint": "stylelint 'src/sass/**/*.scss'",
     "start": "gulp dev",
     "build": "gulp prod",
     "deploy": "npm run build && sh ./deploy.sh"
@@ -55,6 +56,9 @@
     "object-assign": "^4.0.1",
     "path": "^0.12.7",
     "pretty-hrtime": "^1.0.1",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "stylelint": "^9.3.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-scss": "^3.1.3"
   }
 }
