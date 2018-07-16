@@ -486,7 +486,9 @@ html .k-upload {
 .k-numeric-wrap.k-state-border-up
 {
   border-radius: @main-border-radius @main-border-radius @main-border-radius @main-border-radius;
-  margin-top: 5px;
+  &.k-popup {
+    margin-top: 5px;
+  }
 }
 
 .k-window-content,
@@ -504,7 +506,9 @@ html .k-upload {
 .k-numeric-wrap.k-state-border-down
 {
   border-radius: @main-border-radius @main-border-radius @main-border-radius @main-border-radius;
-  margin-bottom: 5px;
+  &.k-popup {
+    margin-top: -5px;
+  }
 }
 
 // 1555
@@ -779,6 +783,8 @@ div.k-window-content {
 // Pagination Flat style - Gap
 
 .k-pager-wrap {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   // border
   .k-link {
     border-radius: @pager-border-radius; // kendo.common.css 2927
@@ -790,8 +796,8 @@ div.k-window-content {
 
   // icon
   .k-icon {
-    font-size: @pager-font-size; // base.less 330
-    height: 0.9em;
+    overflow: visible;
+    height: 0.9rem;
   }
 }
 
@@ -944,6 +950,7 @@ div.k-window-content {
     // 顯示中文
     .k-icon { // icon 加寬
       width: @pager-icon-width; // kendo.common.css 267
+      font-size: @pager-font-size;
     }
     .k-i-arrow-w {
       &:before {
