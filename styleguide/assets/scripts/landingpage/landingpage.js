@@ -63,6 +63,29 @@ $(document).ready(function() {
             .setTween(".landing-sec1 p", 1, { scale: 1.05, opacity: 1, ease:Sine.easeInOut}) // trigger a TweenMax.to tween
             .addTo(controller);
 
+// new ScrollMagic.Scene({
+//               triggerElement: ".alien-trigger"
+//             })
+//             .setTween("#vital-alien", 0.5, {backgroundColor: "red", scale: 2.5}) 
+//             .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+//             .addTo(controller);
+
+new ScrollMagic.Scene({
+              triggerElement: ".alien-trigger"
+            })
+            .setTween(".align-wrapper", 0.5, { x: '-205px'}) // trigger a TweenMax.to tween
+            .addTo(controller);
+
+document.getElementsByClassName('align-wrapper')[0].addEventListener('mouseover',function(event){
+})
+document.getElementsByClassName('align-wrapper')[0].addEventListener('mouseout',function(event){
+  console.log('mouse-out!!!');
+})
+
+$('#vital-alien').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',function(){
+  console.log('animation end!!!');
+});
+
 
 
   // var tween = TweenMax.to(".landing-sec2 h2", 0.5, {scale: 1.05, repeat: 75, yoyo: true});
