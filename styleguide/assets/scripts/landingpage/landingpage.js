@@ -74,16 +74,40 @@ new ScrollMagic.Scene({
               triggerElement: ".alien-trigger"
             })
             .setTween(".align-wrapper", 0.5, { x: '-205px'}) // trigger a TweenMax.to tween
-            .addTo(controller);
+            .addTo(controller);         
 
-document.getElementsByClassName('align-wrapper')[0].addEventListener('mouseover',function(event){
-})
-document.getElementsByClassName('align-wrapper')[0].addEventListener('mouseout',function(event){
-  console.log('mouse-out!!!');
-})
+
+  // build tween
+  var tween = TweenMax.to(".align-wrapper", 0.5, {x:0});
+
+  // build scene and supply getMousePos function as duration
+  new ScrollMagic.Scene({triggerElement: "#alien-hide-trigger"})
+          .setTween(".align-wrapper", 0.5, { x: '0px'})
+          .addTo(controller);
+
 
 $('#vital-alien').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',function(){
-  console.log('animation end!!!');
+  var presnetarray = [ $('#present-moon'),$('#present-pokerk'),$('#present-pokera') ];
+  var rannum = Math.floor((Math.random() * 3) + 1 );
+  console.log(rannum); 
+  if( rannum === 1 ){
+    presnetarray[Math.floor(Math.random() * 3)].attr('class','is-splash');
+  }
+  if( rannum === 2 ){
+    var rn = Math.floor(Math.random() * 3);
+    presnetarray.filter( (d,index) => { if( index !== rn ) return d }).forEach(d => {
+      d.attr('class','is-splash');
+    });
+  }
+  if( rannum === 3 ){
+    presnetarray.forEach(d => {
+      d.attr('class','is-splash');
+    })
+  }
+});
+
+$('#present-moon,#present-pokerk,#present-pokera').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',function(){
+  $('#present-moon,#present-pokerk,#present-pokera').attr("class", "");
 });
 
 

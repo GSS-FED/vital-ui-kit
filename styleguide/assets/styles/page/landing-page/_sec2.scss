@@ -24,15 +24,15 @@
 .align-wrapper{
   height:300px;
   width:300px;
-  position:absolute;
+  position:fixed;
   right:-300px;
-  top:-300px;
+  top:calc( 50% - 150px );
   z-index:87;
-  transition: transform 0.25s ease-in-out;
+
    &:hover{
-    #vital-alien,#vital-title{
+    #vital-alien,#vital-title,#vital-alien-back{
     animation-name: earthquake;
-    animation-duration: 0.25s;
+    animation-duration: 0s;
     animation-iteration-count: 1;
     animation-delay: 0.35s;
     animation-timing-function: ease-in-out;
@@ -46,12 +46,25 @@
   position:absolute;
   right:0px;
   top:0px;
+  z-index:7;
+  pointer-events:none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url('../img/landing-page/sec2/alien-front.png');
+}
+#vital-alien-back {
+  height:100%;
+  width:100%;
+  position:absolute;
+  right:0px;
+  top:0px;
   z-index:2;
   pointer-events:none;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url('../img/landing-page/sec2/ui-flow-poker-card.png');  
+  background-image: url('../img/landing-page/sec2/alien-back.png');
 }
 
 #vital-title {
@@ -87,7 +100,7 @@
     top:0px;
     z-index: 2;
     opacity: 0;
-    transform: translateY(-200px);
+    transform: translateY(0px);
     transition: opacity 0.35s ease-in-out, transform 0.35s cubic-bezier(.68,0,.99,.54) ; 
     background-size: cover;
     background-position: center center;
@@ -97,7 +110,7 @@
   &:hover{
     &:before{
       opacity:0;
-      transform: translateX(30px);
+      transform: translateX(0px);
     }
     &:after{
       opacity:1;
@@ -108,18 +121,124 @@
 
 @keyframes earthquake {
   0% {
-    transform: translateY(5px);
+    // transform: translateY(5px);
+
   }
   45% {
-    transform: translateY(-5px);
+    // transform: translateY(-5px);
   }
   60% {
-    transform: translateY(5px);
+    // transform: translateY(5px);
   }
   100% {
-    transform: translateY(0px);
+    // transform: translateY(0px);
   }
 }
+#present-moon{
+  width:30px;
+  position: absolute;
+  top:178px;
+  left:103px;
+  z-index: 3;
+  transform:scale(0.5,0.5);
+  opacity:0;
+  &.is-splash{
+    animation-name: splash_moom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  .cls-1{fill:url(#未命名漸層_74);}
+  .cls-2{fill:#26477a;opacity:0.4;}
+}
+#present-pokerk{
+  width:37px;
+  position: absolute;
+  top:152px;
+  left:78px;
+  z-index: 5;
+  transform:scale(0.5,0.5);
+  opacity:0;
+  &.is-splash{
+    animation-name: splash_pokerk;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  .cls-1{fill:#efefef;}
+  .cls-2{fill:#dc555c;}
+}
+#present-pokera{
+  width:37px;
+  position: absolute;
+  top:175px;
+  left:70px;
+  z-index: 4;
+  transform:scale(0.5,0.5);
+  opacity:0;
+  &.is-splash{
+    animation-name: splash_pokera;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+  }
+  .cls-1{fill:url(#未命名漸層_2);}
+  .cls-2,.cls-3{fill:#314461;}.cls-3{fill-rule:evenodd;}
+}
+@keyframes splash_moom {
+  0% {
+    opacity:0.3;
+    transform: translateY(0px) translateX(0px) scale(1,1);
+  }
+  50% {
+     opacity:1;
+     transform: translateY(-40px) translateX(-20px) scale(1,1);
+  }
+  95% {
+     transform: translateY(-40px) translateX(-20px) scale(1,1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes splash_pokerk {
+  0% {
+    opacity:0.3;
+    transform: translateY(0px) translateX(0px) scale(1,1);
+  }
+  50% {
+    opacity:1;
+     transform: translateY(-37px) translateX(-22px) scale(1,1);
+  }
+  95% {
+     transform: translateY(-37px) translateX(-22px) scale(1,1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes splash_pokera {
+  0% {
+    opacity:0;
+    transform: translateY(0px) translateX(0px) scale(1,1);
+  }
+  15% {
+    opacity:0;
+    transform: translateY(-20px) translateX(-10px) scale(1,1);
+  }
+  50% {
+    opacity:1;
+     transform: translateY(-40px) translateX(-20px) scale(1,1);
+  }
+  95% {
+     transform: translateY(-40px) translateX(-20px) scale(1,1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .landing-sec2 {
   position: relative;
   text-align: center;
