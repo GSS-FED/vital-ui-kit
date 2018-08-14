@@ -352,26 +352,21 @@ sg.initializeCollapse = function() {
  * @desc initialize tooltip
  */
 sg.initializeTooltip = function() {
-  $('body').append(
-    '<div class="' + PREFIX + '-tooltip">'
-      + '<div class="' + PREFIX + '-tooltip-inner"></div>'
-      + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
-    + '</div>'
-  );
+  if ($(_PREFIX + '-tooltip').length === 0) {
+    $('body').append(
+      '<div class="' + PREFIX + '-tooltip">'
+        + '<div class="' + PREFIX + '-tooltip-inner"></div>'
+        + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
+      + '</div>'
+    );
+  }
 
-  $('[data-tooltip]').each(function(i, anchor) {
-    $(anchor).on('click', function(e) {
+  $('[data-tooltip]:not([data-tooltip-initialized=true])').each(function(i, anchor) {
+    $(anchor).attr('data-tooltip-initialized', true);
+
+    $(anchor).on('mouseover', function(e) {
       try {
         var $tooltip = $(_PREFIX + '-tooltip');
-        if ($tooltip.length === 0) {
-          $('body').append(
-            '<div class="' + PREFIX + '-tooltip">'
-              + '<div class="' + PREFIX + '-tooltip-inner"></div>'
-              + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
-            + '</div>'
-          );
-          $tooltip = $(_PREFIX + '-tooltip');
-        }
         $tooltip[0].className = PREFIX + '-tooltip';
 
         var $tooltipInner = $tooltip.find(_PREFIX + '-tooltip-inner');
@@ -405,19 +400,11 @@ sg.initializeTooltip = function() {
         $tooltip.addClass('in');
       } catch (e) {}
     });
-  });
 
-  $(document).on('click', function(e) {
-    // close tooltip
-    var target = $(e.target).closest('[data-tooltip]');
-    var target2 = $(e.target).closest(_PREFIX + '-tooltip');
-    if(target.length === 0 && target2.length === 0) {
+    $(anchor).on('mouseleave', function(e) {
+      // close tooltip
       $(_PREFIX + '-tooltip').removeClass('in');
-    }
-  });
-
-  $(document).on('scroll', function(e) {
-    $(_PREFIX + '-tooltip').removeClass('in');
+    });
   });
 
   return this;
