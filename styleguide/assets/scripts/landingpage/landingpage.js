@@ -63,6 +63,7 @@ $(document).ready(function() {
             .setTween(".landing-sec1 p", 1, { scale: 1.05, opacity: 1, ease:Sine.easeInOut}) // trigger a TweenMax.to tween
             .addTo(controller);
 
+
 // new ScrollMagic.Scene({
 //               triggerElement: ".alien-trigger"
 //             })
@@ -82,9 +83,16 @@ new ScrollMagic.Scene({
 
   // build scene and supply getMousePos function as duration
   new ScrollMagic.Scene({triggerElement: "#alien-hide-trigger"})
-          .setTween(".align-wrapper", 0.5, { x: '0px'})
+          .setTween(".align-wrapper", 0.5, { x: '0px'}) 
           .addTo(controller);
 
+  new ScrollMagic.Scene({triggerElement: "#alien-reverse-trigger"})
+          .setClassToggle(".align-wrapper", "reverse")
+          .addTo(controller);
+
+  new ScrollMagic.Scene({triggerElement: "#alien-end-trigger"})
+          .setTween(".align-wrapper", 0.5, { x: '205px'})
+          .addTo(controller);
 
 $('#vital-alien').on('webkitAnimationEnd oanimationend oAnimationEnd msAnimationEnd animationend',function(){
   var presnetarray = [ $('#present-moon'),$('#present-pokerk'),$('#present-pokera') ];
