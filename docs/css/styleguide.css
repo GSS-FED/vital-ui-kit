@@ -1,14 +1,3 @@
-/*******************************************
- * Copyright © 2018 Galaxy Software Services
- *
- * @gssfed/vital-ui-kit, v1.0.0
- * UI Kit for GSS Vital Family
- *
- * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
- *
- * License: MIT
- *
- ******************************************/
 @charset "UTF-8";
 body {
   overflow-x: hidden; }
@@ -2504,7 +2493,7 @@ a.demo-btn:hover {
   font-weight: bold;
   cursor: pointer; }
   .nav-dropdown-wrapper:hover {
-    box-shadow: 0 0 1px transparent; }
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
     .nav-dropdown-wrapper:hover .nav-dropdown-menu {
       transform: scale(1);
       opacity: 1; }
@@ -2742,8 +2731,7 @@ a.demo-btn:hover {
 
 .demo-ol-wrap, .demo-ul-wrap {
   background: #eee;
-  margin-bottom: 10px;
-  display: inline-block; }
+  margin-bottom: 10px; }
 
 .demo-ul-wrap ul, .demo-ol-wrap ol {
   display: inline-block;
@@ -3159,6 +3147,255 @@ a.demo-btn:hover {
     opacity: 0.9;
     padding-top: 0;
     padding-bottom: 50px; }
+
+.align-wrapper {
+  height: 300px;
+  width: 300px;
+  position: fixed;
+  right: -300px;
+  top: calc( 50% - 150px);
+  z-index: 87; }
+  .align-wrapper.reverse {
+    left: -300px;
+    right: auto; }
+    .align-wrapper.reverse #vital-alien, .align-wrapper.reverse #vital-alien-back {
+      transform: rotateY(180deg); }
+    .align-wrapper.reverse #present-moon {
+      left: 173px; }
+      .align-wrapper.reverse #present-moon.is-splash {
+        animation-name: splash_moom_reverse; }
+    .align-wrapper.reverse #present-pokerk {
+      transform: rotateY(180deg);
+      left: 178px; }
+      .align-wrapper.reverse #present-pokerk.is-splash {
+        animation-name: splash_pokerk_reverse; }
+    .align-wrapper.reverse #present-pokera {
+      left: 190px; }
+      .align-wrapper.reverse #present-pokera.is-splash {
+        animation-name: splash_pokera_reverse; }
+    .align-wrapper.reverse #vital-title {
+      z-index: -1; }
+      .align-wrapper.reverse #vital-title:before {
+        background-image: url("../img/landing-page/sec2/ui-flow-comingsoon-left.png"); }
+      .align-wrapper.reverse #vital-title:after {
+        background-image: url("../img/landing-page/sec2/ui-flow-comingsoon-left-hover.png"); }
+  .align-wrapper:hover #vital-alien, .align-wrapper:hover #vital-title, .align-wrapper:hover #vital-alien-back {
+    animation-name: earthquake;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    animation-delay: 0.35s;
+    animation-timing-function: ease-in-out; }
+
+#vital-alien {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 7;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../img/landing-page/sec2/alien-front.png"); }
+
+#vital-alien-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 2;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../img/landing-page/sec2/alien-back.png"); }
+
+#vital-title {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1; }
+  #vital-title:before {
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../img/landing-page/sec2/ui-flow-comingsoon.png"); }
+  #vital-title:after {
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+    opacity: 0;
+    transform: translateY(0px);
+    transition: opacity 0.35s ease-in-out, transform 0.35s cubic-bezier(0.68, 0, 0.99, 0.54);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../img/landing-page/sec2/ui-flow-comingsoon2.png"); }
+  #vital-title:hover:before {
+    opacity: 0;
+    transform: translateX(0px); }
+  #vital-title:hover:after {
+    opacity: 1;
+    transform: translateY(0px); }
+
+@keyframes earthquake {
+  0% { }
+  45% { }
+  60% { }
+  100% { } }
+
+#present-moon {
+  width: 30px;
+  position: absolute;
+  top: 178px;
+  left: 103px;
+  z-index: 3;
+  transform: scale(0.5, 0.5);
+  opacity: 0; }
+  #present-moon.is-splash {
+    animation-name: splash_moom;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; }
+  #present-moon .cls-1 {
+    fill: url(#未命名漸層_74); }
+  #present-moon .cls-2 {
+    fill: #26477a;
+    opacity: 0.4; }
+
+#present-pokerk {
+  width: 37px;
+  position: absolute;
+  top: 152px;
+  left: 78px;
+  z-index: 5;
+  transform: scale(0.5, 0.5);
+  opacity: 0; }
+  #present-pokerk.is-splash {
+    animation-name: splash_pokerk;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; }
+  #present-pokerk .cls-1 {
+    fill: #efefef; }
+  #present-pokerk .cls-2 {
+    fill: #dc555c; }
+
+#present-pokera {
+  width: 37px;
+  position: absolute;
+  top: 175px;
+  left: 70px;
+  z-index: 4;
+  transform: scale(0.5, 0.5);
+  opacity: 0; }
+  #present-pokera.is-splash {
+    animation-name: splash_pokera;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out; }
+  #present-pokera .cls-1 {
+    fill: url(#未命名漸層_2); }
+  #present-pokera .cls-2, #present-pokera .cls-3 {
+    fill: #314461; }
+  #present-pokera .cls-3 {
+    fill-rule: evenodd; }
+
+@keyframes splash_moom {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px) translateX(0px) scale(1, 1); }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) translateX(-20px) scale(1, 1); }
+  95% {
+    transform: translateY(-40px) translateX(-20px) scale(1, 1); }
+  100% {
+    opacity: 1; } }
+
+@keyframes splash_moom_reverse {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px) translateX(0px) scale(1, 1) rotateY(180deg); }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) translateX(20px) scale(1, 1) rotateY(180deg); }
+  95% {
+    transform: translateY(-40px) translateX(20px) scale(1, 1) rotateY(180deg); }
+  100% {
+    opacity: 1; } }
+
+@keyframes splash_pokerk {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px) translateX(0px) scale(1, 1); }
+  50% {
+    opacity: 1;
+    transform: translateY(-37px) translateX(-22px) scale(1, 1); }
+  95% {
+    transform: translateY(-37px) translateX(-22px) scale(1, 1); }
+  100% {
+    opacity: 1; } }
+
+@keyframes splash_pokerk_reverse {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0px) translateX(0px) scale(1, 1) rotateY(180deg); }
+  50% {
+    opacity: 1;
+    transform: translateY(-37px) translateX(22px) scale(1, 1) rotateY(180deg); }
+  95% {
+    transform: translateY(-37px) translateX(22px) scale(1, 1) rotateY(180deg); }
+  100% {
+    opacity: 1; } }
+
+@keyframes splash_pokera {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) translateX(0px) scale(1, 1); }
+  15% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(-10px) scale(1, 1); }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) translateX(-20px) scale(1, 1); }
+  95% {
+    transform: translateY(-40px) translateX(-20px) scale(1, 1); }
+  100% {
+    opacity: 1; } }
+
+@keyframes splash_pokera_reverse {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) translateX(0px) scale(1, 1) rotateY(180deg); }
+  15% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(10px) scale(1, 1 rotateY(180deg)); }
+  50% {
+    opacity: 1;
+    transform: translateY(-40px) translateX(20px) scale(1, 1) rotateY(180deg); }
+  95% {
+    transform: translateY(-40px) translateX(20px) scale(1, 1) rotateY(180deg); }
+  100% {
+    opacity: 1; } }
 
 .landing-sec2 {
   position: relative;
