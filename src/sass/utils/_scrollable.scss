@@ -5,12 +5,14 @@
 // *************************************
 
 .#{$prefix}-scroll--x {
+  overflow-x:auto;
   overflow-y:hidden;
   -webkit-overflow-scrolling: touch;
 }
 
 .#{$prefix}-scroll--y {
   overflow-x:hidden;
+  overflow-y:auto;
   -webkit-overflow-scrolling: touch;
 }
 
