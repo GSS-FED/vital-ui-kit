@@ -1,7 +1,7 @@
 /*******************************************
  * Copyright © 2018 Galaxy Software Services
  *
- * @gssfed/vital-ui-kit, v1.0.0
+ * @gssfed/vital-ui-kit, v1.0.1
  * UI Kit for GSS Vital Family
  *
  * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
@@ -85,7 +85,7 @@ sg.initializeInput = function() {
 
   // ----- bind ----- //
 
-  $(_PREFIX + '-input').on('keyup', function() {
+  $(document).on('keyup', _PREFIX + '-input', function() {
     var me = $(this);
     var item = me.closest(_PREFIX + '-input-item');
     if (me.val() !== '') {
@@ -169,19 +169,9 @@ sg.initializeTable = function() {
  * @desc initialize tab
  */
 sg.initializeTab = function() {
-  document.querySelectorAll(_PREFIX + '-tab').forEach(function(tab) {
-    tab.addEventListener('click', function(e) {
-      var target = e.path.filter(function(element) {
-        return element.className ? element.className.match(/^sg-tab$/) : false
-      });
-      if (target[0]) {
-        target = target[0];
-        target.parentElement.querySelectorAll('.sg-tab').forEach(function(siblings){
-          siblings.classList.remove(STATE_PREFIX + '--active');
-        });
-        target.classList.add(STATE_PREFIX + '--active');
-      }
-    });
+  $(document).on('click', _PREFIX + '-tab', function(e) {
+    $(this).siblings().removeClass(STATE_PREFIX + '--active');
+    $(this).addClass(STATE_PREFIX + '--active');
   });
 }
 
@@ -373,26 +363,21 @@ sg.initializeCollapse = function() {
  * @desc initialize tooltip
  */
 sg.initializeTooltip = function() {
-  $('body').append(
-    '<div class="' + PREFIX + '-tooltip">'
-      + '<div class="' + PREFIX + '-tooltip-inner"></div>'
-      + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
-    + '</div>'
-  );
+  if ($(_PREFIX + '-tooltip').length === 0) {
+    $('body').append(
+      '<div class="' + PREFIX + '-tooltip">'
+        + '<div class="' + PREFIX + '-tooltip-inner"></div>'
+        + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
+      + '</div>'
+    );
+  }
 
-  $('[data-tooltip]').each(function(i, anchor) {
-    $(anchor).on('click', function(e) {
+  $('[data-tooltip]:not([data-tooltip-initialized=true])').each(function(i, anchor) {
+    $(anchor).attr('data-tooltip-initialized', true);
+
+    $(anchor).on('mouseover', function(e) {
       try {
         var $tooltip = $(_PREFIX + '-tooltip');
-        if ($tooltip.length === 0) {
-          $('body').append(
-            '<div class="' + PREFIX + '-tooltip">'
-              + '<div class="' + PREFIX + '-tooltip-inner"></div>'
-              + '<div class="' + PREFIX + '-tooltip-arrow"></div>'
-            + '</div>'
-          );
-          $tooltip = $(_PREFIX + '-tooltip');
-        }
         $tooltip[0].className = PREFIX + '-tooltip';
 
         var $tooltipInner = $tooltip.find(_PREFIX + '-tooltip-inner');
@@ -426,19 +411,11 @@ sg.initializeTooltip = function() {
         $tooltip.addClass('in');
       } catch (e) {}
     });
-  });
 
-  $(document).on('click', function(e) {
-    // close tooltip
-    var target = $(e.target).closest('[data-tooltip]');
-    var target2 = $(e.target).closest(_PREFIX + '-tooltip');
-    if(target.length === 0 && target2.length === 0) {
+    $(anchor).on('mouseleave', function(e) {
+      // close tooltip
       $(_PREFIX + '-tooltip').removeClass('in');
-    }
-  });
-
-  $(document).on('scroll', function(e) {
-    $(_PREFIX + '-tooltip').removeClass('in');
+    });
   });
 
   return this;

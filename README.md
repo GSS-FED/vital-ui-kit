@@ -47,10 +47,10 @@ Vital UI Kit 使用簡單、輕量級、模組化的 UI library。 Vital UI Kit 
 
 ```
 # yarn
-yarn add vital-ui-kit
+yarn add @gssfed/vital-ui-kit
 
 # npm
-npm i vital-ui-kit --save
+npm i @gssfed/vital-ui-kit --save
 ```
 
 
@@ -82,7 +82,7 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
     如果您是開發者，想要客製化自己的 Vital UI Kit、更改 UI Kit 顏色，可使用以下方法。
 
-    1. `npm install vital-ui-kit`
+    1. `npm i @gssfed/vital-ui-kit --save`
 
     1. 在專案環境輸出 `node_modules/vital-ui-kit/dist` 資料夾底下的 `fonts`、`img`、`js` 檔案
 
@@ -107,7 +107,7 @@ Vital UI Kit 提供了兩種使用方式，您可以依照喜好或是情況選�
 
     如果您是開發者，且專案有使用 [kendo-ui-core](https://github.com/telerik/kendo-ui-core) 或是 [kendo-angular-ui](http://www.telerik.com/kendo-angular-ui/) 套件，想要客製化自己的 Kendo theme，可使用以下方法。
 
-    1. `npm install vital-ui-kit`
+    1. `npm i @gssfed/vital-ui-kit`
 
     1. 在專案環境引用 `node_modules/vital-ui-kit/dist/kendo` 資料夾底下對應的 kendo sources，編譯輸出的 css 檔案。
 

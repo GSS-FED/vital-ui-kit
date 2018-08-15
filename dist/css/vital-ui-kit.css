@@ -1,7 +1,7 @@
 /*******************************************
  * Copyright © 2018 Galaxy Software Services
  *
- * @gssfed/vital-ui-kit, v1.0.0
+ * @gssfed/vital-ui-kit, v1.0.1
  * UI Kit for GSS Vital Family
  *
  * By Neil Lin (https://github.com/Neil-Lin),Patric,Laura Lee (https://github.com/l443018),Eric Yip (https://github.com/ericyip),Vibrissa (https://github.com/Vibrissa),YuRu Lee (https://github.com/YuRu-Lee),CJies Tan (https://github.com/cjies),Evan Wu (https://github.com/evanwu-tw)
@@ -2165,6 +2165,9 @@ textarea.sg-input {
 .sg-input-group__cell.sg-cell--fit {
   width: 1%; }
 
+.sg-input-group__cell.sg-cell--full {
+  width: 100%; }
+
 .sg-input-group__cell.sg-cell--1 {
   width: 8.33333%;
   word-break: break-word; }
@@ -3013,6 +3016,9 @@ img.sg-avatar {
   width: 1%;
   white-space: nowrap; }
 
+.sg-cell--full {
+  width: 100%; }
+
 .sg-cell-1 {
   width: 8.33333%;
   word-break: break-word; }
@@ -3399,11 +3405,13 @@ img.sg-avatar {
   background-attachment: local, local, scroll, scroll; }
 
 .sg-scroll--x {
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch; }
 
 .sg-scroll--y {
   overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
 
 .sg-scroll {
