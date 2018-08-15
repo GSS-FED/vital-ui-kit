@@ -31,6 +31,10 @@
   white-space: nowrap;
 }
 
+.#{$prefix}-cell--full {
+  width: 100%;
+}
+
 @for $_grid-i from 1 through  $grid-col {
   .#{$prefix}-cell-#{$_grid-i} {
     width: ($_grid-i / $grid-col) * 100%;

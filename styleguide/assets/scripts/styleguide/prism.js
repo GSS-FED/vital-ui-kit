@@ -1,5 +1,5 @@
 /* http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
-self = (typeof window !== 'undefined')
+var self = (typeof window !== 'undefined')
   ? window   // if in browser
   : (
     (typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope)

@@ -16,15 +16,26 @@ function outputDependency(type) {
 
   return Promise.all([
     new Promise(function(resolve, reject) {
-      // scripts
-      gulp.src(config.dependency.scripts.src)
-        .pipe(plumber({errorHandler: function(error) {
-          handleErrors(error, 'Dependency Scripts');
-          this.emit('end');
-          reject();
-        }}))
-        .pipe(gulp.dest(config.dependency.scripts[dependencyDest]))
-        .on('end', resolve)
+      // kendo images
+      if(type == 'uikit') {
+        gulp.src(config.dependency.kendoImages.src)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency kendoImages');
+            this.emit('end');
+            reject();
+          }}))
+          .pipe(gulp.dest(config.dependency.kendoImages[dependencyDest]))
+          .on('end', resolve)
+      } else {
+        gulp.src(config.dependency.kendoImages.src)
+          .pipe(plumber({errorHandler: function(error) {
+            handleErrors(error, 'Dependency kendo images');
+            this.emit('end');
+            reject();
+          }}))
+          .pipe(gulp.dest(config.dependency.kendoImages[dependencyDest]))
+          .on('end', resolve)
+        }
     }),
     new Promise(function(resolve, reject) {
       // images ui kit

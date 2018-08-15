@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.0.1 (2018-08-15)
+
+- Update document
+- Fix tab bug
+- Fix tooltip bug
+
+
 ## 1.0.0 (2018-05-24)
 
 - Remove icon dependency

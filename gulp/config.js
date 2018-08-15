@@ -122,7 +122,6 @@ module.exports = {
           src: [
             'assets/img/**/*.+(jpg|jpeg|gif|png|svg)'
           ],
-          filter: [],
           dest: 'www/img'
         },
         fonts: {
@@ -213,20 +212,20 @@ module.exports = {
         ],
         destProd: 'build'
       },
-      scripts: {
-        src: [
-        ],
-        dest: 'www/js',
-        destProd: 'build/dist/js',
-        styleguideDestProd: 'build/styleguide/js'
-      },
-      styles: {
-        src: [
-        ],
-        dest: 'www/css',
-        destProd: 'build/dist/css',
-        styleguideDestProd: 'build/styleguide/css'
-      },
+      // scripts: {
+      //   src: [
+      //   ],
+      //   dest: 'www/js',
+      //   destProd: 'build/dist/js',
+      //   styleguideDestProd: 'build/styleguide/js'
+      // },
+      // styles: {
+      //   src: [
+      //   ],
+      //   dest: 'www/css',
+      //   destProd: 'build/dist/css',
+      //   styleguideDestProd: 'build/styleguide/css'
+      // },
       images: {
         src: [
           'assets/img/**/*'
@@ -238,6 +237,15 @@ module.exports = {
         dest: 'www/img',
         destProd: 'build/dist/img',
         styleguideDestProd: 'build/styleguide/img'
+      },
+      kendoImages: {
+        src: [
+          'node_modules/kendo-ui-core/dist/styles/mobile/images/*',
+          'node_modules/kendo-ui-core/dist/styles/web/Default/*',
+        ],
+        dest: 'www/images',
+        destProd: 'build/dist/images',
+        styleguideDestProd: 'build/styleguide/images'
       },
       fonts: {
         src: [
