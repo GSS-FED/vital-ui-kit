@@ -2165,6 +2165,9 @@ textarea.sg-input {
 .sg-input-group__cell.sg-cell--fit {
   width: 1%; }
 
+.sg-input-group__cell.sg-cell--full {
+  width: 100%; }
+
 .sg-input-group__cell.sg-cell--1 {
   width: 8.33333%;
   word-break: break-word; }
@@ -3013,6 +3016,9 @@ img.sg-avatar {
   width: 1%;
   white-space: nowrap; }
 
+.sg-cell--full {
+  width: 100%; }
+
 .sg-cell-1 {
   width: 8.33333%;
   word-break: break-word; }
@@ -3381,7 +3387,7 @@ img.sg-avatar {
 
 .sg-scrollshadow-v {
   overflow: auto;
-  background: linear-gradient(#FFFFFF 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #FFFFFF 70%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), transparent), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), transparent) 0 100%;
+  background: linear-gradient(#FFFFFF 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), #FFFFFF 70%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
   background-repeat: no-repeat;
   background-color: #FFFFFF;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
@@ -3391,7 +3397,7 @@ img.sg-avatar {
 .sg-scrollshadow-h {
   overflow: auto;
   white-space: nowrap;
-  background: linear-gradient(to right, #FFFFFF 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), #FFFFFF 70%) 100% 0, radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.2), transparent), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), transparent) 100% 0;
+  background: linear-gradient(to right, #FFFFFF 30%, rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(255, 255, 255, 0), #FFFFFF 70%) 100% 0, radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 100% 0;
   background-repeat: no-repeat;
   background-color: #FFFFFF;
   background-size: 40px 100%, 40px 100%, 14px 100% , 14px 100%;
@@ -3399,11 +3405,13 @@ img.sg-avatar {
   background-attachment: local, local, scroll, scroll; }
 
 .sg-scroll--x {
+  overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch; }
 
 .sg-scroll--y {
   overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
 
 .sg-scroll {
