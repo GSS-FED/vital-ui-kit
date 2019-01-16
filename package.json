@@ -52,6 +52,7 @@
     "gulp-watch": "^5.0.0",
     "gulp-zip": "^4.0.0",
     "morgan": "^1.6.1",
+    "natives": "^1.1.6",
     "object-assign": "^4.0.1",
     "path": "^0.12.7",
     "pretty-hrtime": "^1.0.1",

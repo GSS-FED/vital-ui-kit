@@ -71,7 +71,7 @@
 //   Circle
 // -------------------------------------
 
-&.#{$prefix}-switches--circle {
+.#{$prefix}-switches--circle {
   .#{$prefix}-switch-label {
     border-radius: $switch-height;
   }
@@ -84,7 +84,7 @@
 //   With Icon
 // -------------------------------------
 
-&.#{$prefix}-switches--icon {
+.#{$prefix}-switches--icon {
   .#{$prefix}-switch-label {
     position: relative;
   }
@@ -121,7 +121,7 @@
 //   With Inner Icon
 // -------------------------------------
 
-&.#{$prefix}-switches--txt {
+.#{$prefix}-switches--txt {
   .#{$prefix}-switch-label {
     position: relative;
     .text {

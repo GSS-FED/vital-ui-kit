@@ -15,6 +15,7 @@ html {
     font-size: 12px;
   }
   .icon-caret-right {
+    display:inline;
     color:$breadcrumb-light-blue;
   }
   .#{$prefix}-breadcrumb--section,.#{$prefix}-breadcrumb--divider,.#{$prefix}-breadcrumb--link,.#{$prefix}-breadcrumb--section.active {
