@@ -1,5 +1,5 @@
 /*******************************************
- * Copyright © 2018 Galaxy Software Services
+ * Copyright © 2019 Galaxy Software Services
  *
  * @gssfed/vital-ui-kit, v1.0.1
  * UI Kit for GSS Vital Family
@@ -1590,6 +1590,7 @@ html {
     margin: 0 5px;
     font-size: 12px; }
   .sg-breadcrumb .icon-caret-right {
+    display: inline;
     color: #95ABD3; }
   .sg-breadcrumb .sg-breadcrumb--section, .sg-breadcrumb .sg-breadcrumb--divider, .sg-breadcrumb .sg-breadcrumb--link, .sg-breadcrumb .sg-breadcrumb--section.active {
     display: inline-block;
