@@ -16,3 +16,5 @@ deploy:
   github_token: $GH_TOKEN
   keep_history: true
   target_branch: master
+  on:
+    branch: develop
