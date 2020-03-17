@@ -176,7 +176,7 @@ body .k-button-icon {
 }
 .k-button-icontext .k-icon,
 .k-button-icontext .k-image {
-  margin-right: 0.2rem;
+  margin-right: .2rem;
   margin-left: -0.2rem;
   vertical-align: text-top;
 }
@@ -1249,7 +1249,7 @@ html .k-error-colored {
 }
 .k-loading-color {
   filter: alpha(opacity=30);
-  opacity: 0.3;
+  opacity: .3;
 }
 .k-content-frame {
   border: 0;
@@ -1267,8 +1267,8 @@ html .k-error-colored {
   z-index: 10003;
   border-style: solid;
   border-width: 1px;
-  font-size: 0.9em;
-  padding: 0.2em 0.4em;
+  font-size: .9em;
+  padding: .2em .4em;
   white-space: nowrap;
   cursor: default;
 }
@@ -1384,7 +1384,7 @@ a.k-button:hover {
   float: left;
   clear: both;
   width: 30%;
-  padding: 0.4em 0 1em;
+  padding: .4em 0 1em;
   margin-left: 2%;
   text-align: right;
 }
@@ -1394,14 +1394,14 @@ a.k-button:hover {
   clear: right;
   width: 60%;
   margin-right: 2%;
-  padding: 0 0 0.6em;
+  padding: 0 0 .6em;
 }
 .k-edit-field > input[type="checkbox"],
 .k-edit-field > input[type="radio"] {
-  margin-top: 0.4em;
+  margin-top: .4em;
 }
 .k-edit-form-container .k-button {
-  margin: 0 0.16em;
+  margin: 0 .16em;
 }
 .k-edit-field > input[type="checkbox"]:first-child,
 .k-edit-field > input[type="radio"]:first-child,
@@ -1416,7 +1416,7 @@ a.k-button:hover {
   border-style: solid;
   position: relative;
   bottom: -1em;
-  padding: 0.6em;
+  padding: .6em;
 }
 /* Window */
 div.k-window {
@@ -1435,7 +1435,7 @@ div.k-window {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   margin-top: -2em;
-  padding: 0.4em 0;
+  padding: .4em 0;
   font-size: 1.2em;
   white-space: nowrap;
   min-height: 16px;
@@ -1444,12 +1444,12 @@ div.k-window {
 .k-block > .k-header {
   position: relative;
   margin: -2px 0 10px -2px;
-  padding: 0.3em 2px;
+  padding: .3em 2px;
 }
 .k-window-title {
   position: absolute;
-  left: 0.44em;
-  right: 0.44em;
+  left: .44em;
+  right: .44em;
   overflow: hidden;
   cursor: default;
   text-overflow: ellipsis;
@@ -1464,7 +1464,7 @@ div.k-window-titleless {
 div.k-window-content {
   position: relative;
   height: 100%;
-  padding: 0.58em;
+  padding: .58em;
   overflow: auto;
   outline: 0;
 }
@@ -1482,8 +1482,8 @@ div.k-window-iframecontent {
 .k-window-titlebar .k-window-actions {
   position: absolute;
   top: 0;
-  right: 0.3em;
-  padding-top: 0.3em;
+  right: .3em;
+  padding-top: .3em;
   white-space: nowrap;
 }
 .k-window-titlebar .k-window-action {
@@ -1493,7 +1493,7 @@ div.k-window-iframecontent {
   padding: 2px;
   text-decoration: none;
   vertical-align: middle;
-  opacity: 0.7;
+  opacity: .7;
 }
 .k-window-titlebar .k-state-hover {
   border-style: solid;
@@ -1580,7 +1580,7 @@ div.k-window-iframecontent {
   height: 100%;
   background-color: #000;
   filter: alpha(opacity=50);
-  opacity: 0.5;
+  opacity: .5;
 }
 .k-window .k-overlay {
   position: absolute;
@@ -1623,7 +1623,7 @@ div.k-window-iframecontent {
 .k-panelbar .k-tabstrip-items .k-link {
   display: inline-block;
   border-bottom-width: 0;
-  padding: 0.5em 0.92em;
+  padding: .5em .92em;
 }
 .k-tabstrip-items .k-icon,
 .k-panelbar .k-tabstrip-items .k-icon {
@@ -1674,8 +1674,8 @@ div.k-window-iframecontent {
   position: static;
   border-style: solid;
   border-width: 1px;
-  margin: 0 0.29em 0.3em;
-  padding: 0.3em 0.92em;
+  margin: 0 .29em .3em;
+  padding: .3em .92em;
   zoom: 1;
 }
 .k-tabstrip > .k-content {
@@ -1685,7 +1685,7 @@ div.k-window-iframecontent {
   padding: 0;
 }
 .k-tabstrip > .k-content > .km-scroll-container {
-  padding: 0.3em 0.92em;
+  padding: .3em .92em;
 }
 @keyframes k-tab-loader {
   0% {
@@ -1746,7 +1746,7 @@ div.k-window-iframecontent {
 }
 .k-panel > .k-item > .k-link {
   border-bottom: 0;
-  font-size: 0.95em;
+  font-size: .95em;
   line-height: 2.2;
 }
 .k-panel .k-i-arrow-n,
@@ -1833,7 +1833,7 @@ ul.k-menu-vertical > .k-item {
   box-sizing: content-box;
 }
 .k-menu .k-group .k-item > .k-link {
-  padding: 0.28em 1.8em 0.38em 0.9em;
+  padding: .28em 1.8em .38em .9em;
 }
 .k-ie7 .k-menu .k-group .k-link {
   width: 100%;
@@ -1845,7 +1845,7 @@ ul.k-menu-vertical > .k-item {
   position: absolute;
   top: 50%;
   margin-top: -8px;
-  right: 0.2rem;
+  right: .2rem;
 }
 .k-menu .k-animation-container {
   border: 0;
@@ -1959,7 +1959,7 @@ ul.k-menu-vertical .k-separator,
 .k-calendar th {
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  padding: 0.4em 0.45em 0.4em 0.1em;
+  padding: .4em .45em .4em .1em;
   font-weight: normal;
   cursor: default;
 }
@@ -1977,10 +1977,10 @@ ul.k-menu-vertical .k-separator,
   overflow: hidden;
   min-height: 1.8333em;
   line-height: 1.8333em;
-  padding: 0 0.45em 0 0.1em;
+  padding: 0 .45em 0 .1em;
 }
 .k-calendar .k-meta-view .k-link {
-  padding: 0.25em 0 0.3em;
+  padding: .25em 0 .3em;
   text-align: center;
 }
 .k-calendar .k-footer {
@@ -1990,7 +1990,7 @@ ul.k-menu-vertical .k-separator,
 .k-calendar .k-footer > .k-state-disabled {
   display: block;
   height: 100%;
-  padding: 0.5em 0;
+  padding: .5em 0;
 }
 .k-calendar .k-nav-today:hover {
   text-decoration: underline;
@@ -2311,7 +2311,7 @@ body .k-datetimepicker .k-select {
 }
 .k-multiselect-wrap li {
   margin: 1px 0 1px 1px;
-  padding: 0.1em 0.15em 0.1em 0.4em;
+  padding: .1em .15em .1em .4em;
   line-height: 1.784rem;
   float: left;
 }
@@ -2362,7 +2362,7 @@ body .k-datetimepicker .k-select {
 }
 .k-textbox {
   outline: 0;
-  padding: 2px 0.3em;
+  padding: 2px .3em;
   line-height: 1.6em;
 }
 input.k-textbox {
@@ -2498,7 +2498,7 @@ div.k-flatcolorpicker {
 }
 .k-flatcolorpicker .k-selected-color input.k-color-value {
   font-family: Consolas, "Ubuntu Mono", "Lucida Console", "Courier New", monospace;
-  padding: 0.75em 0.3em 0.65em 1em;
+  padding: .75em .3em .65em 1em;
   border: 0;
   margin: 0;
   width: 70%;
@@ -2624,7 +2624,7 @@ div.k-flatcolorpicker {
 }
 /* Notification */
 .k-notification-wrap {
-  padding: 0.6em 0.5em;
+  padding: .6em .5em;
   cursor: default;
   position: relative;
   white-space: nowrap;
@@ -2798,7 +2798,7 @@ div.k-flatcolorpicker {
 }
 .k-progress-status {
   display: inline-block;
-  padding: 0 0.5em;
+  padding: 0 .5em;
   min-width: 10px;
   white-space: nowrap;
 }
@@ -2817,11 +2817,11 @@ div.k-flatcolorpicker {
 }
 .k-ie7 .k-progressbar-vertical .k-progress-status {
   writing-mode: tb-rl;
-  padding: 0.5em 0;
+  padding: .5em 0;
 }
 .k-ie8 .k-progressbar-vertical .k-progress-status {
   writing-mode: bt-lr;
-  padding: 0.5em 0;
+  padding: .5em 0;
 }
 /* Slider */
 div.k-slider {
@@ -2863,7 +2863,7 @@ div.k-slider {
 }
 .k-state-disabled .k-slider-wrap {
   filter: alpha(opacity=60);
-  opacity: 0.6;
+  opacity: .6;
 }
 .k-state-disabled .k-slider-wrap .k-slider-items {
   color: #333;
@@ -3087,7 +3087,7 @@ div.k-slider {
 .k-slider .k-label {
   position: absolute;
   white-space: nowrap;
-  font-size: 0.92em;
+  font-size: .92em;
 }
 .k-slider-horizontal .k-label {
   left: 0;
@@ -4255,7 +4255,7 @@ div.k-imagebrowser-dropzone em {
 }
 .k-state-disabled {
   filter: alpha(opacity=70);
-  opacity: 0.7;
+  opacity: .7;
 }
 .k-tile-empty.k-state-selected,
 .k-loading-mask.k-state-selected {
@@ -5334,7 +5334,7 @@ div.k-window-content {
 }
 .k-block > .k-header,
 .k-window-titlebar {
-  padding: 0.4rem 0;
+  padding: .4rem 0;
   margin-top: -2rem;
 }
 div.k-window-content {
@@ -5643,7 +5643,7 @@ div.k-window-content {
   }
 }
 .km-root {
-  font-size: 0.92em;
+  font-size: .92em;
 }
 .km-root a {
   color: inherit;
@@ -5817,8 +5817,8 @@ div.k-window-content {
   background-origin: border-box;
   position: relative;
   display: inline-block;
-  padding: 0.4em 0.7em;
-  margin: 0.1rem;
+  padding: .4em .7em;
+  margin: .1rem;
   overflow: visible;
   text-decoration: none;
 }
@@ -5826,7 +5826,7 @@ div.k-window-content {
 .km-toolbar,
 .km-navbar {
   display: block;
-  padding: 0.8em;
+  padding: .8em;
   margin: 0;
   width: 100%;
   border-width: 0;
@@ -5873,7 +5873,7 @@ div.k-window-content {
   left: 50%;
   width: 180px;
   height: 130px;
-  opacity: 0.85;
+  opacity: .85;
   z-index: 100000;
   padding: 30px 30px;
   position: absolute;
@@ -6032,16 +6032,16 @@ div.k-window-content {
   position: absolute;
   z-index: 1;
   height: 2em;
-  font-size: 0.6rem;
+  font-size: .6rem;
   text-shadow: none;
 }
 .km-badge {
   top: -1em;
   right: -1em;
   line-height: 2em;
-  margin-left: 0.5em;
-  min-width: 0.9em;
-  padding: 0 0.55em;
+  margin-left: .5em;
+  min-width: .9em;
+  padding: 0 .55em;
   background-clip: padding-box;
 }
 .km-tabstrip .km-badge {
@@ -6053,7 +6053,7 @@ div.k-window-content {
 .km-detail {
   position: absolute;
   float: right;
-  right: 0.8rem;
+  right: .8rem;
   top: 50%;
   margin-top: -0.7rem;
   width: 1.3rem;
@@ -6062,7 +6062,7 @@ div.k-window-content {
   box-sizing: border-box;
 }
 .km-widget .km-detaildisclose {
-  font-size: 0.8em;
+  font-size: .8em;
 }
 .k-ff .km-detail {
   width: 1rem;
@@ -6080,15 +6080,15 @@ div.k-window-content {
 .km-widget .km-contactadd:before,
 .km-widget .km-detaildisclose:before,
 .km-detail .km-icon {
-  left: 0.15em;
-  top: 0.15em;
+  left: .15em;
+  top: .15em;
   line-height: 1em;
   font-size: 1em;
   position: absolute;
 }
 .km-widget .km-detaildisclose:after {
-  left: 0.1em;
-  top: 0.25em;
+  left: .1em;
+  top: .25em;
   text-align: center;
   font-weight: bold;
 }
@@ -6122,10 +6122,10 @@ button.km-button {
   box-shadow: none;
 }
 .km-buttongroup {
-  padding: 0.4rem 0.7rem;
+  padding: .4rem .7rem;
   -webkit-margin-collapse: separate;
   margin-collapse: separate;
-  margin: 0.5em auto;
+  margin: .5em auto;
 }
 .km-widget.km-buttongroup {
   padding: 0;
@@ -6140,15 +6140,15 @@ button.km-button {
 .km-widget.km-buttongroup .km-button {
   margin: 0;
   border-width: 1px 0 1px 1px;
-  padding: 0.48em 0.9em 0.44em;
+  padding: .48em .9em .44em;
 }
 .km-tablet .km-buttongroup .km-button {
-  padding: 0.4em 0.8em 0.34em;
+  padding: .4em .8em .34em;
 }
 .km-widget.km-navbar .km-buttongroup {
-  font-size: 0.95rem;
+  font-size: .95rem;
   line-height: 1em;
-  margin: 0 0 0.2em;
+  margin: 0 0 .2em;
   display: inline-block;
   height: 1.5em;
   top: -2px;
@@ -6218,30 +6218,30 @@ button.km-button {
 }
 .km-toolbar .km-button,
 .km-navbar .km-button {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 .km-navbar .km-no-title {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
+  padding-top: .7rem;
+  padding-bottom: .7rem;
 }
 .km-horizontal .km-toolbar .km-button,
 .km-horizontal .km-navbar .km-button {
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
 }
 .km-horizontal .km-navbar .km-no-title {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 .km-tablet.km-root .km-no-title {
-  padding-top: 0.55rem;
-  padding-bottom: 0.55rem;
+  padding-top: .55rem;
+  padding-bottom: .55rem;
 }
 .km-tablet .km-navbar .km-button,
 .km-tablet .km-toolbar .km-button {
-  margin-top: 0.45rem;
-  margin-bottom: 0.45rem;
+  margin-top: .45rem;
+  margin-bottom: .45rem;
 }
 .km-root .km-pane .km-navbar .km-no-title {
   visibility: visible;
@@ -6260,13 +6260,13 @@ button.km-button {
 .km-rightitem {
   z-index: 1;
   position: absolute;
-  right: 0.5em;
+  right: .5em;
 }
 .km-popup .km-rightitem {
   right: 0;
 }
 .km-leftitem {
-  left: 0.5em;
+  left: .5em;
   right: auto;
 }
 .km-popup .km-leftitem {
@@ -6295,10 +6295,10 @@ button.km-button {
   vertical-align: middle;
 }
 .km-tabstrip {
-  padding: 0.4rem 0.7rem;
+  padding: .4rem .7rem;
 }
 .km-horizontal .km-tabstrip {
-  padding: 0.2rem 0.7rem;
+  padding: .2rem .7rem;
 }
 .km-tabstrip {
   -ms-box-orient: horizontal;
@@ -6324,7 +6324,7 @@ button.km-button {
 .km-tabstrip .km-button {
   font-family: Arial, Helvetica, sans-serif;
   color: #a8a8a8;
-  padding: 0.4em 0.8em;
+  padding: .4em .8em;
   border-width: 0;
   border-color: transparent;
   background: none;
@@ -6415,18 +6415,18 @@ button.km-button {
 .km-list .km-switch {
   position: absolute;
   top: 50%;
-  right: 0.8rem;
+  right: .8rem;
   margin-top: -1rem;
 }
 .km-listview-link:after {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: .5rem;
+  height: .5rem;
   content: "\a0";
   display: inline-block;
   vertical-align: middle;
   margin-left: -0.2rem;
   border-style: solid;
-  border-width: 0.24rem 0.24rem 0 0;
+  border-width: .24rem .24rem 0 0;
   transform: rotate(45deg);
 }
 .km-listview-wrapper > ul:not(.km-listview) {
@@ -6455,7 +6455,7 @@ button.km-button {
 .km-listview .km-switch {
   margin-top: -0.95rem;
   position: absolute;
-  right: 0.8rem;
+  right: .8rem;
   top: 50%;
 }
 .km-listview .km-list {
@@ -6470,7 +6470,7 @@ button.km-button {
   list-style-type: none;
   vertical-align: middle;
   box-sizing: border-box;
-  padding: 0.5em 0.7em;
+  padding: .5em .7em;
 }
 .km-list > li {
   line-height: 1.6em;
@@ -6497,11 +6497,11 @@ button.km-button {
 .km-group-title {
   display: block;
   font-weight: bold;
-  padding: 0.2em 0;
-  text-indent: 0.8em;
+  padding: .2em 0;
+  text-indent: .8em;
 }
 .km-listgroupinset .km-group-title {
-  margin-top: 0.65em;
+  margin-top: .65em;
   line-height: 2em;
 }
 .km-list:not(.km-virtual-list) > li:first-child {
@@ -6529,15 +6529,15 @@ button.km-button {
 /* Filtering */
 .km-filter-form {
   width: 100%;
-  padding: 0.5em 0;
+  padding: .5em 0;
   border: 1px solid transparent;
   border-width: 1px 0;
   transform: translatez(0);
 }
 .km-filter-wrap {
   position: relative;
-  margin: 0 0.7em;
-  padding: 0.2em 0.4em;
+  margin: 0 .7em;
+  padding: .2em .4em;
   border: 1px solid transparent;
 }
 .km-widget .km-filter-wrap:before {
@@ -6590,7 +6590,7 @@ button.km-button {
 /* Load more */
 .km-load-more {
   display: block;
-  padding: 0.3em 0 1.2em;
+  padding: .3em 0 1.2em;
   height: 3.2em;
   text-align: center;
 }
@@ -6624,14 +6624,14 @@ button.km-button {
 .km-pages {
   text-align: center;
   margin: 0;
-  padding: 0.6em 0 0;
+  padding: .6em 0 0;
   height: 1.5em;
 }
 .km-pages li {
   display: inline-block;
-  width: 0.5em;
-  height: 0.55em;
-  margin: 0 0.3em;
+  width: .5em;
+  height: .55em;
+  margin: 0 .3em;
 }
 /* Forms and icons */
 .km-item label:before,
@@ -6640,14 +6640,14 @@ button.km-button {
   content: " ";
   display: block;
   top: 50%;
-  left: 0.6em;
+  left: .6em;
   width: 36px;
   height: 36px;
   margin-top: -18px;
 }
 /* Slider */
 .km-widget .k-slider {
-  line-height: 0.6em;
+  line-height: .6em;
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -6655,8 +6655,8 @@ button.km-button {
 }
 .km-widget .k-slider-horizontal {
   width: 50%;
-  height: 0.6em;
-  line-height: 0.6em;
+  height: .6em;
+  line-height: .6em;
 }
 .km-list .k-slider {
   position: absolute;
@@ -6670,8 +6670,8 @@ button.km-button {
   height: 100%;
   display: block;
   position: absolute;
-  border: 0.5em solid transparent;
-  border-width: 0.5em 0;
+  border: .5em solid transparent;
+  border-width: .5em 0;
 }
 .km-widget .k-slider-horizontal .k-slider-track {
   width: auto !important;
@@ -6724,7 +6724,7 @@ button.km-button {
   overflow: visible;
   width: 100%;
   height: 3em;
-  opacity: 0.2;
+  opacity: .2;
 }
 .km-dialog-content {
   font-weight: normal;
@@ -6733,10 +6733,10 @@ button.km-button {
 }
 .km-dialog .km-button {
   display: block;
-  margin: 0.4em;
+  margin: .4em;
   font-size: 1.3em;
   text-align: center;
-  padding: 0.44em;
+  padding: .44em;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -6792,7 +6792,7 @@ button.km-button {
 .km-list input[type=radio] {
   position: absolute;
   top: 50%;
-  right: 0.7em;
+  right: .7em;
   margin-top: -0.5em;
   background: none;
 }
@@ -6843,7 +6843,7 @@ button.km-button {
   border: 0;
   font-size: inherit;
   width: 1em;
-  height: 0.9em;
+  height: .9em;
 }
 /* PopUp + ActionSheet */
 .km-root .km-popup .k-item,
@@ -7044,8 +7044,8 @@ button.km-button {
   position: absolute;
   visibility: hidden;
   z-index: 200000;
-  height: 0.4em;
-  width: 0.4em;
+  height: .4em;
+  width: .4em;
   background-color: #333;
   opacity: 0;
   transform-origin: 0 0;
@@ -7212,7 +7212,7 @@ button.km-button {
 .km-popup .k-item,
 .km-actionsheet > li > a {
   text-decoration: none;
-  padding: 0.5em 0 0.5em 0.6em;
+  padding: .5em 0 .5em .6em;
   border: 0;
   border-radius: 0;
   border-bottom-width: 1px;
@@ -7288,7 +7288,7 @@ button.km-button {
 .km-scroller-refresh .km-loading-right {
   font-size: 1em;
   display: block;
-  width: 0.36em;
+  width: .36em;
   height: 1em;
   position: absolute;
   top: 50%;
@@ -7305,10 +7305,10 @@ button.km-button {
 .km-scroller-pull.km-scroller-refresh .km-icon,
 .km-scroller-refresh .km-loading-left,
 .km-scroller-refresh .km-loading-right {
-  height: 0.6em;
+  height: .6em;
   margin-top: -0.3em;
   margin-left: -0.6em;
-  width: 0.25em;
+  width: .25em;
   animation: km-webrefresh 0.6s infinite linear;
   -moz-animation: km-webrefresh 0.6s infinite linear;
   -webkit-animation: km-webrefresh 0.6s infinite linear;
@@ -7320,7 +7320,7 @@ button.km-button {
   -webkit-animation-delay: 0.2s;
 }
 .km-root .km-loading-right {
-  margin-left: 0.42em;
+  margin-left: .42em;
   animation-delay: 0.4s;
   -moz-animation-delay: 0.4s;
   -webkit-animation-delay: 0.4s;
@@ -7341,7 +7341,7 @@ button.km-button {
 }
 @keyframes km-webrefresh {
   0% {
-    height: 0.6em;
+    height: .6em;
     margin-top: -0.3em;
   }
   33% {
@@ -7349,7 +7349,7 @@ button.km-button {
     margin-top: -0.6em;
   }
   66% {
-    height: 0.6em;
+    height: .6em;
     margin-top: -0.3em;
   }
 }
@@ -7375,7 +7375,7 @@ html .km-widget .km-view .km-notext {
   width: 1em;
   height: 1em;
   font-size: 1em;
-  margin: 0.05em 0.16em 0 0;
+  margin: .05em .16em 0 0;
 }
 .km-tabstrip .km-button .km-icon {
   width: 2.5rem;
@@ -7384,7 +7384,7 @@ html .km-widget .km-view .km-notext {
 }
 .km-tabstrip .km-image,
 .km-tabstrip .km-button .km-icon {
-  margin: 0.1rem auto 0;
+  margin: .1rem auto 0;
   display: inline-block;
 }
 .km-tabstrip .km-text {
@@ -8068,7 +8068,7 @@ body:before {
 /* Button */
 .km-button {
   margin: 0;
-  padding: 0.3em 0.8em;
+  padding: .3em .8em;
   border-width: 1px;
   border-style: solid;
 }
@@ -8098,7 +8098,7 @@ body:before {
 }
 .km-detaildisclose:after,
 .km-detaildisclose:before {
-  left: 0.1em;
+  left: .1em;
   top: 0.35em;
 }
 .km-detail .km-icon:before {
@@ -8112,7 +8112,7 @@ body:before {
   margin: 0;
 }
 .km-buttongroup > * {
-  padding: 0.36em 0.8em;
+  padding: .36em .8em;
 }
 .km-buttongroup > *:not(:first-child):not(:last-child) {
   border-radius: 0;
@@ -8142,7 +8142,7 @@ body:before {
   table-layout: fixed;
 }
 .km-tabstrip .km-button {
-  font-size: 0.7em;
+  font-size: .7em;
   display: table-cell;
   border: 0;
 }
@@ -8225,11 +8225,11 @@ body:before {
 }
 .km-listview-link:after {
   border-color: currentcolor;
-  border-width: 0.2rem 0.2rem 0 0;
+  border-width: .2rem .2rem 0 0;
 }
 .km-pane:not(.km-on-android) .km-listview-link:after {
-  width: 0.66rem;
-  height: 0.64rem;
+  width: .66rem;
+  height: .64rem;
   border-width: 0;
   box-shadow: inset -0.2rem 0.2rem 0;
 }
@@ -8268,7 +8268,7 @@ body:before {
 /* Filter box */
 .km-listview-wrapper form .km-filter-wrap > input {
   font-size: 1.2em;
-  padding: 0.3em 1.8em;
+  padding: .3em 1.8em;
 }
 .km-widget .km-filter-wrap:before {
   margin: 0.05em -1.2em 0 0.2em;
@@ -8287,7 +8287,7 @@ body:before {
   height: 3.4em;
 }
 .km-load-more .km-button {
-  margin: 0 0.8em;
+  margin: 0 .8em;
   display: block;
 }
 .km-scroller-refresh.km-load-more {
@@ -8300,7 +8300,7 @@ body:before {
   font-size: 1em;
   width: 2.5em;
   height: 2.5em;
-  top: 0.25em;
+  top: .25em;
   white-space: nowrap;
 }
 .km-scroller-pull {
@@ -8335,11 +8335,11 @@ body:before {
   margin-left: -0.18em;
 }
 .km-scroller-refresh .km-loading-right {
-  margin-left: 0.28em;
+  margin-left: .28em;
 }
 /* ScrollView */
 .km-pages {
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
 .km-pages li {
   border-radius: 1em;
@@ -8368,12 +8368,12 @@ body:before {
   font-size: 1.1rem;
   min-width: 6em;
   border: 0;
-  padding: 0.4em;
+  padding: .4em;
   outline: none;
   background: transparent;
 }
 .km-list .k-dropdown-wrap {
-  padding: 0.2em;
+  padding: .2em;
 }
 .km-list .k-dropdown {
   margin-top: -1.05em;

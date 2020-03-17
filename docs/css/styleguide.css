@@ -2504,7 +2504,7 @@ a.demo-btn:hover {
   font-weight: bold;
   cursor: pointer; }
   .nav-dropdown-wrapper:hover {
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
+    box-shadow: 0 0 1px transparent; }
     .nav-dropdown-wrapper:hover .nav-dropdown-menu {
       transform: scale(1);
       opacity: 1; }
