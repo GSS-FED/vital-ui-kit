@@ -6,9 +6,15 @@ node_js:
 install:
   - npm install
 
-script:
-  - "if [ ${TRAVIS_PULL_REQUEST} = 'false' ]; then npm run deploy; fi"
-
 branches:
   only:
-    - master
+    - develop
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
+  target_branch: master
+  on:
+    branch: develop

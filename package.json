@@ -19,9 +19,10 @@
     "node": ">=0.14.x"
   },
   "scripts": {
+    "test": "echo 'nothing for now'",
     "start": "gulp dev",
     "build": "gulp prod",
-    "deploy": "npm run build && gh-pages --dist . --branch master"
+    "deploy": "npm run build && sh ./deploy.sh"
   },
   "dependencies": {
     "kendo-ui-core": "^1.0.2"
@@ -35,7 +36,6 @@
     "eslint-config-airbnb": "^16.1.0",
     "express": "^4.13.4",
     "fabricator-assemble": "^1.1.9",
-    "gh-pages": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-data": "^1.2.1",
