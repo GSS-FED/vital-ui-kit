@@ -19,6 +19,7 @@
     "node": ">=0.14.x"
   },
   "scripts": {
+    "test": "echo 'nothing for now'",
     "start": "gulp dev",
     "build": "gulp prod",
     "deploy": "npm run build && sh ./deploy.sh"
