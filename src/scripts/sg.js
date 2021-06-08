@@ -211,7 +211,7 @@ sg.initializeCollapse = function() {
         _this.$el.on("click", "[data-collapse-summary] " + (scope.options.clickQuery || ""),
           $.proxy(_this.handleClick, scope));
 
-        _this.$el.bind("toggle close open",
+        _this.$el.on("toggle close open",
           $.proxy(_this.handleEvent, scope));
 
       }(_this));
