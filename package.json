@@ -21,7 +21,8 @@
   "scripts": {
     "test": "echo 'nothing for now'",
     "start": "gulp dev",
-    "build": "gulp prod",
+    "minify": "npx terser -c -m -o ./docs/js/vital-ui-kit.min.js ./docs/js/vital-ui-kit.js",
+    "build": "gulp prod && npm run minify",
     "deploy": "npm run build && sh ./deploy.sh"
   },
   "dependencies": {
